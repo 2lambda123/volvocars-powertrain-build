@@ -1,0 +1,9 @@
+- project:
+    check:
+      jobs:
+        - noop
+        - tox
+    gate:
+      jobs:
+        - noop
+        - tox
