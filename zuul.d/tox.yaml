@@ -1,0 +1,5 @@
+- job:
+    name: powertrain-build-tox
+    parent: tox
+    vars:
+      tox_envlist: flake8,pytest
