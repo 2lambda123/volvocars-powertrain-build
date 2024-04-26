@@ -1,7 +1,9 @@
 - project:
     check:
       jobs:
+        - powertrain-build-tox
         - noop
     gate:
       jobs:
+        - powertrain-build-tox
         - noop
