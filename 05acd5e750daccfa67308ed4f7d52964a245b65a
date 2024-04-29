@@ -1,0 +1,9 @@
+Code-Review+2: Alberto Gonzalez <alberto.gonzalez@volvocars.com>
+Workflow+1: Alberto Gonzalez <alberto.gonzalez@volvocars.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Mon, 29 Apr 2024 08:42:01 +0000
+Reviewed-on: https://review.opendev.org/c/volvocars/powertrain-build/+/917121
+Comments-Total: 4
+Project: volvocars/powertrain-build
+Branch: refs/heads/master
