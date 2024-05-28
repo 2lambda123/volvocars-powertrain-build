@@ -1,0 +1,7 @@
+
+# Configuration to pick in SPM_Releaseswitch_Setup
+ProjName=CSP_Thermal
+branchName=Trunk
+
+MAKE_ENVIRONMENT_NAME=RB_MG1CS080_2B_B47_00Q000p
+POWERWEAVER_IF_VERSION=35

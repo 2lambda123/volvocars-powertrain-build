@@ -1,0 +1,9 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Variable Type;;MODEL DATA;;;;;;;PROJECTS;;;;SPM;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;INTERFACE DATA;;;;;;;;;;;;;;;;;;;;;;;;;;;
+CAN Interface - Input signals;;Type;Min;Max;Unit;Description;Initial;;VED4_GENII;VED4_GENIII;VEP4_GENIII;;PVC;AC;AES;EL AC;MEC;OIL(Level);Oil(Quality);Oil;OilPrMon;VcMecPc;VcMecPcMon;REG;ScDep;CMB;DCL (Dia);PEM;NVM;PpmEem;PpmImob;PpmPsm;PpmSt;PpmRc;FSD;TmAwp;TmAf;TmHcc;TmEfl;Tm;TmStrt;TcDir;Diag_Monitor;CEC;;EUCD025;EUCD027;C1MCA015;C1MCA016;C1MCA017;SPA1010;SPA1200 SPA1210 ;SPA1500 SPA1510 ;SPA1600 SPA1610 ;SPA1700 SPA1710 ;SPA1800 SPA1810 ;SPA1900 SPA1910 ;SPA2000 SPA2010 ;SPA2210;SPA2310 SPA2410;SPA2510;SPA2710;SPA2810;NDdT [ms];"Locked
+Supplier field:Denso VEP4 GENIII for X2";"Locked
+Supplier field:Denso VED4 GENIII for X2";Locked Supplier field:Denso VED4 13w46Status: PP;Locked Supplier field:Denso VEP4 13w35Status: PP;"Locked
+Supplier field:Denso VED4_GENII Status: 17E100";"Locked
+Supplier field:Denso VEP4_GENII Status: 17E100";"Locked
+Supplier field:Denso VEP4_GENII_HYBRID Status: 17E100";RBPetroldT [ms];Supplier field: GEP3_SPA, D000 SW
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

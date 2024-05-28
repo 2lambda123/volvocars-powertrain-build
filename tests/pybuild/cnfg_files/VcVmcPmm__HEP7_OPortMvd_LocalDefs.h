@@ -1,0 +1,17 @@
+#include "VcCodeSwDefines.h"
+
+#define VcVmcPmm__HEP7_1140_Brake_1 (Vc_Pvc_Sw_B_StopStart || Vc_Pvc_Hw_B_HVSystem)
+#define VcVmcPmm__HEP7_1150_Gradient_estimation_2 (Vc_Pvc_Sw_B_StopStart || Vc_Pvc_Hw_B_HVSystem)
+#define VcVmcPmm__HEP7_121M_StartModeHybrid_3 (Vc_Pvc_Hw_B_Isg && Vc_Pvc_Hw_B_12VStartMotor==0)
+#define VcVmcPmm__HEP7_121N_StartModeHybrid12V_4 (Vc_Pvc_Hw_B_Isg && Vc_Pvc_Hw_B_12VStartMotor)
+#define VcVmcPmm__HEP7_121P_EngRunReqDispHmi_5 (Vc_Pvc_Hw_B_Efad || Vc_Pvc_Hw_B_Erad)
+#define VcVmcPmm__HEP7_1223_C3OilPresBuildUp_6 (Vc_Pvc_Hw_B_Efad || Vc_Pvc_Hw_B_Erad)
+#define VcVmcPmm__HEP7_1224_EngageReqHybrid_7 (Vc_Pvc_Hw_B_Efad || Vc_Pvc_Hw_B_Erad)
+#define VcVmcPmm__HEP7_1243_Isg_8 (Vc_Pvc_Hw_B_Isg && !Vc_Pvc_Hw_B_Efad)
+#define VcVmcPmm__HEP7_1240_Hybrid_Mode_Control_9 (Vc_Pvc_Hw_B_Efad || Vc_Pvc_Hw_B_Erad || Vc_Pvc_Hw_B_Isg)
+#define VcVmcPmm__HEP7_1270_12VStartEnable_10 (Vc_Pvc_Hw_B_12VStartMotor && !Vc_Pvc_Hw_B_Efad && !Vc_Pvc_Hw_B_Erad && !Vc_Pvc_Hw_B_Isg)
+#define VcVmcPmm__HEP7_1000_Hev_11 (Vc_D_CodegenHev>0)
+#define Vc_Pvc_Hw_B_Isg_CN (Vc_Pvc_Hw_B_Isg)
+#define Vc_Pvc_Hw_B_HVSystem_CN (Vc_Pvc_Hw_B_HVSystem)
+#define Vc_Pvc_Hw_B_Efad_CN (Vc_Pvc_Hw_B_Efad)
+#define Vc_Pvc_Hw_B_Erad_CN (Vc_Pvc_Hw_B_Erad)

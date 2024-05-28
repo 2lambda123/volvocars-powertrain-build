@@ -1,0 +1,11 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Variable Type;;MODEL DATA;;;;;;;PROJECTS;;;;;;;;;;;;;; SPM ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;INTERFACE DATA;;;;;;;;;;;;;;;;;;;;;;;;;
+EMS Interface - Input signals;;Type;Min;Max;Unit;Description;Initial;;VED4_GENII;VED4_GENIII;VEP4_GENII;VEP4_GENII_7DCT;VEP4_GENIII;VEP4_GENII_HYBRID;VEP4_GENII_PS14;Hybrid Unique;GEP3_HEP7;GEP3_HRE;GEP3_PFI_HEV;GEP3_SPA;GEP3_BEV;;PVC;AC;AES;EL AC;MEC;OIL(Level);Oil(Quality);Oil;OilPrMon;VcMecPc;VcMecPcMon;REG;ScDep;CMB;DCL (Dia);PEM;NVM;PpmHvem;PpmImob;PpmPsm;PpmSt;PpmRc;FSD;TmAwp;TmAf;TmHcc;TmEfl;Tm;TmStrt;TcDir;Diag_Monitor;CEC;Emiss;SCR;;NDdT [ms];Locked Supplier field:Denso VED4 13w46Status: PP;Locked Supplier field:Denso VEP4 13w35Status: PP;VEA GENIII VCC request (Denso name or CRE number) for X2;Locked Supplier field:Denso VEP4 GENIII for X2;"Locked
+Supplier field:Denso VED4 GENIII for X2--";"VEA GENII 17wXX
+VCC request
+(Denso name or CRE number)
+for VP update";"Locked
+Supplier field:Denso VED4_GENII Status: 17E100";"Locked
+Supplier field:Denso VEP4_GENII Status: 17E100";"Locked
+Supplier field:Denso VEP4_GENII_HYBRID Status: 17E100";VEA SPA VCC request (Denso name or CRE number) 16H100;Locked Supplier field:Denso VED4 SPAStatus: SOP G400;Locked Supplier field:Denso VED4 SPAStatus: MP1 G200;Locked Supplier field:Denso VEP4 SPAStatus: 516H 16H100;Locked Supplier field:Denso VEP4 SPAStatus: SOP K400;VEA 516A, 54x VCC request (Denso name or CRE number) 16A100;Supplier field:Denso VED VEA 516A, 54x Status: 16D100;Supplier field:Denso VEPVEA 516A, 54x Status: 16A100;Vsim Name SPA;Vsim Name minSPA;Vsim Name Chassi;Vsim Name OPTSAS;Comment;RBPetroldT [ms];GEP3_SPA VCC request (Bosch name or CRE number);Supplier field: GEP3_SPA, D000 SW
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

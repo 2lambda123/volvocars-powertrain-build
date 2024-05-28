@@ -1,0 +1,82 @@
+    /begin FUNCTION
+        VcDummy_spm /* Name */
+        ""  /* LongIdentifier */
+    /end FUNCTION
+
+    /begin FUNCTION
+        VcDebugOutputSafe /* Name */
+        ""  /* LongIdentifier */
+    /end FUNCTION
+
+    /begin FUNCTION
+        VcExtVar /* Name */
+        ""  /* LongIdentifier */
+    /end FUNCTION
+
+    /begin FUNCTION
+        VcDebugSafe /* Name */
+        ""  /* LongIdentifier */
+    /end FUNCTION
+
+    /begin FUNCTION
+        VcDebugOutput /* Name */
+        ""  /* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAc_D_AirCondCmpsrStats_db /* Identifier */
+            cVcAc_D_AirCondCmpsrStats_sw /* Identifier */
+        /end DEF_CHARACTERISTIC
+    /end FUNCTION
+
+    /begin FUNCTION
+        VcDummy /* Name */
+        ""  /* LongIdentifier */
+    /end FUNCTION
+
+    /begin FUNCTION
+        VcDebug /* Name */
+        ""  /* LongIdentifier */
+    /end FUNCTION
+
+    /begin FUNCTION
+        VcNvm /* Name */
+        ""  /* LongIdentifier */
+    /end FUNCTION
+
+    /begin CHARACTERISTIC
+        cVcAc_D_AirCondCmpsrStats_db /* Name */
+        "Aircond compressor status" /* LongIdentifier */
+        VALUE   /* Datatype */
+        0x00000000    /* address: cVcAc_D_AirCondCmpsrStats_db */
+        UBYTE_COL_DIRECT   /* Deposit */
+        0   /* MaxDiff */
+        VcDebugOutput_1_0_0_   /* Conversion */
+        0   /* LowerLimit */
+        7   /* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAc_D_AirCondCmpsrStats_sw /* Name */
+        "debug switch for cVcAc_D_AirCondCmpsrStats_db (1=bdsw act)" /* LongIdentifier */
+        VALUE   /* Datatype */
+        0x00000000    /* address: cVcAc_D_AirCondCmpsrStats_sw */
+        UBYTE_COL_DIRECT   /* Deposit */
+        0   /* MaxDiff */
+        VcDebugOutput_1_0_0_   /* Conversion */
+        0   /* LowerLimit */
+        1   /* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin COMPU_METHOD
+        VcDebugOutput_1_0_0_   /* Name */
+        ""    /* LongIdentifier */
+        RAT_FUNC    /* ConversionType */
+        "%11.3"   /* Format */
+        "" /* Unit */
+        COEFFS 0 1 0.0 0 0 1
+    /end COMPU_METHOD
+
+    /begin RECORD_LAYOUT
+        UBYTE_COL_DIRECT /* Name */
+        FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+

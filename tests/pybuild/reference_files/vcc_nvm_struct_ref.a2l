@@ -1,0 +1,117 @@
+
+    /begin MEASUREMENT
+        sVcAcCtrl_t_CmprRunTiNVM /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        ULONG   /* Datatype */
+        VcNvm_1_0_0_None   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        nan   /* LowerLimit */
+        nan   /* UpperLimit */
+        READ_WRITE
+        SYMBOL_LINK "nvm_list_32" 0
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        sVcAesHw_X_VntAdpnOffs /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        FLOAT32_IEEE   /* Datatype */
+        VcNvm_1_0_0_None   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        nan   /* LowerLimit */
+        nan   /* UpperLimit */
+        READ_WRITE
+        SYMBOL_LINK "nvm_list_32" 4
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        sVcAesMo_Ar_ArrayTest /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        FLOAT32_IEEE   /* Datatype */
+        VcNvm_1_0_0_None   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        nan   /* LowerLimit */
+        nan   /* UpperLimit */
+        READ_WRITE
+        MATRIX_DIM 4 2 1
+        SYMBOL_LINK "nvm_list_32" 8
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        sVcAesMo_Ar_NvmThrAdpn /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        FLOAT32_IEEE   /* Datatype */
+        VcNvm_1_0_0_None   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        nan   /* LowerLimit */
+        nan   /* UpperLimit */
+        READ_WRITE
+        SYMBOL_LINK "nvm_list_32" 40
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        sVcAesMo_rt_NvmMafLrngLd1Ne1 /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        UBYTE   /* Datatype */
+        VcNvm_1_0_0_None   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        nan   /* LowerLimit */
+        nan   /* UpperLimit */
+        READ_WRITE
+        BIT_MASK 0x01
+        SYMBOL_LINK "nvm_list_8" 0
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        sVcAcCtrl_t_Test1 /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        ULONG   /* Datatype */
+        VcNvm_1_0_0_None   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        nan   /* LowerLimit */
+        nan   /* UpperLimit */
+        READ_WRITE
+        SYMBOL_LINK "nvm_list_32_per" 0
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD
+        VcNvm_1_0_0_None   /* Name */
+        ""    /* LongIdentifier */
+        RAT_FUNC    /* ConversionType */
+        "%11.3"   /* Format */
+        "-" /* Unit */
+        COEFFS 0 1 0.0 0 0 1
+    /end COMPU_METHOD
+
+    /begin FUNCTION
+        VcNvm /* Name */
+        ""  /* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            sVcAcCtrl_t_CmprRunTiNVM /* Identifier */
+            sVcAesHw_X_VntAdpnOffs /* Identifier */
+            sVcAesMo_Ar_ArrayTest /* Identifier */
+            sVcAesMo_Ar_NvmThrAdpn /* Identifier */
+            sVcAesMo_rt_NvmMafLrngLd1Ne1 /* Identifier */
+            sVcAcCtrl_t_Test1 /* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin RECORD_LAYOUT
+        ULONG_COL_DIRECT /* Name */
+        FNC_VALUES 1 ULONG COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        FLOAT32_IEEE_COL_DIRECT /* Name */
+        FNC_VALUES 1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        UBYTE_COL_DIRECT /* Name */
+        FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT

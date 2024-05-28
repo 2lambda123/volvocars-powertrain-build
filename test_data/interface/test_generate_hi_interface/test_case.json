@@ -1,0 +1,162 @@
+{
+    "DummyRaster": {
+        "consumer": [
+            {
+                "debug": false,
+                "default": null,
+                "description": "Some description",
+                "domain": "DomainOne",
+                "factor": 1,
+                "group": "GroupOne",
+                "init": 0,
+                "length": null,
+                "offset": 0,
+                "port_name": null,
+                "property": "PropertyOne",
+                "property_type": "UInt8",
+                "range": {
+                    "max": 4,
+                    "min": 0
+                },
+                "strategy": "Always",
+                "unit": "-",
+                "variable": "sVcDummy_D_One",
+                "variable_type": "UInt8"
+            },
+            {
+                "debug": false,
+                "default": null,
+                "description": "Some description",
+                "domain": "DomainOne",
+                "factor": 1,
+                "group": "GroupOne",
+                "init": 0,
+                "length": null,
+                "offset": 0,
+                "port_name": null,
+                "property": "PropertyTwo",
+                "property_type": "UInt8",
+                "range": {
+                    "max": 4,
+                    "min": 0
+                },
+                "strategy": "Always",
+                "unit": "-",
+                "variable": "sVcDummy_D_Two",
+                "variable_type": "UInt8"
+            },
+            {
+                "debug": false,
+                "default": null,
+                "description": "Some description",
+                "domain": "DomainOne",
+                "factor": 1,
+                "group": "GroupTwo",
+                "init": 0,
+                "length": null,
+                "offset": 0,
+                "port_name": "PortOne",
+                "property": "PropertyThree",
+                "property_type": "UInt8",
+                "range": {
+                    "max": 4,
+                    "min": 0
+                },
+                "strategy": "Always",
+                "unit": "-",
+                "variable": "sVcDummy_D_Three",
+                "variable_type": "UInt8"
+            },
+            {
+                "debug": false,
+                "default": null,
+                "description": "Some description",
+                "domain": "DomainOne",
+                "factor": 1,
+                "group": "GroupTwo",
+                "init": 0,
+                "length": "PortOne",
+                "offset": 0,
+                "port_name": "PortOne",
+                "property": "PropertyFour",
+                "property_type": "UInt8",
+                "range": {
+                    "max": 4,
+                    "min": 0
+                },
+                "strategy": "Always",
+                "unit": "-",
+                "variable": "sVcDummy_D_Four",
+                "variable_type": "UInt8"
+            },
+            {
+                "debug": false,
+                "default": null,
+                "description": "Some description",
+                "domain": "DomainTwo",
+                "factor": 1,
+                "group": null,
+                "init": 0,
+                "length": null,
+                "offset": 0,
+                "port_name": null,
+                "property": "PropertyFive",
+                "property_type": "UInt8",
+                "range": {
+                    "max": 4,
+                    "min": 0
+                },
+                "strategy": "Always",
+                "unit": "-",
+                "variable": "sVcDummy_D_Five",
+                "variable_type": "UInt8"
+            },
+            {
+                "debug": false,
+                "default": null,
+                "description": "Some description",
+                "domain": "DomainThree",
+                "factor": 1,
+                "group": null,
+                "init": 0,
+                "length": null,
+                "offset": 0,
+                "port_name": "PortTwo",
+                "property": "PropertySix",
+                "property_type": "UInt8",
+                "range": {
+                    "max": 4,
+                    "min": 0
+                },
+                "strategy": "Always",
+                "unit": "-",
+                "variable": "sVcDummy_D_Six",
+                "variable_type": "UInt8"
+            }
+        ],
+        "producer": [
+            {
+                "debug": false,
+                "default": null,
+                "description": "Some description",
+                "domain": "DomainThree",
+                "factor": 1,
+                "group": null,
+                "init": 0,
+                "length": null,
+                "offset": 0,
+                "port_name": null,
+                "property": "PropertySeven",
+                "property_type": "UInt8",
+                "range": {
+                    "max": 4,
+                    "min": 0
+                },
+                "strategy": "Always",
+                "unit": "-",
+                "variable": "sVcDummy_D_Seven",
+                "variable_type": "UInt8"
+            }
+        ]
+    }
+}

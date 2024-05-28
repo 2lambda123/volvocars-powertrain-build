@@ -1,0 +1,28 @@
+{
+  "BaseConfigFileVersion": "0.2.1",
+  "ProjectInfo" : {
+    "deviceDomains": "./conf.local/DeviceDomains.json",
+    "serviceInterfaces": "./conf.local/ServiceInterfaces.json",
+    "didDefFile": "DIDIds_FullRange",
+    "didCarCom": "./output/CarCom_DIDDefs.csv",
+    "srcCodeDstDir": "./output/SourceCode",
+    "reportDstDir": "./output/Reports",
+    "logDstDir": "./output/logs",
+    "configDir": "../../ConfigDocuments",
+    "interfaceCfgDir": "./Config/ActiveInterfaces",
+    "commonSrcDir": "../../Models/Common/pybuild_src",
+    "prjUnitSrcDir": "../../Models/*/Vc*/pybuild_src",
+    "prjUnitCfgDir": "../../Models/*/Vc*/pybuild_cfg",
+    "prjUnitMdlDir": "../../Models/*/Vc*",
+    "prjLocalDefs": "*_LocalDefs.h",
+    "prjCodeswitches": "SPM_Codeswitch_Setup*.csv",
+    "coreDummyFileName" : "VcCoreDummy",
+    "featureHeaderName": "VcCodeSwDefines.h",
+    "tsHeaderName": "VcUnitTsDefines.h",
+    "useGlobalConst" : "VcConst"
+  },
+  "NvmConfig": {
+    "fileName" : "vcc_nvm_struct",
+    "baseNvmStructs" : "./conf.local/nvm_structs.json"
+    }
+}

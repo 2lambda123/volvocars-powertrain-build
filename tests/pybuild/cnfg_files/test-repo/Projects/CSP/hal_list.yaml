@@ -1,0 +1,8 @@
+hal-hvec-thermal-properties: HVECThermalPropertiesHal
+hal-hvec-electrical-properties: HVECElectricalPropertiesHal
+hal-hvcc-monitor: HighVoltageChargingMonitorHal
+hal-hvcc-requests: HighVoltageChargingRequestsHal
+hal-hlcm-electrical-measurement: HighVoltageDcDcConverterElectricalMeasurementHal
+hal-hlcm-system-states: HighVoltageDcDcConverterSystemStatesHal
+hal-hvec-contactor-status: HVECContactorStatusHal
+

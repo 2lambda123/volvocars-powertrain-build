@@ -1,0 +1,18 @@
+[
+    {
+        "name": "VcExt10ms",
+        "ports": {
+            "in": {
+                "sVcModel_B_Something": {
+                    "primitive": "appprogint.endpoint.something",
+                    "type": "Float32"
+                },
+                "sVcModel_B_Boolean": {
+                    "primitive": "appprogint.endpoint.property",
+                    "type": "Bool"
+                }
+            },
+            "out": {}
+        }
+    }
+]

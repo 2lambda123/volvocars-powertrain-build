@@ -1,0 +1,51 @@
+{
+    "read": {
+        "signal_groups": {
+            "DomainOne": {
+                "GroupOne": {
+                    "GroupOne": {
+                        "data": {
+                            "PropertyOne": "sVcDummy_D_One",
+                            "PropertyTwo": "sVcDummy_D_Two"
+                        }
+                    }
+                },
+                "PortOne": {
+                    "GroupTwo": {
+                        "data": {
+                            "PropertyThree": "sVcDummy_D_Three",
+                            "PropertyFour": "sVcDummy_D_Four"
+                        }
+                    }
+                }
+            }
+        },
+        "signals": {
+            "DomainTwo": {
+                "PropertyFive": {
+                    "data": {
+                        "PropertyFive": "sVcDummy_D_Five"
+                    }
+                }
+            },
+            "DomainThree": {
+                "PortTwo": {
+                    "data": {
+                        "PropertySix": "sVcDummy_D_Six"
+                    }
+                }
+            }
+        }
+    },
+    "write": {
+        "signals": {
+            "DomainThree": {
+                "PropertySeven": {
+                    "data": {
+                        "PropertySeven": "sVcDummy_D_Seven"
+                    }
+                }
+            }
+        }
+    }
+}

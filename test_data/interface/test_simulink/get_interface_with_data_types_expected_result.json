@@ -1,0 +1,50 @@
+[
+    {
+        "name": "VcExt10ms_AppProgInt_Always",
+        "ports": {
+            "in": {
+                "sVcModel_B_CarModes": {
+                    "primitive": "appprogint.endpoint.property",
+                    "type": "CarModes"
+                }
+            },
+            "out": {}
+        },
+        "types": [
+            {
+                "name": "CarModes",
+                "kind": "enum",
+                "enumerators": [
+                    {"CARMODES_NORMAL": "vehiclemodesprovider::types::CarModes::kNormal"},
+                    {"CARMODES_TRANSPORT": "vehiclemodesprovider::types::CarModes::kTransport"},
+                    {"CARMODES_FACTORY": "vehiclemodesprovider::types::CarModes::kFactory"},
+                    {"CARMODES_DYNO": "vehiclemodesprovider::types::CarModes::kDyno"}
+                ],
+                "default": {"CARMODES_NORMAL": "vehiclemodesprovider::types::CarModes::kNormal"}
+            }
+        ]
+    },
+    {
+        "name": "VcExt10ms_AppProgIntTwo_Always",
+        "ports": {
+            "in": {
+                "sVcModel_B_BlinkerMode": {
+                    "primitive": "appproginttwo.endpoint.property",
+                    "type": "BlinkerMode"
+                }
+            },
+            "out": {}
+        },
+        "types": [
+            {
+                "name": "BlinkerMode",
+                "kind": "enum",
+                "enumerators": [
+                    {"BLINKERMODE_OFF": "vehiclemodesprovider::types::BlinkerMode::Off"},
+                    {"BLINKERMODE_ON": "vehiclemodesprovider::types::BlinkerMode::On"}
+                ],
+                "default": {"BLINKERMODE_OFF": "vehiclemodesprovider::types::BlinkerMode::Off"}
+            }
+        ]
+    }
+]

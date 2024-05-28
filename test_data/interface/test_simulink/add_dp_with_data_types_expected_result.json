@@ -1,0 +1,30 @@
+[
+    {
+        "name": "VcExt10ms",
+        "ports": {
+            "in": {
+                "sVcModel_Z_SignalWithGroup": {
+                    "primitive": "signals.other_domain.Group.Signal",
+                    "type": "BlinkerMode"
+                }
+            },
+            "out": {
+                "sVcModel_D_OutSignalWithoutGroup": {
+                    "primitive": "signals.domain.OutSignalWithoutGroup",
+                    "type": "BlinkerMode"
+                }
+            }
+        },
+        "types": [
+            {
+                "name": "BlinkerMode",
+                "kind": "enum",
+                "enumerators": [
+                    {"BLINKERMODE_OFF": "vehiclemodesprovider::types::BlinkerMode::Off"},
+                    {"BLINKERMODE_ON": "vehiclemodesprovider::types::BlinkerMode::On"}
+                ],
+                "default": {"BLINKERMODE_OFF": "vehiclemodesprovider::types::BlinkerMode::Off"}
+            }
+        ]
+    }
+]

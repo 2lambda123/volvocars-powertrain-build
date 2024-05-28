@@ -1,0 +1,14 @@
+[
+    {
+        "name": "VcExt10ms_Always",
+        "ports": {
+            "in": {
+                "sVcModel_B_Boolean": {
+                    "primitive": "appprogint.endpoint.property",
+                    "type": "Bool"
+                }
+            },
+            "out": {}
+        }
+    }
+]

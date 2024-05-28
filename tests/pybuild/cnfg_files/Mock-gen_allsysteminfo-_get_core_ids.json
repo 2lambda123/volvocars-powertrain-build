@@ -1,0 +1,278 @@
+{
+    "VcPvcIn": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    },
+    "VcScBCoord": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    },
+    "VcScABrkPed": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    },
+    "VcScAAccPed": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    },
+    "VcScBAccPed": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    },
+    "VcScAVehMtn": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    },
+    "VcScACluPed__denso": {
+        "Events": {
+            "VcEvClPedSwMonPerf": {
+                "API_blk": [{
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1460_Cl75swSTTimerCoreCall/Dem_SetEventStatusPF",
+                        "config": ["all"]
+                    }, {
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1460_Cl75swSTTimerCoreCall/Dem_SetEventStatusPP",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant",
+                "subsystem": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1460_Cl75swSTTimerCoreCall",
+                "API_blk_type": "Dem_SetEventStatusPre-Passed",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            },
+            "VcEvClPedPosMonPerf": {
+                "API_blk": [{
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1360_TimerCoreCallClAna/Dem_SetEventStatusPF",
+                        "config": ["all"]
+                    }, {
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1360_TimerCoreCallClAna/Dem_SetEventStatusPP",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant",
+                "subsystem": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1360_TimerCoreCallClAna",
+                "API_blk_type": "Dem_SetEventStatusPre-Passed",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            },
+            "VcEvClPedPosPlausMon": {
+                "API_blk": [{
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1370_FaultCoreCallClAna/Dem_SetEventStatusPF",
+                        "config": ["all"]
+                    }, {
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1370_FaultCoreCallClAna/Dem_SetEventStatusPP",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant",
+                "subsystem": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1370_FaultCoreCallClAna",
+                "API_blk_type": "Dem_SetEventStatusPre-Passed",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            },
+            "VcEvClPedSwPlausMon": {
+                "API_blk": [{
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1440_Cl75swSTFaultCoreCall/Dem_SetEventStatusPF",
+                        "config": ["all"]
+                    }, {
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1440_Cl75swSTFaultCoreCall/Dem_SetEventStatusPP",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant",
+                "subsystem": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1440_Cl75swSTFaultCoreCall",
+                "API_blk_type": "Dem_SetEventStatusPre-Passed",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            }
+        },
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {
+            "VcRvClPedSwMonPerf": {
+                "API_blk": [{
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1460_Cl75swSTTimerCoreCall/Vc_SetRanking",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant1",
+                "subsystem": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1460_Cl75swSTTimerCoreCall",
+                "API_blk_type": "Vcc_SetRanking",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            },
+            "VcRvClPedPosMonPerf": {
+                "API_blk": [{
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1360_TimerCoreCallClAna/Vc_SetRanking",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant1",
+                "subsystem": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1360_TimerCoreCallClAna",
+                "API_blk_type": "Vcc_SetRanking",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            },
+            "VcRvClPedPosPlausMon": {
+                "API_blk": [{
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1370_FaultCoreCallClAna/Vc_SetRanking",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant1",
+                "subsystem": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1300_ClPedAnaDiag/1370_FaultCoreCallClAna",
+                "API_blk_type": "Vcc_SetRanking",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            },
+            "VcRvClPedSwPlausMon": {
+                "API_blk": [{
+                        "path": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1440_Cl75swSTFaultCoreCall/Vc_SetRanking",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant1",
+                "subsystem": "VcScACluPed__denso/VcScACluPed/Subsystem/VcScACluPed/VcScACluPed/1000_VcScACluPed/1400_ClPed75swDiag/1440_Cl75swSTFaultCoreCall",
+                "API_blk_type": "Vcc_SetRanking",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            }
+        },
+        "TstId": {}
+    },
+    "VcScBDrvr": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    },
+    "VcScANeuMT__denso": {
+        "Events": {
+            "VcEvGNS1PlausMon": {
+                "API_blk": [{
+                        "path": "VcScANeuMT__denso/VcScANeuMT/Subsystem/VcScANeuMT/VcScANeuMT/1000_ASILA/1500_NeutralSensorPlausMonitor/1540_FaultCoreCallNeutralMTPlaus/Dem_SetEventStatusPF",
+                        "config": ["all"]
+                    }, {
+                        "path": "VcScANeuMT__denso/VcScANeuMT/Subsystem/VcScANeuMT/VcScANeuMT/1000_ASILA/1500_NeutralSensorPlausMonitor/1540_FaultCoreCallNeutralMTPlaus/Dem_SetEventStatusPP",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant",
+                "subsystem": "VcScANeuMT__denso/VcScANeuMT/Subsystem/VcScANeuMT/VcScANeuMT/1000_ASILA/1500_NeutralSensorPlausMonitor/1540_FaultCoreCallNeutralMTPlaus",
+                "API_blk_type": "Dem_SetEventStatusPre-Passed",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            }
+        },
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {
+            "VcRvGNS1PlausMon": {
+                "API_blk": [{
+                        "path": "VcScANeuMT__denso/VcScANeuMT/Subsystem/VcScANeuMT/VcScANeuMT/1000_ASILA/1500_NeutralSensorPlausMonitor/1540_FaultCoreCallNeutralMTPlaus/Vc_SetRanking",
+                        "config": ["all"]
+                    }
+                ],
+                "blk_name": "NamedConstant1",
+                "subsystem": "VcScANeuMT__denso/VcScANeuMT/Subsystem/VcScANeuMT/VcScANeuMT/1000_ASILA/1500_NeutralSensorPlausMonitor/1540_FaultCoreCallNeutralMTPlaus",
+                "API_blk_type": "Vcc_SetRanking",
+                "description": "-",
+                "type": "-",
+                "unit": "-",
+                "offset": "-",
+                "lsb": "-",
+                "min": "-",
+                "max": "-",
+                "class": "-"
+            }
+        },
+        "TstId": {}
+    },
+    "VcScATqExt__denso": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    },
+    "VcScATrsm__denso": {
+        "Events": {},
+        "IUMPR": {},
+        "FIDs": {},
+        "Ranking": {},
+        "TstId": {}
+    }
+}

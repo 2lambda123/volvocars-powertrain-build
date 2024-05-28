@@ -1,0 +1,1 @@
+{"SIG8": {"memory_area": "NVM_LIST_8", "signal_index": 0}, "SIG16": {"memory_area": "NVM_LIST_16", "signal_index": 0}, "SIG32": {"memory_area": "NVM_LIST_32", "signal_index": 0}, "SIG8P": {"memory_area": "NVM_LIST_8_PER", "signal_index": 0}, "SIG16P": {"memory_area": "NVM_LIST_16_PER", "signal_index": 0}, "SIG32P": {"memory_area": "NVM_LIST_32_PER", "signal_index": 0}}

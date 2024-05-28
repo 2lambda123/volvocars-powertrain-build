@@ -1,0 +1,514 @@
+########################################################
+#
+# Service for input values of app to VcTestRx model
+#
+#
+########################################################
+
+service:
+  ClimateAndThermalControlInternal:
+    properties:
+    - ControlRequests:
+      - insignal: yVcReq_B_MaxDefOn
+        property: enable_max_defroster
+  VehicleModesProvider:
+    properties:
+    - UsageModeAvailable:
+      - insignal: yVcVmp_B_VehModAvl
+        property: UsageModeAvailableIsActivated
+    - UsageModeAwake:
+      - insignal: yVcVmp_B_VehModAwake
+        property: UsageModeAwakeIsActivated
+    - UsageModeConvenience:
+      - insignal: yVcVmp_B_VehModConv
+        property: UsageModeConvenienceIsActivated
+    - UsageModeDriving:
+      - insignal: yVcVmp_B_VehModDrv
+        property: UsageModeDrivingIsActivated
+    - UsageModeMovable:
+      - insignal: yVcVmp_B_VehModMovable
+        property: UsageModeMovableIsActivated
+    # - CarMode:
+    #   - insignal: sVcVmp_Enm_CarMode
+    #     property: CarMode
+    # - CarModeSubtype:   # <-- Create a new Enum for this one, it is not same as CarMode
+    #   - insignal: sVcVmp_Enm_CarModeSubtype
+    #     property: Subtype
+    - CrashMode:
+      - insignal: yVcVmp_B_CrashMod
+        property: CrashModeIsActivated
+  VehicleMotionState:
+    properties:
+    - VelocityLongitudinal:
+      - insignal: sVcVms_v_VehSpdLgt
+        property: nominal.value
+      - insignal: sVcVms_Enm_VehSpdLgtQf
+        property: nominal.quality
+########################################################
+#
+# Direct connection for input values of app to VcTestRx model
+# From HALs
+#
+########################################################
+hal:
+  hal-hvec-thermal-properties:
+  - ClimatizationEnergyRequest:
+    - insignal: sVcHvec_E_HvBattClimaEgyReq
+  - ClimatizationPrioritizationRequest:
+    - insignal: sVcHvec_D_HvBattClimaPrioReq
+  - ClimatizationPowerEstimation:
+    - insignal: sVcHvec_Pw_HvBattClimaPwrEstimn
+  - AllowedCoolingEnergy:
+    - insignal: sVcHvec_E_HvBattCoolgEgyAllwd
+  - AllowedCoolingPower:
+    - insignal: sVcHvec_Pw_HvBattCoolgPwrAllwd
+  - CoolingPowerRequest:
+    - insignal: sVcHvec_Pw_HvBattCoolgPwrReq
+  - AllowedHeatingEnergy:
+    - insignal: sVcHvec_E_HvBattHeatgEgyAllwd
+  - AllowedHeatingPower:
+    - insignal: sVcHvec_Pw_HvBattHeatgPwrAllwd
+  - HeatingPowerRequest:
+    - insignal: sVcHvec_Pw_HvBattHeatgPwrReq
+  - MinimumFlowRequest:
+    - insignal: sVcHvec_Q_HvBattMinFlowReq
+  # - CoolantTemperatureSensorStatus:
+  #   - insignal: sVcHvec_Enm_HvBattCooltTSnsrSts
+  - CoolingPowerNow:
+    - insignal: sVcHvec_Pw_HvBattCoolgPwrEstimn
+  - CoolingPowerNext:
+    - insignal: sVcHvec_Pw_HvBattCoolgPwrPred
+  - CoolingPowerTime:
+    - insignal: sVcHvec_t_HvBattCoolgPwrTi
+  - CoolingPowerTransition:
+    - insignal: sVcHvec_Pw_HvBattCoolgPwrTran
+  - HeatingPowerNow:
+    - insignal: sVcHvec_Pw_HvBattHeatgPwrEstimn
+  - HeatingPowerNext:
+    - insignal: sVcHvec_Pw_HvBattHeatgPwrPred
+  - HeatingPowerTime:
+    - insignal: sVcHvec_t_HvBattHeatgPwrTi
+  - HeatingPowerTransition:
+    - insignal: sVcHvec_Pw_HvBattHeatgPwrTran
+  - MaxTemperature:
+    - insignal: sVcHvec_Te_HvBattTMax
+  - MinTemperature:
+    - insignal: sVcHvec_Te_HvBattTMin
+  - AverageTemperature:
+    - insignal: sVcHvec_Te_HvBattTAvg
+  # needed?
+  # electrical_energy_coordinator:
+  # - PowerLimitClimate:
+  #   - insignal: sVcHlcm_Enm_HvDcDcMod
+
+  hal-hvec-electrical-properties:
+  - Voltage:
+    - insignal: sVcHvec_U_HvBattU
+  - Current:
+    - insignal: sVcHvec_I_HvBattI
+  # - DynamicVoltageMaxLimit:
+  #   - insignal: sVcHvec_U_DynamicVoltageMaxLimit
+  # - DynamicVoltageMinLimit:
+  #   - insignal: sVcHvec_U_DynamicVoltageMinLimit
+  # - CurrentLimit:
+  #   - insignal: sVcHvec_I_CurrentLimit
+
+  # hal-ihfa:
+  # - CoolingRequest:
+  #   - insignal: sVcIhfa_Enm_EmFrntCoolgReq
+  # - CoolantTemperature:
+  #   - insignal: sVcIhfa_Te_EmIvtrFrntCooltT
+  # - DcCurrent:
+  #   - insignal: sVcIhfa_I_EmIvtrFrntIDc
+  # - InverterTemperature:
+  #   - insignal: sVcIhfa_Te_EmIvtrFrntT
+  # # - LimitationIndication:
+  # #   - insignal: sVcIhfa_D_FrntLimInd
+  # # - OperatingMode:
+  # #   - insignal: sVcIhfa_Enm_EmIvtrFrntMod
+  # - MotorTemperature:
+  #   - insignal: sVcIhfa_Te_EmMotFrntT
+  # - Speed:
+  #   - insignal: sVcIhfa_n_EmMotFrntSpd
+  #     property: speed
+  # - TorqueAvailable:
+  #   - insignal: sVcIhfa_Tq_EmMotFrntTqAvlMax
+  #     property: max
+  #   - insignal: sVcIhfa_Tq_EmMotFrntTqAvlMin
+  #     property: min
+  # - DcVoltage:
+  #   - insignal: sVcIhfa_U_EmIvtrFrntDcU
+  # - TorqueEstimated:
+  #   - insignal: sVcIhfa_Tq_EmMotFrntTqEstimn
+  #     property: torque
+
+  # hal-ihra:
+  # # - CoolingRequest:
+  # #   - insignal: sVcIhra_Enm_EmReCoolgReq
+  # - CoolantTemperature:
+  #   - insignal: sVcIhra_Te_EmIvtrReCooltT
+  # - DcCurrent:
+  #   - insignal: sVcIhra_I_EmIvtrReIDc
+  # - InverterTemperature:
+  #   - insignal: sVcIhra_Te_EmIvtrReT
+  # # - LimitationIndication:
+  # #   - insignal: sVcIhra_D_ReLimInd
+  # # - OperatingMode:
+  # #   - insignal: sVcIhra_Enm_EmIvtrReMod
+  # - MotorTemperature:
+  #   - insignal: sVcIhra_Te_EmMotReT
+  # - Speed:
+  #   - insignal: sVcIhra_n_EmMotReSpd
+  #     property: speed
+  # - TorqueAvailable:
+  #   - insignal: sVcIhra_Tq_EmMotReTqAvlMax
+  #     property: max
+  #   - insignal: sVcIhra_Tq_EmMotReTqAvlMin
+  #     property: min
+  # - DcVoltage:
+  #   - insignal: sVcIhra_U_EmIvtrReDcU
+  # - TorqueEstimated:
+  #   - insignal: sVcIhra_Tq_EmMotReTqEstimn
+  #     property: torque
+
+  hal-hvcc-monitor:
+  # - ChargerType:
+  #   - insignal: sVcHvcc_Enm_HvChrgrTyp
+  # - ConnectionStatus:
+  #   - insignal: sVcHvcc_Enm_HvChrgrCnctnSts
+  # - ChargingStatus:
+  #   - insignal: sVcHvcc_Enm_HvChrgnSts
+  - Temperature:
+    - insignal: sVcHvcc_Te_HvChrgrT
+  - TimeToFullCharge:
+    - insignal: sVcHvcc_t_HvChrgTiToFull
+
+  # hal-hvcc-requests:
+  # - CoolingPower:
+  #   - insignal: sVcHvcc_Enm_HvChrgCoolgReq
+
+  hal-hlcm-electrical-measurement:
+  - TransientPower:
+    - insignal: sVcHlcm_Pw_HvDcDcTraPwr
+  - CurrentOnLowVoltageSide:
+    - insignal: sVcHlcm_I_HvDcDcILv
+  - CurrentOnHighVoltageSide:
+    - insignal: sVcHlcm_I_HvDcDcIHv
+  - VoltageOnLowVoltageSide:
+    - insignal: sVcHlcm_U_HvDcDcULv
+  - VoltageOnHighVoltageSide:
+    - insignal: sVcHlcm_U_HvDcDcUHv
+
+  # hal-hlcm-system-states:
+  # - OperationMode:
+  #   - insignal: sVcHlcm_Enm_HvDcDcMod
+  # - CoolingFlowRequest:
+  #   - insignal: sVcHlcm_Enm_HvDcDcCoolgFlowReq
+  # - FaultNotification:
+  #   - insignal: sVcHlcm_Enm_HvDcDcFltSts
+
+  # hal-hvec-contactor-status:
+  # - MainContactorStatus:
+  #   - insignal: sVcHvec_Enm_MaiHvCntctSts
+  # - DCContactorStatus:
+  #   - insignal: sVcHvec_Enm_HvDcDcCntctSts
+
+########################################################
+#
+# Direct connection for input values of app to VcTestRx model
+# From FIOC DP
+#
+########################################################
+##### FIOC 4/6.0.0 #######
+signals:
+  fioc:
+  - insignal: sVcFioc_Te_AmbTMecRimSnsr
+    property: AmbTMecRimSnsr
+  - insignal: sVcFioc_D_AmbTMecRimSnsrElecSts
+    property: AmbTMecRimSnsrElecSts
+  - insignal: sVcFioc_D_CircCnctVlvElecSts
+    property: CircCnctVlvElecSts
+  # - insignal: sVcFioc_D_CircCnctVlvSts
+  #   property: CircCnctVlvSts
+  # - insignal: sVcFioc_D_CooltLvlElecSts
+  #   property: CooltLvlElecSts
+  # - insignal: sVcFioc_D_CooltPmpDtElecCpbySts
+  #   property: CooltPmpDtElecCpbySts
+  # - insignal: sVcFioc_D_CooltPmpHvBattCpbySts
+  #   property: CooltPmpHvBattCpbySts
+  # - insignal: sVcFioc_D_CooltPmpInClimaCpbySts
+  #   property: CooltPmpInClimaCpbySts
+  # - insignal: sVcFioc_X_CooltPmpSpdInCircClimaAct
+  #   property: CooltPmpSpdInCircClimaAct
+  # - insignal: sVcFioc_X_CooltPmpSpdInCircDtElecAct
+  #   property: CooltPmpSpdInCircDtElecAct
+  # - insignal: sVcFioc_X_CooltPmpSpdInHvBattCircAct
+  #   property: CooltPmpSpdInHvBattCircAct
+  - insignal: sVcFioc_Te_CooltTAftHvac
+    property: CooltTAftHvac
+  - insignal: sVcFioc_D_CooltTAftHvacElecSts
+    property: CooltTAftHvacElecSts
+  - insignal: sVcFioc_Te_CooltTAftRadrDtElec
+    property: CooltTAftRadrDtElec
+  - insignal: sVcFioc_D_CooltTAftRadrDtElecSts
+    property: CooltTAftRadrDtElecSts
+  - insignal: sVcFioc_Te_CooltTAtHvBattOutl
+    property: CooltTAtHvBattOutl
+  - insignal: sVcFioc_D_CooltTAtHvBattOutlElecSts
+    property: CooltTAtHvBattOutlElecSts
+  - insignal: sVcFioc_Te_CooltTBfrRadrBypVlv
+    property: CooltTBfrRadrBypVlv
+  - insignal: sVcFioc_D_CooltTBfrRadrBypVlvElecSts
+    property: CooltTBfrRadrBypVlvElecSts
+# EvaprVlvFrntElecSts
+# EvaprVlvRearElecSts
+# ExtdIntglAck
+  # - insignal: sVcFioc_D_FanCpbySts
+  #   property: FanCpbySts
+  - insignal: sVcFioc_D_FanElecSts
+    property: FanElecSts
+  - insignal: sVcFioc_D_FanModSts
+    property: FanModSts
+  - insignal: sVcFioc_D_FanRlyElecSts
+    property: FanRlyElecSts
+  # - insignal: sVcFioc_D_FanRlySts
+  #   property: FanRlySts
+  - insignal: sVcFioc_X_FanSpdAct
+    property: FanSpdAct
+  - insignal: sVcFioc_D_HvBattOnOffVlvElecSts
+    property: HvBattOnOffVlvElecSts
+  # - insignal: sVcFioc_D_HvBattOnOffVlvSts
+  #   property: HvBattOnOffVlvSts
+  # - insignal: sVcFioc_X_PropVlvToHvBattAct
+  #   property: PropVlvToHvBattAct
+# HvCooltHeatrICns2
+# HvCooltHeatrSplyUForCtrlUnitVal2
+# HvCooltHeatrSts2
+# HvCooltWtrHeatrWtrTInIntk2
+  - insignal: sVcFioc_Pw_HvHeatrPwrCns2
+    property: HvHeatrPwrCns2
+  - insignal: sVcFioc_Te_HvCooltWtrHeatrWtrTInOutl2
+    property: HvCooltWtrHeatrWtrTInOutl2
+# HvHeatrPwrCns2
+# HvHeatrPwrCnsDes2
+  - insignal: sVcFioc_p_PMedChillrOut
+    property: PMedChillrOut
+  - insignal: sVcFioc_p_PMedCmprOut
+    property: PMedCmprOut
+# PMedChillrOutElecSts
+# PMedCmprOutElecSts
+  # - insignal: sVcFioc_D_PropVlvToHvBattCpbySts
+  #   property: PropVlvToHvBattCpbySts
+  # - insignal: sVcFioc_D_PropVlvToHvBattSts
+  #   property: PropVlvToHvBattSts
+  - insignal: sVcFioc_D_RadrBypVlvElecSts
+    property: RadrBypVlvElecSts
+  # - insignal: sVcFioc_D_RadrBypVlvSts
+  #   property: RadrBypVlvSts
+  # - insignal: sVcFioc_D_RlyForCoolgElecSts
+  #   property: RlyForCoolgElecSts
+  # - insignal: sVcFioc_D_RlyForCoolgSts
+  #   property: RlyForCoolgSts
+  # - insignal: sVcFioc_an_SplrShttrAgAct
+  #   property: SplrShttrAgAct
+  # - insignal: sVcFioc_D_SplrShttrCpbySts
+  #   property: SplrShttrCpbySts
+  # - insignal: sVcFioc_D_SplrShttrInfoSts
+  #   property: SplrShttrInfoSts
+  - insignal: sVcFioc_D_StsOfCooltLvl
+    property: StsOfCooltLvl
+  - insignal: sVcFioc_Te_TMedChillrOut
+    property: TMedChillrOut
+  - insignal: sVcFioc_Te_TMedCmprOut
+    property: TMedCmprOut
+# TMedChillrOutElecSts
+# TMedCmprOutElecSts
+# CmprDiagStsExtdEepErr
+# CmprDiagStsExtdInpOverIErr
+# CmprDiagStsExtdMemErr
+# CmprDiagStsExtdMotOverIErr
+# CmprDiagStsExtdOverTErr
+# CmprDiagStsExtdStallErr
+# CmprDiagStsExtdSwErr
+# CmprDiagcStsCmprCmprSpdErr
+# CmprDiagcStsCmprCtrlrErr
+# CmprDiagcStsCmprHvSnsr1
+# CmprDiagcStsCmprHvSnsrI
+# CmprDiagcStsCmprHvSnsrICrct
+# CmprDiagcStsCmprHvSplyErr
+# CmprDiagcStsCmprStartUpErr
+# CmprDiagcStsCmprT1
+# CmprDiagcStsCmprT2
+# CmprDiagcStsCmprTOperErr
+# CmprDiagcStsCmprWdgErr
+  ccmb:
+  - insignal: sVcCcmb_X_AirFlapPosnActForCentrForFirstLe
+    property: AirFlapPosnActForCentrForFirstLe
+  - insignal: sVcCcmb_X_AirFlapPosnActForDefrst1
+    property: AirFlapPosnActForDefrst1
+  - insignal: sVcCcmb_X_AirFlapPosnActForFlrForFirstRiLe
+    property: AirFlapPosnActForFlrForFirstRiLe
+  - insignal: sVcCcmb_X_AirFlapPosnActForFlrForSecRiLe
+    property: AirFlapPosnActForFlrForSecRiLe
+  - insignal: sVcCcmb_X_AirFlapPosnActForOsa1
+    property: AirFlapPosnActForOsa1
+  - insignal: sVcCcmb_X_AirFlapPosnActForRecirc1
+    property: AirFlapPosnActForRecirc1
+  - insignal: sVcCcmb_X_AirFlapPosnActForSideForFirstLe
+    property: AirFlapPosnActForSideForFirstLe
+  - insignal: sVcCcmb_X_AirFlapPosnActForVentCentrForFirstRi
+    property: AirFlapPosnActForVentCentrForFirstRi
+  - insignal: sVcCcmb_X_AirFlapPosnActForVentForSecRiLe
+    property: AirFlapPosnActForVentForSecRiLe
+  - insignal: sVcCcmb_X_AirFlapPosnActForVentSideForFirstRi
+    property: AirFlapPosnActForVentSideForFirstRi
+  - insignal: sVcCcmb_X_AirFlapPosnTActForFirstLe
+    property: AirFlapPosnTActForFirstLe
+  - insignal: sVcCcmb_X_AirFlapPosnTActForFirstRi
+    property: AirFlapPosnTActForFirstRi
+  - insignal: sVcCcmb_X_AirFlapPosnTActForSecLe
+    property: AirFlapPosnTActForSecLe
+  - insignal: sVcCcmb_X_AirFlapPosnTActForSecRi
+    property: AirFlapPosnTActForSecRi
+
+signal_groups:
+  fioc:
+  - CmprRunSts:
+    - property: CmprRunStsCmprIPha
+      insignal: sVcFioc_I_CmprRunStsCmprIPha
+    - property: CmprRunStsCmprSpd
+      insignal: sVcFioc_n_CmprRunStsCmprSpd
+    - property: CmprRunStsCmprT
+      insignal: sVcFioc_Te_CmprRunStsCmprT
+    - property: CmprRunStsCmprU
+      insignal: sVcFioc_U_CmprRunStsCmprU
+    - property: CmprRunStsCmprI
+      insignal: sVcFioc_I_CmprRunStsCmprI
+# CmprRunStsCmprSts
+# FuHeatrSts0FuHeatrCmbAirFanErrSts
+# FuHeatrSts0FuHeatrCmbDetnErrSts
+# FuHeatrSts0FuHeatrDiagcSts
+# FuHeatrSts0FuHeatrFuPmpErrSts
+# FuHeatrSts0FuHeatrGlwPinAct
+# FuHeatrSts0FuHeatrGlwPinErrSts
+# FuHeatrSts0FuHeatrLockdSts
+# FuHeatrSts0FuHeatrOperErrSts
+# FuHeatrSts0FuHeatrSnsrCooltTErrSts
+# FuHeatrSts0FuHeatrSnsrTHiErrSts
+# FuHeatrSts0FuHeatrStsSho
+# FuHeatrSts0FuHeatrUpSts
+# FuHeatrSts0FuHeatrWtrT
+# HvCooltHeatrProtnOfSelfTmp2HwProtn
+# HvCooltHeatrProtnOfSelfTmp2Ovrheatg
+# HvCooltHeatrProtnOfSelfTmp2ProtnOfSelfTmp
+# HvCooltHeatrProtnOfSelfTmp2ProtnOfSelfTmpResd
+# HvCooltHeatrSnsrFlt2CooltTInSnsrFlt
+# HvCooltHeatrSnsrFlt2CooltTOutSnsrFlt
+# HvCooltHeatrSnsrFlt2ResdForSnsrFlt
+# HvCooltHeatrSnsrFlt2TInMtrlSnsrFlt
+# HvCooltHeatrSrvRqrd2CircForDrvrShoOrOpen
+# HvCooltHeatrSrvRqrd2ICnsOutOfRng
+# HvCooltHeatrSrvRqrd2MemErr
+# HvCooltHeatrSrvRqrd2SrvRqrd
+# HvCooltHeatrSrvRqrd2SrvRqrdResd
+# HvCooltHeatrWarn2CooltTOutOfRng
+# HvCooltHeatrWarn2FltInCom
+# HvCooltHeatrWarn2FltPrsnt
+# HvCooltHeatrWarn2FltPrsntResd
+# HvCooltHeatrWarn2HvOutOfRng
+# HvCooltHeatrWarn2ULoOutOfRng
+  - ElecExpVlvCtrl:
+    - insignal: sVcFioc_D_ElecExpVlvCtrlErrStsForChillrVlv
+      property: ElecExpVlvCtrlErrStsForChillrVlv
+    - insignal: sVcFioc_D_ElecExpVlvCtrlIninStsForChillrVlv
+      property: ElecExpVlvCtrlIninStsForChillrVlv
+    - insignal: yVcFioc_B_ElecExpVlvCtrlMotStallStsForChillrVlv
+      property: ElecExpVlvCtrlMotStallStsForChillrVlv
+    - insignal: sVcFioc_X_ElecExpVlvCtrlPsnActForChillrVlv
+      property: ElecExpVlvCtrlPsnActForChillrVlv
+    - insignal: yVcFioc_B_ElecExpVlvCtrlRunsStsForChillrVlv
+      property: ElecExpVlvCtrlRunsStsForChillrVlv
+    - insignal: sVcFioc_D_ElecExpVlvCtrlTWarnStsForChillrVlv
+      property: ElecExpVlvCtrlTWarnStsForChillrVlv
+    - insignal: sVcFioc_D_ElecExpVlvCtrlUerrStsForChillrVlv
+      property: ElecExpVlvCtrlUerrStsForChillrVlv
+
+  ##### THESE SIGNALS DOES NOT EXIST IN THE FIOC-DP YET? ################
+  # signal_groups:
+  #   fioc:
+  # - CooltPmpInHvBattCircSts:
+  #   - insignal: sVcFioc_X_CooltPmpInHvBattCircSts
+  #     property: CooltPmpInHvBattCircSts
+  # - CooltPmpInDtElecSts:
+  #   - insignal: sVcFioc_D_CooltPmpInDtElecSts
+  #     property: CooltPmpInDtElecSts
+  # - CltPmpInCircClimaSts:
+  #   - insignal: sVcFioc_D_CltPmpInCircClimaSts
+  #     property: CltPmpInCircClimaSts
+  # - PropVlvToHvBattFltSts:
+  #   - insignal: sVcFioc_D_PropVlvToHvBattFltSts
+  #     property: PropVlvToHvBattFltSts
+  # - SplrShttrSts:
+  #   - insignal: sVcFioc_D_SplrShttrSts
+  #     property: SplrShttrSts
+  # - SplrShttrFltSts:
+  #   - insignal: sVcFioc_D_SplrShttrFltSts
+  #     property: SplrShttrFltSts
+  # - SplrShttrAgAct:
+  #
+  ccmb:
+  - EvaprTFrnt2:
+    - insignal: sVcCcmb_Te_EvapTFrnt
+      property: EvaprTFrnt2EvaprTFrnt
+    - insignal: yVcCcmb_B_EvapTFrntQf
+      property: EvaprTFrnt2EvaprTQf
+  - MtrlSnsrT:
+    - insignal: sVcCcmb_Te_MtrlSnsrT
+      property: MtrlSnsrTMtrlSnsrT
+    - insignal: yVcCcmb_B_MtrlSnsrTQf
+      property: MtrlSnsrTFacQly
+  - HvacAirTForHeatrFrnt2:
+    - insignal: sVcCcmb_Te_HvacAirTForHeatrFrnt
+      property: HvacAirTForHeatrFrnt2HvacAirTForHeatrFrnt
+    - insignal: yVcCcmb_B_HvacAirTForHeatrFrntQf
+      property: HvacAirTForHeatrFrnt2HvacAirTForHeatrFrntQf
+  - HvacAirTForRowFirstAtFlrRi2:
+    - insignal: sVcCcmb_Te_HvacAirTForRowFirstAtFlrRi
+      property: HvacAirTForRowFirstAtFlrRi2HvacAirTForRowFirstAtFlrRi
+    - insignal: yVcCcmb_B_HvacAirTForRowFirstAtFlrRiQf
+      property: HvacAirTForRowFirstAtFlrRi2HvacAirTForRowFirstAtFlrRiQf
+  - HvacAirTForRowFirstAtVentLe2:
+    - insignal: sVcCcmb_Te_HvacAirTForRowFirstAtVentLe
+      property: HvacAirTForRowFirstAtVentLe2HvacAirTForRowFirstAtVentLe
+    - insignal: yVcCcmb_B_HvacAirTForRowFirstAtVentLeQf
+      property: HvacAirTForRowFirstAtVentLe2HvacAirTForRowFirstAtVentLeQf
+  - HvacAirTForRowFirstAtVentRi2:
+    - insignal: sVcCcmb_Te_HvacAirTForRowFirstAtVentRi
+      property: HvacAirTForRowFirstAtVentRi2HvacAirTForRowFirstAtVentRi
+    - insignal: yVcCcmb_B_HvacAirTForRowFirstAtVentRiQf
+      property: HvacAirTForRowFirstAtVentRi2HvacAirTForRowFirstAtVentRiQf
+  - HvacAirTForRowSecAtFlrLe:
+    - insignal: sVcCcmb_Te_HvacAirTForRowSecAtFlrLe
+      property: HvacAirTForRowSecAtFlrLeHvacAirTForRowSecAtFlrLe
+    - insignal: yVcCcmb_B_HvacAirTForRowSecAtFlrLeQf
+      property: HvacAirTForRowSecAtFlrLeQf
+  - HvacAirTForRowSecAtFlrRi:
+    - insignal: sVcCcmb_Te_HvacAirTForRowSecAtFlrRi
+      property: HvacAirTForRowSecAtFlrRiHvacAirTForRowSecAtFlrRi
+    - insignal: yVcCcmb_B_HvacAirTForRowSecAtFlrRiQf
+      property: HvacAirTForRowSecAtFlrRiQf
+  - HvacAirTForRowSecAtVentLe:
+    - insignal: sVcCcmb_Te_HvacAirTForRowSecAtVentLe
+      property: HvacAirTForRowSecAtVentLeHvacAirTForRowSecAtVentLe
+    - insignal: yVcCcmb_B_HvacAirTForRowSecAtVentLeQf
+      property: HvacAirTForRowSecAtVentLeQf
+  - HvacAirTForRowSecAtVentRi:
+    - insignal: sVcCcmb_Te_HvacAirTForRowSecAtVentRi
+      property: HvacAirTForRowSecAtVentRiHvacAirTForRowSecAtVentRi
+    - insignal: yVcCcmb_B_HvacAirTForRowSecAtVentRiQf
+      property: HvacAirTForRowSecAtVentRiQf
+  - HvacAirTForRowFirstAtFlrLe2:
+    - insignal: sVcCcmb_Te_HvacAirTForRowFirstAtFlrLe
+      property: HvacAirTForRowFirstAtFlrLe2HvacAirTForRowFirstAtFlrLe
+    - insignal: yVcCcmb_B_HvacAirTForRowFirstAtFlrLeQf
+      property: HvacAirTForRowFirstAtFlrLe2HvacAirTForRowFirstAtFlrLeQf

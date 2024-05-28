@@ -1,0 +1,27 @@
+[
+    {
+        "name": "VcExt10ms",
+        "ports": {
+            "in": {
+                "sVcModel_B_CarModes": {
+                    "primitive": "appprogint.endpoint.property",
+                    "type": "CarModes"
+                }
+            },
+            "out": {}
+        },
+        "types": [
+            {
+                "name": "CarModes",
+                "kind": "enum",
+                "enumerators": [
+                    {"CARMODES_NORMAL": "vehiclemodesprovider::types::CarModes::kNormal"},
+                    {"CARMODES_TRANSPORT": "vehiclemodesprovider::types::CarModes::kTransport"},
+                    {"CARMODES_FACTORY": "vehiclemodesprovider::types::CarModes::kFactory"},
+                    {"CARMODES_DYNO": "vehiclemodesprovider::types::CarModes::kDyno"}
+                ],
+                "default": {"CARMODES_NORMAL": "vehiclemodesprovider::types::CarModes::kNormal"}
+            }
+        ]
+    }
+]

@@ -1,0 +1,8 @@
+Range Min;Range Max
+0xE400;0xE404
+DID_NAME;DID ID
+rVcDepTre_D_CompositeDID1;0xE400
+yVcAc_B_EvaprVlvReqFrnt;0xE401
+rVcRegCh_D_RegenState;0xE402
+rVcFtivMon_D_FtivState;0xE403
+rVcLeakMon_D_State;0xE404

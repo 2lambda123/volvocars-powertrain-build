@@ -1,0 +1,171 @@
+{
+  "version": "0.2.1",
+  "outports": {
+    "yVcAesSupM_B_SupChrgrErr": {
+      "handle": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/tlop_VcAesAct_posn_EgrTar1",
+      "name": "yVcAesSupM_B_SupChrgrErr",
+      "configs": [
+        "all"],
+      "description": "Supercharger Peak Pressure engine protection activation flag",
+      "type": "Bool",
+      "unit": "%",
+      "offset": 0,
+      "lsb": 1,
+      "min": "-",
+      "max": "-",
+      "class": "CVC_DISP"}},
+  "inports": {
+    "yVcEc_B_ObdExe": {
+      "handle": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/tlop_VcXx_insignal1",
+      "name": "yVcEc_B_ObdExe",
+      "configs": [
+        [
+          "Vc_Aes_SupM_B_CodeGenSprChrg"]],
+      "description": "OBD execution flag",
+      "type": "Bool",
+      "unit": "-",
+      "offset": 0,
+      "lsb": 1,
+      "min": "-",
+      "max": "-",
+      "class": "CVC_EXT"},
+    "sVcEc_p_Amb": {
+      "handle": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/tlop_VcXx_insignal3",
+      "name": "sVcEc_p_Amb",
+      "configs": [
+        [
+          "Vc_Aes_SupM_B_CodeGenSprChrg"]],
+      "description": "Ambient pressure sensor",
+      "type": "Float32",
+      "unit": "kPa",
+      "offset": 0,
+      "lsb": 1,
+      "min": 0,
+      "max": 200,
+      "class": "CVC_EXT"}
+  },
+  "core": {
+    "Events": {
+      "VcEvSupChrPMdlPlausHi": {
+        "API_blk": [
+          {
+            "path": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/114_InformationStorage/141_CoreHiBoost/Dem_SetEventStatusPF1",
+            "config": [
+              "Vc_Aes_SupM_B_CodeGenSprChrg"]},
+          {
+            "path": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/114_InformationStorage/141_CoreHiBoost/Dem_SetEventStatusPP1",
+            "config": [
+              "Vc_Aes_SupM_B_CodeGenSprChrg"]}],
+        "blk_name": "NamedConstant2",
+        "subsystem": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/114_InformationStorage/141_CoreHiBoost",
+        "API_blk_type": "Dem_SetEventStatus Pre-Passed",
+        "description": "-",
+        "type": "-",
+        "unit": "-",
+        "offset": "-",
+        "lsb": "-",
+        "min": "-",
+        "max": "-",
+        "class": "-"}
+    },
+    "IUMPR": {},
+    "FIDs": {
+      "VcFiSupChrPMdlPlausHi": {
+        "API_blk": [
+          {
+            "path": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/112_EnaCond/FiM_GetFunctionPermission",
+            "config": [
+              "Vc_Aes_SupM_B_CodeGenSprChrg"]}],
+        "blk_name": "NamedConstant2",
+        "subsystem": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/112_EnaCond",
+        "API_blk_type": "FiM_GetFunctionPermission",
+        "description": "-",
+        "type": "-",
+        "unit": "-",
+        "offset": "-",
+        "lsb": "-",
+        "min": "-",
+        "max": "-",
+        "class": "-"}
+      },
+      "Ranking": {
+      "VcRvSupChrPMdlPlausHi": {
+        "API_blk": [
+          {
+            "path": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/114_InformationStorage/141_CoreHiBoost/Vc_SetRanking",
+            "config": [
+              "Vc_Aes_SupM_B_CodeGenSprChrg"]}],
+        "blk_name": "NamedConstant1",
+        "subsystem": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/114_InformationStorage/141_CoreHiBoost",
+        "API_blk_type": "Vcc_SetRanking",
+        "description": "-",
+        "type": "-",
+        "unit": "-",
+        "offset": "-",
+        "lsb": "-",
+        "min": "-",
+        "max": "-",
+        "class": "-"}
+      },
+    "TstId": {}},
+  "dids": {},
+  "nvm": {},
+  "pre_procs": [
+    "Vc_Aes_SupM_B_CodeGenSprChrg"],
+  "local_vars": {
+    "rVcAesSupM_p_SupMonrSCTarDly": {
+      "type": "Float32",
+      "unit": "kPa",
+      "description": "Low pass filtered supercharger target pressure",
+      "max": "300",
+      "min": "0",
+      "lsb": "1",
+      "offset": "0",
+      "class": "CVC_DISP",
+      "handle": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/111_SignalCalc/FirstOrderFilter/Sum2",
+      "configs": [
+        "Vc_Aes_SupM_B_CodeGenSprChrg"],
+      "width": "1"},
+    "rVcAesSupM_p_SupMonrPDif": {
+      "type": "Float32",
+      "unit": "kPa",
+      "description": "Supercharger actual  and target pressure difference",
+      "max": "300",
+      "min": " 300",
+      "lsb": "1",
+      "offset": "0",
+      "class": "CVC_DISP",
+      "handle": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/111_SignalCalc/Sum5",
+      "configs": [
+        "not_in_config"],
+      "width": "1"},
+    "rVcAesSupM_p_SupChrgrPDsAtmDiff": {
+      "type": "Float32",
+      "unit": "kPa",
+      "description": "Over pressure downstream supercharger",
+      "max": " ",
+      "min": " ",
+      "lsb": "1",
+      "offset": "0",
+      "class": "CVC_DISP",
+      "handle": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/2_EngProtn/21_SupChrgrPPeak/211_PPeakTest/Sum5",
+      "configs": [
+        "Vc_Aes_SupM_B_CodeGenSprChrg"],
+      "width": "1"}
+  },
+  "calib_consts": {
+    "cVcAesSupM_B_SupMonrHiBypFiMPerm": {
+      "type": "Bool",
+      "unit": "",
+      "description": "Switch to bypass FiM permission  supercharger high boost monitor",
+      "max": " ",
+      "min": " ",
+      "lsb": "1",
+      "offset": "0",
+      "class": "CVC_CAL",
+      "handle": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/VcAesSupM/1_SupMonr/11_SupChrgrSys/112_EnaCond/B_SupMonrHiBypFiMPerm",
+      "configs": [
+        "Vc_Aes_SupM_B_CodeGenSprChrg"],
+      "width": "1"}
+  }
+}

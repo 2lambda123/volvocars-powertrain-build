@@ -1,0 +1,2296 @@
+
+
+/*===========================================================================*/
+/*                    VcAesSupM                                                */
+/*===========================================================================*/
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_B_SupMonrHiBypFiMPerm	/* Name */
+        "Switch to bypass FiM permission, supercharger high boost monitor"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_B_SupMonrHiBypFiMPerm */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC cVcAesSupM_B_dcl_mimic /* Name */
+        "Mimics hand coded a2l files"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_B_dcl_mimic */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_B_SupMonrHiCluOnSw	/* Name */
+        "Switch to bypass SC clutch on flag, supercharger high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_B_SupMonrHiCluOnSw */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_B_SupMonrLoBypFiMPerm	/* Name */
+        "Switch to bypass FiM permission"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_B_SupMonrLoBypFiMPerm */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_B_SupMonrLoCluOnSw	/* Name */
+        "Switch to bypass SC clutch on flag, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_B_SupMonrLoCluOnSw */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_dp_SupMonrHiSCTarNegDrv	/* Name */
+        "Supercharger pressure target negative derivative enable condition, supercharger high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_dp_SupMonrHiSCTarNegDrv */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_d	/* Conversion */
+        -1000	/* LowerLimit */
+        0	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_dp_SupMonrHiSCTarPosDrv	/* Name */
+        "Supercharger pressure target max positive derivative enable condition, supercharger high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_dp_SupMonrHiSCTarPosDrv */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_d	/* Conversion */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_dp_SupMonrLoSCTarNegDrv	/* Name */
+        "Supercharger pressure target negative derivative enable condition, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_dp_SupMonrLoSCTarNegDrv */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_d	/* Conversion */
+        -1000	/* LowerLimit */
+        0	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_dp_SupMonrLoSCTarPosDrv	/* Name */
+        "Supercharger pressure target max positive derivative enable condition, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_dp_SupMonrLoSCTarPosDrv */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_d	/* Conversion */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_m_SupMonrHiCylRevTotMax	/* Name */
+        "Max load enable condition, supercharger high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_m_SupMonrHiCylRevTotMax */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_g	/* Conversion */
+        0	/* LowerLimit */
+        5	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_m_SupMonrHiCylRevTotMin	/* Name */
+        "Min load enable condition, supercharger high boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_m_SupMonrHiCylRevTotMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_g	/* Conversion */
+        0	/* LowerLimit */
+        5	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_m_SupMonrLoCylRevTotMax	/* Name */
+        "Max load enable condition, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_m_SupMonrLoCylRevTotMax */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_g	/* Conversion */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_m_SupMonrLoCylRevTotMin	/* Name */
+        "Min load enable condition, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_m_SupMonrLoCylRevTotMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_g	/* Conversion */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_n_SupMonrHiEngSpdMax	/* Name */
+        "Max engine speed enable condition, supercharger high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_n_SupMonrHiEngSpdMax */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_b	/* Conversion */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_n_SupMonrHiEngSpdMin	/* Name */
+        "Min engine speed enable condition, supercharger high boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_n_SupMonrHiEngSpdMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_b	/* Conversion */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_n_SupMonrLoEngSpdMax	/* Name */
+        "Max engine speed enable condition, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_n_SupMonrLoEngSpdMax */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_b	/* Conversion */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_n_SupMonrLoEngSpdMin	/* Name */
+        "Min engine speed enable condition, supercharger low boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_n_SupMonrLoEngSpdMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_b	/* Conversion */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_p_SupChrgrPPeakHealLim	/* Name */
+        "Supercharger pressure peak healing delay"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_p_SupChrgrPPeakHealLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        0	/* LowerLimit */
+        200	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_p_SupChrgrStuckErrLim	/* Name */
+        "Error limit for stuck supercharger engine protection (prot off under this limit)"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_p_SupChrgrStuckErrLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        0	/* LowerLimit */
+        500	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_p_SupMonrHiAmbpMin	/* Name */
+        "Min ambient pressure enable condition, supercharger high boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_p_SupMonrHiAmbpMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        0	/* LowerLimit */
+        110	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_p_SupMonrHiTarMin	/* Name */
+        "Min target boost pressure enable condition, supercharger high boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_p_SupMonrHiTarMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        -1000	/* LowerLimit */
+        1000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_p_SupMonrLoAmbpMin	/* Name */
+        "Min ambient pressure enable condition, supercharger low boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_p_SupMonrLoAmbpMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_p_SupMonrLoTarMax	/* Name */
+        "Min target boost pressure enable condition, supercharger low boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_p_SupMonrLoTarMax */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        0	/* LowerLimit */
+        200	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_p_SupMonrLoTarMin	/* Name */
+        "Min target boost pressure enable condition, supercharger low boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_p_SupMonrLoTarMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        -1000	/* LowerLimit */
+        1000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_t_SupChrgrPPeakErrDly	/* Name */
+        "Supercharger peak pressure engine protection activation delay"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_t_SupChrgrPPeakErrDly */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        1000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_t_SupChrgrPPeakHealDly	/* Name */
+        "Supercharger peak pressure engine protection deactivation delay"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_t_SupChrgrPPeakHealDly */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        3.402823466e38	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_t_SupChrgrStuckErrDly	/* Name */
+        "Supercharger Stuck engine protection activation delay"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_t_SupChrgrStuckErrDly */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        1000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_t_SupChrgrStuckHealDly	/* Name */
+        "Supercharger stuck engine protection deactivation delay (allow retest after this delay time)"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_t_SupChrgrStuckHealDly */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        3.402823466e38	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_t_SupChrgrStuckRefResetDly	/* Name */
+        "Supercharger Stuck monitor maximum activation time"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_t_SupChrgrStuckRefResetDly */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        3.402823466e38	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_t_SupMonrHiAvgTi	/* Name */
+        "Supercharger high boost test value average calculation time"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_t_SupMonrHiAvgTi */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        100	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_t_SupMonrLoAvgTi	/* Name */
+        "Supercharger low boost test value average calculation time"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_t_SupMonrLoAvgTi */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        100	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_tc_SupMonrHiSCTar	/* Name */
+        "Supercharger boost pressure monitor, target pressure deriviative time constant"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_tc_SupMonrHiSCTar */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        1000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_tc_SupMonrHiTiConCmprThr	/* Name */
+        "Supercharger bypass throttle position derivative time constant, supercharger high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_tc_SupMonrHiTiConCmprThr */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        100	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_tc_SupMonrLoSCTar	/* Name */
+        "Supercharger boost pressure monitor, target pressure deriviative time constant, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_tc_SupMonrLoSCTar */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        1000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_tc_SupMonrLoTiConCmprThr	/* Name */
+        "Supercharger bypass throttle position derivative time constant, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_tc_SupMonrLoTiConCmprThr */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        100	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_Te_SupMonrHiTempMin	/* Name */
+        "Min temperature upstream SC enable condition, supercharger high boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_Te_SupMonrHiTempMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_a	/* Conversion */
+        -40	/* LowerLimit */
+        500	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_Te_SupMonrLoTempMin	/* Name */
+        "Min temperature upstream SC enable condition, supercharger low boost "	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_Te_SupMonrLoTempMin */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_a	/* Conversion */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupChrgrStuckThrPosMaxLim	/* Name */
+        "Error limit for stuck supercharger engine protection (prot off under this limit)"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupChrgrStuckThrPosMaxLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_k	/* Conversion */
+        0	/* LowerLimit */
+        500	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupChrgrStuckThrPosRefLim	/* Name */
+        "Bypass throttle max limit to freeze pressure reference value"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupChrgrStuckThrPosRefLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_k	/* Conversion */
+        0	/* LowerLimit */
+        500	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupMonrHiCmprThrMaxLim	/* Name */
+        "Supercharger throttle enable coindition, SC high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupMonrHiCmprThrMaxLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_k	/* Conversion */
+        0	/* LowerLimit */
+        110	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupMonrHiThrNegDrv	/* Name */
+        "Supercharger throttle max negative derivative enable condition, supercharger high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupMonrHiThrNegDrv */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_l	/* Conversion */
+        -1000	/* LowerLimit */
+        0	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupMonrHiThrPosDrv	/* Name */
+        "Supercharger throttle max positive derivative enable condition, supercharger high boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupMonrHiThrPosDrv */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_l	/* Conversion */
+        0	/* LowerLimit */
+        1000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupMonrLoThrMaxLim	/* Name */
+        "Supercharger throttle enable coindition, SC low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupMonrLoThrMaxLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_k	/* Conversion */
+        0	/* LowerLimit */
+        300	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupMonrLoThrMinLim	/* Name */
+        "Supercharger throttle enable coindition, SC low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupMonrLoThrMinLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_k	/* Conversion */
+        -10	/* LowerLimit */
+        100	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupMonrLoThrNegDrv	/* Name */
+        "Supercharger throttle max negative derivative enable condition, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupMonrLoThrNegDrv */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_l	/* Conversion */
+        -1000	/* LowerLimit */
+        0	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesSupM_X_SupMonrLoThrPosDrv	/* Name */
+        "Supercharger throttle max positive derivative enable condition, supercharger low boost"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesSupM_X_SupMonrLoThrPosDrv */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_l	/* Conversion */
+        0	/* LowerLimit */
+        1000	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        mVcAesSupM_m_SupChrgrStuckMaxLoadLim	/* Name */
+        "Supercharger stuck load limit"	/* LongIdentifier */
+        MAP	/* Type */
+        0x00000000    /* address: mVcAesSupM_m_SupChrgrStuckMaxLoadLim */
+        UWORD_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_0_000244140625	/* Conversion */
+        0	/* LowerLimit */
+        5	/* UpperLimit */
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_0_00390625	/* Conversion */
+            3	/* MaxAxisPoints */
+            0	/* LowerLimit */
+            200	/* UpperLimit */
+            AXIS_PTS_REF mVcAesSupM_m_SupChrgrStuckMaxLoadLim_r
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_0_25	/* Conversion */
+            4	/* MaxAxisPoints */
+            0	/* LowerLimit */
+            10000	/* UpperLimit */
+            AXIS_PTS_REF mVcAesSupM_m_SupChrgrStuckMaxLoadLim_c
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        tVcAesSupM_fac_SupChrgrStuckMaxLoadCmp	/* Name */
+        "temperature factor for load limit compensation"	/* LongIdentifier */
+        CURVE	/* Type */
+        0x00000000    /* address: tVcAesSupM_fac_SupChrgrStuckMaxLoadCmp */
+        UWORD_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_6_103515625em05	/* Conversion */
+        0	/* LowerLimit */
+        3.99	/* UpperLimit */
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_0_03125	/* Conversion */
+            4	/* MaxAxisPoints */
+            0	/* LowerLimit */
+            1000	/* UpperLimit */
+            AXIS_PTS_REF tVcAesSupM_fac_SupChrgrStuckMaxLoadCmp_x
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        tVcAesSupM_p_SupChrgrPPeakLim	/* Name */
+        "Supercharger peak boost pressure protection activation limit"	/* LongIdentifier */
+        CURVE	/* Type */
+        0x00000000    /* address: tVcAesSupM_p_SupChrgrPPeakLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_1_a	/* Conversion */
+            4	/* MaxAxisPoints */
+            0	/* LowerLimit */
+            1000	/* UpperLimit */
+            AXIS_PTS_REF tVcAesSupM_p_SupChrgrPPeakLim_x
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        tVcAesSupM_p_SupMonrHiErrLim	/* Name */
+        "Supercharger high boost pressure monitor error limit"	/* LongIdentifier */
+        CURVE	/* Type */
+        0x00000000    /* address: tVcAesSupM_p_SupMonrHiErrLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        -50	/* LowerLimit */
+        200	/* UpperLimit */
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_1_b	/* Conversion */
+            6	/* MaxAxisPoints */
+            0	/* LowerLimit */
+            10000	/* UpperLimit */
+            AXIS_PTS_REF tVcAesSupM_p_SupMonrHiErrLim_x
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        tVcAesSupM_p_SupMonrLoErrLim	/* Name */
+        "Supercharger low boost pressure monitor error limit"	/* LongIdentifier */
+        CURVE	/* Type */
+        0x00000000    /* address: tVcAesSupM_p_SupMonrLoErrLim */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1	/* Conversion */
+        -200	/* LowerLimit */
+        50	/* UpperLimit */
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_1_b	/* Conversion */
+            6	/* MaxAxisPoints */
+            0	/* LowerLimit */
+            10000	/* UpperLimit */
+            AXIS_PTS_REF tVcAesSupM_p_SupMonrLoErrLim_x
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        tVcAesSupM_t_SupMonrHiEnaDly	/* Name */
+        "Supercharger high boost pressure monitor, enable condition delay time"	/* LongIdentifier */
+        CURVE	/* Type */
+        0x00000000    /* address: tVcAesSupM_t_SupMonrHiEnaDly */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        100	/* UpperLimit */
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_1_a	/* Conversion */
+            5	/* MaxAxisPoints */
+            -50	/* LowerLimit */
+            500	/* UpperLimit */
+            AXIS_PTS_REF tVcAesSupM_t_SupMonrHiEnaDly_x
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        tVcAesSupM_t_SupMonrLoEnaDly	/* Name */
+        "Supercharger low boost pressure monitor, enable condition delay time"	/* LongIdentifier */
+        CURVE	/* Type */
+        0x00000000    /* address: tVcAesSupM_t_SupMonrLoEnaDly */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        100	/* UpperLimit */
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_1_a	/* Conversion */
+            5	/* MaxAxisPoints */
+            -50	/* LowerLimit */
+            500	/* UpperLimit */
+            AXIS_PTS_REF tVcAesSupM_t_SupMonrLoEnaDly_x
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        tVcAesSupM_tc_SupMonrSCTarDly	/* Name */
+        "Supercharger boost pressure monitor, target pressure lowpass filter time constant, engine speed support points"	/* LongIdentifier */
+        CURVE	/* Type */
+        0x00000000    /* address: tVcAesSupM_tc_SupMonrSCTarDly */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_c	/* Conversion */
+        0	/* LowerLimit */
+        100	/* UpperLimit */
+        /begin AXIS_DESCR
+            COM_AXIS	/* Attribute */
+            NO_INPUT_QUANTITY	/* InputQuantity */
+            EQ_LSB_1_b	/* Conversion */
+            6	/* MaxAxisPoints */
+            0	/* LowerLimit */
+            10000	/* UpperLimit */
+            AXIS_PTS_REF tVcAesSupM_tc_SupMonrSCTarDly_x
+            DEPOSIT ABSOLUTE
+        /end AXIS_DESCR
+    /end CHARACTERISTIC
+
+    /begin AXIS_PTS
+        mVcAesSupM_m_SupChrgrStuckMaxLoadLim_c	/* Name */
+        "Engine speed breakpoint data for supercharger stuck load limit "	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        UWORD_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_0_25	/* Conversion */
+        4	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        mVcAesSupM_m_SupChrgrStuckMaxLoadLim_r	/* Name */
+        "Ambient Pressure breakpoint data for supercharger stuck load limit "	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        UWORD_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_0_00390625	/* Conversion */
+        3	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        200	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesSupM_fac_SupChrgrStuckMaxLoadCmp_x	/* Name */
+        "Temperature correction for supercharger stuck load limit"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        UWORD_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_0_03125	/* Conversion */
+        4	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        1000	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesSupM_p_SupChrgrPPeakLim_x	/* Name */
+        "Supercharger downstream temperature breakpoint data"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_a	/* Conversion */
+        4	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        1000	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesSupM_p_SupMonrHiErrLim_x	/* Name */
+        "Supercharger high boost pressure monitor error limit engine speed support points"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_b	/* Conversion */
+        6	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesSupM_p_SupMonrLoErrLim_x	/* Name */
+        "Supercharger low boost pressure monitor error limit engine speed support points"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_b	/* Conversion */
+        6	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesSupM_t_SupMonrHiEnaDly_x	/* Name */
+        "Supercharger high boost pressure monitor, enable condition delay time support points"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_a	/* Conversion */
+        5	/* MaxAxisPoints */
+        -50	/* LowerLimit */
+        500	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesSupM_t_SupMonrLoEnaDly_x	/* Name */
+        "Supercharger low boost pressure monitor, enable condition delay time support points"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_a	/* Conversion */
+        5	/* MaxAxisPoints */
+        -50	/* LowerLimit */
+        500	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesSupM_tc_SupMonrSCTarDly_x	/* Name */
+        "Supercharger boost pressure monitor, target pressure lowpass filter time constant, engine speed support points"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_b	/* Conversion */
+        6	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin MEASUREMENT
+        rVcAesSupM_fac_SupChrgrStuckMaxLoadCmp	/* Name */
+        "temperature factor for load limit compensation"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1_h	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_m_SupChrgrStuckMaxLoadLim	/* Name */
+        "Supercharger stuck load limit"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1_g	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_m_SupChrgrStuckMaxLoadLimBase	/* Name */
+        "Supercharger stuck load limit"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1_g	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        5	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_p_SupChgrStuckPDiff	/* Name */
+        "Diff pressure before/after supercharger engagement"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -300	/* LowerLimit */
+        300	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_p_SupChrgrPDsAtmDiff	/* Name */
+        "Over pressure downstream supercharger"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_p_SupChrgrStuckPDiffMax	/* Name */
+        "Maximum supercharger diff pressure during stuck test"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -500	/* LowerLimit */
+        500	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_p_SupMonrHiTstVal	/* Name */
+        "Supercharger high boost pressure test value "	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -300	/* LowerLimit */
+        300	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_p_SupMonrLoTstVal	/* Name */
+        "Supercharger low boost pressure test value "	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -300	/* LowerLimit */
+        300	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_p_SupMonrPDif	/* Name */
+        "Supercharger actual- and target pressure difference"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -300	/* LowerLimit */
+        300	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_p_SupMonrSCTar	/* Name */
+        "Supercharger target boost pressure, compensated for ambient pressure"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -300	/* LowerLimit */
+        300	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_p_SupMonrSCTarDly	/* Name */
+        "Low pass filtered supercharger target pressure"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        300	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_Z_SupMonrHiBoostRnkVal	/* Name */
+        "Supercharger high boost ranking value"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        VOID_SCALING_f	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        255	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_Z_SupMonrHiSCTarDrv	/* Name */
+        "Trajectory differential"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1_d	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_Z_SupMonrHiSCThrDrv	/* Name */
+        "Trajectory differential"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1_d	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_Z_SupMonrLoBoostRnkVal	/* Name */
+        "Supercharger low boost ranking value"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        VOID_SCALING_f	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        255	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_Z_SupMonrLoSCTarDrv	/* Name */
+        "Trajectory differential"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1_d	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesSupM_Z_SupMonrLoSCThrDrv	/* Name */
+        "Trajectory differential"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1_d	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -100000	/* LowerLimit */
+        100000	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupChrgrPPeakErr	/* Name */
+        "Engine protection from high supercharger pressure activation flag"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupChrgrStuckEnable	/* Name */
+        "SC CLutch and bypass throttle Enable conditions enabled"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupChrgrStuckErr	/* Name */
+        "Engine protection from high supercharger pressure activation flag"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupChrgrStuckExe	/* Name */
+        "Supercharger stuck monitor executes"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupChrgrStuckUnfiltErr	/* Name */
+        "Supercharger stuck error, unfiltered"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiAmbpEna	/* Name */
+        "Ambient pressure enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiCluOnEna	/* Name */
+        "Supercharger clutch enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiCmprThrEna	/* Name */
+        "Supercharger bypass throttle enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiCylRevEna	/* Name */
+        "Engine load enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiEna	/* Name */
+        ""	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiEngSpdEna	/* Name */
+        "Engine speed enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiErr	/* Name */
+        "Supercharger boost pressure to high error"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiExe	/* Name */
+        "High boost pressure monitor entry condition"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiOk	/* Name */
+        "Supercharger monitor high boost OK"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiSCTarDrvEna	/* Name */
+        "Supercharger target pressure derivative enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiSCTempEna	/* Name */
+        "Supercharger inlet temperature enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiStabEna	/* Name */
+        "Delayed trajectory pressure stable entry condition"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiTarEna	/* Name */
+        "Supercharger target pressure enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiThrDrvEna	/* Name */
+        "Supercharger bypass throttle derivative enable condition, supercharger high boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrHiTstValCmplt	/* Name */
+        "Supercharger high boost pressure monitor test value (average calculation) complete"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoAmbpEna	/* Name */
+        "Ambient pressure enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoCluOnEna	/* Name */
+        "Supercharger clutch enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoCmprThrEna	/* Name */
+        "Supercharger target pressure derivative enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        EQ_LSB_1_e	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoCmprThrMaxEna	/* Name */
+        "Supercharger bypass throttle enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        EQ_LSB_1_e	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoCmprThrMinEna	/* Name */
+        "Supercharger bypass throttle enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        EQ_LSB_1_e	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoCylRevEna	/* Name */
+        "Engine load enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoEna	/* Name */
+        ""	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoEngSpdEna	/* Name */
+        "Engine speed enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoErr	/* Name */
+        "Supercharger boost pressure too low error"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoExe	/* Name */
+        "Low boost pressure monitor entry condition"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoOk	/* Name */
+        "Supercharger monitor low boost OK"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoSCTarDrvEna	/* Name */
+        "Supercharger target pressure derivative enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoSCTempEna	/* Name */
+        "Supercharger inlet temperature enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoStabEna	/* Name */
+        "Delayed trajectory pressure stable entry condition"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoTarEna	/* Name */
+        "Supercharger target pressure derivative enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        EQ_LSB_1_e	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoTarMaxEna	/* Name */
+        "Supercharger target pressure enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        EQ_LSB_1_e	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoTarMinEna	/* Name */
+        "Supercharger target pressure enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        EQ_LSB_1_e	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoThrDrvEna	/* Name */
+        "Supercharger bypass throttle derivative enable condition, supercharger low boost"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        xVcAesSupM_B_SupMonrLoTstValCmplt	/* Name */
+        "Supercharger low boost pressure monitor test value (average calculation) complete"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        yVcAesSupM_B_SupChrgrErr	/* Name */
+        "Supercharger Peak Pressure engine protection activation flag"	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        EQ_LSB_1_j	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BIT_MASK 0x1
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD
+        EQ_LSB_0_000244140625	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%15.12"	/* Format */
+        "g/rev"	/* Unit */
+        COEFFS 0 1 0 0 0 0.000244140625
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_0_00390625	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.8"	/* Format */
+        "kPa"	/* Unit */
+        COEFFS 0 1 0 0 0 0.00390625
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_0_03125	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%10.5"	/* Format */
+        "K"	/* Unit */
+        COEFFS 0 1 0 0 0 0.03125
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_0_25	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%8.2"	/* Format */
+        "rpm"	/* Unit */
+        COEFFS 0 1 0 0 0 0.25
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "kPa"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_a	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "K"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_b	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "rpm"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_c	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "s"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_d	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "kPa/s"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_e	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%1.0"	/* Format */
+        "-"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_g	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "g/rev"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_h	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "-"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_j	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%1.0"	/* Format */
+        "%"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_k	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "%"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_l	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "%/s"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_6_103515625em05	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%16.14"	/* Format */
+        "-"	/* Unit */
+        COEFFS 0 1 0 0 0 6.103515625e-05
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        VOID_SCALING	/* Name */
+        "Void scaling for unscaled variables"	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%1.0"	/* Format */
+        ""	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        VOID_SCALING_f	/* Name */
+        "Void scaling for unscaled variables"	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        ""	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin FUNCTION
+        SAesSupM__g29_Avg1	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesSupM_t_SupMonrHiAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrPDif	/* Identifier */
+            xVcAesSupM_B_SupMonrHiExe	/* Identifier */
+            rVcAesSupM_p_SupMonrHiTstVal	/* Identifier */
+            xVcAesSupM_B_SupMonrHiTstValCmplt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g32_Subsystem	/* Identifier */
+            SAesSupM__g31_EnabledSubsystem	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g30_Avg2	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesSupM_t_SupMonrLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrPDif	/* Identifier */
+            xVcAesSupM_B_SupMonrLoExe	/* Identifier */
+            rVcAesSupM_p_SupMonrLoTstVal	/* Identifier */
+            xVcAesSupM_B_SupMonrLoTstValCmplt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g34_Subsystem	/* Identifier */
+            SAesSupM__g33_EnabledSubsystem	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g31_EnabledSubsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g32_Subsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesSupM_t_SupMonrHiAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrPDif	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g33_EnabledSubsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g34_Subsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesSupM_t_SupMonrLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrPDif	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g35_141_CoreHiBoost	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            tVcAesSupM_p_SupMonrHiErrLim	/* Identifier */
+            tVcAesSupM_p_SupMonrHiErrLim_x	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrHiTstVal	/* Identifier */
+            rVcAesSupM_Z_SupMonrHiBoostRnkVal	/* Identifier */
+            xVcAesSupM_B_SupMonrHiOk	/* Identifier */
+            xVcAesSupM_B_SupMonrHiErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g41___rtional_Ranking	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g36_142_CoreLoBoost	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            tVcAesSupM_p_SupMonrLoErrLim	/* Identifier */
+            tVcAesSupM_p_SupMonrLoErrLim_x	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrLoTstVal	/* Identifier */
+            rVcAesSupM_Z_SupMonrLoBoostRnkVal	/* Identifier */
+            xVcAesSupM_B_SupMonrLoOk	/* Identifier */
+            xVcAesSupM_B_SupMonrLoErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g50___rtional_Ranking	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g41___rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrHiTstVal	/* Identifier */
+            xVcAesSupM_B_SupMonrHiErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g44_FaultFree	/* Identifier */
+            SAesSupM__g45_WithFault	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g44_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g45_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g5_11_SupChrgrSys	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            tVcAesSupM_t_SupMonrLoEnaDly	/* Identifier */
+            tVcAesSupM_t_SupMonrLoEnaDly_x	/* Identifier */
+            tVcAesSupM_t_SupMonrHiEnaDly	/* Identifier */
+            tVcAesSupM_t_SupMonrHiEnaDly_x	/* Identifier */
+            tVcAesSupM_tc_SupMonrSCTarDly	/* Identifier */
+            tVcAesSupM_tc_SupMonrSCTarDly_x	/* Identifier */
+            cVcAesSupM_B_SupMonrHiBypFiMPerm	/* Identifier */
+            cVcAesSupM_B_dcl_mimic	/* Identifier */
+            cVcAesSupM_B_SupMonrHiCluOnSw	/* Identifier */
+            cVcAesSupM_B_SupMonrLoBypFiMPerm	/* Identifier */
+            cVcAesSupM_B_SupMonrLoCluOnSw	/* Identifier */
+            cVcAesSupM_Te_SupMonrHiTempMin	/* Identifier */
+            cVcAesSupM_Te_SupMonrLoTempMin	/* Identifier */
+            cVcAesSupM_X_SupMonrHiCmprThrMaxLim	/* Identifier */
+            cVcAesSupM_X_SupMonrHiThrNegDrv	/* Identifier */
+            cVcAesSupM_X_SupMonrHiThrPosDrv	/* Identifier */
+            cVcAesSupM_X_SupMonrLoThrMaxLim	/* Identifier */
+            cVcAesSupM_X_SupMonrLoThrMinLim	/* Identifier */
+            cVcAesSupM_X_SupMonrLoThrNegDrv	/* Identifier */
+            cVcAesSupM_X_SupMonrLoThrPosDrv	/* Identifier */
+            cVcAesSupM_dp_SupMonrHiSCTarNegDrv	/* Identifier */
+            cVcAesSupM_dp_SupMonrHiSCTarPosDrv	/* Identifier */
+            cVcAesSupM_dp_SupMonrLoSCTarNegDrv	/* Identifier */
+            cVcAesSupM_dp_SupMonrLoSCTarPosDrv	/* Identifier */
+            cVcAesSupM_m_SupMonrHiCylRevTotMax	/* Identifier */
+            cVcAesSupM_m_SupMonrHiCylRevTotMin	/* Identifier */
+            cVcAesSupM_m_SupMonrLoCylRevTotMax	/* Identifier */
+            cVcAesSupM_m_SupMonrLoCylRevTotMin	/* Identifier */
+            cVcAesSupM_n_SupMonrHiEngSpdMax	/* Identifier */
+            cVcAesSupM_n_SupMonrHiEngSpdMin	/* Identifier */
+            cVcAesSupM_n_SupMonrLoEngSpdMax	/* Identifier */
+            cVcAesSupM_n_SupMonrLoEngSpdMin	/* Identifier */
+            cVcAesSupM_p_SupMonrHiAmbpMin	/* Identifier */
+            cVcAesSupM_p_SupMonrHiTarMin	/* Identifier */
+            cVcAesSupM_p_SupMonrLoAmbpMin	/* Identifier */
+            cVcAesSupM_p_SupMonrLoTarMax	/* Identifier */
+            cVcAesSupM_p_SupMonrLoTarMin	/* Identifier */
+            cVcAesSupM_tc_SupMonrHiSCTar	/* Identifier */
+            cVcAesSupM_tc_SupMonrHiTiConCmprThr	/* Identifier */
+            cVcAesSupM_tc_SupMonrLoSCTar	/* Identifier */
+            cVcAesSupM_tc_SupMonrLoTiConCmprThr	/* Identifier */
+            cVcAesSupM_t_SupMonrHiAvgTi	/* Identifier */
+            cVcAesSupM_t_SupMonrLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrSCTarDly	/* Identifier */
+            rVcAesSupM_p_SupMonrPDif	/* Identifier */
+            rVcAesSupM_Z_SupMonrHiSCThrDrv	/* Identifier */
+            rVcAesSupM_Z_SupMonrLoSCThrDrv	/* Identifier */
+            rVcAesSupM_Z_SupMonrHiSCTarDrv	/* Identifier */
+            rVcAesSupM_Z_SupMonrLoSCTarDrv	/* Identifier */
+            xVcAesSupM_B_SupMonrLoEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiCluOnEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoExe	/* Identifier */
+            xVcAesSupM_B_SupMonrLoCluOnEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoThrDrvEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiThrDrvEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiSCTarDrvEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoSCTarDrvEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoTarEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoCmprThrEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiCylRevEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiExe	/* Identifier */
+            xVcAesSupM_B_SupMonrLoCylRevEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiEngSpdEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoEngSpdEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiAmbpEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiTarEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoAmbpEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoTarMaxEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiSCTempEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoSCTempEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoTarMinEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoCmprThrMinEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoCmprThrMaxEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiCmprThrEna	/* Identifier */
+            xVcAesSupM_B_SupMonrHiStabEna	/* Identifier */
+            xVcAesSupM_B_SupMonrLoStabEna	/* Identifier */
+            rVcAesSupM_p_SupMonrSCTar	/* Identifier */
+            rVcAesSupM_p_SupMonrHiTstVal	/* Identifier */
+            xVcAesSupM_B_SupMonrHiTstValCmplt	/* Identifier */
+            rVcAesSupM_p_SupMonrLoTstVal	/* Identifier */
+            xVcAesSupM_B_SupMonrLoTstValCmplt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g36_142_CoreLoBoost	/* Identifier */
+            SAesSupM__g35_141_CoreHiBoost	/* Identifier */
+            SAesSupM__g29_Avg1	/* Identifier */
+            SAesSupM__g30_Avg2	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g50___rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrLoTstVal	/* Identifier */
+            xVcAesSupM_B_SupMonrLoErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g53_FaultFree	/* Identifier */
+            SAesSupM__g54_WithFault	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g53_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g54_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesSupM_p_SupMonrLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g55_21_SupChrgrPPeak	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            xVcAesSupM_B_SupChrgrPPeakErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g59_211_PPeakTest	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g56_22_SupChrgrStuck	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            xVcAesSupM_B_SupChrgrStuckErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesSupM__g70_221_StuckTest	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g59_211_PPeakTest	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            tVcAesSupM_p_SupChrgrPPeakLim	/* Identifier */
+            tVcAesSupM_p_SupChrgrPPeakLim_x	/* Identifier */
+            cVcAesSupM_p_SupChrgrPPeakHealLim	/* Identifier */
+            cVcAesSupM_t_SupChrgrPPeakErrDly	/* Identifier */
+            cVcAesSupM_t_SupChrgrPPeakHealDly	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesSupM_B_SupChrgrPPeakErr	/* Identifier */
+            rVcAesSupM_p_SupChrgrPDsAtmDiff	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesSupM__g70_221_StuckTest	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            mVcAesSupM_m_SupChrgrStuckMaxLoadLim	/* Identifier */
+            mVcAesSupM_m_SupChrgrStuckMaxLoadLim_r	/* Identifier */
+            mVcAesSupM_m_SupChrgrStuckMaxLoadLim_c	/* Identifier */
+            tVcAesSupM_fac_SupChrgrStuckMaxLoadCmp	/* Identifier */
+            tVcAesSupM_fac_SupChrgrStuckMaxLoadCmp_x	/* Identifier */
+            cVcAesSupM_X_SupChrgrStuckThrPosRefLim	/* Identifier */
+            cVcAesSupM_t_SupChrgrStuckRefResetDly	/* Identifier */
+            cVcAesSupM_X_SupChrgrStuckThrPosMaxLim	/* Identifier */
+            cVcAesSupM_p_SupChrgrStuckErrLim	/* Identifier */
+            cVcAesSupM_t_SupChrgrStuckErrDly	/* Identifier */
+            cVcAesSupM_t_SupChrgrStuckHealDly	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesSupM_B_SupChrgrStuckEnable	/* Identifier */
+            rVcAesSupM_p_SupChgrStuckPDiff	/* Identifier */
+            xVcAesSupM_B_SupChrgrStuckExe	/* Identifier */
+            xVcAesSupM_B_SupChrgrStuckUnfiltErr	/* Identifier */
+            rVcAesSupM_p_SupChrgrStuckPDiffMax	/* Identifier */
+            rVcAesSupM_m_SupChrgrStuckMaxLoadLim	/* Identifier */
+            xVcAesSupM_B_SupChrgrStuckErr	/* Identifier */
+            rVcAesSupM_fac_SupChrgrStuckMaxLoadCmp	/* Identifier */
+            rVcAesSupM_m_SupChrgrStuckMaxLoadLimBase	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        test_mrg	/* Name */
+        ""	/* LongIdentifier */
+        /begin OUT_MEASUREMENT
+            yVcAesSupM_B_SupChrgrErr	/* Identifier */
+        /end OUT_MEASUREMENT 
+        /begin SUB_FUNCTION
+            SAesSupM__g56_22_SupChrgrStuck	/* Identifier */
+            SAesSupM__g55_21_SupChrgrPPeak	/* Identifier */
+            SAesSupM__g5_11_SupChrgrSys	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin RECORD_LAYOUT
+        FLOAT32_IEEE_COL_DIRECT	/* Name */
+        FNC_VALUES 1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Name */
+        AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        UBYTE_COL_DIRECT	/* Name */
+        FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        UWORD_COL_DIRECT	/* Name */
+        FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        UWORD_X_INCR_DIRECT	/* Name */
+        AXIS_PTS_X 1 UWORD INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+

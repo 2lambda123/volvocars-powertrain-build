@@ -1,0 +1,563 @@
+Switch name;Description;VED4_GENII;VED4_GENIII;VEP4_GENII_HYBRID;VEP4_GENII_PS14;VEP4_GENII;VEP4_GENII_7DCT;VEP4_GENIII;GEP3_HEP7;GEP3_HRE;GEP3_PFI_HEV;GEP3_SPA;GEP3_BEV
+Vc.Ac.Ctrl.B_Codegen;Only used for ME9 special AC module;NA;NA;0;0;0;0;0;0;0;0;0;0
+Vc.Ac.Ctrl.B_CodeGenMecAC;Generate code for mechanical AC;1;1;0;0;1;1;1;0;0;0;1;0
+Vc.Ac.Ctrl.B_CodeGenFixDisplacementAc;Fix displacement AC  (handled by calibration for EDC17);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Ac.Ctrl.B_CodeGenTorqueEstOff;Disables AcCtrl torque estimation;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Ac.Ctrl.B_CodeGenTorqueEstOn;Enables AcCtrl torque estimation;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Ac.Ctrl.B_CodeGenVariableDisplacementAc;Variable displacement AC (handled by calibration for EDC17);1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Ac.Fan.B_Codegen;Only used for ME9 special AC module;NA;NA;0;0;0;0;0;0;0;0;0;0
+Vc.Ac.Ovr.B_Codegen;Only used for ME9 special AC module;NA;NA;0;0;0;0;0;0;0;0;0;0
+Vc.AcReg.B_CodegenPHEV;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.B_CodeGenBasCalDsl;Diesel configuration for air system;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.B_CodeGenDiesel;Diesel configuration for air system;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.B_CodeGenDsl;Diesel configuration for air system;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.B_CodeGenEgr;Egr system;1;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.B_CodeGenEgrLongRoute;Long route EGR functionality active;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.B_CodeGenGEP3;;0;0;0;0;0;0;1;1;1;1;1;0
+Vc.Aes.B_CodeGenGsl;Gasoline configuration for air system;0;0;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.B_CodeGenSC;Supercharger functions;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Bc.B_CodeGenBaseModes;Configure setpoint structure to use base modes;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Bc.B_CodeGenBoostAvl;Max available boost pressure function;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Bc.B_CodeGenBoostMaxRgn;Max boost limit dedicated for regneration mode;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Bc.B_CodeGenEgrCoolr;Oscillator function for robustness tests;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ch.B_CodeGenCcv;Code switch for Crank Case Ventilation flow estimation;0;0;0;0;0;0;1;1;1;1;1;0
+Vc.Aes.Ch.B_CodeGenLocalThrMon;Local throttle monitor for max torque guard;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ch.B_CodeGenThrIdleMax;Max limitation of idle throttle;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Co.B_CodeGenDrvModIdleNvh;Drive mode conditions for NVH idle throttle control;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Co.B_CodeGenDrvModSignal;Use new Drive mode signal for AES;1;0;1;1;1;1;0;1;1;1;1;0
+Vc.Aes.Co.B_CodeGenIntkFil;Intake manifold pressure filter;0;0;0;0;0;0;0;1;1;1;1;0
+Vc.Aes.Co.B_CodeGenMafBasCmp;MAF base compensation;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Co.B_CodeGenMafPlsCmp;MAF pulsation compensation;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Co.B_CodeGenOscr;Oscillator function for robustness tests;1;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Co.B_CodeGenPresAdpn;Pressure adaptation from ambient at ignition;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ct.B_CodeGenBoostCtrl;Extra boost control coordination functions;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ct.B_CodeGenLoadTran;Transient load detection for EGR/VNT control coordination, VcAesCt/9_LoadTran;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ct.B_CodeGenTqTran;Transient torque detection for EGR compensation, VcAesCt/4_TqTran;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.EgrM.B_CodeGenEgr;Generate code for Egr monitor;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.EgrM.B_CodeGenEgrClr;Generate code for Egr cooler monitor;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Hw.B_CodeGenAirBypVlv;Present logic for air bypass valve;0;0;1;1;1;1;1;0;0;0;0;0
+Vc.Aes.Hw.B_CodeGenVntGvnr;VNT position controller (vacuum);1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Mo.B_CodeGenMafLrng;MAF learning adaptation of modeled cylinder charge;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Mo.B_CodeGenMafLrngLam;MAF learning adaptation from lambda sensor;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Mo.B_CodeGenMafLrngNvm;NVM memory storage for MAF learning adaptations;1;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Obd.B_CodeGenExhP;Exhaust pressure monitor present;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Obd.B_CodeGenMaf;Activate the Maf monitoring.;1;1;1;1;1;1;1;0;0;0;0;0
+Vc.Aes.Sc.B_CodeGenISG;ISG functionality for SC engagement;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Sp.B_BoostScav;Boost controlled scavenging operation;0;0;1;1;1;1;1;0;0;0;0;0
+Vc.Aes.Sp.B_CodeGenBoostAvl;Use available boost functionality;1;0;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.Sp.B_CodeGenBoostOperMod;Individual combustion operating mode setpoint;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Sp.B_CodeGenBoostProtnT;Model-based temperature boost protection;0;0;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.Sp.B_CodeGenCylReqMaxTq;Max load calculation;0;0;0;0;0;0;1;1;1;1;1;0
+Vc.Aes.Sp.B_CodeGenCylReqMin;Min load for combustion stability;0;0;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.Sp.B_CodeGenPresOperMod;Individual combustion operating mode setpoint;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Sp.B_CodeGenRvsFlowOvlp;Fuel-cut overlap strategy load request;0;0;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.Sp.B_CodeGenTargetPres;Inverse volumetric target pressure calculations;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Sp.B_CodeGenVolmcNom;Nominal voleff model for transient use;0;0;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.SupM.B_CodeGenSprChrg;Generate code for supercharger monitors;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Tc.B_CodeGen2TMdl;Two stage model based boost control;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Tc.B_CodeGenConvBoostCtl;Select boost control, old model-based selection switch;1;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Tc.B_CodeGenConvCtrl;Conventional boost control (PID);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Tc.B_CodeGenStatFF;Use StatFF model for wastegate (VEP);0;0;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.Tc.B_ExhPresFb;EMAPS based actuator feed back;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.TrboM.B_CodeGen2Trbo;Config turbo monitor for 2T config.;1;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.TrboM.B_CodeGenCACP;Generate code for CAC pressure monitor;1;0;1;1;1;1;0;1;1;1;1;0
+Vc.Aes.TrboM.B_CodeGenPowerPulse;Code switch for power pulse monitor;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.TrboM.B_CodeGenTrbo;Generate code for turbo monitor;1;1;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.TrboM.B_CodeGenTrboMode06;Code switch for activating mode 06 turbo monitoring;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.TrboM.B_CodeGenVacVnt;Code switch for vacuum VNT monitor;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ve.B_CodeGenRvsFlowOvlp;Use available boost functionality;0;0;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.Ve.B_CodeGenVolmcMapDsl;Code gen for map based voleff modell diesel;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ve.B_CodeGenVolmcMapGsl;Map based voleff for gasoline;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ve.B_CodeGenVolmcMdl;Code gen for voleff model;0;0;0;0;0;0;1;1;1;1;1;0
+Vc.At.Te.B_CodeGenTeScr2;Activate SCR 2 temperature logic;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGen_7DCT_Gbx;7DCT gearbox;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.B_CodeGen_AW_Gbx;AW gearbox;1;1;1;1;1;1;1;0;0;0;0;0
+Vc.B_CodeGen_EuCD_Platform;EuCD platform , incl C1MCA;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGen_SPA_Platform;SPA platform, incl CMA;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGen25LT;ME9 old interface (AT06) variable declaration;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGen7DCT;7DCT specific;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.B_CodeGenAccStopAndGo;AccStopAndGo signals generation;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGenBrakeFootOnOffPedal;Brake foot on/off pedal generation;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGenCGEA;CGEA;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenCMA;Generate code for CMA;0;0;0;0;0;0;0;1;1;1;1;1
+Vc.B_CodeGenConvImpTq;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodegenDISI;I4 DISI only;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenDv6c;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenECLUTCH;Activate E-clutch functionality;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodegenEcoMode;Eco mode;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGenEDC17;Vcc EDC17. Add offset to BaseTorque signals.  ;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodegenExtAsIntervent;Not used;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGenGearBoxLoss;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGenGtdi;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenI5T;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodegenIdleCoast;Idle coast functionality activated;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.B_CodegenLowRangeMode;Lowrange mode for Australian SUV;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenPEV;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenPnG;Pulse and glide;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGenReverseSwitch;To enbable selection of reverse gear signals;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenSI6;Denso project special;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenSPA;Generate code for ;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodegenSportMode;Sport mode;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGenTrafficSignSpeed;Generation of dummy value for traffic sign recognition system;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenVEA;VEA shiftpoint;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.B_CodeGenVED4;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenVEP4;;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.B_PistonCoolingRename;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.D_CodegenByPass;Es910 ByPass interface;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.D_CodegenHev;0=NoHev, 1=MicroHev, 2=FullHev ;1;1;2;2;2;2;2;2;2;2;2;2
+Vc.D_CodegenHev12VStarter;HEV with 12V starter;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.D_CodegenPhevUH61inX1;Only temporary fix for phev. UH61T1 sw in X1 veh;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.B_CodeGenOilLevel;Histogram over engine oil level;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.B_EMSTorque;Torque signal produced in EMS;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Dcl.B_EuCDC1MCA;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.B_Hybrid;Hybrid specific logg;0;0;1;1;0;0;0;0;0;0;0;0
+Vc.Dcl.B_SPA;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.B_SPMTorque;Torque signal produced in SPM;1;1;0;0;0;0;1;1;1;1;1;1
+Vc.Dcl.B_VED;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.B_VEP;;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Dpf.B_CodeGenDiffPressHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Dpf.B_CodeGenRegenCauseHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Dpf.B_CodeGenRegenInjSum;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Dpf.B_CodeGenRegenMilage;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Dpf.B_CodeGenRegenOnOff;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Dpf.B_CodeGenRegenTime;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Dpf.B_CodeGenSootMass;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Dsl.B_CodeGenBoostAir;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Dsl.B_CodeGenHeatProtection;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Dsl.B_CodeGenInjectorSystem;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Dsl.B_CodeGenThermalLoading;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.IcPnG.B_CodeGenIdleCoast;Logger of IdleCoast;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.IcPnG.B_CodeGenPnG;Logger of Pulse and Glide;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Iupr.B_CATM;;1;1;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Iupr.B_EVAP;;1;1;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Iupr.B_Markow;;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Iupr.B_MOXH;;1;1;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Iupr.B_MOXT;;1;1;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Iupr.B_StContTrq;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Iupr.B_StTrq;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Iupr.B_UOXS;;1;1;1;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Iupr.B_VehSpd;;0;0;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Pc.B_CodeGenPC;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Phev.B_IceInhibitedStop;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Phev.B_IceRunningPercentage;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Phev.B_IceSystemInducedStarts;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Phev.B_ISG;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Phev.B_LOS;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Phev.B_ModeManager;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Phev.B_ModeManagerSPA;;1;1;0;0;1;1;1;0;0;0;0;0
+Vc.Dcl.Vu1.B_ModeManagerSPA;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Phev.B_PHEV;Logger of all hybridspecific data;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Phev.B_RunDry;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Phev.B_TorqueManager;;1;1;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Phev.B_VehSpd;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Pt.B_CodeGemPurgingTime;Logger of purging times;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Pt.B_CodeGenCatTempHistogram;Logger of Catalyst Temperature histogram;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Pt.B_CodeGenFuelCutHist;Logger of fuel cuts;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Pt.B_CodeGenFuelMassIncrease;Logger of Fuelmass increase;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Pt.B_CodeGenFuelMassLoss;Logger of Fuelmass Loss;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Pt.B_CodeGenLowCatTemp;Logger of low catalyst temperatures;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Pt.B_CodeGenLVGStartHist;Logger of LVG;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Pt.B_CodeGenMisfireHist;Logger of misfires;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Pt.B_KnockCtrlAdaptTime;Logger of knock control adaptation value;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenPowerPulse;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenScrTemp;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenScrAgingSeverity;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenScrAdaption;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenScrAmmonia;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenEmCoMode;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenEoNoxModel;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenScrNoxConcentration;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenLntNoxConcentration;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenScrDef;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenScrRde;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenDpfRegenDuration;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenSoxLoad;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenDpfRegenMileage;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Soot.B_CodeGenGlowTemp;;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenChangeOfMind;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenDieselStopStart;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenEgRailPressTempTime;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenEgRailPressureAtSS;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenEgStartAmbPressSS;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenEgStartTempTime;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenEgStopLoadTime;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenEgStopPosition;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenEgStopTimeSS;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenHistory;Stop/Start histograms;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Ss.B_CodeGenInhibitStart;Counters for inhibited starts;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Ss.B_CodeGenInhibitStop;Counters for inhibited stops;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Ss.B_CodeGenInhibitStopDsl;Counter for inhibited stops, dieselspecific causes;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenStartCounts;Misc start counters;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Ss.B_CodeGenStopIntakePressure;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenSystemStart;Counters for system induced starts;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Ss.B_CodeGenTempIgnOn;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Ss.B_CodeGenTimeToDriveEngagedAutomatic;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Strt.B_CodeGenVEA;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenAmbTempAmbPressHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenCanBusHEVOff;;0;0;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenCanBusOff;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenDCLRemoteStart;Logger of Remote starts;1;1;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Vu1.B_CodeGenDrCycle;Logger of Drive cycle times;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenEgStartTempAmbHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenEngClntTemp;;1;1;1;0;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenI5Ttest;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Vu1.B_CodeGenIdleCoast;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenPedalActiveTime;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenPowertrainModeHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Vu1.B_CodeGenShiftProt;;0;0;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Vu1.B_CodeGenSoakHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenTakeOffGear;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Vu1.B_CodeGenTempHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenTorqueMonitoring;Generation of torque monitor logging.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu1.B_CodeGenTotFuelMass;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Vu1.B_CodeGenTrailerCnt;;1;1;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Vu1.B_CodeGenTrimCnt;;0;0;0;0;1;1;1;0;0;0;0;0
+Vc.Dcl.Vu1.B_CodeGenGPF;;0;0;1;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Vu2.B_CodeGenDistance;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_CodeGenEnergy;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_CodeGenFuel;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_CodeGenLoadRpmHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_CodeGenLoadRpmSteadyHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_CodeGenEMSTorque;;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Dcl.Vu2.B_CodeGenModelTorque;;1;1;0;0;0;0;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_CodeGenRefuel;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dcl.Vu2.B_CodeGenVehAccHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_CodeGenVehSpeedHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_CodeGenSpeedLimitVehSpeedHistogram;;1;1;0;1;1;1;1;0;0;0;0;0
+Vc.Dcl.Vu2.B_CodeGenVehSpeedSteadyHistogram;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_DcyTimeWithHighOilTemp;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_EngOilTemp;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_OilDilution;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_OilLvlVsMileageSinceLastService;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_OilPressureVsTorque;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.Dcl.Vu2.B_OilTempAtStartVsDrivCycleTime;;1;1;0;1;1;1;1;1;1;1;1;1
+Vc.De.As.B_CodegenOldGain;Used in VCC projects;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.De.Da.B_Codegen;Driving analysis (EcoMeter, EcoGrade, SportMeter);1;1;0;1;1;1;1;1;1;1;1;1
+Vc.De.Da.B_CodeGenEcoGrade;Enables EcoGrade;0;0;0;1;0;0;0;0;0;0;0;0
+Vc.De.Da.B_CodegenEcoGrDenso;EcoGrade: NVM Denso;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Da.B_CodegenEcoGrOther;EcoGrade: NVM other;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Da.B_CodeGenExtRng;Enables Extended Range;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Da.B_CodeGenPerfMeter;Enables Performance Meter;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Da.B_CodeGenRefDrv;Enables Reference Driver;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Dmm.CodeGenAT;Automatic transmission;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Dmm.CodeGenFSiD;Freeroll SiD, Below AT;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.De.Dmm.CodeGenFSiN;Freeroll SiN, Below MT;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.De.Dmm.CodeGenMT;Manual transmission;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.De.Dmm.CodeGenSiD;Stop in Drive, Below AT;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Dmm.CodeGenSiG;Stop In Gear Below MT;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.De.Dmm.CodeGenSiN;Stop In Neutral, Below MT;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.De.Dmm.CodeGenSteerActive;Extra steering conditions detection, reduce S/S;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Gsi.B_Codegen;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Gsi.B_CodegenCoolshift;Coolshift;1;1;0;0;0;0;1;0;0;0;0;0
+Vc.De.PnG.B_CodeGenGlideTimeModel;Glide Time calculation from model;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Scl.B_CodeGenASL;Adjustable speed limiter;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Scl.B_CodeGenNewSetSpeed;New CC/ACC/ASL set speed function;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Scl.B_CodeGenOldSetSpeed;Old CC/ACC/ASL set speed function;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Scl.B_CodeGenTSSL;Traffic sign speed limiter;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Tfr.B_Codegen2Maps;Addition from Ford (VF9x track, only DV6C);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Tfr.B_Codegen4Maps;Choose 4 or 6 pedal maps;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Tfr.B_Codegen6Maps;Choose 4 or 6 pedal maps;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Tfr.B_CodegenAccPedRcf;Possibility to request pedal reconfiguration. DENSO only.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Tfr.B_CodegenConvComp;Compensate pedalmap torque with converter gain;0;0;1;1;1;1;0;1;1;1;1;1
+Vc.De.Tfr.B_CodegenForceMap;1 = use traction force map without hybrid;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Tfr.B_CodegenHDC ;Pedal interpretation with only HDC (simple VCC implementation). Will include blending.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Tfr.B_CodegenHDCTOS;The complete implementation. Will include blending.;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Tfr.B_CodegenHighAltMaps;Use high altipude pedal maps;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.De.Tfr.B_CodegenIdleSpeedMod;Enable the idle speed modification for the support line (= idle speed controller feed forward).;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Tfr.B_CodegenLowRangeMode;Lowrange mode for Australian SUV;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Tfr.B_CodegenMaxTrqAdapt;Adapt max torque (LGF);1;1;1;1;1;1;1;1;1;1;1;1
+Vc.De.Tfr.B_CodegenNoHDCTOS;The simplest implementation. Will NOT include blending.;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.De.Tfr.B_CodeGenPedalTrim;Pedal trim function. Is used with Feed Forward Launch.;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Tfr.B_CodegenPedMapMult;Pedal map multiplication (FNA brand DNA);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.De.Tfr.B_CodegenTqMax;Generate engine speed for max torque (JLR signal);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Debug.B_CodeGenCGEA;Not used;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Debug.B_CodeGenLevel1;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Debug.B_CodeGenLevel2;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Debug.B_CodeGenLevel3;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Debug.B_CodeGenLevel4;Db oil sensor SPM;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Debug.B_CodeGenLevel5;Max speed signal. Should be 0 in production.;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenAmbTempAmbPressHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenCanBusOff;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenCPSDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenCustomConfigDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenDiffPressHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenDPFDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenEgStartTempAmbHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenHistory;Stop/Start histograms;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenICEDieselDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenICEPetrolDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenInhibitStart;Counters for inhibited starts;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenInhibitStop;Counters for inhibited stops;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenLoadRpmHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenLoadRpmSteadyHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenPedalActiveTime;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenPistonCoolingDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenPowertrainModeHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenPwrTrainCoolingSystemDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenRegenCauseHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenRegenInjSum;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenRegenMilage;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenRegenOnOff;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenRegenTime;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenScavengingDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenSoakHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenSootMass;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenStartCounts;Misc start counters;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenStopStartDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenSuperChargerDataLog;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenSystemStart;Counters for system induced starts;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenTempHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenTotFuelMass;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenVehSpeedHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dia.Dcl.B_CodeGenVehSpeedSteadyHistogram;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.DIDApi.Enable;Code gen of DID API;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenCcCancel;Cruise control cancel;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenDpBase;Only gasoline.;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenDpBaseLPFilter;LowPass filter on base torque (used in V8 application);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Ajc.B_CodegenDpClutch;Clutch;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenDpRegenGain;Fast and slow dashpot gain depending on EGT and gear.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenDpSportMode;Used in SI6T, must have an sportmoide input in to CVC from CAN;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenDpTosHDC;Fast and slow dp gain depending on TOS and HDC. ;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Ajc.B_CodegenDpZeroCrossComp;Compensate feedback torque to move zero cross passing. Only used in EDC16;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenLowTrqDetect;Only gasoline use.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenNewAjc;New Ajc layout;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Ajc.B_CodegenTiAccPedComp;Should be used together with torque based tipin.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiAccPedRate;Accelerator pedal rate;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiAtmoPres;Fast tipin dependant on atmospheric pressure;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiConvComp;Fast and slow tipin depending on converter slip;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiConvLim;Decrease tipin torque rate depending on lockup slip. ;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiEGTGain;Fast and slow tipin gain depending on EGT(regen) and gear. Only old system is EDC16. ;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiLP;Only used in 20V8 project;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiOverrunGain;Only used in ME9 system;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Ajc.B_CodegenTiSportMode;Used in SI6T, must have an sportmode CAN input from TCM into CVC;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiTemp;Fast and slow tipin gain depending on ambient temperature. Only old system is EDC16.  ;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiTosHDC;Fast and slow tipin gain depending on TOS and HDC. ;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Ajc.B_CodegenTiTqRsv;Only used in gasoline applications;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTiZeroCrossComp;Compensate feedback torque to move zero cross passing. Only used in EDC16;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.Dtc.Ajc.B_CodegenTosHDC;Fast and slow tipin gain depending on TOS and HDC. ;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Ajc.B_CodegenTrailerLim;Should be equal to Vc.Dtc.Ajc.B_CodegenTiLP;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.As.B_Codegen6thOrderFilt_Ndiff;6-pole filter for Ndiff;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Atf.B_CodeGenAcCut;AC cut;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Atf.B_CodeGenAltCut;Enable Alternator Cut flag generation;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Atf.B_CodeGenCGEA;Not used;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Cta.B_CodegenAT;AT or PS;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Cta.B_CodegenBTL;Interface to F21 gearbox in SI6T;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Cta.B_CodegenInertia;Code for inertia compensation;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Cta.B_CodegenMT;MT;1;1;0;0;0;0;1;1;1;1;1;1
+Vc.Dtc.Cta.B_CodegenShaftProt;Possibility to use driveshaft torque protection;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Dc.B_CodegenAT;AT;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Esc.B_CodegenAT;AT or PS;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Esc.B_CodegenMonAT;AT;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Esc.B_CodegenMonPS;PS;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Esc.B_CodegenMT;MT;1;1;0;0;0;0;1;1;1;1;1;1
+Vc.Dtc.Ffl.B_CodegenFfl;Feed forward launch;1;1;0;0;0;0;1;1;1;1;1;1
+Vc.Dtc.Ffl.B_CodegenFflInertia;Generate inertia compensation part of Ffl;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Isc.B_CodegenPIDBase;ISC airpath (petrol only);0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Isc.B_CodegenTorqueReserve;ISC torque reserve (petrol only);0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Rct.B_CodegenCtr;Ctr = Clutch Torque Request, for 7DCT (& eClutch);1;1;0;0;1;1;1;1;1;1;1;1
+Vc.Dtc.Rct.B_CodegenInertiaCmp;Inertia compensation;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Rct.B_CodegenMT;MT;1;1;0;0;0;0;1;1;1;1;1;1
+Vc.Dtc.Rct.B_CodegenPS ;PS;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Dtc.Tc.B_CodegenOilTorqueLimit;Oil Torque Limit;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Tc.B_CodegenTqRsv;Not used;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Dtc.Tc.B_CodgenACTrqRsvReq;Create torque reserve during A/C on (denso);1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Ext.In.B_CanMod;Codeswitch for temporary CAN-fix;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Ext.In.B_CodeGenASLTestButton;Possible to use CcOnOff and CcOnOffCancel to activate both ASL and Cc;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Ext.In.B_CodeGenHack;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Ext.In.B_PhevHighIdle;Increase idle speed from DtcTc;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Ext.In.B_VEATestinSI6;To be able to test VEA shiftpoint models in SI6;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Ext.Out.B_CodeGenAccDistCtlActv;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Ext.Out.B_CodeGenAesVEAX0b;VEA specific;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Ext.Out.B_CodeGenASLUseCcLamp;Possible to CCLamp to both Sl and Cc (Test purpose);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Ext.Out.B_CodegenVEA;VEA specific;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.ExtVar.B_CodeGenCGEA;Not used;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.ExtVar.B_CodeGenOilLevSens;Oil sensor SPM is used;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.ExtVar.B_CodeGenRegenCharge;Regen charge SPM is used;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.ExtVar.B_CodeGenTOC;TOC SPM is used;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Fsd.Pc.B_CodeGenAntiClogging;Use anti clogging functionality only for diesel;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Ftiv.Mon.B_Ftiv;Fuel tank isolation valve monitoring;0;0;1;1;0;0;0;0;0;0;0;0
+Vc.Lin.CptM.B_Alternator12V;Code gen for 12V alternator;1;1;1;1;1;1;1;0;0;0;1;0
+Vc.Lin.CptM.B_EDWaterPump;Code gen for electrical water pump for electric drive circuit;0;0;1;1;0;0;0;1;1;1;0;1
+Vc.Lin.CptM.B_ElAC;Code gen for electrical Air Condition;0;0;1;1;0;0;0;1;1;1;0;1
+Vc.Lin.CptM.B_EWaterPump;Code gen for  electric water pump for ICE;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Lin.CptM.B_GrillShutter;Code gen when Grillshutter shall be used;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Lin.CptM.B_SPA;Modelparts that shall be used in SPA;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Lin.CptM.B_SpoilerShutter;Code gen when Spoiler shutter shall be used;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Lin.CptM.B_VEP;Patrol config;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Lin.CptM.B_VEP315H;Modelparts that shall be used in S315H;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.NewDiagnosticCoreIF;Use New Diagnostic Core Interface;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Nvm.B_CodeGenNvmSync;;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Nvm.B_CodeGenNvmSyncDebug;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Nvm.Codegen;Non-Volatile Memory;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenAmbT;Generate code for Ambient temperature related monitors;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenBoostT;Generate code for Boost temperature related monitors;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenCisgT;Generate code for Crank ISG temperature related monitors;0;0;0;0;0;0;0;0;1;0;0;0
+Vc.Obd.Cmn.B_CodeGenClntT;Generate code for Coolant temperature related monitors;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenInManiT;Generate code for Intake Manifold temperature related monitors;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenIntkT;Generate code for Intake air temperature related monitors;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Obd.Cmn.B_CodeGenObdExe;Activate ObdExe module;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenOilT;Generate code for Oil temperature related monitors;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenPreHeatDet;Activate preheater detection module;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenTempAve;Activate average temp calc at key on;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Oil.Lvl.B_CodeGenPHEV;Generation of PHEV-specific logic;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Oil.Lvl.B_CodeGenVEA;Generation of VEA-specific logic;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Oil.Lvl.B_CodeGenStck;Activate Oil Level Sensor Stuck diagnose;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Oil.Pr.B_CodeGenPIDCtrl;PID controller for oil pump;1;0;1;1;1;1;0;0;0;0;0;0
+Vc.Oil.Pr.B_CodeGenResetCtrl;Reset PID controller for oil pump;1;0;1;1;1;1;0;0;0;0;0;0
+Vc.Oil.Pr.B_CodeGenVEP;VVT for VEP;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Oil.Pr.B_CodeGenVvtPwmBst;Extra PWM signal for oil pressure req during VVT transient;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Oil.PrMon.B_CodeGen2ModOilPmp;Activate stuck monitor for solenoid in two-mode oil pump;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Pem.Alc.B_Codegen_AcCut;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Pem.Alc.B_Codegen_AltCut;;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Pem.Alc.B_Codegen_Controller;;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Pem.Alc.B_CodegenDpfRegen;Electrical load increase for DPF-regen ;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Pem.Alc.B_CodegenFastCat;Electrical load increase for Cat-heating;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Pem.Alc.B_CodegenStart;StartCut enable;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Ppm.B_CodegenRemoteStart;Remote Start;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Ppm.Imob.B_ImobSkipAllowed;Allow bypassing immobiliser through calibration.;0;1;0;1;0;1;1;0;0;1;0;0
+Vc.Ppm.Psm.D_CodegenSysRly;System Relay control in WakeUp / afterrun  state;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Ppm.Rc.B_Glow;Glow sync with starter motor in StopStart;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Ppm.St.B_CodeGenEmsPowerPackStatus;Use PowerPackStatus generated in EMS instead of the one in VcPpmSt;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Reg.Ch.B_CodegenAltCut;Alternator cut implemented;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Reg.Ch.B_CodegenCostEms;Cost-function in  EMS;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Reg.Ch.B_CodegenCostSpm;Cost-function in  SPM;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Reg.Ch.B_CodeGenDID;Code gen for writing regen state to readable DID;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Reg.Ch.B_CodegenDpfRegen;Voltage boost for DPF-regen (2 add load);1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Reg.Ch.B_CodegenFastCat;Cat-heating by el-load;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Reg.Ch.B_CodegenFuelpumpBoost;Voltage boost for fuel pump;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Reg.Ch.B_CodegenInjComp;Voltage increase to boost injection;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Sc.Dep.B_CodeGenDepPropAllowed;Generate dependability logic for Remote Start vehicles;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Sc.Dep.B_CodegenEngPosition;;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Sc.Dep.B_GenDepAccPedalPosition;Switch to enable code generation for AccPedal logic in ScDep. Select for Denso I5T, VEA and PHEV where RAM is not an issue.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Sc.Dep.B_UseEMSClutchPedalPosition;Switch to use EMS clutch pedal signal, instead of signal from VcScDep. Select for all variants apart from Denso I5T and VEA.;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Sc.In.RegenByPaddles;Function for selecting brake regen level using paddles (HRE);0;0;0;0;0;0;1;1;1;1;1;1
+Vc.Sp.B_CruiseDownHill;Cruise Down Hill functionality;0;NA;0;NA;0;NA;NA;NA;NA;NA;NA;NA
+Vc.Sp.B_DriverEvaluator;Driver Evaluator;1;1;1;1;1;1;1;1;NA;1;1;1
+Vc.Sp.B_FanRequest;FanRequest;1;NA;1;NA;1;NA;NA;NA;NA;NA;NA;NA
+Vc.Sp.B_GLMMonitor;GLMMonitor;1;NA;1;NA;1;NA;NA;NA;NA;NA;NA;NA
+Vc.Sp.B_GradeEstimator;Grade Estimation Calculation;0;NA;0;NA;0;NA;NA;NA;NA;NA;NA;NA
+Vc.Sp.B_HEV;HEV;0;NA;1;NA;1;NA;NA;NA;NA;NA;NA;NA
+Vc.Sp.B_IntermediateGear;Intermediate Gear for FreeWheel;1;1;1;1;1;1;1;1;NA;1;1;1
+Vc.Sp.B_LTS;LTS functionality;1;1;1;1;1;1;1;1;NA;1;1;1
+Vc.Sp.B_OpenLUEngSpeed;LU in VcSpCC;1;1;1;1;1;0;0;0;NA;0;0;0
+Vc.Sp.B_PredictiveUpShift;Usage of Predictive Upshift;1;1;0;0;1;1;1;1;NA;1;1;1
+Vc.Sp.B_SportInit;Usage of Sport Init.;1;1;1;1;1;1;1;1;NA;1;1;1
+Vc.Sp.B_TransMode;TransMode for FreeWheel;1;1;1;1;1;1;1;1;NA;1;1;1
+Vc.Temp.StkM.B_CodeGenBoost;Activate temp stuck diag for boost temp;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Temp.StkM.B_CodeGenClnt;Activate temp stuck diag for coolant temp;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Temp.StkM.B_CodeGenInMani;Activate temp stuck diag for intake manifold temp;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Temp.StkM.B_CodeGenMaf;Activate temp stuck diag for inairtemp/maftemp;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.Temp.ThM.B_CodeGenThms;Activate THMS diagnostics;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Tm.Af.B_CodeGenMovCtrDenso;NVM for movement ctr Denso;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Tm.Efl.B_CodeGenAuxWtrPmpReqHandler;Auxillary water pump request in VcTmEfl;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Tm.Efl.B_CodeGenClntFlwFb;Coolant flow feedback;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Tm.Efl.B_CodeGenClntFlwRequestHandler;Use with electrical waterpump;0;0;1;1;1;1;0;1;0;0;0;0
+Vc.Tm.Efl.B_CodeGenClntSetpoint;Function for two coolant setpoints;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Tm.Efl.B_CodeGenCwpHvac;FailSafe function for CWP and HVAC;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Tm.Efl.B_CodeGenEgrPmpHandler;EGR coolant flow requst;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Tm.Efl.B_CodeGenEwpRly;FailSafe function for EWP ;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Tm.Efl.B_CodeGenRadClntFlowRequest;Use with electrical waterpump;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Tm.Efl.B_CodeGenSpoilerShutter;Function for spoilershutter variant;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Tm.Efl.B_CodeGenThermostatOpenRequest;Use with electrical thermostat;0;0;1;1;1;1;1;0;0;0;0;0
+Vc.Tm.Efl.B_CodeGenValveHandler;Use with electrical controled valves in coolant system;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Tm.Efl.B_CodeGenWtrPmpAftRun;Function for EWP after run;0;0;1;1;1;1;0;0;0;0;0;0
+Vc.Vmc.Ajc.B_CodegenCcCancel;Cruise control cancel;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenDpBase;Only gasoline.;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenDpBaseLPFilter;LowPass filter on base torque (used in V8 application);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Ajc.B_CodegenDpClutch;Clutch;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenDpRegenGain;Fast and slow dashpot gain depending on EGT and gear.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenDpSlowFast;0 = 12maps (FoE), 1 = 2maps (Volvo), 2 = Frequency based (under development);1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenDpSlowFast12Maps;FoE project use 12 maps, Vcc projects use 2 maps (not used after V80, use Vc.Vmc.Ajc.B_CodegenDpSlowFast instead);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Ajc.B_CodegenDpSportMode;Used in SI6T, must have an sportmoide input in to CVC from CAN;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenDpTosHDC;Fast and slow dp gain depending on TOS and HDC. ;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Ajc.B_CodegenDpZeroCrossComp;Compensate feedback torque to move zero cross passing. Only used in EDC16;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenLowTrqDetect;Only gasoline use.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiAccPedRate;Accelerator pedal rate;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiAtmoPres;Fast tipin dependant on atmospheric pressure;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiConvComp;Fast and slow tipin depending on converter slip;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiConvLim;Decrease tipin torque rate depending on lockup slip. ;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiEGTGain;Fast and slow tipin gain depending on EGT(regen) and gear. Only old system is EDC16. ;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiLP;Only used in 20V8 project;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiOverrunGain;Only used in ME9 system;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Ajc.B_CodegenTiSlowFast;0 = 12maps (FoE), 1 = 2maps (Volvo), 2 = Frequency based (under development);1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiSlowFast12Maps;FoE project use 12 maps, Vcc projects use 2 maps. (not used after V80, use Vc.Vmc.Ajc.B_CodegenTipSlowFast instead);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Ajc.B_CodegenTiSportMode;Used in SI6T, must have an sportmode CAN input from TCM into CVC;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiTemp;Fast and slow tipin gain depending on ambient temperature. Only old system is EDC16.  ;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiTosHDC;Fast and slow tipin gain depending on TOS and HDC. ;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Ajc.B_CodegenTiTqRsv;Only used in gasoline applications;0;0;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTiZeroCrossComp;Compensate feedback torque to move zero cross passing. Only used in EDC16;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Ajc.B_CodegenTosHDC;Fast and slow tipin gain depending on TOS and HDC. ;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Ajc.B_CodegenTrailerLim;Should be equal to Vc.Vmc.Ajc.B_CodegenTiLP;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Crp.B_CodegenCreep;Code switch for 7DCT Creep function;1;1;0;0;1;1;1;1;1;1;1;1
+Vc.Vmc.Em.CodeGenStartStop;Use old EM function;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Vmc.Pmm.B_CodegenAT;Use transmission function;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Vmc.Pmm.B_CodegenPS;Use PowerShift function;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Trq.Req.B_CodeGenTrqDlyTCM;Activate calculation of expected torque delay for transmission control;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Trq.B_CodeGenMaxNoBoost;Activate calculation of maximum torque without boost for dual clutch transmission (7DCT) or e-clutch clutch control;0;0;0;0;0;0;0;1;1;1;1;1
+Vc.Aes.B_CodeGen2VNT;Enable 2xVNT turbo control;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenEfad;CodeGen for Efad;0;0;0;0;0;0;0;1;1;1;0;1
+Vc.Aes.Tc.B_CodeGenModelBasedCtl;Code switch for model based turbo control;1;0;1;1;1;1;0;1;1;1;1;0
+Vc.Obd.Sch.B_ObdSch;Code switch for OBD scheduler;0;0;1;1;1;0;0;0;0;0;0;0
+Vc.Sc.Feh.B_HEP7;Debug LOS flags based on HEP7 specification;0;0;0;0;0;0;1;1;1;1;0;1
+Vc.Sc.Feh.B_HRE;Debug LOS flags based on HRE specification;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Obd.Cmn.B_CodeGenLtClntWcacT;Generate code for WCAC coolant temperature related monitors;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Obd.Cmn.B_CodeGenBoostT2;Generate code for Boost temperature 2 related monitors;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Obd.Cmn.B_CodeGenInitReq;Generate code for the init req flag function;0;1;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Cmn.B_CodeGenEcmInit;Generate code for the ECM init flag function;0;0;0;0;0;0;0;1;1;1;1;1
+Vc.Temp.StkM.B_CodeGenBoostT2;Activate temp stuck diag for boost temp 2;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Temp.StkM.B_CodeGenLtClntWcacT;Activate temp stuck diag for low temp WCAC cooling circuit;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.Tc.Dir.B_CodeGenElectcPrndCtrl;Code gen to activate control of electronic PRND hw (e.g.TACM);0;0;1;1;0;0;0;0;0;0;0;0
+Vc.Obd.Cmn.B_CodeGenPowerPulseT;Generate code for Power pulse temperature related monitors;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.Temp.StkM.B_CodeGenPowerPulseT;Activate temp stuck diag for power pulse temperature;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Ign.B_CodeGen4CylLogic;Generate code for 4 cylinders in ignition and injection;1;1;1;1;1;1;1;0;0;0;0;0
+Vc.Ign.B_CodeGenPetrolEgr;Generate code for external EGR logic (Petrol);0;0;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.DynPresM.B_CodeGenBst1AmbP;Generate code for comparison between Boost 1 and ambient pressure;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.DynPresM.B_CodeGenBst2AmbP;Generate code for comparison between Boost 2 and ambient pressure;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.DynPresM.B_CodeGenBst1Bst2P;Generate code for comparison between Boost 1 and boost2 pressure;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.DynPresM.B_CodeGenBst2IntkMapP;Generate code for comparison between Boost 2 and intake map pressure;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.DynPresM.B_CodeGenBst1IntkMapP;Generate code for comparison between Boost 1 and intake map pressure;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.StatPresM.B_CodeGenAmbP;Generate code for ambient pressure key off monitor;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.StatPresM.B_CodeGenBst1P;Generate code for boost 1 pressure key off monitor;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.StatPresM.B_CodeGenBst2P;Generate code for boost 2 pressure key off monitor;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.StatPresM.B_CodeGenIntkMapP;Generate code for intake map pressure key off monitor;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.StatPresM.B_CodeGenExhaustP;Generate code for exhaust pressure key off monitor;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.StatPresM.B_CodeGenElcmP;Generate code for ELCM pressure key off monitor;0;0;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.TrboM.B_CodeGenBstPeak;Generate code for boost peak monitor;1;1;1;1;1;1;1;1;1;1;1;0
+Vc.Aes.TrboM.B_CodeGenTrboOverSpd;Generate code for turbo overspeed monitor;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.LPEgrM.B_CodeGenLPEgrSysMon;Generate code for long route EGR flow monitor;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.LPEgrM.B_CodeGenLPEgrClrMon;Generate code for long route EGR cooler monitor;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.LPEgrM.B_CodeGenLPOverTempMon;Generate code for long route EGR overtemperature monitor;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Fuel.Ctrl.B_CodeGenHeatFu;Generate code for heat fuel function;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.EgrM_B_CodeGenTotalEGRMon;Generate code for total Egr flow monitoring;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Ppm.Psm.B_CodegenKERS;Generate code for 48V power up/power down;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Fuel.Ctrl.B_CodeGenMonVap;Generate code for Monitor Vapor in high-pressure pump;0;0;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.Vnt.B_CodeGenVntGvnr;VNT position controller (vacuum);0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Osc.B_CodeGenOscr;Oscillator function for robustness tests;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.Rx.B_CodeGenDrvModSignal;Use new Drive mode signal for AES;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.Snsr.B_CodeGenMafBasCmp;MAF base compensation;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Snsr.B_CodeGenMafPlsCmp;MAF pulsation compensation;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Snsr.B_CodeGenIntkFil;Intake manifold pressure filter;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Snsr.B_CodeGenPresAdpn;Pressure adaptation from ambient at ignition;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Fuel.Ctrl.B_CodeGenFuDev;Generate code for Fuel Development;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.B_CodeGenPredUpShift;Code switch for predicted gearshift function;1;1;0;0;0;0;1;0;0;0;0;0
+Vc.Tm.Af.B_CodeGenShttrSyncCtrl;Generate code synchronised shutter control.;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Tm.Af.B_CodeGenMapAirFlowCalcn;Generate code for calculating airflow through cooling via maps.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Tm.Af.B_CodeGenLnrAirFlowCalcn;Generate code for calculating airflow through cooling via linear eq.;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Tm.Af.B_CodeGenShttrSeqCtrl;Generate code sequenced shutter control.;1;1;1;1;1;1;1;1;1;1;1;1
+Vc.Aes.B_CodeGenEChrgr;Generate code for Echarger;0;0;0;0;0;0;1;0;0;0;0;0
+Vc.Ppm.St.B_CodeGenIntIceStatus;Generate code for IceStatus;0;0;0;0;0;0;0;0;0;0;0;0
+Vc.Emi.Gpf.B_CodeGenSelIf;Code switch for input signal selection for Gpf;0;0;0;0;0;0;1;1;1;1;1;1
+Vc.Obd.Gpf.B_CodeGenSelIf;Code switch for input signal selection for Gpf monitor;0;0;0;0;0;0;1;1;1;1;1;1
+Vc.Aes.B_CodeGenCNDILA;Code switch for i-Art learning accl. and cetane num detection;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Ch.B_CodeGenThrMan;Code switch for manual throttle position maps;1;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Sp.B_CodeGenBoostSpMan;Code switch for manual boost pressure set point map;1;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Mo.B_CodeGenVirtSnsrCylAdj;Code switch for virtual sensor adjust;1;0;1;1;1;1;0;0;0;0;0;0
+Vc.Aes.Ps.B_CodeGenPresSpThr;Code switch for throttle closing by pressure ratio set-point for NVH;1;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.TrboM.B_CodeGenLPPres;Code switch for reconfig of LP pressure sensor;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.B_CodeGenOilTemp;Code switch for input oil temp signal;0;0;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.B_CodeGenEgrCoolr;Generate code for Egr cooler;1;0;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.B_CodeGenWCAC;Generate code for WCAC applications;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Aes.Srg.B_CodeGenSrgOscDetn;Enable frequency homing oscillation detector;0;1;0;0;0;0;1;0;0;0;0;0
+Vc.Lam.B_CodeGenLVGAct;Code switch to activate LVG compensation of feed forward lambda;0;0;0;0;0;0;0;0;0;1;0;0
+Vc.Aes.Bc.B_CodeGenBaseMode5;Enable base mode 5;0;1;0;0;0;0;0;0;0;0;0;0
+Vc.Aes.Tc.B_CodeGenHPCmprByp;Code switch to activate HP compressor bypass;0;1;0;0;0;0;0;0;0;0;0;0

@@ -1,0 +1,21 @@
+[
+    {
+        "name": "VcPvcDemo_11_CSPMethodCall",
+        "primitive_method": "simulinktest",
+        "namespace": "",
+        "in": [
+            {
+                "name": "sVcTvdc_Tq_DftlCluTqCpMaxReRi",
+                "primitive_name": "method2.a",
+                "type": "Float32"
+            }
+        ],
+        "out": [
+            {
+                "name": "Output1",
+                "primitive_name": "method2.b",
+                "type": "Int16"
+            }
+        ]
+    }
+]

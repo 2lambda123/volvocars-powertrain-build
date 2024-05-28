@@ -1,0 +1,47 @@
+[
+    {
+        "name": "VcExt10ms_tvdc_Always",
+        "ports": {
+            "in": {
+                "sVcTvdc_Tq_DftlCluTqCpMaxReRi": {
+                    "primitive": "signals.tvdc.DftlCluTqCpMaxReRi",
+                    "type": "Float32"
+                }
+            },
+            "out": {
+                "sVcPvcDemo_Tq_DftlCluTqCpReqReRi": {
+                    "primitive": "signals.tvdc.DftlCluTqCpReqReRi",
+                    "type": "Float32"
+                }
+            }
+        }
+    },
+    {
+        "name": "csp_methods",
+        "ports": {
+            "in": {},
+            "out": {}
+        },
+        "methods": [
+            {
+                "in": [
+                    {
+                        "name": "sVcIem_U_WhlMotSysUdc",
+                        "primitive_name": "request",
+                        "type": "Float32"
+                    }
+                ],
+                "out": [
+                    {
+                        "name": "sVcPvcDemo_X_11CSPMethodCall2Output1",
+                        "primitive_name": "out_prim",
+                        "type": "Int8"
+                    }
+                ],
+                "name": "VcPvcDemo_11_CSPMethodCall2",
+                "primitive_method": "brakecontrol.requestelectronicparkingbrake",
+                "namespace": "adapterwrapper"
+            }
+        ]
+    }
+]

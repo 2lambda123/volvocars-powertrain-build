@@ -1,0 +1,132 @@
+[
+  {
+    "signals": [
+        {
+            "x_size": 1,
+            "type": "UInt32",
+            "name": "SIG8",
+            "y_size": 1
+        }
+    ],
+    "name": "NVM_LIST_8",
+    "default_datatype": "UInt8",
+    "instanceName": "nvm_list_8",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 56,
+    "persistent": false,
+    "allowed_datatypes": [
+      "Bool",
+      "UInt8",
+      "Int8"
+    ]
+  },
+  {
+    "signals": [
+        {
+            "x_size": 1,
+            "type": "UInt32",
+            "name": "SIG16",
+            "y_size": 1
+        }
+    ],
+    "name": "NVM_LIST_16",
+    "default_datatype": "UInt16",
+    "instanceName": "nvm_list_16",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 240,
+    "persistent": false,
+    "allowed_datatypes": [
+      "UInt16",
+      "Int16"
+    ]
+  },
+  {
+    "signals": [
+        {
+            "x_size": 1,
+            "type": "UInt32",
+            "name": "SIG32",
+            "y_size": 1
+        }
+    ],
+    "name": "NVM_LIST_32",
+    "default_datatype": "UInt32",
+    "instanceName": "nvm_list_32",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 975,
+    "persistent": false,
+    "allowed_datatypes": [
+      "Float32",
+      "UInt32",
+      "Int32"
+    ]
+  },
+  {
+    "signals": [
+        {
+            "x_size": 1,
+            "type": "UInt32",
+            "name": "SIG8P",
+            "y_size": 1
+        }
+    ],
+    "name": "NVM_LIST_8_PER",
+    "default_datatype": "UInt8",
+    "instanceName": "nvm_list_8_per",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 56,
+    "persistent": true,
+    "allowed_datatypes": [
+      "Bool",
+      "UInt8",
+      "Int8"
+    ]
+  },
+  {
+    "signals": [
+        {
+            "x_size": 1,
+            "type": "UInt32",
+            "name": "SIG16P",
+            "y_size": 1
+        }
+    ],
+    "name": "NVM_LIST_16_PER",
+    "default_datatype": "UInt16",
+    "instanceName": "nvm_list_16_per",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 240,
+    "persistent": true,
+    "allowed_datatypes": [
+      "UInt16",
+      "Int16"
+    ]
+  },
+  {
+    "signals":[
+        {
+            "x_size": 1,
+            "type": "UInt32",
+            "name": "SIG32P",
+            "y_size": 1
+        }
+    ],
+    "name": "NVM_LIST_32_PER",
+    "default_datatype": "UInt32",
+    "instanceName": "nvm_list_32_per",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 190,
+    "persistent": true,
+    "allowed_datatypes": [
+      "Float32",
+      "UInt32",
+      "Int32"
+    ]
+  }
+]
