@@ -1,0 +1,87 @@
+[
+  {
+    "signals": [
+      {
+        "x_size": 1,
+        "type": "UInt32",
+        "name": "sVcTest_t_UInt32",
+        "y_size": 1
+      }
+    ],
+    "name": "NVM_LIST_32",
+    "default_datatype": "UInt32",
+    "instanceName": "nvm_list_32",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 56,
+    "persistent": false,
+    "allowed_datatypes": [
+      "Float32",
+      "UInt32",
+      "Int32"
+    ]
+  },
+  {
+    "signals": [
+      {
+        "x_size": 1,
+        "type": "UInt32",
+        "name": "sVcTest_t_UInt32",
+        "y_size": 1
+      },
+      {
+        "x_size": 1,
+        "type": "Int16",
+        "name": "sVcTest_t_Int16",
+        "y_size": 1
+      },
+      {
+        "x_size": 1,
+        "type": "UInt8",
+        "name": "sVcTest_t_UInt8",
+        "y_size": 1
+      }
+    ],
+    "name": "NVM_LIST_CRITICAL1",
+    "default_datatype": "UInt16",
+    "instanceName": "nvm_list_critical1",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 56,
+    "persistent": false,
+    "allowed_datatypes": ["NotApplicable"]
+  },
+  {
+    "signals": [
+      {
+        "x_size": 1,
+        "type": "Int16",
+        "name": "sVcTest_t_Int16",
+        "y_size": 1
+      }
+    ],
+    "name": "NVM_LIST_16",
+    "default_datatype": "UInt16",
+    "instanceName": "nvm_list_16",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 56,
+    "persistent": false,
+    "allowed_datatypes": [
+      "UInt16",
+      "Int16"
+    ]
+  },
+  {
+    "signals": [
+    ],
+    "name": "NVM_LIST_8",
+    "default_datatype": "UInt8",
+    "instanceName": "nvm_list_8",
+    "includeStart": "MemMap_SDA_START.h",
+    "includeStop": "MemMap_SDA_STOP.h",
+    "size": 56,
+    "persistent": false,
+    "allowed_datatypes": ["should_be_empty"]
+  }
+]

@@ -1,0 +1,237 @@
+########################################################
+#
+# Service for output values from VcTestTx model
+#
+#
+########################################################
+service:
+  ClimateAndThermalControlInternal:
+    properties:
+    - ControlOutput:
+      - outsignal: yVcTestTx_B_MaxDefOnDisp
+        property: max_defroster_state.is_enabled
+      # - outsignal: sVcTestTx_D_MaxDefState
+      #   property: max_defroster_state.availability
+      # - outsignal: sVcTestTx_Te_AmbTMecRimSnsr
+      #   property: AmbTMecRimSnsr.Value
+      # - outsignal: sVcTestTx_D_AmbTMecRimSnsrSts
+      #   property: AmbTMecRimSnsr.Status
+# # service:
+# #   ThermalSystemPropertiesToBattery:
+# #     properties:
+#     - CoolantTemperatureAtHighVoltageBatteryOutlet:
+#       - outsignal: sVcTestTx_Te_CooltTAtHvBattOutl
+#     - HighVoltageBatteryCoolingPowerAllowed:
+#       - outsignal: sVcTestTx_Pw_HvBattCoolgPwrAllwd
+#     - HighVoltageBatteryHeatingPowerAllowed:
+#       - outsignal: sVcTestTx_Pw_HvBattHeatgPwrAllwd
+#     - HighVoltageBatteryClimatisationEnergyAllowed:
+#       - outsignal: sVcTestTx_E_HvBattClimaEgyAllwd
+#     - TimeLeftForHighVoltageBatteryPreConditioning:
+#       - outsignal: sVcTestTx_t_TiLeForHvBattPreCdng
+#     # Add enums later
+#     # - HighVoltageBatteryCircuitCoolingPerformance:
+#     #   - outsignal: sVcTestTx_Enm_HvBattCircCoolgPfmnc
+#     - HighVoltageBatteryActualFlow:
+#       - outsignal: sVcTestTx_Q_HvBattActFlow
+#     # Add enums later
+#     # - HighVoltageBatteryThermalStateActual:
+#     #   - outsignal: sVcTestTx_Enm_HvBattThermStAct
+# # service:
+# #   ThermalSystemPropertiesToElectricMachines:
+# #     properties:
+#     - CoolantTemperatureAfterRadiatorDrivetrainElectric:
+#       - outsignal: sVcTestTx_Te_CooltTAftRadrDtElec
+#     - CoolantFlowEstimatedInEMCircuitFront:
+#       - outsignal: sVcTestTx_Q_CooltFlowEstimdInEmCircFrnt
+#     - CoolantFlowEstimatedInEMCircuitRear:
+#       - outsignal: sVcTestTx_Q_CooltFlowEstimdInEmCircRe
+#     # Add enums later
+#     # - EMCircuitCoolingPerformance:
+#     #   - outsignal: sVcTestTx_Enm_EmCircCoolgPfmnc
+#     - EMPowerAdditionalLossRequestFront:
+#       - outsignal: sVcTestTx_Pw_EmPwrAddlLossReqFrnt
+#     - EMPowerAdditionalLossRequestRear:
+#       - outsignal: sVcTestTx_Pw_EmPwrAddlLossReqRe
+# # service:
+# #   ThermalSystemPropertiesToElectricEnergyCoordinator:
+# #     properties:
+#     - ThermalHighVoltagePowerConsumptionRequest:
+#       - outsignal: sVcTestTx_Pw_ThermHvPwrCnsReq
+#     # - LowVoltagePowerRequest:
+#     #   - outsignal: sVcTestTx_Pw_LvElecPwrReq
+#     - ThermalHighVoltagePowerConsumptionEstimation:
+#       - outsignal: sVcTestTx_Pw_ThermHvPwrCnsEstimn
+#     - ThermalHighVoltageEnergyRequest:
+#       - outsignal: sVcTestTx_E_ThermHvEgyReq
+#     # - CurrentThroughLowVoltageLoads:
+#     #   - outsignal: sVcTestTx_I_LvLoadEstimn
+# service:
+#   ThermalSystemPropertiesToVechileEnergyManagement:
+#     properties:
+#       - PredictedHVElectricalPowerForCooling:
+#         - outsignal: sVcTestTx_Pw_PredHvElecPwrForCoolg
+#       - PredictedHVElectricalPowerForHeating:
+#         - outsignal: sVcTestTx_Pw_PredHvElecPwrForHeatg
+#       - PredictedLVElectricalPowerforThermalManagement:
+#         - outsignal: sVcTestTx_Pw_PredHvElecPwrForThermMngt
+########################################################
+#
+# Direct connection for output values of app from VcTestTx model
+# To different DPs
+#
+# Please correct the list below with correct domains and properties
+# Group signals that match together?
+#
+########################################################
+signals:
+  ##### FIOC 4/6.0.0 #######
+  fioc:
+  - outsignal: yVcTestTx_B_CircCnctVlvReq
+    property: CircCnctVlvReq
+  - outsignal: yVcTestTx_B_HvBattOnOffVlvReq
+    property: HvBattOnOffVlvReq
+  - outsignal: sVcTestTx_Q_CooltFlowInCmptmtCirc2
+    property: CooltFlowInCmptmtCirc2
+  - outsignal: sVcTestTx_X_CooltPmpSpdInCircClimaReq
+    property: CooltPmpSpdInCircClimaReq
+  - outsignal: sVcTestTx_X_CooltPmpSpdInCircDtElecReq
+    property: CooltPmpSpdInCircDtElecReq
+  - outsignal: sVcTestTx_X_CooltPmpSpdInHvBattCircReq
+    property: CooltPmpSpdInHvBattCircReq
+# DstTrvld
+# EvaprVlvFrntReq
+# EvaprVlvRearReq
+# ExtdIntgReq
+  - outsignal: sVcTestTx_D_FanModReq
+    property: FanModReq
+  - outsignal: sVcTestTx_X_FanSpdReq
+    property: FanSpdReq
+# FuHeatrTRqrd
+# HvBattOnOffVlvReq
+  - outsignal: sVcTestTx_U_HvBattUDynMinLim2
+    property: HvBattUDynMinLim2
+  - outsignal: yVcTestTx_B_HvCooltHeatrEnad2
+    property: HvCooltHeatrEnad2
+  - outsignal: sVcTestTx_Pw_HvCooltHeatrPwrCnsAllwd2
+    property: HvCooltHeatrPwrCnsAllwd2
+  - outsignal: sVcTestTx_Te_HvCooltHeatrWtrTDes2
+    property: HvCooltHeatrWtrTDes2
+  - outsignal: sVcTestTx_X_PropVlvToHvBattReq
+    property: PropVlvToHvBattReq
+  - outsignal: yVcTestTx_B_RadrBypVlvReq
+    property: RadrBypVlvReq
+  - outsignal: yVcTestTx_B_RlyForCoolgActvnReq
+    property: RlyForCoolgActvnReq
+  - outsignal: sVcTestTx_an_SplrShttrAgReq
+    property: SplrShttrAgReq
+  - outsignal: yVcTestTx_B_SplrShttrEnaReq
+    property: SplrShttrEnaReq
+#UsageMode
+  - outsignal: sVcTestTx_D_UsgModSts
+    property: UsgModStsForTherm
+  ccmb:
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForDefrst1
+    property: AirFlapPosnReqForDefrst1
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForSideForFirstLe
+    property: AirFlapPosnReqForSideForFirstLe
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForVentSideForFirstRi
+    property: AirFlapPosnReqForVentSideForFirstRi
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForCentrForFirstLe
+    property: AirFlapPosnReqForCentrForFirstLe
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForVentCentrForFirstRi
+    property: AirFlapPosnReqForVentCentrForFirstRi
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForFlrForFirstRiLe
+    property: AirFlapPosnReqForFlrForFirstRiLe
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForFlrForSecRiLe
+    property: AirFlapPosnReqForFlrForSecRiLe
+  - outsignal: sVcTestTx_X_AirFlapPosnTReqForFirsLe
+    property: AirFlapPosnTReqForFirsLe
+  - outsignal: sVcTestTx_X_AirFlapPosnTReqForFirstRi
+    property: AirFlapPosnTReqForFirstRi
+  - outsignal: sVcTestTx_X_AirFlapPosnTReqForSecLe
+    property: AirFlapPosnTReqForSecLe
+  - outsignal: sVcTestTx_X_AirFlapPosnTReqForSecRi
+    property: AirFlapPosnTReqForSecRi
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForRecirc1
+    property: AirFlapPosnReqForRecirc1
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForOsa
+    property: AirFlapPosnReqForOsa
+  - outsignal: sVcTestTx_X_AirFlapPosnReqForVentForSecRiLe
+    property: AirFlapPosnReqForVentForSecRiLe
+  - outsignal: sVcTestTx_D_AirFlapSpdReqForAirDistbn
+    property: AirFlapSpdReqForAirDistbn
+  - outsignal: sVcTestTx_D_AirFlapSpdReqForRecirc
+    property: AirFlapSpdReqForRecirc
+  - outsignal: sVcTestTx_D_AirFlapSpdReqForTFrnt
+    property: AirFlapSpdReqForTFrnt
+  - outsignal: sVcTestTx_D_HvacActrStReq
+    property: HvacActrStReq
+  hvacsys:
+  - outsignal: sVcTestTx_n_HvcFanRq
+    property: HvacFanSet1HvacFanSpd1
+  - outsignal: sVcTestTx_n_HvcFanRamp
+    property: HvacFanSet1HvacFanRamp1
+signal_groups:
+  ##### FIOC 6.0.0 #######
+  fioc:
+  - CmprAirCdnCtrl:
+    - outsignal: sVcTestTx_Pw_CmprPwrLim
+      property: CmprAirCdnCtrlCmprPwrLim
+    - outsignal: yVcTestTx_B_CmprRunReq
+      property: CmprAirCdnCtrlCmprRunReq
+    - outsignal: sVcTestTx_n_CmprSpdReq
+      property: CmprAirCdnCtrlCmprSpdReq
+  - ElecExpVlvCtrl2:
+    - outsignal: yVcTestTx_B_EmgyModEnaForChillrVlv
+      property: ElecExpVlvCtrl2EmgyModEnaForChillrVlv
+    - outsignal: sVcTestTx_n_ChillerVlvEmgyPosReq
+      property: ElecExpVlvCtrl2EmgyPosnRqrdForChillrVlv
+    - outsignal: sVcTestTx_D_EmgyStrtDlyForChillrVlv
+      property: ElecExpVlvCtrl2EmgyStrtDlyForChillrVlv
+    - outsignal: sVcTestTx_D_IninReqForChillrVlv
+      property: ElecExpVlvCtrl2IninReqForChillrVlv
+    - outsignal: sVcTestTx_D_MotStallDetnEnaForChillrVlv
+      property: ElecExpVlvCtrl2MotStallDetnEnaForChillrVlv
+    - outsignal: yVcTestTx_B_MoveEnaForChillrVlv
+      property: ElecExpVlvCtrl2MoveEnaForChillrVlv
+    - outsignal: sVcTestTx_X_PosnReqForChillerVlv
+      property: ElecExpVlvCtrl2PsnRqrdForChillrVlv
+  # - FuelHeaterCtrl:
+  #   - outsignal: sVcTestTx_X_
+  #     property: FuelHeaterCtrlFuHeatrAmbAirP
+  #   - outsignal: sVcTestTx_X_
+  #     property: FuelHeaterCtrlFuHeatrDiagRqrd
+  #   - outsignal: sVcTestTx_X_
+  #     property: FuelHeaterCtrlFuHeatrErrResdVal
+  #   - outsignal: sVcTestTx_X_
+  #     property: FuelHeaterCtrlFuHeatrErrStsReqd
+  #   - outsignal: sVcTestTx_X_
+  #     property: FuelHeaterCtrlFuHeatrFuTyp
+  #   - outsignal: sVcTestTx_X_
+  #     property: FuelHeaterCtrlFuHeatrMod
+  # - OutdT:
+  #   - outsignal: sVcTestTx_X_
+  #     property: OutdTAmbTVal
+  #   - outsignal: sVcTestTx_X_
+  #     property: OutdTQly
+  # - VehBattU:
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehBattUSysU
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehBattUSysUQf
+  # - VehSpdSafe:
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehSpdSafeChks
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehSpdSafeCntr
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehSpdSafeMax
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehSpdSafeMin
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehSpdSafeMinMaxQf
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehSpdSafeNom
+  #   - outsignal: sVcTestTx_X_
+  #     property: VehSpdSafeNomQf

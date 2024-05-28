@@ -1,0 +1,14 @@
+{
+  "SampleTimes": {
+    "2ms": "0.002",
+    "10ms": "0.010",
+    "20ms": "0.020"
+  },
+    "2ms": [],
+    "10ms": [
+      "VcScBCoord",
+      "VcScCVehMtn",
+      "VcScFeh"
+    ],
+    "20ms": []
+}

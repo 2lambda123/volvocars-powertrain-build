@@ -1,0 +1,5 @@
+{
+  "ClimateAndThermalControlInternal": "climate-and-thermal-control-service",
+  "VehicleModesProvider": "vehicle_modes_provider",
+  "VehicleMotionState": "vehiclemotionstate-service"
+}

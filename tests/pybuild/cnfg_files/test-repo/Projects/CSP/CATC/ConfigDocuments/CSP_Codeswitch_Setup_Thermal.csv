@@ -1,0 +1,31 @@
+Switch name;Description;CSP_Thermal
+Vc.Pvc.Hw.B_Efad;Project includes Efad;1
+Vc.Pvc.Hw.B_Erad;Project includes Erad;1
+Vc.Pvc.Hw.B_Isg;Project includes Isg;0
+Vc.Pvc.Hw.B_HVSystem;Project includes high voltage system;1
+Vc.Pvc.Hw.B_MVSystem;Project includes medium voltage system;0
+Vc.Pvc.Hw.B_MT;Project includes manual transmission;0
+Vc.Pvc.Hw.B_AT;Project includes automatic transmission;0
+Vc.Pvc.Hw.B_DualClutchGbx;Project includes dual clutch;0
+Vc.Pvc.Hw.B_EClutch;Project includes E-clutch;0
+Vc.Pvc.Hw.B_ManualClutch;Project includes manual clutch;0
+Vc.Pvc.Hw.B_TqConverterGbx;Project includes torque converter;0
+Vc.Pvc.Hw.B_12VStartMotor;Project includes 12V start motor;0
+Vc.Pvc.Hw.B_Petrol;Project includes petrol engine;0
+Vc.Pvc.Hw.B_Diesel;Project includes diesel engine;0
+Vc.Pvc.Hw.B_RangeExtender;Project includes range extender;0
+Vc.Pvc.Hw.B_Awd;Project includes mechanical AWD;0
+Vc.Pvc.Sw.B_StopStart;Project includes start stop functionality;0
+Vc.Pvc.Sw.B_IdleCoast;Project includes idle coast functionality;0
+Vc.Pvc.Hw.B_DualErad;Project includes two Erad;0
+Vc.Pvc.Hw.B_VeaGen1;Project includes VEA gen1 engine;0
+Vc.Pvc.Hw.B_VeaGen2;Project includes VEA gen2 engine;0
+Vc.Pvc.Hw.B_VeaGen3;Project includes VEA gen3 engine;0
+Vc.Pvc.Hw.B_Gep3Gen1;Project includes GEP3 gen1 engine;1
+Vc.Pvc.Hw.B_Bev;Project includes battery electric vehicle (BEV);1
+Vc.Pvc.Hw.B_Tacm;Project includes Tacm actuator;0
+Vc.Pvc.Hw.B_Bosch;Project includes a Bosch ECM ;1
+Vc.Pvc.Hw.B_Denso;Project includes a Desno ECM ;0
+Vc.Pvc.Sw.B_OnePedalmapPerGear;Project includes one pedalmap per gear;0
+Vc.Pvc.Hw.B_HRE;Project includes Horizon Range Extender;0
+Vc.Pvc.Sw.B_Gstr;Project includes new Torque interface with AW;0

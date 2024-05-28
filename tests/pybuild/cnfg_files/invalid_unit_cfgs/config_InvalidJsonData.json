@@ -1,0 +1,15 @@
+{
+  "outports": {
+    "yVcAesSupM_B_SupChrgrErr": {
+      "handle": "VcAesSupM__gen3/VcAesSupM/Subsystem/VcAesSupM/tlop_VcAesAct_posn_EgrTar1",
+      "name": "yVcAesSupM_B_SupChrgrErr",
+      "configs": [
+        "all"],
+      "description": "Supercharger Peak Pressure engine protection activation flag",
+      "type": "Bool",
+      "unit": "%",
+      "offset": 0,
+      "lsb": 1,
+      "min": "-",
+      "max": "-",
+      "class": "CVC_DISP"}},

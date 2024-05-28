@@ -1,0 +1,29 @@
+{
+  "SGP_SYMBOL_GROUPS": {
+    "HYBRID": 4,
+    "HEP": 4,
+    "VEP": 3,
+    "GEP": 3,
+    "VED": 2,
+    "CSP": 4
+  },
+  "SGP_FILE": {
+    "cfg_folder": "ConfigDocuments",
+    "debug": "VcDebug_sgp.xml",
+    "debug_output": "VcDebugOutput_sgp.xml",
+    "dep": "VcDebugSafe_sgp.xml",
+    "dep_output": "VcDebugOutputSafe_sgp.xml"
+  },
+  "security_variables": [
+    "sVcModel_D_SecurityOne",
+    "sVcModel_D_SecurityTwo"
+  ],
+  "special_unit_prefixes": ["VcDcl"],
+  "special_units": {
+    "VcDclSsCvc": "VcDclSsCvcMdl"
+  },
+  "project_symbols": {
+    "VED": {"EGE_DATA_VCC_SP_VERSION": "CS_ENGINESYSTEMINFO"},
+    "VEP": {"EGE_DATA_VCC_SP_VERSION": "CS_ENGINESYSTEMINFO"}
+  }
+}

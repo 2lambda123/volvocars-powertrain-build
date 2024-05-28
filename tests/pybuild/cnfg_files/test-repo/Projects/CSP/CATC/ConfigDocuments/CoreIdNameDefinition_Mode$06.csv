@@ -1,0 +1,101 @@
+;;;;;;PROJECTS;Comments
+Model name;Mode $06 Name;Description;Fid;Unit and Scaling ID;Comments;ClimCtr;Old Id
+VcAesTrboM;Vc06BoostHiPlausMon;Test Result Id for high boost pressure Monitoring;VcFiBoostPPlausMon;17;;;BSTR_HI
+VcAesTrboM;Vc06BoostLoPlausMon;Test Result Id for low boost pressure Monitoring;VcFiBoostPPlausMon;17;;;BSTR_LO
+VcAesTrboMg3;Vc06Boost1HiPlausMon;Test Result Id for high boost pressure 1 Monitoring;VcFiBoostPPlausMon;17;;;
+VcAesTrboMg3;Vc06Boost1LoPlausMon;Test Result Id for low boost pressure 1 Monitoring;VcFiBoostPPlausMon;17;;;
+VcAesTrboMg3;Vc06Boost2HiPlausMon;Test Result Id for high boost pressure 2 Monitoring;VcFiBoostPPlausMon;17;;;
+VcAesTrboMg3;Vc06Boost2LoPlausMon;Test Result Id for low boost pressure 2 Monitoring;VcFiBoostPPlausMon;17;;;
+VcAesObd;Vc06PCVLeakMon;Test Result Id for PCV Leakage Monitor;VcFiPCVLeakMon;17;;;
+VcEmiCatM;Vc06CatMon;Test Result Id for catalyst monitor;VcFiCatMon;3A;3A = 0.001g / LSB;;
+VcEmiOscM;Vc06CatalystO2StorageMon;Test Result Id for catalyst monitor;VcFiCatalystO2StorageMon;3A;;;
+VcEmiOscM;Vc06SecO2SnsrDynMon;Test Result Id for catalyst monitor;VcFiCatalystO2StorageMon;10;10 = 1ms/LSB;;
+VcEmiPlsM;Vc06SecO2SnsrPlausLeanMon;Test result Id for secondary oxygen sensor plausability monitor lean;VcFiSecO2SnsrPlausMon;0A;0A = 0.122mV/LSB;;
+VcEmiPlsM;Vc06SecO2SnsrPlausRichMon;Test result Id for secondary oxygen sensor plausability monitor rich;VcFiSecO2SnsrPlausMon;0A;;;
+VcEmiPlsM;Vc06SecO2SnsrPlausAmplMon;Test result Id for secondary oxygen sensor plausability monitor amplitude;VcFiSecO2SnsrPlausMon;0A;;;
+VcLamDynCcM;Vc06LamSnsrSlowRespSlpMon;Test result Id for front lambda sensor slow response;VcFiPrimO2SnsrSlowRespMon;90;90 = 1ms/LSB;;
+VcLamDynCcM;Vc06LamSnsrSlowRespMon;Test result Id for front lambda sensor slow response;VcFiPrimO2SnsrSlowRespMon;90;90 = 1ms/LSB;;
+VcAesEgrM;Vc06EgrLoFlw;Test result Id for EGR Lo flow fault;VcFiEgrSysMon;28;;;
+VcAesEgrM;Vc06EgrHiFlw;Test result Id for EGR Hi flow fault;VcFiEgrSysMon;28;;;
+VcAesEgrM;Vc06EgrAr;Test result Id for EGR flow fault;VcFiEgrAr;1;;;EGRAR
+VcAesEgrM;Vc06EgrClrMnr;Test result Id for EGR cooler fault;VcFiEgrClrMnr;3;;;EGRCLRR
+VcObdDpfDpms;Vc06DPFPerfDpms;Test Result Id for DPF soot filtration efficiency below threshold Soot Sensor ;VcFiDPFPerfDpms;1;;;DPFPERF
+VcObdDpf;Vc06DPFPerfDP;Test Result Id for DPF soot filtration efficiency below threshold DP-sensor;VcFiDPFPerfDP;83;;;
+VcObdLnt;Vc06ObdLnt;Test Result Id for LNT performance monitor;VcFiObdLnt;3;;;NTMA
+VcObdLntNox;Vc06ObdLntNox;Test Result Id for LNT performance monitor;VcFiObdLntNox;3B;g (0-6,5335);;
+VcNoxSensMgr;Vc06NOxSensUsMountingError;Test Result Id for Mounting error (not in exhaust flow);VcFiNOxSensUsMountingDiag;2E;True/false;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensUsAvailabilityError;Test Result Id for NOx signal status invalid too much;VcFiNOxSensUsAvailabilityDiag;20; Ratio (0-1) ;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensUsReadinessError;Test Result Id for Sensor readiness not reached in time;VcFiNOxSensUsReadinessDiag;91; S (0-900)  ;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensUsCurveDiagAError;Test Result Id for Nox signal slope error ;VcFiNOxSensUsCurveDiagA;2F; %  (0-255%) ;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensDsMountingError;Test Result Id for Mounting error (not in exhaust flow);VcFiNOxSensDsMountingDiag;2E;True/false;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensDsAvailabilityError;Test Result Id for NOx signal status invalid too much;VcFiNOxSensDsAvailabilityDiag;20; Ratio (0-1);;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensDsReadinessError;Test Result Id for Sensor readiness not reached in time;VcFiNOxSensDsReadinessDiag;91;S (0-900)  ;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensDsCurveDiagAError;Test Result Id for Nox signal slope error ;VcFiNOxSensDsCurveDiagA;2F; %  (0-255%) ;;Remove this for GenIII?
+VcObdNoxSOfs;Vc06NOxSensUsOfsTst;Test Result Id for Upstream NOx sensor offset test;VcFiNOxSensOfs;40; Ppm (0-1650) ;;
+VcObdNoxSOfs;Vc06NOxSensMidOfsTst;Test Result Id for Mid NOx sensor offset test;VcFiNOxSensOfs;40; Ppm (0-1650) ;;
+VcObdNoxSOfs;Vc06NOxSensDsOfsTst;Test Result Id for Downstream NOx sensor offset test;VcFiNOxSensOfs;40; Ppm (0-1650) ;;
+VcObdNoxSO2;Vc06NOxSensUsOxyToMdl;Test Result Id for Upstream NOx sensor O2 concentration sensor to model;VcFiNOxSensO2;30; % (0-100) ;;
+VcObdNoxSO2;Vc06NOxSensMidOxyToMdl;Test Result Id for Mid NOx sensor O2 concentration sensor to model;VcFiNOxSensO2;30; % (0-100) ;;
+VcObdNoxSO2;Vc06NOxSensDsOxyToMdl;Test Result Id for Downstream NOx sensor O2 concentration sensor to model;VcFiNOxSensO2;30; % (0-100) ;;
+VcObdScr;Vc06ScrConvEff;Test Result Id for SCR Conversion efficiency too low;VcFiScrConvEff;20; Ratio (0-1) ;;
+VcObdScr;Vc06Scr1ConvEff;Test Result Id for SCR1 Conversion efficiency too low;VcFiScr1ConvEff;20; Ratio (0-1) ;;
+VcObdScr;Vc06Scr2ConvEff;Test Result Id for SCR2 Conversion efficiency too low;VcFiScr2ConvEff;20; Ratio (0-1) ;;
+Unused;Vc06Unused;Unused monitors;VcFiUnused;;;;
+VcPurgMon;Vc06PurgMonMp;Test result Id purge monitor manifold purge ;VcFiPurgMon;5;;;
+VcPurgMon;Vc06PurgMonVp;Test result Id purge monitor over pressure purge;VcFiPurgMon;5;;;
+VcLamCtrlM;Vc06LamCtrlMFirstSt;Test result Id lambda control closed loop monitor first start;VcFiLamCtrlM;12;;;
+VcLamCtrlM;Vc06LamCtrlMReSt;Test result Id lambda control closed loop monitor restart;VcFiLamCtrlM;12;;;
+VcObdGpf;Vc06ObdGpf;Test result Id for gasoline particle filter monitor;VcFiObdGpf;83;;;
+VcLeakMon;Vc06LeakMon;Test result Id for leakage detection monitor;VcFiLeakMon;32;;;
+VcNoxSensMgr;Vc06NOxSensUsHeater;Test result id for Us Heater capacity monitor;VcFiNOxSensUsHeaterDiag;91; s (0-900) ;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensDsHeater;Test result id for Ds Heater capacity monitor;VcFiNOxSensDsHeaterDiag;91; s (0-900) ;;Remove this for GenIII?
+VcEmiPlsM;Vc06MidO2SnsrPlausLeanMon;Test result Id for middle oxygen sensor plausability monitor lean;VcFiMidO2SnsrPlausMon;0A;0A = 0.122mV/LSB;;
+VcEmiPlsM;Vc06MidO2SnsrPlausRichMon;Test result Id for middle oxygen sensor plausability monitor rich;VcFiMidO2SnsrPlausMon;0A;;;
+VcEmiPlsM;Vc06MidO2SnsrPlausAmplMon;Test result Id for middle oxygen sensor plausability monitor amplitude;VcFiMidO2SnsrPlausMon;0A;;;
+VcLeakMon;Vc06LeakMonBlocked;Test result Id for leakage detection monitor blocked lines;VcFiLeakMon;12;;;
+VcLeakMon;Vc06LeakMonRefPres;Test result Id for leakage detection monitor pressure sensor fault;VcFiLeakMon;17;;;
+VcObdDpms;Vc06DpmsTPlaus;Test result Id Key on check of temperature meander;VcFiDpmsTPlaus;96;degC;;
+VcObdDpms;Vc06DpmsProtTubePlaus;Test result Id Detection of clogged protection tube;VcFiDpmsProtTubePlaus;91;s;;
+VcObdDpms;Vc06DpmsHtrPlaus;Test result Id Heater plausibility check;VcFiDpmsHtrPlaus;13;Ohm results are in the range of 0 to 20 Ohm;;
+VcObdDpms;Vc06DpmsIDEPlaus;Test result Id IDE plausibility check;VcFiDpmsIDEPlaus;41;uA;;
+VcObdDpms;Vc06DpmsShntCircPlaus;Test result Id IDE shunt circuit plausibility check;VcFiDpmsShntCircPlaus;41;uA;;
+VcObdDpms;Vc06PMSnsrGainFault;Test result Id for PM sensor gain fault;VcFiPMSnsrGainFault;3;;;
+VcObdDpms;Vc06PMSnsrRegenTOut;Test result Id for PM sensor regeneration time out;VcFiPMSnsrRegenTOut;2F;% (perc failed regen attemps) RegenTOut should be linked to Heater MID;;
+VcObdDpms;Vc06PMSnsrOutOfExh;Test result Id for PM sensor removed/out of exhaust;VcFiPMSnsrOutOfExh;96;degC;;
+VcObdDpms;Vc06PMSnsrCloggedTip;Test result Id for PM Sensor clogged tip;VcFiPMSnsrCloggedTip;16;degC;;
+VcLamCilM;Vc06CilMSfb;Test result Id for Cylinder Imbalance Monitor Sub-Feedback;VcFiCilM;5;;;
+VcLamCilM;Vc06CilMLam;Test result Id for Cylinder Imbalance Monitor Lambda Oscillation;VcFiCilM;6;;;
+VcLamCilM;Vc06CilMEngSpd;Test result Id for Cylinder Imbalance Monitor Engine Speed Oscillation;VcFiCilM;3;;;
+VcCdPinM;Vc06CdPinMHiAct1;Test result Id for Sliding Camshaft Monitor Actuator Pin 1, High Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMHiAct2;Test result Id for Sliding Camshaft Monitor Actuator Pin 2, High Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMHiAct3;Test result Id for Sliding Camshaft Monitor Actuator Pin 3, High Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMHiAct4;Test result Id for Sliding Camshaft Monitor Actuator Pin 4, High Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMHiAct5;Test result Id for Sliding Camshaft Monitor Actuator Pin 5, High Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMHiAct6;Test result Id for Sliding Camshaft Monitor Actuator Pin 6, High Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMHiAct7;Test result Id for Sliding Camshaft Monitor Actuator Pin 7, High Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMHiAct8;Test result Id for Sliding Camshaft Monitor Actuator Pin 8, High Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMLoAct1;Test result Id for Sliding Camshaft Monitor Actuator Pin 1, Low Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMLoAct2;Test result Id for Sliding Camshaft Monitor Actuator Pin 2, Low Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMLoAct3;Test result Id for Sliding Camshaft Monitor Actuator Pin 3, Low Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMLoAct4;Test result Id for Sliding Camshaft Monitor Actuator Pin 4, Low Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMLoAct5;Test result Id for Sliding Camshaft Monitor Actuator Pin 5, Low Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMLoAct6;Test result Id for Sliding Camshaft Monitor Actuator Pin 6, Low Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMLoAct7;Test result Id for Sliding Camshaft Monitor Actuator Pin 7, Low Side;VcFiCdPinM;1D;;;
+VcCdPinM;Vc06CdPinMLoAct8;Test result Id for Sliding Camshaft Monitor Actuator Pin 8, Low Side;VcFiCdPinM;1D;;;
+VcEmiPlsM;Vc06AftO2SnsrPlausLeanMon;Test result Id for after oxygen sensor plausability monitor lean;VcFiAftO2SnsrPlausMon;0A;0A = 0.122mV/LSB;;
+VcEmiPlsM;Vc06AftO2SnsrPlausRichMon;Test result Id for after oxygen sensor plausability monitor rich;VcFiAftO2SnsrPlausMon;0A;;;
+VcEmiPlsM;Vc06AftO2SnsrPlausAmplMon;Test result Id for after oxygen sensor plausability monitor amplitude;VcFiAftO2SnsrPlausMon;0A;;;
+VcNoxSensMgr;Vc06NOxSensMidMountingError;Test Result Id for Mounting error (not in exhaMidt flow);VcFiNOxSensMidMountingDiag;2E;True/false;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensMidAvailabilityError;Test Result Id for NOx signal statMid invalid too much;VcFiNOxSensMidAvailabilityDiag;20; Ratio (0-1) ;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensMidReadinessError;Test Result Id for Sensor readiness not reached in time;VcFiNOxSensMidReadinessDiag;91; S (0-900)  ;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensMidCurveDiagAError;Test Result Id for Nox signal slope error ;VcFiNOxSensMidCurveDiagA;2F; %  (0-255%) ;;Remove this for GenIII?
+VcNoxSensMgr;Vc06NOxSensMidHeater;Test result id for Mid Heater capacity monitor;VcFiNOxSensMidHeaterDiag;91; s (0-900) ;;Remove this for GenIII?
+VcObdNoxStartUp;Vc06NOxSnsrUsHtr;Test result id for Us Heater capacity monitor;VcFiNOxSnsrUsHtr;91; S (0-900)  ;;
+VcObdNoxStartUp;Vc06NOxSnsrMidHtr;Test result id for Mid Heater capacity monitor;VcFiNOxSnsrMidHtr;91; S (0-900)  ;;
+VcObdNoxStartUp;Vc06NOxSnsrDsHtr;Test result id for Ds Heater capacity monitor;VcFiNOxSnsrDsHtr;91; S (0-900)  ;;
+VcObdNoxStartUp;Vc06NOxSnsrUsReady;Test Result Id for Us Sensor readiness not reached in time;VcFiNOxSnsrUsReady;91; S (0-900)  ;;
+VcObdNoxStartUp;Vc06NOxSnsrMidReady;Test Result Id for Mid Sensor readiness not reached in time;VcFiNOxSnsrMidReady;91; S (0-900)  ;;
+VcObdNoxStartUp;Vc06NOxSnsrDsReady;Test Result Id for Ds Sensor readiness not reached in time;VcFiNOxSnsrDsReady;91; S (0-900)  ;;
+VcLamRespM;Vc06SymRespM;Test result ID for Front Oxygen Sensor Symmetric Slow Response;VcFiRespM;90;;;
+VcLamRespM;Vc06LRRespM;Test result ID for Front Oxygen Sensor Lean to Rich Slow Response;VcFiRespM;90;;;
+VcLamRespM;Vc06RLRespM;Test result ID for Front Oxygen Sensor Rich to Lean Slow Response;VcFiRespM;90;;;

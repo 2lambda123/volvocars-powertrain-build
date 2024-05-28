@@ -1,0 +1,5 @@
+;;;;;;PROJECTS;;
+Model name;Mode $06 Name;Description;Fid;Unit and Scaling ID;Comments;CFG1;CFG2;Old Id
+VcAesTrboM;Vc06BoostHiPlausMon;Test Result Id for high boost pressure Monitoring;VcFiBoostPPlausMon;17;;x;x;BSTR_HI
+VcAesTrboM;Vc06BoostLoPlausMon;Test Result Id for low boost pressure Monitoring;VcFiBoostPPlausMon;18;;x;;BSTR_LO
+VcAesTrboMg3;Vc06Boost1HiPlausMon;Test Result Id for high boost pressure 1 Monitoring;VcFiBoostPPlausMon;1A;;;x;

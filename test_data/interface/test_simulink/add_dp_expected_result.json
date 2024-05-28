@@ -1,0 +1,27 @@
+[
+    {
+        "name": "VcExt10ms",
+        "ports": {
+            "in": {
+                "sVcModel_D_SignalWithoutGroup": {
+                    "primitive": "signals.domain.SignalWithoutGroup",
+                    "type": "UInt16"
+                },
+                "sVcModel_Z_SignalWithGroup": {
+                    "primitive": "signals.other_domain.Group.Signal",
+                    "type": "Float32"
+                }
+            },
+            "out": {
+                "sVcModel_D_OutSignalWithoutGroup": {
+                    "primitive": "signals.domain.OutSignalWithoutGroup",
+                    "type": "UInt16"
+                },
+                "sVcModel_Z_OutSignalWithGroup": {
+                    "primitive": "signals.other_domain.OutGroup.OutSignal",
+                    "type": "Float32"
+                }
+            }
+        }
+    }
+]

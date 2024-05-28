@@ -1,0 +1,4 @@
+;;;;;PROJECTS;;
+Model name;Event Id Name;Description;Controlling FiD;Comments;PvcDemo;CSP_CATC;Old Id
+VcTdTOffsM;VcEvAmbTOffsHi;Ambient temperature sensor offset high;-;;;x;
+;VcEvAmbTOffsLo;Ambient temperature sensor offset low;-;;;x;

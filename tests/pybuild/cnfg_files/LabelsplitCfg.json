@@ -1,0 +1,15 @@
+{
+  "ConfigFileVersion": "0.0.1",
+  "BaseConfig": "./BaseConfig.json",
+  "ProjectInfo": {
+    "projConfig": "GEP3_BEV",
+    "a2LFileName": "VEA_VED4_SPA.a2l",
+    "baseNvmStructs": "nvm_structs_ref_empty.json",
+    "ecuSupplier": "Denso",
+    "ecuType": "G2",
+    "unitCfgDeliveryDir": "../reference_files/UnitCfgs",
+    "prjUnitCfgDir": "./cnfg_files/unit_cfgs/",
+    "srcCodeDstDir": "../reference_files"
+  },
+  "UnitCfgs": "./rasters.json"
+}

@@ -1,0 +1,841 @@
+_signals_external_ext_ok:
+  inports: {}
+  outports: {}
+dp_spec:
+  VcExt50ms:
+    consumer:
+    - default: null
+      description: Ambient temperature sensor from FIOC
+      domain: fioc
+      factor: 1
+      group: null
+      init: 0
+      length: null
+      offset: 0
+      property: AmbTMecRimSnsr
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: deg C
+      variable: sVcFioc_Te_AmbTMecRimSnsr
+      variable_type: Float32
+    - default: null
+      description: sVcFioc_D_AmbTMecRimSnsrElecSts
+      domain: fioc
+      factor: 1
+      group: null
+      init: 0
+      length: null
+      offset: 0
+      property: AmbTMecRimSnsrElecSts
+      property_type: uint8
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: sVcFioc_D_AmbTMecRimSnsrElecSts
+      variable_type: UInt8
+    producer:
+    - default: null
+      description: Circuit Connect Valve Request
+      domain: fioc
+      factor: 1
+      group: null
+      init: 0
+      length: null
+      offset: 0
+      property: CircCnctVlvReq
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcTestTx_B_CircCnctVlvReq
+      variable_type: Bool
+    - default: null
+      description: Hv battery coolant shut off valve request, 1 = no flow to battery
+      domain: fioc
+      factor: 1
+      group: null
+      init: 0
+      length: null
+      offset: 0
+      property: HvBattOnOffVlvReq
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcTestTx_B_HvBattOnOffVlvReq
+      variable_type: Bool
+hal_spec:
+  VcExt1000ms:
+    consumer: []
+    producer: []
+  VcExt100ms:
+    consumer: []
+    producer: []
+  VcExt50ms:
+    consumer:
+    - api: HighVoltageDcDcConverterElectricalMeasurementHal
+      default: null
+      description: Actual current at the Low Voltage side of converter
+      endpoint: CurrentOnHighVoltageSide
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: A
+      variable: sVcHlcm_I_HvDcDcIHv
+      variable_type: Float32
+      variant: hals
+    - api: HighVoltageDcDcConverterElectricalMeasurementHal
+      default: null
+      description: Actual current at the Low Voltage side of Hconverter
+      endpoint: CurrentOnLowVoltageSide
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: A
+      variable: sVcHlcm_I_HvDcDcILv
+      variable_type: Float32
+      variant: hals
+    - api: HighVoltageDcDcConverterElectricalMeasurementHal
+      default: null
+      description: Power parameter that characterizes voltage transients.
+      endpoint: TransientPower
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHlcm_Pw_HvDcDcTraPwr
+      variable_type: UInt16
+      variant: hals
+    - api: HighVoltageDcDcConverterElectricalMeasurementHal
+      default: null
+      description: The measured voltage on the high voltage side of converter
+      endpoint: VoltageOnHighVoltageSide
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: V
+      variable: sVcHlcm_U_HvDcDcUHv
+      variable_type: Float32
+      variant: hals
+    - api: HighVoltageDcDcConverterElectricalMeasurementHal
+      default: null
+      description: The voltage on the low voltage side of Hconverter
+      endpoint: VoltageOnLowVoltageSide
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: V
+      variable: sVcHlcm_U_HvDcDcULv
+      variable_type: Float32
+      variant: hals
+    - api: HighVoltageChargingMonitorHal
+      default: null
+      description: 'It provides the temperature of the Onboard charger  '
+      endpoint: Temperature
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: deg C
+      variable: sVcHvcc_Te_HvChrgrT
+      variable_type: Float32
+      variant: hals
+    - api: HighVoltageChargingMonitorHal
+      default: null
+      description: It provides an estimated charging time left
+      endpoint: TimeToFullCharge
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: s
+      variable: sVcHvcc_t_HvChrgTiToFull
+      variable_type: UInt16
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: High Voltage Battery Climatisation Priority Request
+      endpoint: ClimatizationPrioritizationRequest
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int8
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: sVcHvec_D_HvBattClimaPrioReq
+      variable_type: Int8
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: High Voltage Battery Climatisation Energy Request
+      endpoint: ClimatizationEnergyRequest
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: Wh
+      variable: sVcHvec_E_HvBattClimaEgyReq
+      variable_type: UInt16
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: High voltage battery allowed cooling energy. The limit is estimated
+        based on min and max battery temperature and the thermal mass of the battery
+        pack. Data is used as input for thermal coordinator to use the battery HW
+        as thermal sink.
+      endpoint: AllowedCoolingEnergy
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: Wh
+      variable: sVcHvec_E_HvBattCoolgEgyAllwd
+      variable_type: UInt16
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: Allowed heating energy of the high voltage battery. Input to thermal
+        coordinator to be able to use high voltage battery as thermal sink.
+      endpoint: AllowedHeatingEnergy
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: Wh
+      variable: sVcHvec_E_HvBattHeatgEgyAllwd
+      variable_type: UInt16
+      variant: hals
+    - api: HVECElectricalPropertiesHal
+      default: null
+      description: HV Battery current. Positive current is discharging the battery.
+      endpoint: Current
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: A
+      variable: sVcHvec_I_HvBattI
+      variable_type: Float32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'Climatization power estimation of the high voltage battery based
+        on the flow of the coolant within the battery pack, the temperature of the
+        coolant within the battery pack and specific heat capacity for the coolant.  '
+      endpoint: ClimatizationPowerEstimation
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int16
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattClimaPwrEstimn
+      variable_type: Int16
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'The cooling powers are derived from the respective energy allowed
+        limitations and based on a calibratable time threshold.  '
+      endpoint: AllowedCoolingPower
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattCoolgPwrAllwd
+      variable_type: UInt16
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: Cooling power (thermal) for current heating need.
+      endpoint: CoolingPowerNow
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattCoolgPwrEstimn
+      variable_type: Float32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: Cooling power (thermal) for next heating need.
+      endpoint: CoolingPowerNext
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattCoolgPwrPred
+      variable_type: Float32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: Cooling power request of the high voltage battery.
+      endpoint: CoolingPowerRequest
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattCoolgPwrReq
+      variable_type: UInt16
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'Transition phase from current cooling power to the next stationary
+        cooling power level.  '
+      endpoint: CoolingPowerTransition
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int32
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattCoolgPwrTran
+      variable_type: Int32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'Allowed heating power of the high voltage battery.  '
+      endpoint: AllowedHeatingPower
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattHeatgPwrAllwd
+      variable_type: UInt16
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'Heating power (thermal) for the current cooling need.  '
+      endpoint: HeatingPowerNow
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattHeatgPwrEstimn
+      variable_type: Float32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'Heating power (thermal) for the next cooling need.  '
+      endpoint: HeatingPowerNext
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattHeatgPwrPred
+      variable_type: Float32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'Heating power request of the high voltage battery. Used to keep
+        battery within the minimum operating temperature.  '
+      endpoint: HeatingPowerRequest
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: uint16
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattHeatgPwrReq
+      variable_type: UInt16
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'Transition phase from current heating power to the next stationary
+        heating power level.  '
+      endpoint: HeatingPowerTransition
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int32
+      range:
+        max: '-'
+        min: '-'
+      unit: W
+      variable: sVcHvec_Pw_HvBattHeatgPwrTran
+      variable_type: Int32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: Minimum flow request of the high voltage battery. Request for coolant
+        flow.
+      endpoint: MinimumFlowRequest
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: l/min
+      variable: sVcHvec_Q_HvBattMinFlowReq
+      variable_type: Float32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: The average temperature of the high voltage battery.
+      endpoint: AverageTemperature
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int32
+      range:
+        max: '-'
+        min: '-'
+      unit: deg C
+      variable: sVcHvec_Te_HvBattTAvg
+      variable_type: Int32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'The maximum temperature of the high voltage battery.  '
+      endpoint: MaxTemperature
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int32
+      range:
+        max: '-'
+        min: '-'
+      unit: deg C
+      variable: sVcHvec_Te_HvBattTMax
+      variable_type: Int32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: The minimum temperature of the high voltage battery.
+      endpoint: MinTemperature
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int32
+      range:
+        max: '-'
+        min: '-'
+      unit: deg C
+      variable: sVcHvec_Te_HvBattTMin
+      variable_type: Int32
+      variant: hals
+    - api: HVECElectricalPropertiesHal
+      default: null
+      description: Actual HV Battery pack voltage (measured before contactors, i.e.
+        always giving pack voltage).
+      endpoint: Voltage
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: V
+      variable: sVcHvec_U_HvBattU
+      variable_type: Float32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: 'How long the current cooling power is held.  '
+      endpoint: CoolingPowerTime
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int32
+      range:
+        max: '-'
+        min: '-'
+      unit: s
+      variable: sVcHvec_t_HvBattCoolgPwrTi
+      variable_type: Int32
+      variant: hals
+    - api: HVECThermalPropertiesHal
+      default: null
+      description: How long the current heating power is held.
+      endpoint: HeatingPowerTime
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: null
+      property_type: int32
+      range:
+        max: '-'
+        min: '-'
+      unit: s
+      variable: sVcHvec_t_HvBattHeatgPwrTi
+      variable_type: Int32
+      variant: hals
+    producer: []
+service_spec:
+  ClimateAndThermalControlInternal:
+    default: 0
+    description: Availability of ClimateAndThermalControlInternal in climate-and-thermal-control-service
+    factor: 1
+    group: null
+    init: 0
+    length: 1
+    model: ClimateAndThermalControlInternal
+    offset: 0
+    property: inherent
+    property_type: bool
+    range:
+      max: '1'
+      min: '0'
+    service: climate-and-thermal-control-service
+    unit: '-'
+    variable: yVcSfw_B_ClimateandthermalcontrolinternalIsAvailable
+    variable_type: Bool
+  VehicleModesProvider:
+    default: 0
+    description: Availability of VehicleModesProvider in vehicle_modes_provider
+    factor: 1
+    group: null
+    init: 0
+    length: 1
+    model: VehicleModesProvider
+    offset: 0
+    property: inherent
+    property_type: bool
+    range:
+      max: '1'
+      min: '0'
+    service: vehicle_modes_provider
+    unit: '-'
+    variable: yVcSfw_B_VehiclemodesproviderIsAvailable
+    variable_type: Bool
+  VehicleMotionState:
+    default: 0
+    description: Availability of VehicleMotionState in vehiclemotionstate-service
+    factor: 1
+    group: null
+    init: 0
+    length: 1
+    model: VehicleMotionState
+    offset: 0
+    property: inherent
+    property_type: bool
+    range:
+      max: '1'
+      min: '0'
+    service: vehiclemotionstate-service
+    unit: '-'
+    variable: yVcSfw_B_VehiclemotionstateIsAvailable
+    variable_type: Bool
+sfw_spec:
+  VcExt1000ms:
+    consumer: []
+    producer: []
+  VcExt100ms:
+    consumer: []
+    producer: []
+  VcExt50ms:
+    consumer:
+    - api: VehicleMotionState
+      default: null
+      description: Estimate of instantanious longitudinal velocity of vehicle using
+        wheel rotary encoders, QF
+      endpoint: VelocityLongitudinal
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: nominal.quality
+      property_type: int8
+      range:
+        max: '-'
+        min: '-'
+      unit: -,$VmsQf
+      variable: sVcVms_Enm_VehSpdLgtQf
+      variable_type: Int8
+      variant: properties
+    - api: VehicleMotionState
+      default: null
+      description: Estimate of instantanious longitudinal velocity of vehicle using
+        wheel rotary encoders, the Inertial Measurement Unit and the Global Positioning
+        System. Vehicle axis system defined by ISO 8855.
+      endpoint: VelocityLongitudinal
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: nominal.value
+      property_type: float
+      range:
+        max: '-'
+        min: '-'
+      unit: m/s
+      variable: sVcVms_v_VehSpdLgt
+      variable_type: Float32
+      variant: properties
+    - api: ClimateAndThermalControlInternal
+      default: null
+      description: MaxDefOn
+      endpoint: ControlRequests
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: enable_max_defroster
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcReq_B_MaxDefOn
+      variable_type: Bool
+      variant: properties
+    - api: VehicleModesProvider
+      default: null
+      description: ''
+      endpoint: CrashMode
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: CrashModeIsActivated
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcVmp_B_CrashMod
+      variable_type: Bool
+      variant: properties
+    - api: VehicleModesProvider
+      default: null
+      description: ''
+      endpoint: UsageModeAvailable
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: UsageModeAvailableIsActivated
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcVmp_B_VehModAvl
+      variable_type: Bool
+      variant: properties
+    - api: VehicleModesProvider
+      default: null
+      description: ''
+      endpoint: UsageModeAwake
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: UsageModeAwakeIsActivated
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcVmp_B_VehModAwake
+      variable_type: Bool
+      variant: properties
+    - api: VehicleModesProvider
+      default: null
+      description: Vehicle Mode convinience
+      endpoint: UsageModeConvenience
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: UsageModeConvenienceIsActivated
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcVmp_B_VehModConv
+      variable_type: Bool
+      variant: properties
+    - api: VehicleModesProvider
+      default: null
+      description: Vehicle Mode Drive
+      endpoint: UsageModeDriving
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: UsageModeDrivingIsActivated
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcVmp_B_VehModDrv
+      variable_type: Bool
+      variant: properties
+    - api: VehicleModesProvider
+      default: null
+      description: ''
+      endpoint: UsageModeMovable
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: UsageModeMovableIsActivated
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcVmp_B_VehModMovable
+      variable_type: Bool
+      variant: properties
+    producer:
+    - api: ClimateAndThermalControlInternal
+      default: null
+      description: yVcTestTx_B_MaxDefOnDisp
+      endpoint: ControlOutput
+      factor: 1
+      init: 0
+      length: null
+      offset: 0
+      property: max_defroster_state.is_enabled
+      property_type: bool
+      range:
+        max: '-'
+        min: '-'
+      unit: '-'
+      variable: yVcTestTx_B_MaxDefOnDisp
+      variable_type: Bool
+      variant: properties

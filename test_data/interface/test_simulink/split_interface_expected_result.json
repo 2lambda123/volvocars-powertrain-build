@@ -1,0 +1,50 @@
+{
+    "VcExt10ms_domain_Always": {
+        "consumer": [
+            {
+                "domain": "domain",
+                "group": null,
+                "property": "SignalWithoutGroup",
+                "variable": "sVcModel_D_SignalWithoutGroup",
+                "variable_type": "UInt16",
+                "strategy": "Always"
+            }
+        ],
+        "producer": [
+            {
+                "domain": "domain",
+                "group": null,
+                "property": "OutSignalWithoutGroup",
+                "variable": "sVcModel_D_OutSignalWithoutGroup",
+                "variable_type": "UInt16",
+                "strategy": "Always"
+            }
+        ]
+    },
+    "VcExt10ms_otherdomain_Always": {
+        "consumer": [],
+        "producer": [
+            {
+                "domain": "other_domain",
+                "group": "OutGroup",
+                "property": "OutSignal",
+                "variable": "sVcModel_Z_OutSignalWithGroup",
+                "variable_type": "Float32",
+                "strategy": "Always"
+            }
+        ]
+    },
+    "VcExt10ms_otherdomain_OnChanged": {
+        "consumer": [
+            {
+                "domain": "other_domain",
+                "group": "Group",
+                "property": "Signal",
+                "variable": "sVcModel_Z_SignalWithGroup",
+                "variable_type": "Float32",
+                "strategy": "OnChanged"
+            }
+        ],
+        "producer": []
+    }
+}

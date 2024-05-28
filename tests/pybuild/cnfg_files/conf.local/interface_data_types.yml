@@ -1,0 +1,33 @@
+########################################################
+#
+# Defines user defined data types, such as enumerations
+#
+#
+########################################################
+types:
+  enums:
+    EnumTest:
+      - item: ClimaOff
+        in: ENUMTEST_CLIMAOFF
+        out: namespace::types::EnumTest::ClimaOff
+      - item: ClimaHeatgToHvacAndHvBatt
+        in: ENUMTEST_CLIMAHEATGTOHVACANDHVBATT
+        out: namespace::types::EnumTest::ClimaHeatgToHvacAndHvBatt
+      - item: ClimaHeatgToHvBatt
+        in: ENUMTEST_CLIMAHEATGTOHVBATT
+        out: namespace::types::EnumTest::ClimaHeatgToHvBatt
+      - item: ClimaHeatgToHvac
+        in: ENUMTEST_CLIMAHEATGTOHVAC
+        out: namespace::types::EnumTest::ClimaHeatgToHvac
+      - item: ClimaFlow
+        in: ENUMTEST_CLIMAFLOW
+        out: namespace::types::EnumTest::ClimaFlow
+      - item: Degas
+        in: ENUMTEST_DEGAS
+        out: namespace::types::EnumTest::Degas
+      - item: FailSafe
+        in: ENUMTEST_FAILSAFE
+        out: namespace::types::EnumTest::FailSafe
+      - default: ClimaOff
+        in: ENUMTEST_CLIMAOFF
+        out: namespace::types::EnumTest::ClimaOff

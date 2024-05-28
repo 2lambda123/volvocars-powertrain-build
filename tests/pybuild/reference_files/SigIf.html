@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    body {
+        counter-reset: h2;
+        font-family:"Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    }
+    h1 {text-align: center}
+    h2 {counter-reset: h3}
+    h3 {counter-reset: h4}
+    h4 {counter-reset: h5}
+    h5 {counter-reset: h6}
+    h2:before {counter-increment: h2; content: counter(h2) ". "}
+    h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
+    h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) ". "}
+    h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "}
+    h6:before {
+      counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "
+    }
+    h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {
+      content: ""; counter-increment: none
+    }
+    p {
+        padding-left:5mm;
+    }
+    table {
+        width:95%;
+        margin-left:5mm
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+    table tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+        background-color:#fff;
+    }
+    table th {
+        background-color: black;
+        color: white;
+    }
+    ol {
+        list-style-type: none;
+        counter-reset: item;
+        margin: 0;
+        padding-left:5mm;
+    }
+    ol > li {
+        display: table;
+        counter-increment: item;
+        margin-bottom: 0.6em;
+    }
+    ol > li:before {
+        content: counters(item, ".") ". ";
+        display: table-cell;
+        padding-right: 0.6em;
+    }
+    li ol > li {
+        margin: 0;
+    }
+    li ol > li:before {
+        content: counters(item, ".") " ";
+    }
+</style>
+<title>Signal interface report</title>
+</head>
+<body>
+<h1>Signal interface report</h1>
+<h2 class="nocount">Table of contents</h2>
+    <ol>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#signal_details">Detailed signal information</a></li>
+      <li><a href="#signal_index">Signal index</a></li>
+    </ol>
+    <h2 id="introduction">Introduction</h2>
+    <p>This documents lists the signal interfaces.</p>
+      <h2 id="signal_details">Detailed Signal Information</h2>
+  <h3 id="yVcAesSupM_B_SupChrgrErr">yVcAesSupM_B_SupChrgrErr</h3>
+  <p>Supercharger Peak Pressure engine protection activation flag</p>
+  <table id="sig_desc">
+    <thead>
+      <tr>
+        <th>Unit</th>
+        <th>Type</th>
+        <th>Class</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Lsb</th>
+        <th>Offset</th>
+        <th>Configs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>%</td>
+        <td>Bool</td>
+        <td>CVC_DISP</td>
+        <td>-</td>
+        <td>-</td>
+        <td>1</td>
+        <td>0</td>
+        <td>['all']</td>
+      </tr>
+    </tbody>
+  </table>
+  <p></p>
+
+  <table id="detailed_sig_def">
+    <thead>
+      <tr>
+        <th>Defined in unit</th>
+        <th>in projects</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>VcAesSupM__gen3</td>
+        <td>['CFG1']</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="signal_index">Signal index</h2>
+  <div><a href="#yVcAesSupM_B_SupChrgrErr">yVcAesSupM_B_SupChrgrErr</a></div>
+</body>
+</html>

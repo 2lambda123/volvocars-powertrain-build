@@ -1,0 +1,213 @@
+{
+    "DP": {
+        "VcExt10ms": {
+            "consumer": [
+                {
+                    "domain": "domain",
+                    "group": null,
+                    "property": "SignalWithoutGroup",
+                    "variable": "sVcModel_D_SignalWithoutGroup",
+                    "variable_type": "UInt16",
+                    "strategy": "Always"
+                },
+                {
+                    "domain": "other_domain",
+                    "group": "Group",
+                    "property": "Signal",
+                    "variable": "sVcModel_Z_SignalWithGroup",
+                    "variable_type": "Float32",
+                    "strategy": "OnChanged"
+                }
+            ],
+            "producer": [
+                {
+                    "domain": "domain",
+                    "group": null,
+                    "property": "OutSignalWithoutGroup",
+                    "variable": "sVcModel_D_OutSignalWithoutGroup",
+                    "variable_type": "UInt16",
+                    "strategy": "Always"
+                },
+                {
+                    "domain": "other_domain",
+                    "group": "OutGroup",
+                    "property": "OutSignal",
+                    "variable": "sVcModel_Z_OutSignalWithGroup",
+                    "variable_type": "Float32",
+                    "strategy": "Always"
+                }
+            ]
+        }
+    },
+    "DP_ENUM": {
+        "VcExt10ms": {
+            "consumer": [
+                {
+                    "domain": "other_domain",
+                    "group": "Group",
+                    "property": "Signal",
+                    "variable": "sVcModel_Z_SignalWithGroup",
+                    "variable_type": "BlinkerMode",
+                    "strategy": "Always"
+                }
+            ],
+            "producer": [
+                {
+                    "domain": "domain",
+                    "group": null,
+                    "property": "OutSignalWithoutGroup",
+                    "variable": "sVcModel_D_OutSignalWithoutGroup",
+                    "variable_type": "BlinkerMode",
+                    "strategy": "Always"
+                }
+            ]
+        }
+    },
+    "API": {
+        "VcExt10ms": {
+            "consumer": [
+                {
+                    "api": "AppProgInt",
+                    "endpoint": "EndPoint",
+                    "property": "Property",
+                    "variable": "sVcModel_B_Boolean",
+                    "variable_type": "Bool",
+                    "variant": "properties",
+                    "strategy": "Always"
+                }
+            ]
+        }
+    },
+    "API_ENUM": {
+        "VcExt10ms": {
+            "consumer": [
+                {
+                    "api": "AppProgInt",
+                    "endpoint": "EndPoint",
+                    "property": "Property",
+                    "variable": "sVcModel_B_CarModes",
+                    "variable_type": "CarModes",
+                    "variant": "properties",
+                    "strategy": "Always"
+                }
+            ]
+        }
+    },
+    "API_ENUMS": {
+        "VcExt10ms": {
+            "consumer": [
+                {
+                    "api": "AppProgInt",
+                    "endpoint": "EndPoint",
+                    "property": "Property",
+                    "variable": "sVcModel_B_CarModes",
+                    "variable_type": "CarModes",
+                    "variant": "properties",
+                    "strategy": "Always"
+                },
+                {
+                    "api": "AppProgIntTwo",
+                    "endpoint": "EndPoint",
+                    "property": "Property",
+                    "variable": "sVcModel_B_BlinkerMode",
+                    "variable_type": "BlinkerMode",
+                    "variant": "properties",
+                    "strategy": "Always"
+                }
+            ]
+        }
+    },
+    "API_DOUBLE_ENUM": {
+        "VcExt10ms": {
+            "consumer": [
+                {
+                    "api": "AppProgInt",
+                    "endpoint": "EndPoint",
+                    "property": "Property",
+                    "variable": "sVcModel_B_CarModes",
+                    "variable_type": "CarModes",
+                    "variant": "properties",
+                    "strategy": "Always"
+                },
+                {
+                    "api": "AppProgIntTwo",
+                    "endpoint": "EndPoint",
+                    "property": "Property",
+                    "variable": "sVcModel_B_CarModesTwo",
+                    "variable_type": "CarModes",
+                    "variant": "properties",
+                    "strategy": "Always"
+                }
+            ]
+        }
+    },
+    "INTERFACE_DATA_TYPES": {
+        "enums": {
+            "CarModes": [
+                {
+                    "item": "Normal",
+                    "in": "CARMODES_NORMAL",
+                    "out": "vehiclemodesprovider::types::CarModes::kNormal"
+                },
+                {
+                    "item": "Transport",
+                    "in": "CARMODES_TRANSPORT",
+                    "out": "vehiclemodesprovider::types::CarModes::kTransport"
+                },
+                {
+                    "item": "Factory",
+                    "in": "CARMODES_FACTORY",
+                    "out": "vehiclemodesprovider::types::CarModes::kFactory"
+                },
+                {
+                    "item": "Dyno",
+                    "in": "CARMODES_DYNO",
+                    "out": "vehiclemodesprovider::types::CarModes::kDyno"
+                },
+                {
+                    "default": "Normal",
+                    "in": "CARMODES_NORMAL",
+                    "out": "vehiclemodesprovider::types::CarModes::kNormal"
+                }
+            ],
+            "BlinkerMode": [
+                {
+                    "item": "Off",
+                    "in": "BLINKERMODE_OFF",
+                    "out": "vehiclemodesprovider::types::BlinkerMode::Off"
+                },
+                {
+                    "item": "On",
+                    "in": "BLINKERMODE_ON",
+                    "out": "vehiclemodesprovider::types::BlinkerMode::On"
+                },
+                {
+                    "default": "Off",
+                    "in": "BLINKERMODE_OFF",
+                    "out": "vehiclemodesprovider::types::BlinkerMode::Off"
+                }
+            ]
+        }
+    },
+    "METHODS": {
+        "VcPvcDemo_11_CSPMethodCall": {
+            "name": "VcPvcDemo_11_CSPMethodCall",
+            "primitive": "simulinktest",
+            "namespace": "",
+            "ports": {
+                "in": {
+                    "sVcTvdc_Tq_DftlCluTqCpMaxReRi": {
+                        "primitive": "method2.a",
+                        "type": "Float32"
+                    }
+                },
+                "out": {
+                    "Output1": {
+                        "primitive": "method2.b",
+                        "type": "Int16"
+                    }
+                }
+            }
+        }
+    }
+}

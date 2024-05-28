@@ -1,0 +1,23 @@
+    /begin MEASUREMENT
+        sVcDtcAtr_D_TrgGear	/* Name */
+        "Target gear"	/* LongIdentifier */
+        SBYTE	/* Datatype */
+        EQ_LSB_1	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -1	/* LowerLimit */
+        8	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD
+        EQ_LSB_1	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%3.0"	/* Format */
+        "-"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD

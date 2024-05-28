@@ -1,0 +1,14 @@
+;;;;
+PROJECTS;;;;
+;;;;
+D;Should be an active input signal for that project and it exists debug signals accordingly.;;;
+x;Should be an active input signal for that project, but it will be without debug signals.;;;
+-;No signal implementation for this project.;;;
+;;;;
+;;;;
+;;;;
+SPM;;;;
+;;;;
+o;Signal owner;;;
+x;Signal user;;;
+-;Not using this signal;;;

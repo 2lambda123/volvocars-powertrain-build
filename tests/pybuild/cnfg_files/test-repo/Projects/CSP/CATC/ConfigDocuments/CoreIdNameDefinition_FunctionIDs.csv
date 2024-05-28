@@ -1,0 +1,581 @@
+;;;;PROJECTS;
+Model name;Function Id Name;Description;Comments;ClimCtr;Old Id
+VcAesObd;VcFiAmbPCompPlausMon;VcFi forAmbient Pressure Rationality Monitor  (comparison to other sensor at eng off);;;ATPR
+VcAesObd;VcFiCacPCompPlausMon;VcFi for CAC Pressure Rationality Monitor  (comparison to other sensor at eng off);;;CACPR
+VcAesObd;VcFiExhMnfldPCompPlausMon;VcFi for Exhaust Manifold Pressure Diff Rationality Monitor (comparison to other sensor at eng off);;;EXHMPDR
+VcAesObd;VcFiIntkMnfldPCompPlausMon;VcFi for Intake Manifold Pressure Diff Rationality Monitor (comparison to other sensor at eng off);;;MAPIMPDR
+VcAesObd;VcFiScPCompPlausMon;VcFi for Supercharger Pressure Rationality Monitor  (comparison to other sensor at eng off);;;SCPR
+VcAesObd;VcFiScPAmbPPlausMon;VcFi for SC Pressure Sensor diff vs Ambient Pressure Sensor Rationality Monitor;;;SCPAMBP
+VcAesObd;VcFiCacPAmbPPlausMon;VcFi for CAC Pressure Sensor diff vs Ambient pressure sensor rationality monitor;;;CACPAMBP
+VcAesObd;VcFiCacPIntkPPlausMon;VcFi for CAC pressure sensor vs Intake Manifold Pressure Diff Rationality Monitor;;;CACPINTK
+VcAesObd;VcFiIntkMnfldPMdlPlausMon;VcFi for Intake Manifold Rationality Monitor (comparison to model);;;MAPR
+VcAesMapM;VcFiIntkMnfldPMdlPlausMon;VcFi for Intake Manifold Rationality Monitor (comparison to model);;;MAPR
+VcAesObd;VcFiIntkMnfldFlwMdlPlausMon;VcFi for MAF Rationality Monitor;;;MAFR
+VcAesObd;VcFiPCVLeakMon;VcFi for PCV Leakage monitor;;;
+VcAesObd;VcFiFsAbvOpen;VcFi for opening turbo compressor Air Bypass Valve;;;FS_ABVOP
+VcAesObd;VcFiFsMafCorrInh;VcFi for inhibition of air flow mass meter correction;;;FS_AFCIN
+VcAesObd;VcFiFsBoostPCorrInh;VcFi for inhibition of boost pressure correction;;;FS_BCRIN
+VcAesObd;VcFiFsWstGateOpen;VcFi for opening waste gate (boost pressure off);;;FS_BSOFF
+VcAesObd;VcFiFsEgrOff;VcFi for turning off EGR control and closing the EGR-valve;;;FS_EGROF
+VcAesObd;VcFiFsExhMnfldPCorr;VcFi for inhibition of exhaust manifold pressure correction;;;FS_EPCIN
+VcAesObd;VcFiFsMafLrngOff;VcFi for inhibiting use of MAF learning;;;
+VcAesObd;VcFiFsAfCorrInh;VcFi for A/F Correction Inhibition;;;FS_FLCIN
+VcAesObd;VcFiFsHpTrboBypOpen;VcFi for opening HP bypass;;;FS_HPBOP
+VcAesObd;VcFiFsAirFlwCorrInc;VcFi for Increase air flow correction limits;Skall denna vara med i GEP3?;;FS_IAFCL
+VcAesObd;VcFiFsIntkMnfldPCorrInh;VcFi for inhibition of intake manifold pressure correction;;;FS_IPCIN
+VcAesObd;VcFiFsScBypOpen;VcFi for turning off supercharger and opening supercharger bypass valve;;;FS_SCBYO
+VcAesObd;VcFiFsScPUseDftVal;VcFi for Inhibit use of SC pressure sensor (use ambient);;;FS_SCPIN
+VcAesObd;VcFiFsEgrFrzn;VcFi to indicate frozen EGR in cold condition;Här kanske vi borde kalla fiden för vad den gör, isf vid vilket fel den aktiveras!;;FS_SPR3
+VcAesObd;VcFiFsThrAdpInhAdp;VcFi for inhibiting throttle adaptation;;;FS_TADPI
+VcAesObd;VcFiFsThrCtrlOff;VcFi for turning off throttle control and make the throttle to go to it's limp home position;;;FS_THOFF
+VcAesObd;VcFiFsThrServoModelOff;VcFi for using measured throttle position instead of throttle servo model;;;FS_THROF
+VcAesObd;VcFiFsTrqLimFastActv;VcFi for activating fast ramping in of torque limit;;;FS_TQLFS
+VcAesObd;VcFiFsTrqLimActv1;VcFi for activating torque limit 1;;;FS_TRQL1
+VcAesObd;VcFiFsTrqLimActv2;VcFi for activating torque limit 2;;;FS_TRQL2
+VcAesObd;VcFiFsTrqLimActv3;VcFi for activating torque limit 3;;;FS_TRQL3
+VcAesObd;VcFiFsTrqLimActv4;VcFi for activating torque limit 4;;;FS_TRQL4
+VcAesObd;VcFiFsTrqLimActv5;VcFi for activating torque limit 5;;;FS_TRQL5
+VcAesObd;VcFiFsTrqLimActv6;VcFi for activating torque limit 6;;;FS_TRQL6
+VcAesObd;VcFiFsTrqLimActv7;VcFi for activating torque limit 7;;;FS_TRQL7
+VcAesObd;VcFiFsVntOpen;VcFi for opening VNT;;;FS_VNTOP
+VcAesRcfgM;VcFiFsAbvOpen;VcFi for opening turbo compressor Air Bypass Valve;;;FS_ABVOP
+VcAesRcfgM;VcFiFsMafCorrInh;VcFi for inhibition of air flow mass meter correction;;;FS_AFCIN
+VcAesRcfgM;VcFiFsMafLrngOff;VcFi for inhibiting use of MAF learning;;;
+VcAesRcfgM;VcFiFsBoostPCorrInh;VcFi for inhibition of boost pressure correction;;;FS_BCRIN
+VcAesRcfgM;VcFiFsWstGateOpen;VcFi for opening waste gate (boost pressure off);;;FS_BSOFF
+VcAesRcfgM;VcFiFsEgrOff;VcFi for turning off EGR control. To be used for system failures.;;;FS_EGROF
+VcAesRcfgM;VcFiFsExhMnfldPCorr;VcFi for inhibition of exhaust manifold pressure correction;;;FS_EPCIN
+VcAesRcfgM;VcFiFsAfCorrInh;VcFi for A/F Correction Inhibition;;;FS_FLCIN
+VcAesRcfgM;VcFiFsHpTrboBypOpen;VcFi for opening HP bypass;;;FS_HPBOP
+VcAesRcfgM;VcFiFsAirFlwCorrInc;VcFi for Increase air flow correction limits;Skall denna vara med i GEP3?;;FS_IAFCL
+VcAesRcfgM;VcFiFsIntkMnfldPCorrInh;VcFi for inhibition of intake manifold pressure correction;;;FS_IPCIN
+VcAesRcfgM;VcFiFsScBypOpen;VcFi for turning off supercharger and opening supercharger bypass valve;;;FS_SCBYO
+VcAesRcfgM;VcFiFsScPUseDftVal;VcFi for Inhibit use of SC pressure sensor (use ambient);;;FS_SCPIN
+VcAesRcfgM;VcFiFsSrEgrFrzn;VcFi to indicate frozen SR EGR valve in cold condition;;;FS_SPR3
+VcAesRcfgM;VcFiFsLrEgrFrzn;VcFi to indicate frozen LR EGR valve in cold condition;;;FS_SPR3
+VcAesRcfgM;VcFiFsThrAdpInhAdp;VcFi for inhibiting throttle adaptation;;;FS_TADPI
+VcAesRcfgM;VcFiFsThrCtrlOff;VcFi for turning off throttle control and make the throttle to go to it's limp home position;;;FS_THOFF
+VcAesRcfgM;VcFiFsThrServoModelOff;VcFi for using measured throttle position instead of throttle servo model;;;FS_THROF
+VcAesRcfgM;VcFiFsTrqLimFastActv;VcFi for activating fast ramping in of torque limit;;;FS_TQLFS
+VcAesRcfgM;VcFiFsTrqLimActv1;VcFi for activating torque limit 1;;;FS_TRQL1
+VcAesRcfgM;VcFiFsTrqLimActv2;VcFi for activating torque limit 2;;;FS_TRQL2
+VcAesRcfgM;VcFiFsTrqLimActv3;VcFi for activating torque limit 3;;;FS_TRQL3
+VcAesRcfgM;VcFiFsTrqLimActv4;VcFi for activating torque limit 4;;;FS_TRQL4
+VcAesRcfgM;VcFiFsTrqLimActv5;VcFi for activating torque limit 5;;;FS_TRQL5
+VcAesRcfgM;VcFiFsTrqLimActv6;VcFi for activating torque limit 6;;;FS_TRQL6
+VcAesRcfgM;VcFiFsTrqLimActv7;VcFi for activating torque limit 7;;;FS_TRQL7
+VcAesRcfgM;VcFiFsVntOpen;VcFi for opening VNT;;;FS_VNTOP
+VcAesRcfgM;VcFiFsPowerPulse;VcFi for power pulse failsafe;;;FS_PowerPulse
+VcAesRcfgM;VcFiFsPowerPulseRly1;VcFi for failsafe power pulse relay 1 stuck;;;FS_PowerPulseRly1
+VcAesRcfgM;VcFiFsPowerPulseRly2;VcFi for failsafe power pulse relay 2 stuck;;;FS_PowerPulseRly2
+VcAesRcfgM;VcFiFsEgrTest;VcFi for individual testing of EGR system;;;
+VcAesRcfgM;VcFiFSEChrgrOff;VcFi for turning off Echarger control;;;
+VcAesRcfgM;VcFiFsEgrTPeak;VcFi to change sensitivity for intake temp peak monitor;;;
+VcAesRcfgM;VcFiFsLPBoostPCorrInh;VcFi to inhibit use of LP boost sensor;;;
+VcAesRcfgM;VcFiFsLpEgrThrS;VcFi to indicate faults on LP EGR throttle position sensor and initiate reconfiguration of the throttle;;;
+VcAesRcfgM;VcFiFsLpEgrThrV;VcFi to indicate faults on LP EGR throttle actuator and initiate reconfiguration of EGR control;;;
+VcAesRcfgM;VcFiFsLpEgrS;VcFi to indicate faults on the LP EGR valve position sensor and initiate reconfiguration of EGR control;;;
+VcAesRcfgM;VcFiFsLpEgrV;VcFi to indicate faults on the LP EGR valve actuator and initiate reconfiguration of EGR control;;;
+VcAesRcfgM;VcFiFsHpEgrS;VcFi to indicate faults on the HP EGR valve position sensor and initiate reconfiguration of EGR control;;;
+VcAesRcfgM;VcFiFsHpEgrV;VcFi to indicate faults on the HP EGR valve actuator and initiate reconfiguration of EGR control;;;
+VcAesRcfgM;VcFiFsHpCmprBypOpen;VcFi for opening HP compressor bypass;;;
+VcAesRcfgM;VcFiFsHPVntOpen;VcFi for opening HP VNT;;;
+VcAesTrboM;VcFiBoostPeakMon;VcFi for Boost Pressure Pressure Peak Monitor;;;BSTPEAK
+VcAesTrboM;VcFiBoostPPlausMon;VcFi for Boost Pressure Rationality Monitor;;;BSTR
+VcAesTrboMg3;VcFiBoostPeakMon;VcFi for Boost Pressure Pressure Peak Monitor;;;BSTPEAK
+VcAesTrboMg3;VcFiBoost2PeakMon;VcFi for Boost 2 Pressure Pressure Peak Monitor;;;
+VcAesTrboMg3;VcFiBoostPPlausMon;VcFi for Boost Pressure Rationality Monitor;;;BSTR
+VcAesTrboMg3;VcFiBoostPeakHPUsMon;VcFi for Boost Peak Pressure Monitor HP Upstream or E-Charger upstream;;;
+VcAesTrboMg3;VcFiBoostHpCmprBypStkOpen;VcFi for HP compressor bypass stuck open;;;
+VcFsdPc;VcFiFsPEMRunDryMon;VcFi for activation of run dry monitor;Varför finns det inget event till denna monitor?;;FS_PEM1
+VcOilLvl;VcFiOilLvlMon;VcFi for Oil level monitor;;;OILLV
+VcOilPrMon;VcFiOilPrMon;VcFi for Oil pressure rationality monitor;;;OILP
+VcOilPrMon;VcFiOilPrMonOffs;VcFi for Oil pressure offset test rationality monitor;;;OILPOFFS
+VcOilPrMon;VcFiFsOilPSnsrInhUse;Request to inhibit use of pressure sensor;;;FS_OILPC
+VcOilPrMon;VcFiFsOilTSnsrInhUse;Request to inhibit use of oil temp. sensor;;;FS_OPTST
+VcOilPrMon;VcFiOilPmpStckMon;VcFi for Oil pump solenoid stuck monitor;;;
+VcPpmImob;VcFiImmo;Diagnostics: Function identifier for Imobiliser.  [0 65535], Default=10;;x;
+VcTcDir;VcFiFsActrChgOfDirNotPsbl;Lost com on CAN for Tacm;Är denna funktionen bara för hybrid? Uppdatera kommentarerna till något bättre;x;
+VcTcDir;VcFiFsMsgChgOfDirNotPsbl;Lost commuincation on LIN from EGSM node.;Är denna funktionen bara för hybrid?;x;
+VcTcDir;VcFiFsDrvrInpDirNotPsbl;Lost commuincation on CAN from EGSM node.;Är denna funktionen bara för hybrid?;x;
+VcTmAf;VcFiFsAirCoolgFlowSafe;VcFi to compensate for broken coolant temp sensor;;x;FS_AirCoolgFlowSafe
+VcTmAf;VcFiFsAirCoolgLimHi;VcFi activate if engine cooling fan is faulty.;;x;FS_AirCoolgFlowLimHi
+VcTmAf;VcFiFsAirCoolgLimLowr;VcFi to compensate for broken spoiler shutter;;x;FS_AirCoolgFlowLimLo
+VcTmAf;VcFiFsAirCoolgLimUppr;VcFi to compensate for broken grill shutter;;x;FS_AirCoolgFlowLimMed
+VcTmAf;VcFiFsEngFanRlyRels;VcFi to release fan relay;;x;FS_EngFanRlyRels
+VcTmHcc;VcFiFsEdClntPmp;VcFi for reconfiguration of electric drive coolant pump;;x;RCPC
+VcTmHcc;VcFiFsEdClntFlwEstClsdTh;VcFi for reconfiguration estimated electric drive coolant flow closed thermostat ;;x;RECFC
+VcTmHcc;VcFiFsEdClntFlwEstOpenTh;VcFi for reconfiguration estimated electric drive coolant flow open thermostat ;;x;RECFO
+VcTmHcc;VcFiFsEdClntT;VcFi for reconfiguration of electric drivetrain coolant temperature;;x;RMEDT
+VcTmHcc;VcFiFsEdClntPmpMaxFlw;VcFi for reconfiguration set max electric drive coolant flow;SDCF - vilket coolant flow är detta?;x;SDCF
+VcTmHcc;VcFiFsEdClntPmpMaxSpd;VcFi for reconfiguration to maximum electric drive pump speed;vilken coolant pump?;x;SMPS
+VcTmHcc;VcFiFsEdFanShutOff;VcFi for reconfiguration to shutoff electric drive fan request;SOFR - vilken fläkt? Electric Drivetrain?;x;SOFR
+VcEmiCatM;VcFiCatMon;Function Id for catalyst monitor;;;
+VcEmiOscM;VcFiCatalystO2StorageMon;Function Id for catalyst monitor;;;
+VcEmiAdpM;VcFiSecO2AdpMon;Function Id for secondary fuel trim monitor;;;
+VcEmiPlsM;VcFiSecO2SnsrPlausMon;Function Id for secondary oxygen sensor plausability monitor;;;
+VcLamDynCcM;VcFiPrimO2SnsrSlowRespMon;Function ID for front lambda sensor slow response;;;
+VcLamAdpM;VcFiLamAdpMon;Function ID for Fueltrim;;;
+VcEmiCtrl;VcFiFsEmiCtrlFbInh;VcFi for inhibition of Hego feedback emission control;;;FS_SFBA
+VcEmiOvlp;VcFiFsEmiOvlpInh;VcFi for inhibition of emission requests forVVT overlap;;;FS_OVLFC
+VcLamDyn;VcFiFsLamCtrlInh;VcFi for inhibition of lambda feedback control;;x;FS_AFA
+VcInjMode;VcFiFsInjModeHom;VcFi for reconfiguration to single intake injection mode;Samtliga dessa gamla failsafe ( inklusive de som skapades i Densos CM_HPSysFS och FI_StaInjDly) skall sätta denna failsafe;x;FS_HOMOG, Ycm_HPSysFS_FS_HPSYSHI, Ycm_HPSysFS_FS_STINJ, Yfi_StaInjDly_STINJ_StaInFact
+VcLamDyn;VcFiFsCmnStaFuCutPCndInh;VcFi for inhibition of fuel pressure condition to enable start injections;;x;Ycm_HPSysFS_FS_STINJ, Yfi_StaInjDly_STINJ_StaInFact
+VcCmnRunReqCEC;VcFiFsStopStartInh;VcFi for inhibition of stop start function;;;FS_ISS
+VcObdCmn;VcFiFsOilTOutOfRange;VcFi to inhibit average oil temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsBstTOutOfRange;VcFi to inhibit average boost temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsClntTOutOfRange;VcFi to inhibit average coolant temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsInManiTOutOfRange;VcFi to inhibit average intake manifold temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsAmbTOutOfRange;VcFi to inhibit average ambient temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsIntkAirTOutOfRange;VcFi to inhibit average intake air temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsBstT2OutOfRange;VcFi to inhibit average boost temperature 2 calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsLtClntWcacTOutOfRange;VcFi to inhibit average LT wcac coolant temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsPowerPulseTOutOfRange;VcFi to inhibit average power pulse temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsEChargerTOutOfRange;VcFi to inhibit average ECharger temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsWcacUsAirTOutOfRange;VcFi to inhibit average WCAC upstream air temperature calculation if the sensor value is out of range;;;
+VcObdCmn;VcFiFsLPFuelTOutOfRange;VcFi to inhibit average LP fuel temperature calculation if the sensor value is out of range;;;
+VcTempKohlM;VcFiFsAmbTRcfg;VcFi for reconfiguration to replacement value of Ambient temperature;;;FS_AMBT
+VcTempKohlM;VcFiFsIntkAirTRcfg;VcFi for reconfiguration to replacement value of Intake air temperature;;;FS_IAT2
+VcTempKohlM;VcFiFsBstTRcfg;VcFi for reconfiguration to replacement value of Boost air temperature;;;FS_BAT
+VcTempKohlM;VcFiFsClntTRcfg;VcFi for reconfiguration to replacement value of Engine coolant temperature;;;FS_ECT
+VcTempKohlM;VcFiFsOilTRcfg;VcFi for reconfiguration to replacement value of Oil temperature;;;FS_OILT
+VcTempKohlM;VcFiFsInManiTRcfg;VcFi for reconfiguration to replacement value of Intake manifold air temperature;;;FS_MAT
+VcTempKohlM;VcFiFsCisgTRcfg;VcFi for reconfiguration to replacement value of Crank ISG temperature;;;FS_CISG
+VcTempKohlM;VcFiFsLtClntWcacTRcfg;VcFi for reconfiguration to replacement value of coolant temperature in the LT wcac circuit;;;
+VcTempKohlM;VcFiFsPowerPulseTRcfg;VcFi for reconfiguration to replacement value of the Power pulse temperature;;;
+VcTempKohlM;VcFiFsEChargerTRcfg;VcFi for reconfiguration to replacement value of the ECharger temperature;;;
+VcTempKohlM;VcFiFsWcacUsAirTRcfg;VcFi for reconfiguration to replacement value of the WCAC upstream air temperature;;;
+VcTempKohlM;VcFiFsLPFuelTRcfg;VcFi for reconfiguration to replacement value of the LP fuel temperature;;;
+VcTempKohlM;VcFiAmbTKohlM;VcFi for offset monitor of the ambient air temperature sensor;;;KOAMBT
+VcTempKohlM;VcFiIntkAirTKohlM;VcFi for offset monitor of the intake air temperature sensor;;;KOIAT
+VcTempKohlM;VcFiBstTKohlM;VcFi for offset monitor of the boost air temperature sensor;;;KOBAT
+VcTempKohlM;VcFiClntTKohlM;VcFi for offset monitor of the engine coolant temperature sensor;;;KOECT
+VcTempKohlM;VcFiOilTKohlM;VcFi for offset monitor of the oil temperature sensor;;;KOOILT
+VcTempKohlM;VcFiInManiTKohlM;VcFi  for offset monitor of the intake manifold air temperature sensor;;;KOMAT
+VcTempKohlM;VcFiCisgTKohlM;VcFi for offset monitor of the Crank ISG temperature sensor;;;KOCISG
+VcTempKohlM;VcFiBstT2KohlM;VcFi for offset monitor of the boost air temperature sensor 2;;;
+VcTempKohlM;VcFiLtClntWcacTKohlM;VcFi for offset monitor of the coolant temperature sensor in the LT wcac circuit;;;
+VcTempKohlM;VcFiPowerPulseTKohlM;VcFi for offset monitor of the power pulse temperature sensor;;;
+VcTempKohlM;VcFiEChargerTKohlM;VcFi for offset monitor of the ECharger temperature sensor;;;
+VcTempKohlM;VcFiLPFuelTKohlM;VcFi for offset monitor of the LP fuel temperature sensor;;;
+VcTempKohlM;VcFiWcacUsAirTKohlM;VcFi for offset monitor of the WCAC upstream air temperature sensor;;;
+VcTempStkM;VcFiBstTStkM;VcFi for stuck in range monitor of the boost air temperature sensor;;;BATD
+VcTempStkM;VcFiClntTStkM;VcFi for stuck in range monitor of the engine coolant temperature sensor;;;CLTD
+VcTempStkM;VcFiIntkAirTStkM;VcFi for stuck in range monitor of the intake air temperature sensor;;;IATD
+VcTempStkM;VcFiInManiTStkM;VcFi for stuck in range monitor of the intake manifold air temperature sensor;;;MATD
+VcTempStkM;VcFiBstT2StkM;VcFi for stuck in range monitor of the boost air temperature sensor 2;;;
+VcTempStkM;VcFiLtClntWcacTStkM;VcFi for stuck in range monitor of the coolant temperature sensor in the LT wcac circuit;;;
+VcTempStkM;VcFiPowerPulseTStkM;VcFi for stuck in range monitor of the power pulse temperature sensor;;;PPTD
+VcTempStkM;VcFiEChrgrTStkM;VcFi for stuck in range monitor of the Echarger temperature sensor;;;
+VcTempStkM;VcFiOilTStkM;VcFi for stuck in range monitor of the Oil temperature sensor;;;
+VcTempStkM;VcFiLPFuelTStkM;VcFi for stuck in range monitor of the LP fuel temperature sensor;;;
+VcTempStkM;VcFiWcacUsAirTStkM;VcFi for stuck in range monitor of the WCAC upstream air temperature sensor;;;
+VcTempThM;VcFiThM;VcFi for thermostat monitor;;;THMS
+VcTempThContnsM;VcFiThContnsM;VcFi for continuous thermostat monitor;;;
+VcAesObd;VcFiFsPowerPulse;VcFi for power pulse failsafe;;;FS_PowerPulse
+VcAesObd;VcFiExhtMnfPMon;VcFi for exhaust manifold pressure rationality monitor;;;EXHPR
+VcAesExhMnfPM;VcFiExhtMnfPMon;VcFi for exhaust manifold pressure rationality monitor;;;EXHPR
+VcAesTrboM;VcFiPpValveStk;VcFi for power pulse valve stuck closed monitor;;;PPVSTK
+VcAesTrboM;VcFiPpLk;VcFi for power pulse leakage monitor;;;PPLK
+VcAesTrboM;VcFiPpSmlLk;VcFi for power pulse small leakage monitor;;;PPSMLK
+VcAesPpM;VcFiPpValveStk;VcFi for power pulse valve stuck closed monitor;;;PPVSTK
+VcAesPpM;VcFiPpLk;VcFi for power pulse leakage monitor;;;PPLK
+VcAesPpM;VcFiPpSmlLk;VcFi for power pulse small leakage monitor;;;PPSMLK
+VcAesTrboM;VcFiVntAdp;VcFi for vacuum VNT adaption monitor;;;VNTDP
+VcAesVntM;VcFiVntAdp;VcFi for vacuum VNT adaption monitor;;;VNTDP
+VcAesEgrM;VcFiEgrSysMon;VcFi for EGR system monitor;;;
+VcAesEgrM;VcFiEgrAr;VcFi for SR EGR flow monitor;;;EGRAR
+VcAesEgrM;VcFiEgrClrMnr;VcFi for EGR cooler monitor;;;EGRCLRR
+VcAesEgrM;VcFiEgrIntkTPeak;VcFi for intake air temperature peak monitor;;;INTKPEAK
+VcAesSupM;VcFiSupChrPMdlPlausHi;VcFi for Supercharger Pressure Rationality Monitor High  (Target vs. Actual);;;
+VcAesSupM;VcFiSupChrPMdlPlausLo;VcFi for Supercharger Pressure Rationality Monitor Low (Target vs. Actual);;;
+VcAesSupM;VcFiSupChrPPeak;VcFi for supercharger pressure too high monitor;;;
+VcAesSupM;VcFiSupChrStuck;VcFi for supercharger clutch stuck monitor;;;
+VcNoxSensMgr;VcFiNOxSensUsVoltageDiag;Inhibit voltage diag;Upstream sensor;;
+VcNoxSensMgr;VcFiNOxSensUsProbeLnDiag;Inhibit probe line diag (incl. Heater line);Upstream sensor;;
+VcNoxSensMgr;VcFiNOxSensUsSRC;Inhibit SRC;Upstream sensor;;
+VcNoxSensMgr;VcFiNOxSensUsHeaterDiag;Inhibit heater diag;Upstream sensor;;
+VcNoxSensMgr;VcFiNOxSensUsMountingDiag;Inhibit mounting diag;Upstream sensor;;
+VcNoxSensMgr;VcFiNOxSensUsAvailabilityDiag;Inhibit availability diag;Upstream sensor;;
+VcNoxSensMgr;VcFiNOxSensUsReadinessDiag;Inhibit readiness diag;Upstream sensor;;
+VcNoxSensMgr;VcFiNOxSensUsCurveDiagA;Inhibit curve diag A;Upstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensUsError;Failsafe for transition to error state;Upstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensUsFreezeNOx;Failsafe for freezing NOx value;Upstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensUsFreezeLambda;Failsafe for freezing lambda value;Upstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensUsModelNOx;Failsafe for using modeled Nox instead of sensor value;Upstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensUsModelLambda;Failsafe for using modeled lambda instead of sensor value;Upstream sensor;;
+VcNoxSensMgr;VcFiNOxSensDsVoltageDiag;Inhibit voltage diag;Downstream sensor;;
+VcNoxSensMgr;VcFiNOxSensDsProbeLnDiag;Inhibit probe line diag (incl. Heater line);Downstream sensor;;
+VcNoxSensMgr;VcFiNOxSensDsSRC;Inhibit SRC;Downstream sensor;;
+VcNoxSensMgr;VcFiNOxSensDsHeaterDiag;Inhibit heater diag;Downstream sensor;;
+VcNoxSensMgr;VcFiNOxSensDsMountingDiag;Inhibit mounting diag;Downstream sensor;;
+VcNoxSensMgr;VcFiNOxSensDsAvailabilityDiag;Inhibit availability diag;Downstream sensor;;
+VcNoxSensMgr;VcFiNOxSensDsReadinessDiag;Inhibit readiness diag;Downstream sensor;;
+VcNoxSensMgr;VcFiNOxSensDsCurveDiagA;Inhibit curve diag A;Downstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensDsError;Failsafe for transition to error state;Downstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensDsFreezeNOx;Failsafe for freezing NOx value;Downstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensDsFreezeLambda;Failsafe for freezing lambda value;Downstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensDsModelNOx;Failsafe for using modeled Nox instead of sensor value;Downstream sensor;;
+VcNoxSensMgr;VcFiFsNOxSensDsModelLambda;Failsafe for using modeled lambda instead of sensor value;Downstream sensor;;
+VcDrvInd;VcFiDrvInd;Inhibit VcDrvInd;SCR Inducement monitor;;
+VcDrvInd;VcFiFsDrvInd;Failsafe to inhibit start at full inducement;SCR Inducement monitor;;
+VcAesTrboM;VcFiPpLkExh;VcFi for power pulse leak to exhaust monitor;;;PPVSTKO
+VcAesPpM;VcFiPpLkExh;VcFi for power pulse leak to exhaust monitor;;;PPVSTKO
+VcIgnCut;VcFiFsIgnInh;VcFi for inhibition of ignition;;;Yim_Result_IgnitionPermit
+VcVVTiTar;VcFiFsVVTiTestSw;VcFi for switching to a test position for inlet VVT;;;
+VcVVTiTar;VcFiFsVVTiTestPos;VcFi for setting a test position for inlet VVT;;;
+VcVVTeTar;VcFiFsVVTScav;VcFi for allowing Scavanging;;;
+VcVVTeTar;VcFiFsVVTeTestSw;VcFi for switching to a test position for exhaust VVT;;;
+VcVVTeTar;VcFiFsVVTeTestPos;VcFi for setting a test position for exhaust VVT;;;
+VcProtNe;VcFiFsEngSpdLimn1;VcFi for lowered rev limit level 1;;;FS_NE
+VcProtNe;VcFiFsEngSpdLimn2;VcFi for lowered rev limit level 2;;;LimpMode=3 (Crankgivarfel)
+VcInjFuCut;VcFiFsFuCutCyl1;VcFi for cylinder individual fuel cut off on cylinder 1;;;FS_FC1…4 additional to Bosch signal yVcEc_B_MisfFuCutCyl2
+VcInjFuCut;VcFiFsFuCutCyl2;VcFi for cylinder individual fuel cut off on cylinder 2;;;
+VcInjFuCut;VcFiFsFuCutCyl3;VcFi for cylinder individual fuel cut off on cylinder 3;;;
+VcInjFuCut;VcFiFsFuCutCyl4;VcFi for cylinder individual fuel cut off on cylinder 4;;;
+VcObdDpms;VcFiDpmsTPlaus;Key on check of temperature meander;;;DpmsTPlaus
+VcObdDpms;VcFiDpmsProtTubePlaus;Detection of clogged protection tube;;;DpmsProtTubePlaus
+VcObdDpms;VcFiDpmsHtrPlaus;Heater plausibility check;;;DpmsHtrPlaus
+VcObdDpms;VcFiDpmsIDEPlaus;IDE plausibility check;;;DpmsIDEPlaus
+VcObdDpms;VcFiDpmsShntCircPlaus;IDE shunt circuit plausibility check;;;DpmsShntCircPlaus
+VcObdDpms;VcFiDpmsBattDiff1;Diff between system voltage and sensor voltage during high load;;;DpmsBattDiff1
+VcObdDpms;VcFiDpmsBattDiff2;Diff between system voltage and sensor voltage;;;DpmsBattDiff2
+VcObdDpms;VcFiDpmsBattElec;Sensor self diagnosis, battery voltage error;;;DpmsBattElec
+VcObdDpms;VcFiDpmsCanTO;Sensor self diagnosis, CAN TimeOut;;;DpmsCanTO
+VcObdDpms;VcFiDpmsHtrOffElec;Sensor self diagnosis, heater error in off state;;;DpmsHtrOffElec
+VcObdDpms;VcFiDpmsTElec;Sensor self diagnosis, temperature meander error;;;DpmsTElec
+VcObdDpms;VcFiDpmsIDENegElec;Sensor self diagnosis, IDE negative current error;;;DpmsIDENegElec
+VcObdDpms;VcFiDpmsHtrOnElec;Sensor self diagnosis, heater error in on state;;;DpmsHtrOnElec
+VcObdDpms;VcFiDpmsIDEPosElec;Sensor self diagnosis, IDE positive current error;;;DpmsIDEPosElec
+VcObdDpfDpms;VcFiDPFPerfDpms;DPF soot filtration efficiency below threshold Soot Sensor ;;;DPFPERF
+VcObdDpf;VcFiDPFPerfDP;DPF soot filtration efficiency below threshold DP-sensor;;;
+VcObdDpms;VcFiPMSnsrCanComFail;Sensor self diagnosis, PM sensor CAN communication failure;;;
+VcObdDpms;VcFiPMSnsrCtrlModPerf;Sensor self diagnosis, PM sensor control module performance;;;
+VcObdDpms;VcFiPMSnsrSuppVoltHi;Sensor self diagnosis, PM sensor control module supply voltage low;;;
+VcObdDpms;VcFiPMSnsrSuppVoltLo;Sensor self diagnosis, PM sensor control module supply voltage high;;;
+VcObdDpms;VcFiPMSnsrGainFault;Sensor self diagnosis, PM sensor gain fault;;;
+VcObdDpms;VcFiPMSnsrHeatrCurHi;Sensor self diagnosis, PM sensor heater current too high;;;
+VcObdDpms;VcFiPMSnsrHeatrCurLo;Sensor self diagnosis, PM sensor heater current too low;;;
+VcObdDpms;VcFiPMSnsrHeatrTempHi;Sensor self diagnosis, PM sensor heater temperature too high;;;
+VcObdDpms;VcFiPMSnsrInternSC;Sensor self diagnosis, PM sensor internal short circuit fault;;;
+VcObdDpms;VcFiPMSnsrOC;Sensor self diagnosis, PM sensor open circuit fault;;;
+VcObdDpms;VcFiPMSnsrRegenTOut;Sensor self diagnosis, PM sensor regeneration time out;;;
+VcObdDpms;VcFiPMSnsrSCBatt;Sensor self diagnosis, PM sensor short circuit to battery fault;;;
+VcObdDpms;VcFiPMSnsrSCGnd;Sensor self diagnosis, PM sensor short circuit to ground fault;;;
+VcObdDpms;VcFiPMSnsrVBoostLo;Sensor self diagnosis, PM sensor boost voltage too low;;;
+VcObdDpms;VcFiPMSnsrOutOfExh;PM Sensor, Tampering diagnosis for removed/out of exhaust;;;
+VcObdDpms;VcFiPMSnsrCloggedTip;PM Sensor,Tampering diagnosis clogged tip;;;
+VcObdNoxSens;VcFiNOxSensPlausGeneral;General identifier for Nox plausibility functions;;;
+VcObdNoxSO2;VcFiNOxSensO2;Function identifier for Nox sensor O2 monitor;;;
+VcObdNoxSOfs;VcFiNOxSensOfs;Function identifier for Nox offset monitors;;;
+VcAcPMon;VcFiFsAcFlowCalcn;Inhibition of AC flow calculation due to A/C variable compressor no operation;;;FS_ACENA
+VcAcPMon;VcFiAcPMon;VcFi for AC pressure monitor;;;ACPS
+VcLinCptM;VcFiAltMon;VcFi for alternator monitor;;;ACM
+VcLinCptM;VcFiGrlShttrMon;VcFi for grill shutter monitor;;x;AGM
+VcLinCptM;VcFiSplrShttrMon;VcFi for spoiler shutter monitor;;x;ASSM
+VcLinCptM;VcFiEwpMon;VcFi for ICE  electrical water pump;;;EPM
+VcLinCptM;VcFiEDEwpMon;VcFi for internal ED electrical water pump errors;;;MTEDCP
+VcLinCptM;VcFiElACMon;VcFi for Electrical  AC;;;ACCM
+VcAcCtrl;VcFiFsACEV;Diagnose code for detection of malfunction of pressure sensor in AC circuit;;x;FS_ACEV
+AcVlvCtrl;VcFiFsAcChillerVlvClsd;FID for Chiller(AC) shut off valve, Closed;;x;FS_AcChillerVlvClsd
+AcVlvCtrl;VcFiFsAcChillerVlvOpn;FID forChiller(AC) shut off valve, Open;;x;FS_AcChillerVlvOpn
+AcVlvCtrl;VcFiFsAcFrntEvaprVlvClsd;FID for Front evaporator(AC) shut off valve, Closed;;x;FS_AcFrntEvaprVlvClsd
+AcVlvCtrl;VcFiFsAcFrntEvaprVlvOpn;FID for Front evaporator(AC) shut off valve, Open;;x;FS_AcFrntEvaprVlvOpn
+AcVlvCtrl;VcFiFsAcFrntEvaprVlv;VcFs for front evaporator valve;;x;Z_FidEVAPVLV
+VcIgnBase;VcFiFsIgnRetard;Ignition retard for incereased tolerances in position measurement ;;;
+VcLamAdp;VcFiFsLamAdpInh;Inhibit lambda control adaptation;;;FS_ADFA
+VcPurgExe;VcFiFsPurgeInh;Inhibit purging;;;FS_PURGE
+VcObdNoxSens;VcFiNOxSensUsLambdaSlwResp;FID for upstream Nox sensor lambda signal slow response ;;;
+VcObdNoxSens;VcFiNOxSensDsLambdaSlwResp;FID for downstream Nox sensor lambda signal slow response ;;;
+VcAesTrboM;VcFiPpRly;VcFi for power pulse relay monitoring.;;;PPRLYSTK
+VcAesPpM;VcFiPpRly;VcFi for power pulse relay monitoring.;;;PPRLYSTK
+VcAesObd;VcFiFsPowerPulseRly1;VcFi for failsafe power pulse relay 1 stuck;;;FS_PowerPulseRly1
+VcAesObd;VcFiFsPowerPulseRly2;VcFi for failsafe power pulse relay 2 stuck;;;FS_PowerPulseRly2
+VcObdExhTemp;VcFiExhTempCat;Function identifier for T1 temperature sensor monitor;;;
+VcObdExhTemp;VcFiExhTempDpf;Function identifier for T2 temperature sensor monitor;;;
+VcObdExhTemp;VcFiExhTempScr;Function identifier for T3 temperature sensor monitor;;;
+VcObdScr;VcFiScrConvEff;Function identifier for SCR conversion efficiency;;;
+VcTrsmShfShkMon;VcFiShfShkOn;VcFi for On/Off of Shift Shock Monitor;;x;
+VcTrsmHeatMon;VcFiTrsmHeatMon;VcFi for On/Off Transmission Heat monitor;;x;
+VcIgnAdp;VcFiFsIgnAdpOffs;Freeze adaptation and set safe replacement values;to be used in case of knock sensor failure;x;
+VcTmEdMon;VcFiEdTOffsMon;VcFi for inhibition of ED Circuit Temp Sensors Offset Monitors;;;
+VcTmEdMon;VcFiEdTStuckMon;VcFi for inhibition of ED Circuit Temp Sensors Stuck Monitors;;;
+VcTrsmNeuShkMon;VcFiTrsmNeuShkOn;VcFi for On/Off of Shift Shock Monitor;;;
+VcTrsmTkOffMon;VcFiTrsmTkOffOn;VcFi for On/Off Transmission Heat monitor;;x;
+VcDpmsCtrl;VcFiFSDpmsCtrlOff;VcFiFS for turning off sot sensor;;;Z_FidFS_DpmsCtrlOff
+VcObdLnt;VcFiObdLnt;LNT performance below threshold;;;NTMA
+VcObdLntNox;VcFiObdLntNox;FID for LNT performance below threshold;;;
+VcRcfAISD;VcFiISDReq;VcFi to request ISD activation;;x;
+VcTmEfl;VcFiAuxCWPOnReq;VcFi for reconfigure the climatic waterpump when HVAC valve is faulty;;x;FS_CWP
+VcTmEfl;VcFiEwpFS;VcFi for FailSafe Electric Waterpump VEP Gen1;;x;FS_ECPMS
+VcScrAd;VcFiScrAdaptionInhibit;Inhibition of SCR adaption function;;;
+VcRdp;VcFiRdpCalculationInhibit;Inhibition of RDP calculation;;;
+VcEmCo;VcFiEmCoDpfRgnInhibit;Inhibition of DPF regen request from EmCo;;;
+VcMtThMon;VcFiMtLtClntTStuck;FID for inhibition of ED circuit coolant temp sensor stuck;;;MTCS
+VcMtThMon;VcFiMtEradInvTStuck;FID for inhibition of ED circuit Erad inverter temp sensor stuck;;;ERAD
+VcMtThMon;VcFiMtWtrPmpTStuck;FID for inhibition of ED circuit water pump temp sensor stuck;;;HYEDCP
+VcMtThMon;VcFiMtCiddClntTStuck;FID for inhibition of ED circuit Cidd coolant temp sensor stuck;;;CCID
+VcMtThMon;VcFiMtHvgWndgTStuck;FID for inhibition of ED circuit Cidd coolant temp sensor stuck;;;STCISGT
+VcMtThMon;VcFiHvBattTOut;Fall back temperature value to be used for Te_HvBattCooltTOut;;;HvBattTOut
+VcMtThMon;VcFiMtThStuck;FID for inhibition of ED cicruit thermostat stuck open and close;;;MTTHMS
+VcMtThMon;VcFiMtTOffs;FID for inhibition of ED circuit  temp sensors offset ;;;
+VcMtThMon;VcFiMtWtrPmpTOffs;FID for inhibition of ED circuit water pump temp sensor offset check;;;
+VcMtThMon;VcFiMtCiddClntTOffs;FID for inhibition of ED circuit Cidd coolant temp sensor offset check;;;
+VcMtThMon;VcFiHvBattCool;FID for inhibition of High voltage battery cooling;;;HvBattCool
+VcMtThMon;VcFiHvBattTOffs;FID for inhibition of Hv battery temp sensor offset check;;;HvBattT
+Unused;VcFiUnused;Parking place for unused monitors;;;
+Core Displayadapter;VcFiCoAf;Inhibition helper from SPM's;;;
+Core Displayadapter;VcFiDaFid1;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid2;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid3;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid4;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid5;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid6;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid7;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid8;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid9;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid10;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid11;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid12;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid13;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid14;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid15;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid16;Dummy FIM-line for messages;;;
+Core Displayadapter;VcFiDaFid17;Dummy FIM-line for messages;;;
+VcFtivMon;VcFiFtivMon;Function Id for Fuel Tank Isolation Valve monitor;;;
+VcPurgMon;VcFiPurgMon;Function Id for purge monitor;;;
+VcLamCtrlM;VcFiLamCtrlM;Function Id for lambda control closed loop monitor;;;
+VcAesDiffPresM;VcFiDiffPresM;Function Id for LR EGR differential pressure monitor;;;
+VcAesDynPresM;VcFiBst1AmbPPlausMon;Function Id for boost 1 vs.ambient pressure comparison;;;
+VcAesDynPresM;VcFiBst2AmbPPlausMon;Function Id for boost 2 vs.ambient pressure comparison;;;
+VcAesDynPresM;VcFiBst1Bst2PlausMon;Function Id for boost 1 vs.boost 2 pressure comparison;;;
+VcAesDynPresM;VcFiBst2IntkMapPlausMon;Function Id for boost 2 vs intake manifold pressure comparison;;;
+VcAesDynPresM;VcFiBst1IntkMapPlausMon;Function Id for boost 1 vs intake manifold pressure comparison;;;
+VcAesStatPresM;VcFiAmbPCompPlausMon;VcFi forAmbient Pressure Rationality Monitor  (comparison to other sensor at eng off);;;ATPR
+VcAesStatPresM;VcFiBst1PCompPlausMon;VcFi for boost 1 Pressure Rationality Monitor  (comparison to other sensor at eng off);;;
+VcAesStatPresM;VcFiBst2PCompPlausMon;VcFi for boost 2 Pressure Rationality Monitor  (comparison to other sensor at eng off);;;
+VcAesStatPresM;VcFiIntkMnfldPCompPlausMon;VcFi for Intake Manifold Pressure Diff Rationality Monitor (comparison to other sensor at eng off);;;MAPIMPDR
+VcAesStatPresM;VcFiExhMnfldPCompPlausMon;VcFi for Exhaust Manifold Pressure Diff Rationality Monitor (comparison to other sensor at eng off);;;EXHMPDR
+VcAesStatPresM;VcFiElcmPCompPlausMon;VcFi for ELCM Pressure Diff Rationality Monitor (comparison to other sensor at eng off);;;
+VcAesStatPresM;VcFiScPCompPlausMon;VcFi for Supercharger Pressure Rationality Monitor  (comparison to other sensor at eng off);;;SCPR
+VcEmCo;VcFiFSScrOnly;Failsafe to run only in SCR-mode (Skip LNT and mixed mode);;;
+VcEmCo;VcFiFSLntOnly;Failsafe to run only in LNT-mode (Skip SCR and mixed mode);;;
+VcTmApach;VcFiFsPmpCluOpn;Failsafe flag that indicates that a fault has been found on the clutchable waterpump, clutch is open;;;
+VcTmApach;VcFiFsPmpCluClsd;Failsafe flag that indicates that a fault has been found on the clutchable waterpump, clutch is closed;;;
+VcTmApach;VcFiFsWcacPmp;Failsafe flag that indicates that a fault has been found on the electric waterpump for the WCAC system;;;
+VcTmApach;VcFiFsEocVlvClsd;Failsafe flag that indicates that a fault has been found on the EOC coolant calve, valve is closed;;;
+VcTmApach;VcFiFsEocVlvOpn;Failsafe flag that indicates that a fault has been found on the EOC coolant calve, valve is open;;;
+VcTmApach;VcFiFsTocVlvClsd;Failsafe flag that indicates that a fault has been found on the TOC coolant calve, valve is closed;;;
+VcTmApach;VcFiFsTocVlvOpn;Failsafe flag that indicates that a fault has been found on the TOC coolant calve, valve is open;;;
+VcScFeh;VcFiFeh1;Dummy FIM-line for messages;;x;
+VcScFeh;VcFiFeh2;Dummy FIM-line for messages;;x;
+VcScFeh;VcFiFeh3;Dummy FIM-line for messages;;x;
+VcScFeh;VcFiFeh4;Dummy FIM-line for messages;;x;
+VcScFeh;VcFiFeh5;Dummy FIM-line for messages;;x;
+VcScFeh;VcFiFeh6;Dummy FIM-line for messages;;x;
+VcScFeh;VcFiFeh7;Dummy FIM-line for messages;;x;
+VcScFeh;VcFiFsLoPwrWarnMsg;FID for inhibitation of showing message for low available propulsive power when a diagnostic function already shows a similar message ;;x;
+VcTqm;VcFiTrqMonLim1;FIM-line for messages from torque monitoring;;x;
+VcTqm;VcFiTrqMonLim2;FIM-line for messages from torque monitoring;;x;
+VcTqmSpdLim;VcFiSpdLim1;FIM-line for messages from safety speed limiation ;;x;
+VcTqmSpdLim;VcFiSpdLim2;FIM-line for messages from safety speed limiation ;;x;
+VcTqmASpdLimReq;VcFiISDMsg1;FIM-line for messages from ISD function;;x;
+VcTqmASpdLimReq;VcFiISDMsg2;FIM-line for messages from ISD function;;x;
+VcTqmASpdLimReq;VcFiISDMsg3;FIM-line for messages from ISD function;;x;
+VcObdGpf;VcFiObdGpf;Function ID for gasoline particle filter monitor;;;
+VcTmEdMon;VcFiEdHvBattCooltVlvMon;VcFi for inhibition of ED/Battery circuit interconnection valves stuck monitor;;;
+VcEmiGpf;VcFiFsGpfInhMdlCorr;Fail safe for inhibiting soot model correction;;x;
+VcOilLvl;VcFiOilLvlStck;VcFi for Oil level sensor stuck;;;
+VcLeakMon;VcFiLeakMon;FID for leakage detection monitor;;;
+VcTmHvacClntTM;VcFiHvacCooltTStuckMon;FID for inhibition of Hvac Temp Stuck Check Diagnostics;;;
+VcMtThMon;VcFiHvacCooltTStuckMon;FID for inhibition of Hvac Temp Stuck Check Diagnostics;;;
+VcTmHvacVlvM;VcFiFsHvchShutOff;Emission Neutral Default Action fid for the Hvac Vavle;;;
+VcTmHvacVlvM;VcFiHvacVlvMon;FID for inhibition of Hvac Valve Monitoring;;;
+VcEmCo;VcFiFSLoNoxBase;Failsafe to run in LoNOxBase-mode if faults related to FIE;;;
+VcAesMafM;VcFiIntkMnfldFlwMdlPlausMon;VcFi for MAF Rationality Monitor;;;
+VcAesEChrgrM ;VcFiEChrgrM;VcFi for Echarger monitor;;;
+VcAesHmdM;VcFiHmdM;VcFi for humidity monitor;;;
+VcObdCmn;VcFiFsPidDefVal;Send default value from PID;;;
+VcTmEdMon;VcFiEdCoolgPfmncMon;VcFi for inhibition of ED circuit system cooling performance error monitor;;;
+VcLinCptM;VcFiEDEwpSpdMon;VcFi for ED electrical water pump speed error;;;
+VcFuelLpM;VcFiFuelLpM;VcFi for Fuel low pressure monitoring;;;
+VcDepSs;VcFiSsRcfSet;Inhibit Stop/Start on certain faults;;x;
+VcDepSs;VcFiSsRcfSetAlt;Inhibit Stop/Start on certain faults;;x;
+VcFuelLpSensM;VcFiFuelLpSensM;VcFi for Fuel low pressure sensor monitoring;;;
+VcFuelLvlSensM;VcFiFuelLvlSensM;VcFi for Fuel level sensor monitoring;;;
+VcFuelCtrl;VcFiFsFuLoPFbCtrl;VcFi fail safe flag to disable fuel low pressure feedback control;;;
+VcFuelCtrl;VcFiFsFuLoPCtrlMargin;VcFi fail safe flag to increase feed forward margins on fuel low pressure control;;;
+VcFuelCtrl;VcFiFsFuLoPPriming;VcFi fail safe flag to prime fuel system after run dry;;;
+VcFuelCtrl;VcFiFsFuLoPSetTar;VcFi fail safe flag to set fuel low pressure target;;;
+VcFuelCtrl;VcFiFsFuLoPVaporCheck;VcFi fail safe flag to disable fuel low pressure vapor check;;;
+VcAccelM;VcFiAccelMStuck;VcFi for accelerometer monitor stuck check;;;
+VcAccelM;VcFiAccelMOffs;VcFi for accelerometer monitor rationality check;;;
+VcAccelM;VcFiAccelMRange;VcFi for accelerometer monitor out of range check;;;
+VcEmiCtrl;VcFiFsEmiCtrlMidFbInh;VcFi fail safe for inhibition of MidHego feedback emission control;;;FS_SFBA
+VcFuelCtrl;VcFiFsFuLoPCtrlFlowMargin;VcFi fail safe flag to increase feed forward margins based on flow on fuel low pressure control;;;
+VcLamCilM;VcFiCilM;VcFi fail safe for Cylinder Imbalance Monitor;;;
+VcLamRespM;VcFiRespM;VcFi fail safe for Lambda Response Monitor;;;
+VcTempWcacThM;VcFiWcacThM;VcFi for WCAC cooling circuit heat up monitor;;;
+VcLinCptM;VcFiEdcpEmgyMon;VcFi for ED Coolant Pump emergency run monitor;;;
+VcLinBypVlvM;VcFiLinBypVlvM;VcFi for LIN Bypass Valve Monitor;;;
+VcTmWcac;VcFiFsLinBypVlv;VcFi for opening LIN Bypass Valve;;;
+VcKersBltSlipM;VcFiKersBltSlipM;VcFi for Kers Belt Slip monitoring;;;
+VcCdPinM;VcFiCdPinM;VcFi for Sliding Camshaft Pin Monitor;;;
+VcCdPinM;VcFiFsCdPinM2CylMode;VcFi fail safe for 2 cylinder mode;;;
+VcCdPinM;VcFiFsCdPinM4CylMode;VcFi fail safe for 4 cylinder mode;;;
+VcLinCptM;VcFiFsCircCnctVlv;VcFi failsafe for HV battery cooling circuit contact valve;;x;
+VcLinCptM;VcFiFsCircCnctVlv2;VcFi failsafe for HV battery cooling circuit contact valve;;x;
+VcLinCptM;VcFiFsCooltPmpCmptmt;VcFi failsafe for coolant pump in climate circuit;;x;
+VcLinCptM;VcFiFsCooltPmpCmptmt2;VcFi failsafe for coolant pump in climate circuit;;x;
+VcLinCptM;VcFiFsCooltPmpDtElec;VcFi failsafe for ED coolant pump;;x;
+VcLinCptM;VcFiFsCooltPmpDtElec2;VcFi failsafe for ED coolant pump;;x;
+VcLinCptM;VcFiFsEvaprVlvFrnt;VcFi failsafe for A/C evaporator valve;;x;
+VcLinCptM;VcFiFsEvaprVlvFrnt2;VcFi failsafe for A/C evaporator valve;;x;
+VcLinCptM;VcFiFsOutdHeatChgToCmprVlv;VcFi failsafe for accumulator shut-off valve;;x;
+VcLinCptM;VcFiFsOutdHeatChgToCmprVlv2;VcFi failsafe for accumulator shut-off valve;;x;
+VcLinCptM;VcFiFsRadrBypVlvInDtElec;VcFi failsafe for radiator bypass valve;;x;
+VcLinCptM;VcFiFsRadrBypVlvInDtElec2;VcFi failsafe for radiator bypass valve;;x;
+VcLinCptM;VcFiFsWtrCondsBypVlv;VcFi failsafe for OHX shut-off valve;;x;
+VcLinCptM;VcFiFsWtrCondsBypVlv2;VcFi failsafe for OHX shut-off valve;;x;
+VcLinCptM;VcFiFsWtrCondsVlv;VcFi failsafe  for liquid cooler condenser shut-off valve;;x;
+VcLinCptM;VcFiFsWtrCondsVlv2;VcFi failsafe  for liquid cooler condenser shut-off valve;;x;
+VcLinCptM;VcFiFsBypVlvForHeatPmp;VcFi failsafe for heatpump bypass valve;;x;
+VcLinCptM;VcFiFsBypVlvForHeatPmp2;VcFi failsafe for heatpump bypass valve;;x;
+VcLinCptM;VcFiFsCooltTInDtElec;VcFi failsafe for ED coolant temperature sensor;;x;
+VcLinCptM;VcFiFsCooltTInCmptmt;VcFi failsafe for coolant temperature in climate circuit;;x;
+VcLinCptM;VcFiFsAmbT;VcFi failsafe for ambient temperature sensor;;x;
+VcLinCptM;VcFiFsFanCoolgFrnt1;VcFi failsafe for cooling fan 1;;x;
+VcLinCptM;VcFiFsFanCoolgFrnt2;VcFi failsafe for cooling fan 2;;x;
+VcLinCptM;VcFiFsPCmprInQly;VcFi failsafe for compressor inlet pressure sensor;;x;
+VcLinCptM;VcFiFsTCmprInQly;VcFi failsafe for compressor inlet temperature sensor;;x;
+VcLinCptM;VcFiFsPCmprOutQly;VcFi failsafe for compressor outlet pressure sensor;;x;
+VcLinCptM;VcFiFsTCmprOutQly;VcFi failsafe for compressor outlet temperature sensor;;x;
+VcLinCptM;VcFiFsPBattChillrOutQly;VcFi failsafe for chiller out pressure sensor;;x;
+VcLinCptM;VcFiFsTBattChillrOutQly;VcFi failsafe for chiller out temperature sensor;;x;
+VcLinCptM;VcFiFsPWtrCondsOutlQly;VcFi failsafe for water cooled condensor outlet pressure sensor;;x;
+VcLinCptM;VcFiFsTWtrCondsOutlQly;VcFi failsafe for water cooled condensor outlet temperature sensor;;x;
+VcLinCptM;VcFiFsPOutdHeatChgOutlQly;VcFi failsafe for battery heat exchanger pressure sensor;;x;
+VcLinCptM;VcFiFsTOutdHeatChgOutlQly;VcFi failsafe for battery heat exchanger temperature sensor;;x;
+VcLeakMon;VcFiFsFuelLvlSens;Fail safe for fuel level sensors;;;
+VcLeakMon;VcFiFsVspd;Fail safe for vehicle speed signal to VcLeakMon;;;
+VcObdDps;VcFiDpsStuck;VcFi for dpf Diff Pressure Sensor monitor stuck check;;;
+VcObdDps;VcFiDpsPlausMon;VcFi for dpf Diff Pressure Sensor monitor offset check;;;
+VcObdDps;VcFiDpsInvHoses;VcFi for dpf Diff Pressure Sensor monitor Inverted Hoses check;;;
+VcCmpntSts;VcFiFsGrlShttr;VcFi failsafe for grill shutter;;x;
+VcCmpntSts;VcFiFsGrlShttr2;VcFi failsafe for grill shutter;;x;
+VcCmpntSts;VcFiFsSplrShttr;VcFi failsafe for spoiler shutter;;x;
+VcCmpntSts;VcFiFsSplrShttr2;VcFi failsafe for spoiler shutter;;x;
+VcTempLtClntHi;VcFiTempLtClntHi;VcFi for WCAC cooling circuit high temperature monitor;;;
+VcTmHvacClntTM;VcFiHvacCooltTOffsMon;FID for inhibition of Hvac Temp Offset Check Diagnostics;;;
+VcProtNe;VcFiFsIdleSpdLimEMS;VcFi failsafe for minimum idle speed from EMS supplier;to be used with HPRLF;;
+VcProtNe;VcFiFsEngSpdLimnEMS;VcFi failsafe for maximum engine speed from EMS supplier;to be used with HPRLF;;
+VcProtInj;VcFiFsInjPrmDurEMS;VcFi failsafe for homogeneous injection parameters and inj. duration from EMS supplier;to be used with HPRLF;;
+VcPpmMvem;VcFiMvSysMon;VcFi for Mv system faults;;;
+VcPpmMvem;VcFiMvBattEOLMon;VcFi for Mv battery end of life detection;;;
+AcPTOffsMonr;VcFiPTOffsMonr;VcFi for AC system pressure and temperature offset monitor;;;
+AcPTOffsMonr;VcFiFsCmprOutP;Failsafe for AC Compressor out pressure sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsCmprInP;Failsafe for AC Compressor in pressure sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsOhxP;Failsafe for OXH pressure sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsWcndOutP;Failsafe for Water cooled condenser pressure sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsChillrOutP;Failsafe for Chiller out pressure sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsCmprOutT;Failsafe for AC Compressor out temperature sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsCmprInT;Failsafe for AC Compressor in temperature sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsOhxT;Failsafe for OXH temperature sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsWcndOutT;Failsafe for Water cooled condenser temperature sensor reconfiguration;;;
+AcPTOffsMonr;VcFiFsChillrOutT;Failsafe for Chiller out temperature sensor reconfiguration;;;
+AcWcndVlvMonr;VcFiWcndVlvMonr;VcFi for Water cooled condenser shut off valve monitor;;;
+AcWcndVlvMonr;VcFiFsWcndVlvCdng;Failsafe for conditioning of Water cooled condenser shut off valve;;;
+AcWcndBypVlvMonr;VcFiWcndBypVlvMonr;VcFi for Water cooled condenser bypass shut off valve monitor;;;
+AcWcndBypVlvMonr;VcFiFsWcndBypVlvCdng;Failsafe for conditioning of Water cooled condenser bypass shut off valve;;;
+AcOhxToCmprVlvMonr;VcFiOhxToCmprVlvMonr;VcFi for OHX to compressor shut off valve monitor;;;
+AcOhxToCmprVlvMonr;VcFiFsOhxToCmprVlvCdng;Failsafe for conditioning of OHX to compressor shut off valve;;;
+AcOhxToCmprVlvMonr;VcFiFsLimdCoolg;Failsafe for limitation of pressure during cooling (open Wcond bypass valve);;;
+AcEvaprVlvMonr;VcFiEvaprVlvMonr;VcFi for Evaporator shut off valve monitor;;;
+AcEvaprVlvMonr;VcFiFsEvaprVlvCdng;Failsafe for conditioning of Evaporator shut off valve;;;
+AcEvaprVlvMonr;VcFiFsEvaprNotAvl;Failsafe for indication of Evaporator not available;;;
+AcWcndChkVlvMonr;VcFiWcndChkVlvMonr;VcFi for Water cooled condenser check valve and OHX EXV plausibility monitor;;;
+AcWcndChkVlvMonr;VcFiFsWcndNotAvl;Failsafe for indication of Water cooled condenser not available;;;
+AcOhxChkVlvMonr;VcFiOhxChkVlvMonr;VcFi for OHX check valve monitor;;;
+AcOhxChkVlvMonr;VcFiFsOhxNotAvl;Failsafe for indication of OHX not available;;;
+AcChillrVlvMonr;VcFiChillrVlvMonr;VcFi for chiller valve, EXV or checkvalve, monitor;;;
+AcChillrVlvMonr;VcFiFsChillrNotAvl;Failsafe for indication of Chiller not available;;;
+AcExVlvMonr;VcFiExVlvMonr;VcFi for EX valve monitor;;;
+AcExVlvMonr;VcFiFsOhxExVlvInin;Failsafe for initialization of EXV to OHX;;;
+AcExVlvMonr;VcFiFsChillrExVlvInin;Failsafe for initialization of Chiller EXV;;;
+AcExVlvMonr;VcFiFsOhxExVlvImps;Failsafe for reconfiguration or lowered status flag of EXV to OHX;;;
+AcExVlvMonr;VcFiFsChillrExVlvImps;Failsafe for reconfiguration or lowered status flag of Chiller EXV;;;
+AcACCAMonr;VcFiACCAMonr;VcFi for Electrical AC compressor monitor;;;
+AcACCAMonr;VcFiFsCmprNotAvl;Failsafe for indication of Electrical AC compressor not available;;;
+AcACCAMonr;VcFiFsCmprWoHpNotAvl;Failsafe for indication of Electrical AC compressor not available in basic AC system;;;
+AcEvaprMonr;VcFiEvaprMonr;VcFi for Evaporator monitor;;;
+AcPOffsWoHpMonr;VcFiPOffsWoHpMonr;VcFi for AC pressure offset monitor in basic AC system;;;
+AcPOffsWoHpMonr;VcFiFsCmprOutPWoHp;Failsafe for AC Compressor out pressure sensor reconfiguration in basic AC system;;;
+AcPOffsWoHpMonr;VcFiFsChillrOutPWoHp;Failsafe for Chiller out pressure sensor reconfiguration in basic AC system;;;
+AcTOffsWoHpMonr;VcFiTOffsWoHpMonr;VcFi for AC temperature offset monitor in basic AC system;;;
+AcTOffsWoHpMonr;VcFiFsCmprOutTWoHp;Failsafe for AC Compressor out temperature sensor reconfiguration in basic AC system;;;
+AcTOffsWoHpMonr;VcFiFsChillrOutTWoHp;Failsafe for Chiller out temperature sensor reconfiguration in basic AC system;;;
+AcEvaprVlvWoHpMonr;VcFiEvaprVlvWoHpMonr;VcFi for Evaporator shut off valve monitor in basic AC system;;;
+AcEvaprVlvWoHpMonr;VcFiFsEvaprWoHpNotAvl;Failsafe for indication of Evaporator not available in basic AC system;;;
+AcChillrVlvWoHpMonr;VcFiChillrVlvWoHpMonr;VcFi for chiller valve, EXV or checkvalve, monitor in basic AC system;;;
+AcChillrVlvWoHpMonr;VcFiFsChillrWoHpNotAvl;Failsafe for indication of Chiller not available in basic AC system;;;
+AcSysProtnMonr;VcFiSysProtnMonr;VcFi for Ac system protection monitor;;;
+CmptmtClntTOffsDiag;VcFiCmptmtClntTOffs;VcFi for compartment coolant temperature offset monitor;;;
+CmptmtClntTStkDiag;VcFiCmptmtClntTStk;VcFi for compartment coolant temperature stuck monitor;;;
+EdClntTOffsDiag;VcFiEdClntTOffs;VcFi for ED coolant temperature offset monitor;;;
+EdClntTStkDiag;VcFiEdClntTStk;VcFi for ED coolant temperature stuck monitor;;;
+EdVlvDiag;VcFiEdVlv;VcFi for ED valve stuck monitor;;;
+HvacVlvDiag;VcFiHvacVlv;VcFi for Hvac valve stuck monitor;;;
+HvBattVlvStkClsdDiag;VcFiHvBattVlv;VcFi for HvBatt valve stuck closed and stuck open monitor;;;
+LinPrpVlvDiag;VcFiLinPrpVlv;VcFi for Lin proportional valve monitor;;;
+LinPmpDiag;VcFiLinDtElecPmp;VcFi for Lin monitor for ED coolant pump;;;
+LinPmpDiag;VcFiLinCmptmtPmp;VcFi for Lin monitor for compartment coolant pump;;;
+VcEmiPlsM;VcFiMidO2SnsrPlausMon;Function Id for middle oxygen sensor plausability monitor;;;
+VcScAAccPed;VcFiScAAccPedL1;VcFi for L1 AccPed plausubility monitor DTC;;x;
+VcScBAccPed;VcFiScBAccPedL2;VcFi for L2 AccPed plausubility monitor DTC;;x;
+VcCmpntSts;VcFiMissHbFan1;Function Id for heartbeat missing for fan 1;;x;
+VcCmpntSts;VcFiMissHbFan2;Function Id for heartbeat missing for fan 2;;x;
+AcSysProtnMonr;VcFiFsAcCoolgNotAvl;Failsafe for indication of Cooling function not available;;;
+AcSysProtnMonr;VcFiFsAcHeatgNotAvl;Failsafe for indication of Heating function not available;;;
+LinPmpDiag;VcFiLinDtElecPmpSpd;Function Id for speed error on DtElec coolant pump;;;
+LinPmpDiag;VcFiLinCmptmtPmpSpd;Function Id for speed error on compartment coolant pump;;;
+ThermDiagSigCdn;VcFiFsHvBattInT;Failsafe for reconfiguration of Hv battery inlet coolant temperature;;;
+VcCmpntSts;VcFiFsCooltTInCmptmt2;Failsafe for compartment coolant temperature sensor 2;;x;
+VcEmiPlsM;VcFiAftO2SnsrPlausMon;Function Id for after oxygen sensor plausability monitor;;;
+VcTmAfReq;VcFiFsMinAirFlowReq;FiFs for activating a minimum airflow request though the front radiator package;;;
+VcOilTMon;VcFiOilTMon;VcFi for oil temperature monitor;;;
+VcNoxSensMgr;VcFiNOxSensMidVoltageDiag;Inhibit voltage diag;Mid sensor;;
+VcNoxSensMgr;VcFiNOxSensMidProbeLnDiag;Inhibit probe line diag (incl. Heater line);Mid sensor;;
+VcNoxSensMgr;VcFiNOxSensMidHeaterDiag;Inhibit heater diag;Mid sensor;;
+VcNoxSensMgr;VcFiNOxSensMidMountingDiag;Inhibit mounting diag;Mid sensor;;
+VcNoxSensMgr;VcFiNOxSensMidAvailabilityDiag;Inhibit availability diag;Mid sensor;;
+VcNoxSensMgr;VcFiNOxSensMidReadinessDiag;Inhibit readiness diag;Mid sensor;;
+VcNoxSensMgr;VcFiNOxSensMidCurveDiagA;Inhibit curve diag A;Mid sensor;;
+VcNoxSensMgr;VcFiFsNOxSensMidError;Failsafe for transition to error state;Mid sensor;;
+VcNoxSensMgr;VcFiFsNOxSensMidFreezeNOx;Failsafe for freezing NOx value;Mid sensor;;
+VcNoxSensMgr;VcFiFsNOxSensMidFreezeLambda;Failsafe for freezing lambda value;Mid sensor;;
+VcNoxSensMgr;VcFiFsNOxSensMidModelNOx;Failsafe for using modeled Nox instead of sensor value;Mid sensor;;
+VcNoxSensMgr;VcFiFsNOxSensMidModelLambda;Failsafe for using modeled lambda instead of sensor value;Mid sensor;;
+VcLamCilM;VcFiFsCILAR;Failsafe for CILM faults;;;
+VcLamCilM;VcFiFsCILC;Failsafe forCILM faults;;;
+VcObdExhTemp;VcFiExhTempCatInit;Function identifier for T1 temperature sensor key-on monitor;;;
+VcObdExhTemp;VcFiExhTempDpfInit;Function identifier for T2 temperature sensor key-on monitor;;;
+VcObdExhTemp;VcFiExhTempScrInit;Function identifier for T3 temperature sensor key-on monitor;;;
+VcObdScr;VcFiScr1ConvEff;Function identifier for SCR1 Conversion Efficiency;;;
+VcObdScr;VcFiScr2ConvEff;Function identifier for SCR2 Conversion Efficiency;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrUsVltg;Function identifier for Nox Us Voltage too high/low error;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrMidVltg;Function identifier for Nox Mid Voltage too high/low error;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrDsVltg;Function identifier for Nox Ds Voltage too high/low error;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrUsProbeLn;Function identifier for Nox Us Probe line electrical error;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrMidProbeLn;Function identifier for Nox Mid Probe line electrical error;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrDsProbeLn;Function identifier for Nox Ds Probe line electrical error;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrUsHtrLn;Function identifier for Nox Us Heater line electrical error;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrMidHtrLn;Function identifier for Nox Mid Heater line electrical error;;;
+VcObdNoxSnsrElec;VcFiNOxSnsrDsHtrLn;Function identifier for Nox Ds Heater line electrical error;;;
+VcObdNoxStartUp;VcFiNOxSnsrUsHtr;Function identifier for Nox Us Heater performance error;;;
+VcObdNoxStartUp;VcFiNOxSnsrMidHtr;Function identifier for Nox Mid Heater performance error;;;
+VcObdNoxStartUp;VcFiNOxSnsrDsHtr;Function identifier for Nox Ds Heater performance error;;;
+VcObdNoxStartUp;VcFiNOxSnsrUsReady;Function identifier for Nox Us readiness not reached in time;;;
+VcObdNoxStartUp;VcFiNOxSnsrMidReady;Function identifier for Nox Mid readiness not reached in time;;;
+VcObdNoxStartUp;VcFiNOxSnsrDsReady;Function identifier for Nox Ds readiness not reached in time;;;
+VcIntkVlvM;VcFiIntkVlv;Function identifier for intake valve monitor;;;
+VcTmAf;VcFiFsAirCoolgLimHiFan2;VcFi indicates that second fan is faulty;;x;

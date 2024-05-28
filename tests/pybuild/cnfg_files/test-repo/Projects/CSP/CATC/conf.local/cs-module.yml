@@ -1,0 +1,68 @@
+id: catc
+description:
+  brief: climate-and-thermal-ctrl
+  full: Climate and Thermal Control
+organisation: ARTCLIMATE, ARTUPTIME, ARTTM
+url: https://dummy-gerrit.dummy-domain.biz/plugins/gitiles/dummy-repo/+/master/README.md
+source: https://dummy-gerrit.dummy-domain.biz/admin/repos/dummy-repo
+asil: QM
+tags:
+  - Design Draft
+  - Implementation Draft
+dependencies:
+  cs-core:
+    min-version: 0.0.2
+  climate-and-thermal-control-service:
+    min-version: 0.1.0
+  vehicle_modes_provider:
+    min-version: 6.0.0
+  vehiclemotionstate-service:
+    min-version: 2.3.5
+  dp-fioc:
+    min-version: 6.0.2
+  dp-ccmb:
+    min-version: 0.0.2
+  dp-hvacsys:
+    min-version: 0.0.5
+  hal-hvec-thermal-properties:
+    min-version: 0.1.0
+  hal-hvec-electrical-properties:
+    min-version: 0.1.2
+  hal-hvcc-monitor:
+    min-version: 0.0.2
+  # hal-hvcc-requests:
+  #   min-version: 0.0.2
+  hal-hlcm-electrical-measurement:
+    min-version: 1.0.1
+  hal-hlcm-system-states:
+    min-version: 1.0.1
+  # electrical_energy_coordinator:
+  #   min-version: 5.0.4
+  hal-hvec-contactor-status:
+    min-version: 0.1.1
+  # dp-aqsm:
+  #   min-version: 0.0.2
+
+maintainer:
+  name: John Doe
+  email: john.doe@volvocars.com
+peers:
+  - name: Aurora Stephenson
+    email: aurora.stephenson@volvocars.com
+  - name: Joe Hull
+    email: joe.hull@volvocars.com
+  - name: Riley Harrington
+    email: riley.harrington@volvocars.com
+  - name: Legacy Rose
+    email: legacy.rose@volvocars.com
+# List of approved architectural debt
+# All subfields are mandatory, and there must be at least one approver listed for each debt
+architectural-debt:
+  - description: Some handy description.
+    motivation: >
+      Some handy motivation, with a bit more text.
+      Let's make it multiline. This is the second line.
+      And this is the third. Why not?
+    approvers:
+      - name: Noah Harper
+        email: noah.harper@volvocars.com

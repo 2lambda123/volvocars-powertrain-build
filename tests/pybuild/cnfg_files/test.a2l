@@ -1,0 +1,1545 @@
+
+
+/*===========================================================================*/
+/*                    VcAesTrboM                                                */
+/*===========================================================================*/
+
+    /begin CHARACTERISTIC
+        cVcAesTrboM_B_EngProtnTrboPPeakUseAbsolutP	/* Name */
+        "Use absolute pressure in peak monitor"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesTrboM_B_EngProtnTrboPPeakUseAbsolutP */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_d	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesTrboM_B_IsObdExeSpm	/* Name */
+        "Defines where is the obd exe flag coming from (1 if coming from SPM)"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesTrboM_B_IsObdExeSpm */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_d	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC
+        cVcAesTrboM_B_PpLkExhFiMPerm	/* Name */
+        "Switch to bypass FiM permission"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x00000000    /* address: cVcAesTrboM_B_PpLkExhFiMPerm */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_d	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+    /end CHARACTERISTIC
+
+
+
+    /begin AXIS_PTS
+        mVcAesTrboM_rt_TrboMonrTgtLim_c	/* Name */
+        "Target turbo pressure ratio limit for low boost, engine speed breakpoints"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        UWORD_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_0_25	/* Conversion */
+        10	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        10000	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        mVcAesTrboM_rt_TrboMonrTgtLim_r	/* Name */
+        "Target turbo pressure ratio limit for low boost, Trq breakpoints"	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        SWORD_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_0_015625	/* Conversion */
+        10	/* MaxAxisPoints */
+        -500	/* LowerLimit */
+        500	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesTrboM_n_EngSpdMinLim_x	/* Name */
+        "Pressure upstream turbo compressor breakpoint data "	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_a	/* Conversion */
+        4	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        110	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin AXIS_PTS
+        tVcAesTrboM_t_TrboMonrLoBoostTiDly_x	/* Name */
+        "Pressure upstream turbo compressor breakpoint data "	/* LongIdentifier */
+        0x00000000
+        NO_INPUT_QUANTITY	/* InputQuantity */
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        EQ_LSB_1_a	/* Conversion */
+        4	/* MaxAxisPoints */
+        0	/* LowerLimit */
+        110	/* UpperLimit */
+        DEPOSIT ABSOLUTE
+    /end AXIS_PTS
+
+    /begin MEASUREMENT
+        rVcAesTrboM_D_TrboVntDpHiTmp	/* Name */
+        "Vnt turbo high error counter value "	/* LongIdentifier */
+        SBYTE	/* Datatype */
+        EQ_LSB_1_e	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -128	/* LowerLimit */
+        127	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesTrboM_D_TrboVntDpLoTmp	/* Name */
+        "Vnt turbo high error counter value "	/* LongIdentifier */
+        SBYTE	/* Datatype */
+        EQ_LSB_1_e	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -128	/* LowerLimit */
+        127	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        rVcAesTrboM_p_EngProtnTrboPPeakPres	/* Name */
+        "Pressure for BSTPEAK monitor"	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        EQ_LSB_1_a	/* Conversion */
+        1	/* Resolution */
+        0	/* Accuracy */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        READ_WRITE
+        /begin IF_DATA ASAP1B_ADDRESS
+            KP_BLOB 0x00000000
+        /end IF_DATA
+    /end MEASUREMENT
+
+
+    /begin COMPU_METHOD
+        EQ_LSB_0_000244140625	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%15.12"	/* Format */
+        "-"	/* Unit */
+        COEFFS 0 1 0 0 0 0.000244140625
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_0_015625	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%10.6"	/* Format */
+        "Nm"	/* Unit */
+        COEFFS 0 1 0 0 0 0.015625
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_0_25	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%8.2"	/* Format */
+        "rpm"	/* Unit */
+        COEFFS 0 1 0 0 0 0.25
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "s"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_a	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "kPa"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_b	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "rpm"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_c	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "-"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_d	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%1.0"	/* Format */
+        "-"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_e	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%3.0"	/* Format */
+        "-"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_f	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%3.0"	/* Format */
+        "deg C"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_g	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%3.0"	/* Format */
+        "s"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_j	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%1.0"	/* Format */
+        "deg C"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_k	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "deg C"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_l	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%1.0"	/* Format */
+        "s"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_m	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "kPa/s"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        EQ_LSB_1_n	/* Name */
+        ""	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        "g/s2"	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        VOID_SCALING	/* Name */
+        "Void scaling for unscaled variables"	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%1.0"	/* Format */
+        ""	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        VOID_SCALING_h	/* Name */
+        "Void scaling for unscaled variables"	/* LongIdentifier */
+        RAT_FUNC	/* ConversionType */
+        "%12.6"	/* Format */
+        ""	/* Unit */
+        COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+
+    /begin FUNCTION
+        SAesTrboM101_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLoErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM102_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM103_1431_CoreLPHiBoost	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLPHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLPHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_Z_TrboMonrLPHiBoostRnkVal	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiNrm	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiFalt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM123_P__rtional_Ranking	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM104_1432_CoreHPHiBoost	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHPHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHPHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_Z_TrboMonrHPHiBoostRnkVal	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiNrm	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiFalt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM133_P__rtional_Ranking	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM105_1433_CoreLPLoBoost	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLPLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLPLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_Z_TrboMonrLPLoBoostRnkVal	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoNrm	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoFalt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM143_P__rtional_Ranking	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM106_1434_CoreHPLoBoost	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHPLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHPLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_Z_TrboMonrHPLoBoostRnkVal	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoNrm	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoFalt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM153_P__rtional_Ranking	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM123_P__rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLPHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLPHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrLPHiErr	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM128_WithFault	/* Identifier */
+            SAesTrboM127_FaultFree	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM127_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLPHiErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM128_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLPHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLPHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM133_P__rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHPHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHPHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrHPHiErr	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM138_WithFault	/* Identifier */
+            SAesTrboM137_FaultFree	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM137_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHPHiErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM138_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHPHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHPHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM143_P__rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLPLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLPLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrLPLoErr	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM148_WithFault	/* Identifier */
+            SAesTrboM147_FaultFree	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM147_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLPLoErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM148_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLPLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLPLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM153_P__rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHPLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHPLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrHPLoErr	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM158_WithFault	/* Identifier */
+            SAesTrboM157_FaultFree	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM157_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHPLoErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM158_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHPLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHPLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM159_21_PPeakTest	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_EngProtnTrboPPeakUseAbsolutP	/* Identifier */
+            cVcAesTrboM_p_EngProtnTrboPPeakErrLim	/* Identifier */
+            cVcAesTrboM_p_EngProtnTrboPPeakHealLim	/* Identifier */
+            cVcAesTrboM_p_EngProtnTrboPPeakRnkMax	/* Identifier */
+            cVcAesTrboM_p_EngProtnTrboPPeakRnkMin	/* Identifier */
+            cVcAesTrboM_t_EngProtnTrboPeakErrDly	/* Identifier */
+            cVcAesTrboM_t_EngProtnTrboPeakHealDly	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_Z_EngProtnTrboPPeakRnk	/* Identifier */
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            yVcAesTrboM_B_EngProtnTrboPPeakErr	/* Identifier */
+            rVcAesTrboM_p_EngProtnTrboPPeakPres	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM172_Vc_SetRanking	/* Identifier */
+            SAesTrboM168_P__rtional_Ranking	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM168_P__rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_EngProtnTrboPPeakErrLim	/* Identifier */
+            cVcAesTrboM_p_EngProtnTrboPPeakRnkMax	/* Identifier */
+            cVcAesTrboM_p_EngProtnTrboPPeakRnkMin	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            yVcAesTrboM_B_EngProtnTrboPPeakErr	/* Identifier */
+            rVcAesTrboM_p_EngProtnTrboPPeakPres	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM174_WithFault	/* Identifier */
+            SAesTrboM173_FaultFree	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM172_Vc_SetRanking	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_Z_EngProtnTrboPPeakRnk	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM173_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_EngProtnTrboPPeakErrLim	/* Identifier */
+            cVcAesTrboM_p_EngProtnTrboPPeakRnkMin	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_EngProtnTrboPPeakPres	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM174_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_EngProtnTrboPPeakErrLim	/* Identifier */
+            cVcAesTrboM_p_EngProtnTrboPPeakRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_EngProtnTrboPPeakPres	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM175_31_StuckTest	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_PpValveStuckNoPump	/* Identifier */
+            cVcAesTrboM_p_PpValveStuck	/* Identifier */
+            cVcAesTrboM_t_PpValveStuckErrDly	/* Identifier */
+            cVcAesTrboM_t_PpValveStuckHealDly	/* Identifier */
+            cVcAesTrboM_t_PpValveStuckOkDly	/* Identifier */
+            cVcAesTrboM_p_PpValveStuckMinPres	/* Identifier */
+            cVcAesTrboM_t_PpValveStuckRefResetDly	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            xVcAesTrboM_B_PpValveStkExe	/* Identifier */
+            xVcAesTrboM_B_PpValveStuckUnfiltErr	/* Identifier */
+            xVcAesTrboM_B_PpValveStuckOkExe	/* Identifier */
+            xVcAesTrboM_B_PpValveStuckErr	/* Identifier */
+            rVcAesTrboM_p_PpValveStuckPDiff	/* Identifier */
+            rVcAesTrboM_p_PpValveStuckPDiffMax	/* Identifier */
+            xVcAesTrboM_B_PpValveStuckEnable	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM19_111_PressureRt	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            mVcAesTrboM_rt_TrboMonrTgtLim	/* Identifier */
+            mVcAesTrboM_rt_TrboMonrTgtLim_r	/* Identifier */
+            mVcAesTrboM_rt_TrboMonrTgtLim_c	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_rt_TrboMonrTgtTqNLim	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+            rVcAesTrboM_rt_TrboMonrTgtLim	/* Identifier */
+            rVcAesTrboM_rt_TrboMonrSnsr	/* Identifier */
+            rVcAesTrboM_rt_TrboMonrTgt	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM191_41_LeakTest	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_PpLkUseMaxtimeout	/* Identifier */
+            cVcAesTrboM_p_PpLkLim	/* Identifier */
+            cVcAesTrboM_t_PpLeakPlsDly	/* Identifier */
+            cVcAesTrboM_t_PpLeakTimeOut	/* Identifier */
+            cVcAesTrboM_t_PpLkErrDly	/* Identifier */
+            cVcAesTrboM_t_PpLkHealDly	/* Identifier */
+            cVcAesTrboM_t_PpLkOkDly	/* Identifier */
+            cVcAesTrboM_t_PpLkPumpReqTimeOut	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            xVcAesTrboM_B_PpLkPumpAct	/* Identifier */
+            xVcAesTrboM_B_PpLkExe	/* Identifier */
+            xVcAesTrboM_B_PpLkFltFlagUnfiltd	/* Identifier */
+            xVcAesTrboM_B_PpLkOk	/* Identifier */
+            rVcAesTrboM_p_PpLkTstValue	/* Identifier */
+            xVcAesTrboM_B_PpLkMaxPumpReqTimeOut	/* Identifier */
+            xVcAesTrboM_B_PpLkErr	/* Identifier */
+            xVcAesTrboM_B_PpLkFltFlag	/* Identifier */
+            xVcAesTrboM_B_PpLkPumpActDly	/* Identifier */
+            rVcAesTrboM_p_PpLkInitPres	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM192_42_LeakExhTest	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_PpLkExhNoPumpUse	/* Identifier */
+            cVcAesTrboM_p_PpLkExhLim	/* Identifier */
+            cVcAesTrboM_t_PpLkExhAftStrt	/* Identifier */
+            cVcAesTrboM_t_PpLkExhErrDly	/* Identifier */
+            cVcAesTrboM_t_PpLkExhHealDly	/* Identifier */
+            cVcAesTrboM_t_PpLkExhOkDly	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            xVcAesTrboM_B_PpLkExhFltFlagUnfiltd	/* Identifier */
+            xVcAesTrboM_B_PpLkExhExe	/* Identifier */
+            xVcAesTrboM_B_PpLkExhErr	/* Identifier */
+            xVcAesTrboM_B_PpLkExhFtlFlag	/* Identifier */
+            rVcAesTrboM_p_PpLkExhTstValue	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM215_51_PpSmalLeakTest	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_PpSmLkNotUseCmprOk	/* Identifier */
+            cVcAesTrboM_Te_PpSmLkMinTempEna	/* Identifier */
+            cVcAesTrboM_p_PpSmLkMaxDrop	/* Identifier */
+            cVcAesTrboM_t_PpSmLkErrDly	/* Identifier */
+            cVcAesTrboM_t_PpSmLkHealDly	/* Identifier */
+            cVcAesTrboM_t_PpSmLkMaxLastCompRun	/* Identifier */
+            cVcAesTrboM_t_PpSmLkMinLastCompRun	/* Identifier */
+            cVcAesTrboM_t_PpSmLkOkDly	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            xVcAesTrboM_B_PpSmLkOk	/* Identifier */
+            xVcAesTrboM_B_PpSmLkFltFlagUnfiltd	/* Identifier */
+            xVcAesTrboM_B_PpSmLkExe	/* Identifier */
+            xVcAesTrboM_B_PpSmalLeakExe	/* Identifier */
+            xVcAesTrboM_B_PpSmLkPreErr	/* Identifier */
+            rVcAesTrboM_p_PpSmLkTstVal	/* Identifier */
+            xVcAesTrboM_B_PpSmLkErr	/* Identifier */
+            xVcAesTrboM_B_PpSmLkFltFlag	/* Identifier */
+            rVcAesTrboM_p_PpSmLkInitPres	/* Identifier */
+            rVcAesTrboM_t_PpSmLkCompRun	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM227_61_RelayStuckTest	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_Rly1StkLim	/* Identifier */
+            cVcAesTrboM_p_Rly2StkLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            xVcAesTrboM_B_Rly2StkRly1Act	/* Identifier */
+            xVcAesTrboM_B_Rly2StkOk	/* Identifier */
+            xVcAesTrboM_B_Rly1StkErr	/* Identifier */
+            xVcAesTrboM_B_Rly2StkExe	/* Identifier */
+            xVcAesTrboM_B_Rly2StkErr	/* Identifier */
+            xVcAesTrboM_B_Rly1StkRly2Act	/* Identifier */
+            xVcAesTrboM_B_Rly1StkOk	/* Identifier */
+            xVcAesTrboM_B_Rly1StkExe	/* Identifier */
+            rVcAesTrboM_p_Rly2StkTstValue	/* Identifier */
+            rVcAesTrboM_p_Rly1StkTstValue	/* Identifier */
+            rVcAesTrboM_p_Rly2StkInitPres	/* Identifier */
+            rVcAesTrboM_p_Rly1StkInitPres	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM249_621_CoreVntDp	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_TrboVntDpRst	/* Identifier */
+            cVcAesTrboM_D_TrboVntDpHiErrLim	/* Identifier */
+            cVcAesTrboM_D_TrboVntDpHiNrmLim	/* Identifier */
+            cVcAesTrboM_D_TrboVntDpHiRstVal	/* Identifier */
+            cVcAesTrboM_D_TrboVntDpLoErrLim	/* Identifier */
+            cVcAesTrboM_D_TrboVntDpLoNrmLim	/* Identifier */
+            cVcAesTrboM_D_TrboVntDpLoRstVal	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsCntMax	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsCntMin	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsNOKHI	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsNOKInc	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsNOKLO	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsOK	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsOKDec	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_D_TrboVntDpLoTmp	/* Identifier */
+            rVcAesTrboM_D_TrboVntDpHiTmp	/* Identifier */
+            xVcAesTrboM_B_TrboVntDpLoTmpNrm	/* Identifier */
+            xVcAesTrboM_B_TrboVntDpHiTmpErr	/* Identifier */
+            xVcAesTrboM_B_TrboVntDpLoTmpErr	/* Identifier */
+            xVcAesTrboM_B_TrboVntStsLoErr	/* Identifier */
+            xVcAesTrboM_B_TrboVntStsHiErr	/* Identifier */
+            xVcAesTrboM_B_TrboVntDpStsLoOk	/* Identifier */
+            xVcAesTrboM_B_TrboVntDpStsHiOk	/* Identifier */
+            sVcAesTrboM_D_TrboVntDpStsLoCnt	/* Identifier */
+            sVcAesTrboM_D_TrboVntDpStsHiCnt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM264_WriteNVM	/* Identifier */
+            SAesTrboM261_WriteNVM	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM261_WriteNVM	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            sVcAesTrboM_D_TrboVntDpStsHiCnt	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM264_WriteNVM	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            sVcAesTrboM_D_TrboVntDpStsLoCnt	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM29_123_2T	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_n_TrboMonrHPEngSpdMax	/* Identifier */
+            cVcAesTrboM_n_TrboMonrLPEngSpdMin	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrLoExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoExe	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM3_1_TrboMonr	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            tVcAesTrboM_t_TrboMonrLoBoostTiDly	/* Identifier */
+            tVcAesTrboM_t_TrboMonrLoBoostTiDly_x	/* Identifier */
+            tVcAesTrboM_n_EngSpdMinLim	/* Identifier */
+            tVcAesTrboM_n_EngSpdMinLim_x	/* Identifier */
+            cVcAesTrboM_t_TrboMonrHiAvgTi	/* Identifier */
+            cVcAesTrboM_t_TrboMonrLoAvgTi	/* Identifier */
+            cVcAesTrboM_B_TrboMonrBypFiMPerm	/* Identifier */
+            cVcAesTrboM_Te_TrboMonrEngClntMinLim	/* Identifier */
+            cVcAesTrboM_B_TrboMonrCmprBypCfg	/* Identifier */
+            cVcAesTrboM_B_TrboMonrCmprPUsCfg	/* Identifier */
+            cVcAesTrboM_B_TrboMonrLoEOM0	/* Identifier */
+            cVcAesTrboM_B_TrboMonrLoEOM1	/* Identifier */
+            cVcAesTrboM_B_TrboMonrLoEOM2	/* Identifier */
+            cVcAesTrboM_B_TrboMonrLoEOM3	/* Identifier */
+            cVcAesTrboM_B_TrboMonrLoEOM4	/* Identifier */
+            cVcAesTrboM_B_TrboMonrLoEOM5	/* Identifier */
+            cVcAesTrboM_B_TrboMonrLoRegDsbl	/* Identifier */
+            cVcAesTrboM_B_TrboMonrSCCluCfg	/* Identifier */
+            cVcAesTrboM_B_TrboMonrTrboActvLoDsbl	/* Identifier */
+            cVcAesTrboM_Te_TrboMonrLoRegMin	/* Identifier */
+            cVcAesTrboM_Z_TrboMonrPTrjDFilMaxLim	/* Identifier */
+            cVcAesTrboM_Z_TrboMonrPTrjDFilMinLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrIntkBoostPTrjMinLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrSCPMaxLim	/* Identifier */
+            cVcAesTrboM_t_TrboMonrLoRegDly	/* Identifier */
+            cVcAesTrboM_t_TrboMonrPTrjStabDly	/* Identifier */
+            cVcAesTrboM_tc_TrboMonrTiConPTrjDFil	/* Identifier */
+            cVcAesTrboM_B_TrboMonrHiEOM0	/* Identifier */
+            cVcAesTrboM_B_TrboMonrHiEOM1	/* Identifier */
+            cVcAesTrboM_B_TrboMonrHiEOM2	/* Identifier */
+            cVcAesTrboM_B_TrboMonrHiEOM3	/* Identifier */
+            cVcAesTrboM_B_TrboMonrHiEOM4	/* Identifier */
+            cVcAesTrboM_B_TrboMonrHiEOM5	/* Identifier */
+            cVcAesTrboM_B_TrboMonrHiRegDsbl	/* Identifier */
+            cVcAesTrboM_B_TrboMonrTrboActvHiDsbl	/* Identifier */
+            cVcAesTrboM_Te_TrboMonrHiRegMin	/* Identifier */
+            cVcAesTrboM_Z_TrboMonrHiPTrjDFilMaxLim	/* Identifier */
+            cVcAesTrboM_Z_TrboMonrHiPTrjDFilMinLim	/* Identifier */
+            cVcAesTrboM_Z_TrboMonrThrMFlowDMinLim	/* Identifier */
+            cVcAesTrboM_n_TrboMonrNEngMaxLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrAmbPDifMinLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrCacPDifMinLim	/* Identifier */
+            cVcAesTrboM_t_TrboMonrHiPTrjStabDly	/* Identifier */
+            cVcAesTrboM_t_TrboMonrHiRegDly	/* Identifier */
+            cVcAesTrboM_tc_TrboMonrHiTiConPTrjDFil	/* Identifier */
+            cVcAesTrboM_tc_TrboMonrThrMFlowDFil	/* Identifier */
+            cVcAesTrboM_B_TrboMonrBoostPCfg	/* Identifier */
+            cVcAesTrboM_B_TrboMonrSCPCfg	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrSHiErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrSLoErr	/* Identifier */
+            sVcAesTrboM_p_TrboMonrAmbPDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoTstValCmplt	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoExe	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrGetPerm	/* Identifier */
+            xVcAesTrboM_B_TrboMonrEngClntEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoPTrjStab	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoRegEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoCmprBypActvEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrActvLoEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoRegActv	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoIntkBoostTrjEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoEngSpdEna	/* Identifier */
+            rVcAesTrboM_p_TrboMonrIntkBoostPTrjAmbDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrSCAmbPDiff	/* Identifier */
+            rVcAesTrboM_p_TrboMonrPCmprUs	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoRegDly	/* Identifier */
+            xVcAesTrboM_B_TrboMonrPTrjStabEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoDynEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrSCPEna	/* Identifier */
+            rVcAesTrboM_Z_TrboMonrPTrjDFil	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiPTrjStab	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiRegActv	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiRegEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrActvHiEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrCacPTrjDifEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrThrFlowDEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrNEngEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrPAmbDiffEna	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiRegDly	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiPTrjStabEna	/* Identifier */
+            rVcAesTrboM_Z_TrboThrMFlowDFild	/* Identifier */
+            rVcAesTrboM_Z_TrboMonrHiPTrjDFil	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM19_111_PressureRt	/* Identifier */
+            SAesTrboM73_143_2T	/* Identifier */
+            SAesTrboM72_142_CoreLoBoost	/* Identifier */
+            SAesTrboM71_141_CoreHiBoost	/* Identifier */
+            SAesTrboM53_Avg2	/* Identifier */
+            SAesTrboM52_Avg1	/* Identifier */
+            SAesTrboM51_131_2T	/* Identifier */
+            SAesTrboM29_123_2T	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM4_2_EngProtnTrboPPeak	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_TrboMonrPPeakBypFiMPerm	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            yVcAesTrboM_B_EngProtnTrboPPeakErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM159_21_PPeakTest	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM5_3_PPvalveStuckClosed	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM175_31_StuckTest	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM51_131_2T	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrHPHiAvgTi	/* Identifier */
+            cVcAesTrboM_t_TrboMonrHPLoAvgTi	/* Identifier */
+            cVcAesTrboM_t_TrboMonrLPHiAvgTi	/* Identifier */
+            cVcAesTrboM_t_TrboMonrLPLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiExe	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoExe	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoTstValCmplt	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM58_LPLoTstVal	/* Identifier */
+            SAesTrboM57_LPHiTstVal	/* Identifier */
+            SAesTrboM56_HPLoTstVal	/* Identifier */
+            SAesTrboM55_HPHiTstVal	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM52_Avg1	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrHiAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM68_Subsystem	/* Identifier */
+            SAesTrboM67_EnabledSubsystem	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM53_Avg2	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrLoTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM70_Subsystem	/* Identifier */
+            SAesTrboM69_EnabledSubsystem	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM55_HPHiTstVal	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrHPHiAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrHPHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM60_Subsystem	/* Identifier */
+            SAesTrboM59_EnabledSubsystem	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM56_HPLoTstVal	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrHPLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrHPLoTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM62_Subsystem	/* Identifier */
+            SAesTrboM61_EnabledSubsystem	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM57_LPHiTstVal	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrLPHiAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrLPHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM64_Subsystem	/* Identifier */
+            SAesTrboM63_EnabledSubsystem	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM58_LPLoTstVal	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrLPLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrLPLoTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM66_Subsystem	/* Identifier */
+            SAesTrboM65_EnabledSubsystem	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM59_EnabledSubsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM6_4_PpLeakage	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_PpLkExhFiMPerm	/* Identifier */
+            cVcAesTrboM_B_PpLkFiMPerm	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM192_42_LeakExhTest	/* Identifier */
+            SAesTrboM191_41_LeakTest	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM60_Subsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrHPHiAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM61_EnabledSubsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM62_Subsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrHPLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM63_EnabledSubsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM64_Subsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrLPHiAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM65_EnabledSubsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM66_Subsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrLPLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM67_EnabledSubsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM68_Subsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrHiAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrCacPTrjDif	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM69_EnabledSubsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM7_5_PpSmallLeakage	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_PpSmLkBypFiMPerm	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM215_51_PpSmalLeakTest	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM70_Subsystem	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_t_TrboMonrLoAvgTi	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrCacPTrjLimDif	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM71_141_CoreHiBoost	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_Z_TrboMonrSHiBoostRnkVal	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrSHiOk	/* Identifier */
+            xVcAesTrboM_B_TrboMonrSHiErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM83_Pr__rtional_Ranking	/* Identifier */
+            SAesTrboM75_1411_Mode06	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM72_142_CoreLoBoost	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_Z_TrboMonrSLoBoostRnkVal	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrSLoOk	/* Identifier */
+            xVcAesTrboM_B_TrboMonrSLoErr	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM97_Pr__rtional_Ranking	/* Identifier */
+            SAesTrboM89_1421_Mode06	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM73_143_2T	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_TrboMUseIndHeal	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrSHiErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiTstValCmplt	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPLoTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLPLoTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHPLoTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrSLoErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoTstValCmplt	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHPHiTstValCmplt	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLPHiTstVal	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoErr	/* Identifier */
+            xVcAesTrboM_B_TrboMonrLoOk	/* Identifier */
+            xVcAesTrboM_B_TrboMonrHiOk	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM106_1434_CoreHPLoBoost	/* Identifier */
+            SAesTrboM105_1433_CoreLPLoBoost	/* Identifier */
+            SAesTrboM104_1432_CoreHPHiBoost	/* Identifier */
+            SAesTrboM103_1431_CoreLPHiBoost	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM75_1411_Mode06	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_TrboMonrMode6Enbl	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHiErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM85_Dem_SetDTR	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM8_6_PpRelay	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_PpRlyStkFiMPerm	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM227_61_RelayStuckTest	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM83_Pr__rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrSHiErr	/* Identifier */
+            rVcAesTrboM_p_TrboMonrHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM88_WithFault	/* Identifier */
+            SAesTrboM87_FaultFree	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM85_Dem_SetDTR	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHiErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM87_FaultFree	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHiErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM88_WithFault	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrHiErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrHiErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrHiTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM89_1421_Mode06	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_TrboMonrMode6Enbl	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLoErrLim	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            rVcAesTrboM_p_TrboMonrLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM9_6_VNTAdp	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_TrboVntAdpnActDsbl	/* Identifier */
+            cVcAesTrboM_B_TrboVntDpFiMPerm	/* Identifier */
+            cVcAesTrboM_B_TrboVntEngIdleDsbl	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsNOKHI	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsNOKLO	/* Identifier */
+            cVcAesTrboM_D_TrboVntStsOK	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+            xVcAesTrboM_B_TrboMonrVntExeFlk	/* Identifier */
+            xVcAesTrboM_B_TrboMonrVntAdpDone	/* Identifier */
+            xVcAesTrboM_B_TrboMonrVntExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM249_621_CoreVntDp	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        SAesTrboM97_Pr__rtional_Ranking	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_p_TrboMonrLoErrLim	/* Identifier */
+            cVcAesTrboM_p_TrboMonrLoErrRnkMax	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            xVcAesTrboM_B_TrboMonrSLoErr	/* Identifier */
+            rVcAesTrboM_p_TrboMonrLoTstVal	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin SUB_FUNCTION
+            SAesTrboM102_WithFault	/* Identifier */
+            SAesTrboM101_FaultFree	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin FUNCTION
+        VcAesTrboM	/* Name */
+        ""	/* LongIdentifier */
+        /begin DEF_CHARACTERISTIC
+            cVcAesTrboM_B_IsObdExeSpm	/* Identifier */
+        /end DEF_CHARACTERISTIC
+        /begin LOC_MEASUREMENT
+            yVcAesTrboM_B_EngProtnTrboPPeakErr	/* Identifier */
+            sVcAesTrboM_p_TrboMonrAmbPDif	/* Identifier */
+            xVcAesTrboM_B_ObdExe	/* Identifier */
+        /end LOC_MEASUREMENT
+        /begin OUT_MEASUREMENT
+            yVcAesTrboM_B_TrboMonrSHiErr	/* Identifier */
+            yVcAesTrboM_B_TrboMonrSLoErr	/* Identifier */
+        /end OUT_MEASUREMENT 
+        /begin SUB_FUNCTION
+            SAesTrboM3_1_TrboMonr	/* Identifier */
+            SAesTrboM9_6_VNTAdp	/* Identifier */
+            SAesTrboM8_6_PpRelay	/* Identifier */
+            SAesTrboM7_5_PpSmallLeakage	/* Identifier */
+            SAesTrboM6_4_PpLeakage	/* Identifier */
+            SAesTrboM5_3_PPvalveStuckClosed	/* Identifier */
+            SAesTrboM4_2_EngProtnTrboPPeak	/* Identifier */
+        /end SUB_FUNCTION
+    /end FUNCTION
+
+    /begin RECORD_LAYOUT
+        FLOAT32_IEEE_COL_DIRECT	/* Name */
+        FNC_VALUES 1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        FLOAT32_IEEE_X_INCR_DIRECT	/* Name */
+        AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        SBYTE_COL_DIRECT	/* Name */
+        FNC_VALUES 1 SBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        SWORD_X_INCR_DIRECT	/* Name */
+        AXIS_PTS_X 1 SWORD INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        UBYTE_COL_DIRECT	/* Name */
+        FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        UWORD_COL_DIRECT	/* Name */
+        FNC_VALUES 1 UWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        UWORD_X_INCR_DIRECT	/* Name */
+        AXIS_PTS_X 1 UWORD INDEX_INCR DIRECT
+    /end RECORD_LAYOUT
+

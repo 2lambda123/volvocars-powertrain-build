@@ -1,0 +1,82 @@
+
+    /begin MEASUREMENT
+        sVcTest_t_UInt32 /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        ULONG   /* Datatype */
+        VcNvm_2_1_0_s   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        0   /* LowerLimit */
+        4294967295   /* UpperLimit */
+        READ_WRITE
+        SYMBOL_LINK "nvm_list_critical1" 0
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        sVcTest_t_Int16 /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        SWORD   /* Datatype */
+        VcNvm_1_0_0_None   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        -32768   /* LowerLimit */
+        32767   /* UpperLimit */
+        READ_WRITE
+        SYMBOL_LINK "nvm_list_critical1" 4
+    /end MEASUREMENT
+
+    /begin MEASUREMENT
+        sVcTest_t_UInt8 /* Name */
+        "Enter a nice description of your variable here" /* LongIdentifier */
+        UBYTE   /* Datatype */
+        VcNvm_1_0_0_None   /* Conversion */
+        1   /* Resolution */
+        0   /* Accuracy */
+        nan   /* LowerLimit */
+        nan   /* UpperLimit */
+        READ_WRITE
+        SYMBOL_LINK "nvm_list_critical1" 6
+    /end MEASUREMENT
+
+    /begin COMPU_METHOD
+        VcNvm_2_1_0_s   /* Name */
+        ""    /* LongIdentifier */
+        RAT_FUNC    /* ConversionType */
+        "%11.3"   /* Format */
+        "s" /* Unit */
+        COEFFS 0 1 1.0 0 0 2
+    /end COMPU_METHOD
+
+    /begin COMPU_METHOD
+        VcNvm_1_0_0_None   /* Name */
+        ""    /* LongIdentifier */
+        RAT_FUNC    /* ConversionType */
+        "%11.3"   /* Format */
+        "-" /* Unit */
+        COEFFS 0 1 0.0 0 0 1
+    /end COMPU_METHOD
+
+    /begin FUNCTION
+        VcNvm /* Name */
+        ""  /* LongIdentifier */
+        /begin LOC_MEASUREMENT
+            sVcTest_t_UInt32 /* Identifier */
+            sVcTest_t_Int16 /* Identifier */
+            sVcTest_t_UInt8 /* Identifier */
+        /end LOC_MEASUREMENT
+    /end FUNCTION
+
+    /begin RECORD_LAYOUT
+        ULONG_COL_DIRECT /* Name */
+        FNC_VALUES 1 ULONG COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        SWORD_COL_DIRECT /* Name */
+        FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+
+    /begin RECORD_LAYOUT
+        UBYTE_COL_DIRECT /* Name */
+        FNC_VALUES 1 UBYTE COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
