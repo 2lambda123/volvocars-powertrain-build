@@ -1,0 +1,5 @@
+---
+- name: Blackduck run
+  hosts: all
+  roles:
+    - blackduck-run
