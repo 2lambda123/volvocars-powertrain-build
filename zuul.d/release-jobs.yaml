@@ -10,3 +10,4 @@
       - name: pypi_info
         secret: powertrain-build-pypi
         pass-to-parent: true
+    nodeset: ubuntu-jammy
