@@ -1,0 +1,7 @@
+- job:
+    name: powertrain-build-blackduck
+    parent: base
+    pre-run: playbooks/powertrain-build-blackduck-pre.yaml
+    run: playbooks/powertrain-build-blackduck.yaml
+    timeout: 7200
+    attempts: 1
