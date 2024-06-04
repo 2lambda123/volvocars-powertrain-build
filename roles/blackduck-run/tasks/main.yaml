@@ -1,0 +1,116 @@
+---
+- name: Run Blackduck
+  ansible.builtin.shell: >
+    bash detect8.sh
+    --detect.project.name={{ blackduck_project_name }}
+    --detect.project.version.name={{ blackduck_package_version }}
+    --blackduck.url={{ blackduck_url }}
+    --blackduck.api.token=$BLACKDUCK_TOKEN
+    --detect.blackduck.scan.mode={{ blackduck_scan_mode }}
+    {{ blackduck_additional_arguments }} > blackduck_output.txt
+  args:
+    chdir: "{{ blackduck_workspace }}"
+  environment:
+    BLACKDUCK_TOKEN: "{{ blackduck_secret.token }}"
+  register: blackduck_result
+  no_log: true
+  ignore_errors: true
+
+- name: Print Blackduck log
+  ansible.builtin.command: cat blackduck_output.txt
+  args:
+    chdir: "{{ blackduck_workspace }}"
+  register: blackduck_log
+
+- name: Extract version using regex
+  set_fact:
+    blackduck_report_version: "{{ (blackduck_log | regex_search('versions/([^/]+)/components', '\\1'))[0] }}"
+
+- name: Generate and fetch License Report
+  ansible.builtin.command: python3 roles/blackduck-run/files/report-script.py
+  args:
+    chdir: "{{ blackduck_workspace }}"
+  environment:
+    BLACKDUCK_TOKEN: "{{ blackduck_secret.token }}"
+    REPORT_VERSION: "{{ blackduck_report_version }}"
+  no_log: true
+
+- name: Unpack license-report.zip
+  ansible.builtin.unarchive:
+    src: "{{ blackduck_workspace }}/license-report.zip"
+    dest: "{{ blackduck_workspace }}"
+    remote_src: true
+
+- name: Find the notice file
+  ansible.builtin.find:
+    paths: "{{ blackduck_workspace }}"
+    patterns: "version-license_*.txt"
+    recurse: true
+  register: found_files
+
+- name: Get notice file path
+  ansible.builtin.set_fact:
+    notice_file_path: "{{ found_files.files[0].path }}"
+
+- name: Set notice file name
+  ansible.builtin.set_fact:
+    notice_file_name: "{{ notice_file_path.split('/')[-1] }}"
+
+- name: Copy the notice file to blackduck workspace
+  ansible.builtin.copy:
+    src: "{{ notice_file_path }}"
+    dest: "{{ blackduck_workspace }}"
+    remote_src: true
+
+- name: Replace NOTICE with new notice file
+  ansible.builtin.copy:
+    src: "{{ notice_file_path }}"
+    dest: "{{ blackduck_workspace }}/NOTICE"
+    remote_src: true
+    force: true
+
+- name: Git diff NOTICE
+  ansible.builtin.command: git diff --ignore-space-at-eol NOTICE
+  args:
+    chdir: "{{ blackduck_workspace }}"
+  register: git_diff
+
+- name: Save git diff
+  ansible.builtin.copy:
+    content: "{{ git_diff.stdout }}"
+    dest: "{{ blackduck_workspace }}/git_diff.txt"
+
+- name: Copy Reports to zuul-output/logs
+  copy:
+    dest: "{{ ansible_user_dir }}/zuul-output/logs/"
+    src: "{{ zuul.project.src_dir }}/{{ item }}"
+    remote_src: true
+  loop:
+    - "license-report.zip"
+    - "powertrain_build_ci_Black_Duck_Notices_Report.txt"
+    - "powertrain_build_ci_BlackDuck_RiskReport.pdf"
+    - "{{ notice_file_name }}"
+    - "git_diff.txt"
+
+- name: Return artifact to Zuul
+  zuul_return:
+    data:
+      zuul:
+        artifacts:
+          - name: "{{ item }}"
+            url: "{{ item }}"
+  loop:
+    - "license-report.zip"
+    - "powertrain_build_ci_Black_Duck_Notices_Report.txt"
+    - "powertrain_build_ci_BlackDuck_RiskReport.pdf"
+    - "{{ notice_file_name }}"
+    - "git_diff.txt"
+
+- name: Fail the job
+  ansible.builtin.fail:
+    msg: "Failing the job"
+
+- name: Fail if Black Duck return non 0 rc
+  ansible.builtin.fail:
+    msg: "Black Duck returned non 0 rc"
+  when: blackduck_result.rc != 0
