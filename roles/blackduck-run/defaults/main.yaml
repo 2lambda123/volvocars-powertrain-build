@@ -1,0 +1,9 @@
+blackduck_workspace: "{{ workspace | default(zuul.project.src_dir) }}"
+blackduck_url: https://apus-blackduck.volvocars.biz
+blackduck_package_version: ci
+blackduck_project_name: "{{ zuul.project.short_name }}"
+blackduck_additional_arguments: ""
+blackduck_scan_mode: INTELLIGENT
+blackduck_fail_on_policy_violation: ALL
+blackduck_signature_scanner: SNIPPET_MATCHING
+blackduck_run_risk_report: true
