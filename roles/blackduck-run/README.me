@@ -1,0 +1,30 @@
+This Ansible role `blackduck-run` is designed to interact with the Black Duck to generate and manage license reports.
+
+**Role Variables**
+
+.. zuul:rolevar:: blackduck_workspace
+    :default: "{{ workspace | default(zuul.project.src_dir) }}"
+
+.. zuul:rolevar:: blackduck_url
+    :default: https://apus-blackduck.volvocars.biz
+
+.. zuul:rolevar:: blackduck_package_version
+    :default: ci
+
+.. zuul:rolevar:: blackduck_project_name
+    :default: "{{ zuul.project.short_name }}"
+
+.. zuul:rolevar:: blackduck_additional_arguments
+    :default: ""
+
+.. zuul:rolevar:: blackduck_scan_mode
+    :default: INTELLIGENT
+
+.. zuul:rolevar:: blackduck_fail_on_policy_violation
+    :default: ALL
+
+.. zuul:rolevar:: blackduck_signature_scanner
+    :default: SNIPPET_MATCHING
+
+.. zuul:rolevar:: blackduck_run_risk_report
+    :default: true
