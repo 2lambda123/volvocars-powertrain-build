@@ -1,0 +1,11 @@
+# Fetch notice file Should this be in a separate job?
+# Do comparison
+# Update notice file if there are new licenses
+# Fail if there are new licenses
+---
+- name: Blackduck post
+  hosts: all
+  tasks:
+    - name: Placeholder post
+      ansible.builtin.debug:
+        msg: "Running Blackduck post"

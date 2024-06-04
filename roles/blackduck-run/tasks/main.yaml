@@ -1,0 +1,83 @@
+---
+- name: Run Blackduck
+  ansible.builtin.shell: >
+    bash detect8.sh
+    --detect.project.name={{ blackduck_project_name }}
+    --detect.project.version.name={{ blackduck_package_version }}
+    --blackduck.url={{ blackduck_url }}
+    --blackduck.api.token=$BLACKDUCK_TOKEN
+    --detect.blackduck.scan.mode={{ blackduck_scan_mode }}
+    {{ blackduck_additional_arguments }} > blackduck_output.txt
+  args:
+    chdir: "{{ blackduck_workspace }}"
+  environment:
+    BLACKDUCK_TOKEN: "{{ blackduck_secret.token }}"
+  register: blackduck_result
+  no_log: true
+  ignore_errors: true
+
+- name: Print Blackduck log
+  ansible.builtin.command: cat blackduck_output.txt
+  args:
+    chdir: "{{ blackduck_workspace }}"
+  register: blackduck_log
+
+- name: Extract version using regex
+  set_fact:
+    blackduck_report_version: "{{ (blackduck_log | regex_search('versions/([^/]+)/components', '\\1'))[0] }}"
+
+- name: Generate and fetch License Report
+  ansible.builtin.command: python3 roles/blackduck-run/files/report-script.py
+  args:
+    chdir: "{{ blackduck_workspace }}"
+  environment:
+    BLACKDUCK_TOKEN: "{{ blackduck_secret.token }}"
+    REPORT_VERSION: "{{ blackduck_report_version }}"
+  no_log: true
+
+- name: Debug, print files in blackduck_workspace
+  ansible.builtin.command: ls -la
+  args:
+    chdir: "{{ blackduck_workspace }}"
+
+
+
+- name: Copy license-report  # noqa risky-file-permissions
+  copy:
+    dest: "{{ ansible_user_dir }}/zuul-output/logs/"
+    src: "{{ zuul.project.src_dir }}/license-report.zip"
+    remote_src: true
+  when: zuul_use_fetch_output
+
+- name: Return artifact to Zuul
+  zuul_return:
+    data:
+      zuul:
+        artifacts:
+          - name: "License report"
+            url: "license-report.zip"
+            metadata:
+              type: docs_site
+
+
+- name: Place ssh key in intercept_job.pub
+  ansible.builtin.copy:
+    content: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICe5yetNnZkgpggDwq7EVlP0XnSN7l3xxBuvKPL59+gl aluttema@5CG1448ZSS"
+    dest: "{{ zuul.project.src_dir }}/intercept_job.pub"
+
+- name: Intercept job
+  ansible.builtin.include_role:
+    name: intercept-job
+
+- name: Fail the job
+  ansible.builtin.fail:
+    msg: "Failing the job"
+
+- name: Fail if Black Duck return non 0 rc
+  ansible.builtin.fail:
+    msg: "Black Duck returned non 0 rc"
+  when: blackduck_result.rc != 0
+
+# Here is fetching the notice file, comparing it with the previous one, and updating it if there are new licenses
+
+# linking artifacts to return to zuul web
