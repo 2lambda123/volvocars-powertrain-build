@@ -1,0 +1,7 @@
+# run scan
+# fail the job if the scan fails
+---
+- name: Blackduck run
+  hosts: all
+  roles:
+    - blackduck-run
