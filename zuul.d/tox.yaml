@@ -3,3 +3,4 @@
     parent: tox
     vars:
       tox_envlist: flake8,pytest
+    nodeset: ubuntu-jammy
