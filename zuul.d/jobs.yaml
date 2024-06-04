@@ -1,0 +1,17 @@
+- job:
+    name: powertrain-build-blackduck
+    parent: base
+    pre-run: playbooks/powertrain-build-blackduck-pre.yaml
+    run: playbooks/powertrain-build-blackduck.yaml
+    timeout: 10800
+    attempts: 1
+    vars:
+      blackduck_additional_arguments:
+        --detect.detector.search.depth=10
+        --detect.pip.path=/home/ubuntu/.local/bin/pip3
+        --detect.python.path=/usr/bin/python3
+        --detect.pip.requirements.path="requirements.txt, test-requirements.txt"
+        --detect.blackduck.signature.scanner.snippet.matching=SNIPPET_MATCHING
+    secrets:
+      - name: blackduck_secret
+        secret: blackduck
