@@ -2,6 +2,7 @@
     check:
       jobs:
         - powertrain-build-tox
+        - powertrain-build-blackduck
         - noop
     gate:
       jobs:

@@ -1,0 +1,9 @@
+# run scan
+# fail the job if the scan fails
+---
+- name: Blackduck run
+  hosts: all
+  tasks:
+    - name: Placeholder run
+      ansible.builtin.debug:
+        msg: "Running Blackduck scan"
