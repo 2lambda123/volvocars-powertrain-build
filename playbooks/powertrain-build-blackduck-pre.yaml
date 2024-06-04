@@ -1,0 +1,20 @@
+---
+- name: Blackduck pre
+  hosts: all
+  roles:
+    - role: ensure-java
+    - role: ensure-pip
+    - role: ensure-zip
+  tasks:
+    - name: Fetch detect
+      ansible.builtin.get_url:
+        url: https://detect.synopsys.com/detect8.sh
+        dest: "{{ zuul.project.src_dir }}/detect8.sh"
+        mode: 0755
+    - name: Install requirements from requirements files
+      ansible.builtin.command: "pip install -r {{ item }}"
+      args:
+        chdir: "{{ zuul.project.src_dir }}"
+      with_items:
+        - requirements.txt
+        - test-requirements.txt
