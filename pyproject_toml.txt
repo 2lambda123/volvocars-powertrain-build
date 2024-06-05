@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=70.0", "pbr>=6.0.0"]
+build-backend = "pbr.build"
+
+[pbr]
+skip_git_sdist = 1
+
+[tool.setuptools.packages.find]
+where = ["pybuild"]
+
+[project]
+name = "powertrain-build"
+authors = [
+  { name="Alberto Gonzalez", email="alberto.gonzalez@volvocars.com" },
+  { name="Anton Lutteman", email="anton.lutteman@volvocars.com" },
+  { name="Henrik Wahlqvist", email="henrik.wahlqvist@volvocars.com" },
+  { name="Oskar Lindgren", email="oskar.lindgren.2@volvocars.com" },
+]
+description = "A Continuous Integration (CI) build system testing all configurations where a Simulink model is used."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.6, <3.11"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: Other/Proprietary License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Embedded Systems",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
