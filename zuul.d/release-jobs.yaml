@@ -7,6 +7,7 @@
     secrets:
       - name: pypi_info
         secret: powertrain-build-pypi
+        pass-to-parent: true
 
 - job:
     name: temp-failing-job
