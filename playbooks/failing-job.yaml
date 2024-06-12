@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+    - name: This task will fail
+      fail:
+        msg: "This task failed"
