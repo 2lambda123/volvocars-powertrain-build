@@ -1,13 +1,12 @@
 - job:
     name: release-powertrain-build
-    parent: python-upload-pypi
+    parent: build-python-release
     description: Generate and upload a python source tarball and binary wheel for powertrain-build.
+    post-run: playbooks/upload-pypi.yaml
     vars:
       release_python: python3
+      twine_python: python3
     secrets:
       - name: pypi_info
         secret: powertrain-build-pypi
-
-- job:
-    name: temp-failing-job
-    run: playbooks/failing-job.yaml
+        pass-to-parent: true
