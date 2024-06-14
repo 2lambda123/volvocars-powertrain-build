@@ -46,6 +46,30 @@
       },
       "revId": "3120ded02887424527dfcdb40c42899692253702",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22766b14_ddc003dc",
+        "filename": "MANIFEST.in",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 36964
+      },
+      "writtenOn": "2024-06-14T10:51:21Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "b2fa5346_c3d7fd75",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "3120ded02887424527dfcdb40c42899692253702",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }
