@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b78c130_9c369ea7",
+        "filename": "MANIFEST.in",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 36964
+      },
+      "writtenOn": "2024-06-14T08:08:42Z",
+      "side": 1,
+      "message": "These directories don\u0027t exist. Remove from here?\n\nThis is to remove the test folders from the Python package, right? Because people using `pybuild` won\u0027t test anything, they will just use it.\n\nIn that case, maybe we should also prune:\n- `tests`\n- `test_data`\n- `zuul.d`",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "3120ded02887424527dfcdb40c42899692253702",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    }
+  ]
+}
