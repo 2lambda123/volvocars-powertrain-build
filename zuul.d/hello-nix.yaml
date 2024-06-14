@@ -1,0 +1,11 @@
+- job:
+    name: hello-nix
+    pre-run: playbooks/nix-pre.yaml
+    run: playbooks/nix.yaml
+    vars:
+      nix_command: poetry --version
+
+- project:
+    check:
+      jobs:
+        - hello-nix

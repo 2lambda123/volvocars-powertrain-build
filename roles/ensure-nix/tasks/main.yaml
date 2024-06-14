@@ -1,0 +1,14 @@
+- name: Download nix-installer
+  get_url:
+    url: https://github.com/DeterminateSystems/nix-installer/releases/download/v0.17.1/nix-installer-x86_64-linux
+    dest: /tmp/nix-installer
+    checksum: sha256:dc91db36f96b15e8651383dbbfe0d6917e22dca199a046c7e25aad38efeccc80
+    mode: 0755
+
+- name: install nix
+  become: true
+  command: >-
+    /tmp/nix-installer \
+    install linux \
+    --extra-conf "experimental-features = nix-command flakes"
+    --no-confirm

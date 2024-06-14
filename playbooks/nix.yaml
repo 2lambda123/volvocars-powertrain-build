@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+    - command: "nix develop --command {{ nix_command }}"
+      args:
+        chdir: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
