@@ -1,0 +1,3 @@
+- name: Install nix
+  become: true
+  script: ensure-nix.sh
