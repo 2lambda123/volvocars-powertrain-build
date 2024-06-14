@@ -22,6 +22,30 @@
       },
       "revId": "3120ded02887424527dfcdb40c42899692253702",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b2fa5346_c3d7fd75",
+        "filename": "MANIFEST.in",
+        "patchSetId": 9
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-06-14T09:16:12Z",
+      "side": 1,
+      "message": "I will remove these lines. We don\u0027t need to prune folders outside of pybuild, in the setup.cfg we have \"[files].packages\" to make sure we only package the pybuild folder.",
+      "parentUuid": "0b78c130_9c369ea7",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 22
+      },
+      "revId": "3120ded02887424527dfcdb40c42899692253702",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }
