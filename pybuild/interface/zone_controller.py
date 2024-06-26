@@ -94,17 +94,16 @@ class ZCAL(BaseApplication):
             signals (list(Signals)): Signals to use
             signal_type (str): 'insignals' or 'outsignals'
         """
-
-        type_in_zc = "insignals" if signal_type == "outsignals" else "outsignals"
         for signal in signals:
             if signal.name not in self.zc_translations:
                 continue
             LOGGER.debug("Adding signal: %s", signal)
             for translation in self.zc_translations[signal.name]:
                 signal_property = translation["property"]
+                port_name = translation["port_name"]
                 struct_name = translation["struct_name"]
-                self.check_signal_property(struct_name, signal_property, type_in_zc)
-                self.signal_names["zc"][type_in_zc].add(signal_property)
+                self.check_signal_property(port_name, struct_name, signal_property, signal_type)
+                self.signal_names["zc"][signal_type].add(signal_property)
                 self.signal_names["other"][signal_type].add(signal.name)
         for e2e_sts_signal_name in self.e2e_sts_signals:
             if e2e_sts_signal_name not in self.signal_names["other"]["insignals"]:
@@ -118,19 +117,19 @@ class ZCAL(BaseApplication):
                 self.signal_names["other"][signal_type].add(update_bit_signal_name)
         LOGGER.debug("Registered signal names: %s", self.signal_names)
 
-    def check_signal_property(self, struct_name, property_name, signal_type):
+    def check_signal_property(self, port_name, struct_name, property_name, signal_type):
         """Check if we have only one signal written for the same property.
 
         Args:
+            port_name (str): port name
             struct_name (str): signal struct name
             property_name (str): signal property
             signal_type (str): insignal or outsignal
         """
-        signal_primitive_spec = ".".join([struct_name, property_name, signal_type])
-        if signal_primitive_spec in self.signal_primitives_list:
+        signal_primitive_spec = ".".join([port_name, struct_name, property_name, signal_type])
+        if signal_primitive_spec in self.signal_primitives_list and signal_type == "outsignal":
             error_msg = (f"You can't write {property_name} in {struct_name} as"
-                         f" {signal_type} since this primitive has been used."
-                         " Run model_yaml_verification to identify exact models.")
+                         f" {signal_type} since this primitive has been used.")
             raise Exception(error_msg)
         self.signal_primitives_list.add(signal_primitive_spec)
 
@@ -149,7 +148,7 @@ class ZCAL(BaseApplication):
         for port_name, port in raw.get("ports", {}).items():
             signal_struct = port.get("element", {})
             if signal_struct:
-                self.populate_signal_translations(signal_struct)
+                self.populate_signal_translations(port_name, signal_struct)
                 ports_info[port_name] = {
                     **self.get_port_info(signal_struct),
                     "interface": port.get("interface")
@@ -190,10 +189,11 @@ class ZCAL(BaseApplication):
             port_info["enable_update"] = list(update_elements)
         return port_info
 
-    def populate_signal_translations(self, struct_specifications):
+    def populate_signal_translations(self, port_name, struct_specifications):
         """Populate class translations data.
 
         Args:
+            port_name (str): Port name.
             struct_specifications (dict): Dict with signal structs to/from a port.
         """
         enumerations = self.base_application.enumerations
@@ -236,7 +236,6 @@ class ZCAL(BaseApplication):
             update_bit = signal_definition.get("updateBit", False)
             e2e_status = signal_definition.get("e2eStatus", False)
             group = signal_definition.get("group", struct_name)
-
             translation = {
                 "range": {
                     "min": base_properties.get("min", "-"),
@@ -246,6 +245,7 @@ class ZCAL(BaseApplication):
                 "factor": base_properties.get("factor", "-"),
                 "property": signal_definition["property"],
                 "init": init_value,
+                "port_name": port_name,
                 "struct_name": struct_name,
                 "variable_type": base_properties.get("type"),
                 "description": base_properties.get("description"),
@@ -276,6 +276,7 @@ class ZCAL(BaseApplication):
                             "max": "-",
                         },
                         "init": 1,
+                        "port_name": port_name,
                         "struct_name": struct_name,
                         "description": f"Update bit signal for signal {struct_name}.",
                         "unit": None,
@@ -309,6 +310,7 @@ class ZCAL(BaseApplication):
                                 "max": 255
                             },
                             "init": 255,
+                            "port_name": port_name,
                             "struct_name": struct_name,
                             "description": f"E2E status code for E2E protected signal(s) {signal_name}.",
                             "unit": None,
