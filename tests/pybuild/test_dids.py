@@ -9,7 +9,16 @@ from unittest.mock import patch
 from unittest.mock import mock_open
 from pathlib import Path
 from pybuild.build_proj_config import BuildProjConfig
-from pybuild.dids import DIDs, HIDIDs
+from pybuild.dids import DIDs, HIDIDs, ZCDIDs
+from test_data.pybuild.test_dids.zc_dids import (
+    dummy_project_dids,
+    valid_dids,
+    bad_valid_dids,
+    test_valid_dids_setter_expected,
+    test_get_operation_data_expected,
+    TEST_GET_HEADER_FILE_CONTENT_EXPECTED,
+    TEST_GET_SOURCE_FILE_CONTENT_EXPECTED,
+)
 
 
 class TestDIDsTL(unittest.TestCase):
@@ -966,3 +975,63 @@ class TestHIDIDs(unittest.TestCase):
             '\n'
         ]
         self.assertListEqual(expected, result)
+
+
+class TestZCDIDs(unittest.TestCase):
+    """Test case for testing ZCDIDs class."""
+
+    def setUp(self):
+        build_cfg = MagicMock()
+        build_cfg.get_swc_name.return_value = 'DUMMY'
+        unit_cfg = MagicMock()
+        self.zc_dids = ZCDIDs(build_cfg, unit_cfg)
+        self.zc_dids.project_dids = dummy_project_dids
+        self.zc_dids.valid_dids = valid_dids
+
+    def test_valid_dids_setter(self):
+        """Test setting property ZCDIDs.valid_dids."""
+        self.zc_dids.valid_dids = {}
+        self.assertDictEqual(self.zc_dids.valid_dids, {})
+
+        self.zc_dids.valid_dids = bad_valid_dids
+        self.assertDictEqual(self.zc_dids.valid_dids, test_valid_dids_setter_expected)
+
+    def test_get_operation_data(self):
+        """Test ZCDIDs.get_operation_data."""
+        result = self.zc_dids.get_operation_data()
+        self.assertDictEqual(result, test_get_operation_data_expected)
+
+    def test_get_header_file_content_no_dids(self):
+        """Test ZCDIDs._get_header_file_content without DIDs."""
+        self.zc_dids.valid_dids = {}
+        result = self.zc_dids._get_header_file_content()
+        expected = [
+            '#ifndef VCDIDAPI_H\n',
+            '#define VCDIDAPI_H\n',
+            '\n',
+            '#include "tl_basetypes.h"\n',
+            '#include "Rte_DUMMY.h"\n',
+            '\n',
+            '\n#endif /* VCDIDAPI_H */\n'
+        ]
+        self.assertListEqual(expected, result)
+
+    def test_get_source_file_content_no_dids(self):
+        """Test ZCDIDs._get_source_file_content without DIDs."""
+        self.zc_dids.valid_dids = {}
+        result = self.zc_dids._get_source_file_content()
+        expected = [
+            '#include "VcDIDAPI.h"\n',
+            '\n'
+        ]
+        self.assertListEqual(expected, result)
+
+    def test_get_header_file_content(self):
+        """Test ZCDIDs._get_header_file_content."""
+        result = ''.join(self.zc_dids._get_header_file_content())
+        self.assertEqual(result, TEST_GET_HEADER_FILE_CONTENT_EXPECTED)
+
+    def test_get_source_file_content(self):
+        """Test ZCDIDs._get_source_file_content."""
+        result = ''.join(self.zc_dids._get_source_file_content())
+        self.assertEqual(result, TEST_GET_SOURCE_FILE_CONTENT_EXPECTED)

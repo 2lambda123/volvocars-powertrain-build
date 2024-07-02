@@ -31,6 +31,7 @@ expected_result = {
                     "accesses": composition_yaml_setup.base_accesses
                 }
             },
+            "diagnostics": {"events": {}, "dids": {}},
             "static": composition_yaml_setup.base_static,
             "shared":  composition_yaml_setup.base_shared,
             "ports": {

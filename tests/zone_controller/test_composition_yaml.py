@@ -10,6 +10,8 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 from pybuild.build_proj_config import BuildProjConfig
+from pybuild.core import ZCCore
+from pybuild.dids import ZCDIDs
 from pybuild.unit_configs import UnitConfigs
 from pybuild.zone_controller.composition_yaml import CompositionYaml
 from test_data.zone_controller.test_composition_yaml import (
@@ -18,6 +20,8 @@ from test_data.zone_controller.test_composition_yaml import (
     composition_yaml_with_a2l_axis_data,
     composition_yaml_with_calls_all_fields,
     composition_yaml_with_calls_no_optional_fields,
+    composition_yaml_with_dids,
+    composition_yaml_with_dtcs,
 )
 
 SRC_DIR = Path(__file__).parent
@@ -54,6 +58,12 @@ class TestCompositionYaml(unittest.TestCase):
             composition_yaml_setup.get_per_cfg_unit_cfg_return_value
         )
 
+        with patch.object(ZCCore, "_get_project_dtcs", return_value=set()):
+            self.zc_core = ZCCore(self.build_cfg, self.unit_cfg)
+
+        with patch.object(ZCDIDs, "_get_project_dids", return_value={}):
+            self.zc_dids = ZCDIDs(self.build_cfg, self.unit_cfg)
+
         self.zc_spec = copy.deepcopy(composition_yaml_setup.zc_spec)
 
         self.calibration_definitions = copy.deepcopy(composition_yaml_setup.calibration_definitions)
@@ -63,7 +73,9 @@ class TestCompositionYaml(unittest.TestCase):
             "_get_all_calibration_definitions",
             return_value=self.calibration_definitions
         ):
-            self.composition_yaml = CompositionYaml(self.build_cfg, self.zc_spec, self.unit_cfg, {})
+            self.composition_yaml = CompositionYaml(
+                self.build_cfg, self.zc_spec, self.unit_cfg, self.zc_core, self.zc_dids, {}
+            )
 
         # Common expected results variables
         self.base_configuration = copy.deepcopy(composition_yaml_setup.base_configuration)
@@ -103,7 +115,9 @@ class TestCompositionYaml(unittest.TestCase):
         calibration_definitions = \
             self.calibration_definitions + composition_yaml_with_a2l_axis_data.calibration_definitions
         with patch.object(CompositionYaml, "_get_all_calibration_definitions", return_value=calibration_definitions):
-            self.composition_yaml = CompositionYaml(self.build_cfg, self.zc_spec, self.unit_cfg, a2l_axis_data)
+            self.composition_yaml = CompositionYaml(
+                self.build_cfg, self.zc_spec, self.unit_cfg, self.zc_core, self.zc_dids, a2l_axis_data
+            )
 
         result = self.composition_yaml.gather_yaml_info()
         self.assertDictEqual(composition_yaml_with_a2l_axis_data.expected_result, result)
@@ -123,7 +137,9 @@ class TestCompositionYaml(unittest.TestCase):
             "_get_all_calibration_definitions",
             return_value=self.calibration_definitions
         ):
-            self.composition_yaml = CompositionYaml(self.build_cfg, self.zc_spec, self.unit_cfg, {})
+            self.composition_yaml = CompositionYaml(
+                self.build_cfg, self.zc_spec, self.unit_cfg, self.zc_core, self.zc_dids, {}
+            )
         result = self.composition_yaml.gather_yaml_info()
         self.assertDictEqual(composition_yaml_with_calls_all_fields.expected_result, result)
 
@@ -140,9 +156,41 @@ class TestCompositionYaml(unittest.TestCase):
             "_get_all_calibration_definitions",
             return_value=self.calibration_definitions
         ):
-            self.composition_yaml = CompositionYaml(self.build_cfg, self.zc_spec, self.unit_cfg, {})
+            self.composition_yaml = CompositionYaml(
+                self.build_cfg, self.zc_spec, self.unit_cfg, self.zc_core, self.zc_dids, {}
+            )
         result = self.composition_yaml.gather_yaml_info()
         self.assertDictEqual(composition_yaml_with_calls_no_optional_fields.expected_result, result)
+
+    def test_composition_yaml_with_dids(self):
+        """Checking that the dict is generated correctly, with DIDs."""
+        self.zc_dids.project_dids = {"DID1": {"dummy_data": {}}}
+        self.zc_spec["Diagnostics"] = composition_yaml_with_dids.diagnostics
+        with patch.object(
+            CompositionYaml,
+            "_get_all_calibration_definitions",
+            return_value=self.calibration_definitions
+        ):
+            self.composition_yaml = CompositionYaml(
+                self.build_cfg, self.zc_spec, self.unit_cfg, self.zc_core, self.zc_dids, {}
+            )
+        result = self.composition_yaml.gather_yaml_info()
+        self.assertDictEqual(composition_yaml_with_dids.expected_result, result)
+
+    def test_composition_yaml_with_dtcs(self):
+        """Checking that the dict is generated correctly, with DTCs."""
+        self.zc_core.project_dtcs = {"DTC1"}
+        self.zc_spec["Diagnostics"] = composition_yaml_with_dtcs.diagnostics
+        with patch.object(
+            CompositionYaml,
+            "_get_all_calibration_definitions",
+            return_value=self.calibration_definitions
+        ):
+            self.composition_yaml = CompositionYaml(
+                self.build_cfg, self.zc_spec, self.unit_cfg, self.zc_core, self.zc_dids, {}
+            )
+        result = self.composition_yaml.gather_yaml_info()
+        self.assertDictEqual(composition_yaml_with_dtcs.expected_result, result)
 
     def test_get_init_values_expecting_failure(self):
         """Test CompositionYaml.get_init_values with a non-existing calibration definition."""

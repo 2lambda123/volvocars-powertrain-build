@@ -188,6 +188,7 @@ expected_result = {
                     ]
                 }
             },
+            "diagnostics": {"events": {}, "dids": {}},
             "static": composition_yaml_setup.base_static,
             "shared": {
                 "ctestName_SC_TriggerReadRteCData": {

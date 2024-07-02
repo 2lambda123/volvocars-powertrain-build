@@ -142,7 +142,7 @@ class ZCAL(BaseApplication):
 
         raw = self.read_translation_files(definition)
         self.composition_spec = {
-            key: raw[key] for key in ("port_interfaces", "data_types", "calls") if key in raw
+            key: raw[key] for key in ("port_interfaces", "data_types", "calls", "Diagnostics") if key in raw
         }
         ports_info = {}
         for port_name, port in raw.get("ports", {}).items():

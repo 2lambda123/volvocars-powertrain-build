@@ -602,3 +602,181 @@ class HIDIDs(ProblemLogger):
             file_path = Path(src_dst_dir, self.FILE_NAME + extension)
             with file_path.open(mode='w', encoding='utf-8') as file_handler:
                 file_handler.writelines(content)
+
+
+class ZCDIDs(ProblemLogger):
+    """A class for handling of ZC DID definitions."""
+
+    FILE_NAME = 'VcDIDAPI'
+
+    def __init__(self, build_cfg, unit_cfgs):
+        """Init.
+
+        Args:
+            build_cfg (BuildProjConfig): Project configuration
+            unit_cfgs (UnitConfigs): Unit definitions
+        """
+        super().__init__()
+        self._build_cfg = build_cfg
+        self._unit_cfgs = unit_cfgs
+        self._valid_dids = None
+        self.project_dids = self._get_project_dids()
+
+    @property
+    def valid_dids(self):
+        return self._valid_dids
+
+    @valid_dids.setter
+    def valid_dids(self, yaml_dids):
+        """Return a set of DIDs appearing in both the project and the project yaml file.
+
+        Args:
+            yaml_dids (dict): DIDs listed in the DID configuration yaml file.
+        Returns:
+            valid_dids (dict): Validated DIDs listed in both DID configuration yaml file as well as project.
+        """
+        self._valid_dids = {}
+
+        yaml_did_names = set(yaml_dids.keys())
+        dids_not_in_project = yaml_did_names - set(self.project_dids.keys())
+        for did in dids_not_in_project:
+            self.warning(f'Ignoring DID {did}, not defined in any model.')
+
+        supported_operations = set(self.get_operation_data().keys())
+        for did, did_data in self.project_dids.items():
+            if did not in yaml_dids:
+                self.warning(f'DID {did} not defined in project diagnostics yaml file.')
+                continue
+
+            yaml_operations = set(yaml_dids[did]['operations'].keys())
+            if not yaml_operations.issubset(supported_operations):
+                self.warning(f'Ignoring unsupported operations {yaml_operations - supported_operations} for DID {did}.')
+
+            operations = {
+                "operations": {
+                    operation: {} for operation in supported_operations
+                }
+            }
+
+            self._valid_dids[did] = deep_dict_update(did_data, operations)
+
+    def _get_project_dids(self):
+        """Return a dict with DIDs defined in the project.
+        Throws a critical error if something goes wrong.
+
+        Returns:
+            project_dids (dict): a dict with all dids in the project.
+        """
+        get_did_error_messages, project_dids = get_dids_in_prj(self._unit_cfgs)
+        if get_did_error_messages:
+            self.critical('\n'.join(get_did_error_messages))
+            return {}
+        return project_dids
+
+    def get_operation_data(self, operation=None):
+        """Get operation function data of supported operations.
+
+        Args:
+            operation (str): Operation to get data for.
+        Returns:
+            (dict): Operation function data.
+        """
+        operation_data = {
+            'ReadData': {
+                'declaration': 'UInt8 Run_{did_name}_ReadData({data_type} *Data)',
+                'body': (
+                    '{{\n'
+                    '  *Data = {did_name};\n'
+                    '  return 0U;\n'
+                    '}}\n'
+                ),
+            }
+        }
+        if operation is None:
+            return operation_data
+        return operation_data[operation]
+
+    def _get_header_file_content(self):
+        """Get content for the DID API header file.
+
+        Returns:
+            (list(str)): List of lines to write to DID API header file.
+        """
+        name = self._build_cfg.get_swc_name()
+        header_guard = f'{self.FILE_NAME.upper()}_H'
+        header = [
+            f'#ifndef {header_guard}\n',
+            f'#define {header_guard}\n',
+            '\n',
+            '#include "tl_basetypes.h"\n',
+            f'#include "Rte_{name}.h"\n',
+            '\n'
+        ]
+        footer = [f'\n#endif /* {header_guard} */\n']
+
+        if not self.valid_dids:
+            return header + footer
+
+        body = [f'#include "{build_defs.PREDECL_DISP_ASIL_D_START}"\n']
+        for did_data in self.valid_dids.values():
+            define = did_data["class"].split('/')[-1]  # E.q. for ASIL D it is ASIL_D/CVC_DISP_ASIL_D
+            body.append(f'extern {define} {did_data["type"]} {did_data["name"]};\n')
+        body.append(f'#include "{build_defs.PREDECL_DISP_ASIL_D_END}"\n')
+
+        body.append(f'\n#include "{build_defs.PREDECL_CODE_ASIL_D_START}"\n')
+        for did_data in self.valid_dids.values():
+            body.extend(
+                [
+                    self.get_operation_data(operation)['declaration'].format(
+                        did_name=did_data["name"],
+                        data_type=did_data["type"]
+                    ) + ';\n' for operation in did_data["operations"]
+                ]
+            )
+        body.append(f'#include "{build_defs.PREDECL_CODE_ASIL_D_END}"\n')
+
+        return header + body + footer
+
+    def _get_source_file_content(self):
+        """Get content for the DID API source file.
+
+        Returns:
+            (list(str)): List of lines to write to DID API source file.
+        """
+        header = [
+            f'#include "{self.FILE_NAME}.h"\n',
+            '\n'
+        ]
+
+        if not self.valid_dids:
+            return header
+
+        body = [f'#include "{build_defs.CVC_CODE_ASIL_D_START}"\n']
+        for did_data in self.valid_dids.values():
+            for operation in did_data["operations"]:
+                body.append(
+                    self.get_operation_data(operation)['declaration'].format(
+                        did_name=did_data["name"],
+                        data_type=did_data["type"]
+                    ) + '\n' + self.get_operation_data(operation)['body'].format(did_name=did_data["name"])
+                )
+        body.append(f'#include "{build_defs.CVC_CODE_ASIL_D_END}"\n')
+
+        return header + body
+
+    def generate_did_files(self):
+        """Generate required DID API files.
+        Only use for some projects, which doesn't copy static code."""
+        if self.valid_dids is None:
+            self.critical('Valid DIDs not set. Cannot generate DID files.')
+            return
+
+        file_contents = {
+            '.h': self._get_header_file_content(),
+            '.c': self._get_source_file_content()
+        }
+        src_dst_dir = self._build_cfg.get_src_code_dst_dir()
+        for extension, content in file_contents.items():
+            file_path = Path(src_dst_dir, self.FILE_NAME + extension)
+            with file_path.open(mode='w', encoding='utf-8') as file_handler:
+                file_handler.writelines(content)

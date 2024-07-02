@@ -20,10 +20,10 @@ from pathlib import Path
 from pybuild import __config_version__, __version__, build_defs
 from pybuild.a2l_merge import A2lMerge
 from pybuild.build_proj_config import BuildProjConfig
-from pybuild.core import Core, HICore
+from pybuild.core import Core, HICore, ZCCore
 from pybuild.core_dummy import CoreDummy
 from pybuild.create_conversion_table import create_conversion_table
-from pybuild.dids import DIDs, HIDIDs
+from pybuild.dids import DIDs, HIDIDs, ZCDIDs
 from pybuild.dummy import DummyVar
 from pybuild.dummy_spm import DummySpm
 from pybuild.ext_dbg import ExtDbg
@@ -834,6 +834,11 @@ def build(
             LOG.info("Generating DID files")
             dids = HIDIDs(build_cfg, unit_cfg)
             dids.generate_did_files()
+        elif ecu_supplier in ["ZC"]:
+            LOG.info("******************************************************")
+            LOG.info("Generating Core header")
+            zc_core = ZCCore(build_cfg, unit_cfg)
+            zc_core.generate_dtc_files()
         else:
             generate_did_files(build_cfg, unit_cfg)
             # generate core dummy files if requested
@@ -920,15 +925,19 @@ def build(
             create_conversion_table(ctable_json, ctable_a2l)
         merged_a2l = merge_a2l_files(build_cfg, unit_cfg, complete_a2l, silver_a2l)
         if ecu_supplier in ["ZC"]:
+            zc_dids = ZCDIDs(build_cfg, unit_cfg)
             axis_data = merged_a2l.get_characteristic_axis_data()
             composition_yaml = CompositionYaml(
-                build_cfg, signal_if.composition_spec, unit_cfg, axis_data
+                build_cfg, signal_if.composition_spec, unit_cfg, zc_core, zc_dids, axis_data
             )
             composition_yaml.generate_yaml()
             zc_calibration = ZoneControllerCalibration(
                 build_cfg, composition_yaml.cal_class_info["tl"]
             )
             zc_calibration.generate_calibration_interface_files()
+            LOG.info("******************************************************")
+            LOG.info("Generating DID files")
+            zc_dids.generate_did_files()
 
         a2l_file_path = Path(build_cfg.get_src_code_dst_dir(), build_cfg.get_a2l_name())
         replace_tab_verb(a2l_file_path)

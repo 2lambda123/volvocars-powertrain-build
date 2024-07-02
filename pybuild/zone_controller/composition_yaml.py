@@ -15,13 +15,15 @@ from pybuild.zone_controller.calibration import ZoneControllerCalibration as ZCC
 class CompositionYaml(ProblemLogger):
     """Class for handling ZoneController composition yaml generation."""
 
-    def __init__(self, build_cfg, composition_spec, unit_cfg, a2l_axis_data):
+    def __init__(self, build_cfg, composition_spec, unit_cfg, zc_core, zc_dids, a2l_axis_data):
         """Init.
 
         Args:
             build_cfg (BuildProjConfig): Object with build configuration settings.
             composition_spec (dict): Dict with port interface information.
             unit_cfg (UnitConfig): Object with unit configurations.
+            zc_core (ZCCore): Object with zone controller diagnositic event information.
+            zc_dids (ZCDIDs): Object with zone controller diagnostic DID information.
             a2l_axis_data (dict): Dict with characteristic axis data from A2L file.
         """
         self.tl_to_autosar_base_types = {
@@ -38,6 +40,8 @@ class CompositionYaml(ProblemLogger):
         self.unit_src_dirs = build_cfg.get_unit_src_dirs()
         self.composition_spec = composition_spec
         self.unit_cfg = unit_cfg
+        self.zc_core = zc_core
+        self.zc_dids = zc_dids
         self.a2l_axis_data = a2l_axis_data
         base_data_types = self.get_base_data_types()  # Might not be necessary in the long run
         self.data_types = {
@@ -294,6 +298,47 @@ class CompositionYaml(ProblemLogger):
 
         return trigger_signal
 
+    def _get_diagnostic_event_info(self, event_dict):
+        """Get diagnostic event information from an even dictionary.
+
+        Args:
+            event_dict (dict): Dict with event information.
+        Returns:
+            valid_event_dict (dict): Dict with diagnostic event information supported by yaml2arxml script.
+        """
+        valid_event_dict = {}
+        dtcs = self.zc_core.get_diagnostic_trouble_codes(event_dict)
+        for dtc_name, dtc_data in dtcs.items():
+            valid_event_dict[dtc_name] = {"operations": dtc_data["operations"], "runnable": dtc_data["runnable"]}
+        return valid_event_dict
+
+    def _get_diagnostic_did_info(self, did_dict):
+        """Get diagnostic DID information from a DID dictionary.
+        NOTE: This function sets the valid_dids property of the ZCDIDs object.
+
+        Args:
+            did_dict (dict): Dict with DID information.
+        Returns:
+            valid_did_dict (dict): Dict with diagnostic DID information supported by yaml2arxml script.
+        """
+        valid_did_dict = {}
+        self.zc_dids.valid_dids = did_dict
+        for did_name, did_data in self.zc_dids.valid_dids.items():
+            valid_did_dict[did_name] = {"operations": did_data["operations"]}
+        return valid_did_dict
+
+    def _get_diagnostic_info(self):
+        """Get diagnostic information from composition spec.
+
+        Returns:
+            (dict): Dict containing diagnostic information.
+        """
+        diag_dict = self.composition_spec.get("Diagnostics", {})
+        return {
+            "events": self._get_diagnostic_event_info(diag_dict.get("events", {})),
+            "dids": self._get_diagnostic_did_info(diag_dict.get("dids", {})),
+        }
+
     def _get_ports_info(self):
         """Creates a dict containing port information.
 
@@ -385,6 +430,7 @@ class CompositionYaml(ProblemLogger):
         swcs[software_component_name]["shared"] = self.cal_class_info["autosar"]["class_info"]
         swcs[software_component_name]["static"] = self.meas_class_info["autosar"]["class_info"]
         swcs[software_component_name]["ports"] = self._get_ports_info()
+        swcs[software_component_name]["diagnostics"] = self._get_diagnostic_info()
         return swcs, data_types
 
     def _get_variables(self):

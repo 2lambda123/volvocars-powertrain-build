@@ -294,3 +294,106 @@ class HICore(ProblemLogger):
             file_path = Path(src_dst_dir, self.FILE_NAME + extension)
             with file_path.open(mode='w', encoding='utf-8') as file_handler:
                 file_handler.writelines(content)
+
+
+class ZCCore(ProblemLogger):
+    """A class holding ZC core configuration data."""
+
+    FILE_NAME = 'VcCoreSupplierAbstraction'
+
+    def __init__(self, project_cfg, unit_cfgs):
+        """Parse the config files to an internal representation.
+
+        Args:
+            project_cfg (BuildProjConfig): Project configuration.
+            unit_cfgs (UnitConfigs): Unit definitions.
+        """
+        super().__init__()
+        self._prj_cfg = project_cfg
+        self._unit_cfgs = unit_cfgs
+        self.project_dtcs = self._get_project_dtcs()
+
+    def _get_project_dtcs(self):
+        """Return a set with DTCs in the currently included SW-Units.
+
+        Returns:
+            (set): Set of DTCs in the currently included SW-Units.
+        """
+        project_dtcs = set()
+        unit_cfg = self._unit_cfgs.get_per_unit_cfg()
+        for unit, data in unit_cfg.items():
+            event_data = data.get('core', {}).get('Events')
+            if event_data is None:
+                self.critical(f'No "core" or "core.Events" key in unit config for {unit}.')
+                continue
+            project_dtcs |= set(event_data.keys())
+        return project_dtcs
+
+    def get_diagnostic_trouble_codes(self, event_data):
+        """Return a set of DTCs appearing in both the project and the project yaml file.
+
+        Args:
+            event_data (dict): Diagnositc event data.
+        Returns:
+            (dict): Dict of DTCs, project yaml dict where the keys also appear in the project.
+        """
+        yaml_dtcs = set(event_data.keys())
+        dtcs_not_in_yaml = self.project_dtcs - yaml_dtcs
+        for key in dtcs_not_in_yaml:
+            self.warning(f'Ignoring DTC {key} since it does not appear in the project diagnostics yaml file.')
+
+        valid_dtcs = {}
+        supported_operations = {"SetEventStatus"}
+        for dtc_name, dtc_data in event_data.items():
+            if dtc_name not in self.project_dtcs:
+                self.warning(f'Ignoring DTC {dtc_name}, not defined in any model.')
+                continue
+
+            valid_dtcs[dtc_name] = dtc_data
+
+            operations = set(dtc_data["operations"])
+            if not operations.issubset(supported_operations):
+                self.warning(f'Ignoring unsupported operations {supported_operations - operations} for DTC {dtc_name}.')
+            valid_dtcs[dtc_name]["operations"] = list(operations & supported_operations)
+
+        return valid_dtcs
+
+    def get_header_content(self):
+        """Get content for the DTC header file.
+
+        Returns:
+            (list(str)): List of lines to write to the DTC header file.
+        """
+        name = self._prj_cfg.get_swc_name()
+        header_guard = f'{self.FILE_NAME.upper()}_H'
+        header = [
+            f'#ifndef {header_guard}\n',
+            f'#define {header_guard}\n',
+            '\n',
+            '/* Core API Supplier Abstraction */\n',
+            '\n',
+            '#include "tl_basetypes.h"\n',
+            f'#include "Rte_{name}.h"\n',
+            '\n'
+        ]
+        footer = [f'\n#endif /* {header_guard} */\n']
+
+        body = [
+            '/* enum EventStatus {passed=0, failed=1, prepassed=2, prefailed=3} */\n',
+            '#define Dem_SetEventStatus(EventName, EventStatus)',
+            '  ',
+            'Rte_Call_Event_##EventName##_SetEventStatus(EventStatus)\n'
+        ]
+        return header + body + footer
+
+    def generate_dtc_files(self):
+        """Generate required ZC Core header files.
+        Only use for some projects, which doesn't copy static code."""
+        file_contents = {
+            '.h': self.get_header_content()
+        }
+        src_dst_dir = self._prj_cfg.get_src_code_dst_dir()
+        for extension, content in file_contents.items():
+            file_path = Path(src_dst_dir, self.FILE_NAME + extension)
+            with file_path.open(mode='w', encoding='utf-8') as file_handler:
+                file_handler.writelines(content)

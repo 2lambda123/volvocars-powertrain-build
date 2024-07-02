@@ -7,7 +7,7 @@ from unittest.mock import MagicMock
 from pathlib import Path
 from pybuild.build_proj_config import BuildProjConfig
 from pybuild.unit_configs import UnitConfigs
-from pybuild.core import Core, HICore
+from pybuild.core import Core, HICore, ZCCore
 
 from .core_cnfg import CORE_CFG
 
@@ -168,7 +168,6 @@ class TestHICore(unittest.TestCase):
 
     def test_get_source_content(self):
         """Test get_source_content."""
-        self.maxDiff = None
         self.hi_core.diagnostic_trouble_codes = self.dummy_yaml_dtcs
         result = self.hi_core.get_source_content()
         expected = [
@@ -204,5 +203,109 @@ class TestHICore(unittest.TestCase):
         expected = [
             '#include "VcCoreSupplierAbstraction.h"\n',
             '\n'
+        ]
+        self.assertListEqual(expected, result)
+
+
+class TestZCCore(unittest.TestCase):
+    """Test case for testing class ZCCore."""
+
+    def setUp(self):
+        """Set-up common data structures for all tests in the test case."""
+        project_config = MagicMock()
+        project_config.get_swc_name.return_value = 'DUMMY'
+        unit_configs = MagicMock()
+        unit_configs.get_per_unit_cfg.return_value = {}
+
+        self.zc_core = ZCCore(project_config, unit_configs)
+        self.zc_core.project_dtcs = {'VcEventOne', 'VcEventTwo', 'VcEventThree'}
+
+        self.dummy_yaml_dtcs = {
+            'VcEventOne': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+            'VcEventTwo': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+            'VcEventThree': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+        }
+
+    def test_get_diagnostic_trouble_codes(self):
+        """Test the get_diagnostic_trouble_codes function."""
+        result = self.zc_core.get_diagnostic_trouble_codes(self.dummy_yaml_dtcs)
+        self.assertEqual(result, self.dummy_yaml_dtcs)
+
+    def test_get_diagnostic_trouble_codes_missing_in_project(self):
+        """Test the get_diagnostic_trouble_codes function, when a DTC is in yaml but not project."""
+        self.zc_core.project_dtcs = {'VcEventOne', 'VcEventTwo'}
+        result = self.zc_core.get_diagnostic_trouble_codes(self.dummy_yaml_dtcs)
+        expected = {
+            'VcEventOne': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+            'VcEventTwo': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+        }
+        self.assertEqual(result, expected)
+
+    def test_get_diagnostic_trouble_codes_missing_in_yaml(self):
+        """Test the get_diagnostic_trouble_codes function, when a DTC is in project but not in yaml."""
+        dummy_yaml_dtcs = {
+            'VcEventOne': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+            'VcEventTwo': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+        }
+        result = self.zc_core.get_diagnostic_trouble_codes(dummy_yaml_dtcs)
+        self.assertEqual(result, dummy_yaml_dtcs)
+
+    def test_get_diagnostic_trouble_codes_unsupported_operation(self):
+        """Test the get_diagnostic_trouble_codes function, when an operation is not supported."""
+        dummy_yaml_dtcs = {
+            'VcEventOne': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+            'VcEventTwo': {
+                'operations': ["SetEventStatus"],
+                'random_data': {},
+            },
+            'VcEventThree': {
+                'operations': ["SetEventStatus", "SomeUnsupportedOperation"],
+                'random_data': {},
+            },
+        }
+        result = self.zc_core.get_diagnostic_trouble_codes(dummy_yaml_dtcs)
+        self.assertEqual(result, self.dummy_yaml_dtcs)
+
+    def test_get_header_content(self):
+        """Test get_header_content."""
+        result = self.zc_core.get_header_content()
+        expected = [
+            '#ifndef VCCORESUPPLIERABSTRACTION_H\n',
+            '#define VCCORESUPPLIERABSTRACTION_H\n',
+            '\n',
+            '/* Core API Supplier Abstraction */\n',
+            '\n',
+            '#include "tl_basetypes.h"\n',
+            '#include "Rte_DUMMY.h"\n',
+            '\n',
+            '/* enum EventStatus {passed=0, failed=1, prepassed=2, prefailed=3} */\n',
+            '#define Dem_SetEventStatus(EventName, EventStatus)',
+            '  ',
+            'Rte_Call_Event_##EventName##_SetEventStatus(EventStatus)\n',
+            '\n#endif /* VCCORESUPPLIERABSTRACTION_H */\n',
         ]
         self.assertListEqual(expected, result)
