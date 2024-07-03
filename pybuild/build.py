@@ -524,8 +524,10 @@ def copy_files_to_include(build_cfg):
     LOG.info("******************************************************")
     LOG.info("Start copying extra included source files")
     start_time = time.time()
-    include_paths = build_cfg.get_includes_paths()
     src_dst_dir = build_cfg.get_src_code_dst_dir()
+
+    # Copy some files flat to the destination directory
+    include_paths = build_cfg.get_includes_paths_flat()
     files = []
     for include_path in include_paths:
         if os.path.isdir(include_path):
@@ -543,6 +545,16 @@ def copy_files_to_include(build_cfg):
     for file_ in files:
         shutil.copy2(file_, src_dst_dir)
         LOG.debug("copied %s to %s", file_, src_dst_dir)
+
+    # Copy some directories as is to the destination directory
+    include_tree_paths = [Path(p) for p in build_cfg.get_includes_paths_tree()]
+    existing_tree_paths = [p for p in include_tree_paths if p.exists()]
+    missing_tree_paths = [p for p in include_tree_paths if not p.exists()]
+    if missing_tree_paths:
+        LOG.warning(f"Missing include paths: {missing_tree_paths}")
+    for path in existing_tree_paths:
+        shutil.copytree(path, src_dst_dir, dirs_exist_ok=True)
+        LOG.debug(f"copied {path} to {src_dst_dir}")
     LOG.info(
         "Finished copying extra included files (in %4.2f s)", time.time() - start_time
     )

@@ -305,10 +305,15 @@ class BuildProjConfig:
             units = units.union(set(runits))
         self._all_units = list(units)
 
-    def get_includes_paths(self):
-        """Return list of paths to files to include in source directory."""
+    def get_includes_paths_flat(self):
+        """Return list of paths to files to be included flat in source directory."""
         includes_paths = self._prj_cfg.get('includesPaths', [])
         return [os.path.join(self.get_root_dir(), os.path.normpath(path)) for path in includes_paths]
+
+    def get_includes_paths_tree(self):
+        """Return list of paths to files to included with directories in source directory."""
+        includes_paths_tree = self._prj_cfg.get('includesPathsTree', [])
+        return [os.path.join(self.get_root_dir(), os.path.normpath(path)) for path in includes_paths_tree]
 
     def get_all_units(self):
         """Return a list of all the units."""
