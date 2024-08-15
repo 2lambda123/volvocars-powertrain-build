@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8060966b_32e25627",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 48
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-15T08:52:58Z",
+      "side": 1,
+      "message": "See the result of the latest failed run, look in artifacts and the console tasks.",
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    }
+  ]
+}
