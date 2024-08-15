@@ -16,6 +16,29 @@
       "message": "See the result of the latest failed run, look in artifacts and the console tasks.",
       "revId": "e998e40ddd59f00022287db364d6587f60369af6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0487e071_10729faa",
+        "filename": "roles/blackduck-run/files/report_script.py",
+        "patchSetId": 48
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 36964
+      },
+      "writtenOn": "2024-08-15T09:03:23Z",
+      "side": 1,
+      "message": "Always a bit sketchy when we wait for fixed times. But I guess you have tried and decided that 60 seconds is enough for the report to be generated and also not an unreasonable time to wait for.",
+      "range": {
+        "startLine": 84,
+        "startChar": 4,
+        "endLine": 84,
+        "endChar": 56
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }
