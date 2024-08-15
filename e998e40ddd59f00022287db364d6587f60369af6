@@ -39,6 +39,30 @@
       },
       "revId": "e998e40ddd59f00022287db364d6587f60369af6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "471f5e74_bd41080c",
+        "filename": "roles/blackduck-run/files/report_script.py",
+        "patchSetId": 48
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-15T10:34:21Z",
+      "side": 1,
+      "message": "I don\u0027t like this approach but there is no endpoint for status, the only thing I could think of otherwise was to fetch it a few times with a delay in between, and stop when the size isn\u0027t increasing in size -.- . One minute should be long enough, it should take about 10sec as of right now.",
+      "parentUuid": "0487e071_10729faa",
+      "range": {
+        "startLine": 84,
+        "startChar": 4,
+        "endLine": 84,
+        "endChar": 56
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }
