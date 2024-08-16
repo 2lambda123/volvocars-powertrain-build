@@ -22,6 +22,30 @@
       },
       "revId": "2c1c6a61811b82a3d88c8944cb4695e023bfbe9f",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc754b22_a07b4e3f",
+        "filename": "playbooks/powertrain-build-blackduck-pre.yaml",
+        "patchSetId": 49
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T13:48:48Z",
+      "side": 1,
+      "message": "Ansible-lint complaining about it, I changed the task to use the pip module instead.",
+      "parentUuid": "93476af6_c202fa02",
+      "range": {
+        "startLine": 21,
+        "startChar": 6,
+        "endLine": 21,
+        "endChar": 18
+      },
+      "revId": "2c1c6a61811b82a3d88c8944cb4695e023bfbe9f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }

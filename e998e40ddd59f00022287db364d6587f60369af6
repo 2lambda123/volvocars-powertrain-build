@@ -498,6 +498,30 @@
       },
       "revId": "e998e40ddd59f00022287db364d6587f60369af6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "369b61e1_19fa5e12",
+        "filename": "roles/blackduck-run/tasks/main.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T13:48:48Z",
+      "side": 1,
+      "message": "Good point, now I am convinced",
+      "parentUuid": "2902ed87_f1ffbac8",
+      "range": {
+        "startLine": 20,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 21
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }
