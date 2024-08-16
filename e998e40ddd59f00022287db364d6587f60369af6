@@ -41,6 +41,30 @@
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0a27c59_0ba1fd1c",
+        "filename": "playbooks/powertrain-build-blackduck-pre.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "Won\u0027t change.",
+      "parentUuid": "9b83b45c_c481fa95",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 11,
+        "endChar": 15
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df7c72b7_8e72c87a",
@@ -54,6 +78,30 @@
       "writtenOn": "2024-08-16T07:27:44Z",
       "side": 1,
       "message": "heard several times with_items is deprecated and that we should use loop, but cannot really find it...",
+      "range": {
+        "startLine": 17,
+        "startChar": 6,
+        "endLine": 17,
+        "endChar": 16
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e9a8350_5601e3dd",
+        "filename": "playbooks/powertrain-build-blackduck-pre.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "df7c72b7_8e72c87a",
       "range": {
         "startLine": 17,
         "startChar": 6,
@@ -89,6 +137,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "45920db7_113a5e5f",
+        "filename": "roles/blackduck-run/README.me",
+        "patchSetId": 48
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "We can go with either the pipeline (gate etc), change is not useful as blackduck only supports 10 versions, so we can use gate for example and that one will be replaced every time we use gate. If we want a more consistent version to look at in the gui we could run this job in a post-merge pipeline.",
+      "parentUuid": "8a1d1f5f_740ca9c3",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 16
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "568fa091_13b306a2",
         "filename": "roles/blackduck-run/README.me",
         "patchSetId": 48
@@ -100,6 +172,30 @@
       "writtenOn": "2024-08-16T07:27:44Z",
       "side": 1,
       "message": "Some description, what other options are there?",
+      "range": {
+        "startLine": 21,
+        "startChar": 14,
+        "endLine": 21,
+        "endChar": 25
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2857d65_1550c819",
+        "filename": "roles/blackduck-run/README.me",
+        "patchSetId": 48
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "I think people can look up the blackduck documentation for more information on this.",
+      "parentUuid": "568fa091_13b306a2",
       "range": {
         "startLine": 21,
         "startChar": 14,
@@ -127,6 +223,24 @@
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "33ba1fbf_cdb522a1",
+        "filename": "roles/blackduck-run/defaults/main.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "Won\u0027t change.",
+      "parentUuid": "4e458deb_bf953f21",
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "16114bda_ff774605",
@@ -144,6 +258,24 @@
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "222bf3b7_9dfd6c7d",
+        "filename": "roles/blackduck-run/files/report_script.py",
+        "patchSetId": 48
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "16114bda_ff774605",
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f8a4c699_fa03d539",
@@ -157,6 +289,30 @@
       "writtenOn": "2024-08-16T07:27:44Z",
       "side": 1,
       "message": "might want to add command line arguments and use the role variables",
+      "range": {
+        "startLine": 78,
+        "startChar": 4,
+        "endLine": 78,
+        "endChar": 18
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0ad9075_a38665e1",
+        "filename": "roles/blackduck-run/files/report_script.py",
+        "patchSetId": 48
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "Added it as an env and read it in the script.",
+      "parentUuid": "f8a4c699_fa03d539",
       "range": {
         "startLine": 78,
         "startChar": 4,
@@ -231,6 +387,24 @@
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "81291535_adefa4e4",
+        "filename": "roles/blackduck-run/tasks/main.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "Won\u0027t change the quotes.",
+      "parentUuid": "35a2112d_7814137a",
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "909eab63_16d5123f",
@@ -244,6 +418,30 @@
       "writtenOn": "2024-08-16T07:27:44Z",
       "side": 1,
       "message": "failed: false, looks better in the output",
+      "range": {
+        "startLine": 20,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 21
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2effb286_b7b52a0b",
+        "filename": "roles/blackduck-run/tasks/main.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 37053
+      },
+      "writtenOn": "2024-08-16T10:52:32Z",
+      "side": 1,
+      "message": "Successful when it fails is better then failed when it fails? I\u0027m not convinced.",
+      "parentUuid": "909eab63_16d5123f",
       "range": {
         "startLine": 20,
         "startChar": 2,
