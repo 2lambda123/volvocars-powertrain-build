@@ -20,6 +20,155 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9b83b45c_c481fa95",
+        "filename": "playbooks/powertrain-build-blackduck-pre.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "NIT or no?\nWe no longer need quotes (unless opendev uses older ansible than us)\n\nbelow too",
+      "range": {
+        "startLine": 11,
+        "startChar": 14,
+        "endLine": 11,
+        "endChar": 15
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df7c72b7_8e72c87a",
+        "filename": "playbooks/powertrain-build-blackduck-pre.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "heard several times with_items is deprecated and that we should use loop, but cannot really find it...",
+      "range": {
+        "startLine": 17,
+        "startChar": 6,
+        "endLine": 17,
+        "endChar": 16
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a1d1f5f_740ca9c3",
+        "filename": "roles/blackduck-run/README.me",
+        "patchSetId": 48
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "This doesn\u0027t look like a version.\nSome descriptive text or change variable name",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 16
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "568fa091_13b306a2",
+        "filename": "roles/blackduck-run/README.me",
+        "patchSetId": 48
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "Some description, what other options are there?",
+      "range": {
+        "startLine": 21,
+        "startChar": 14,
+        "endLine": 21,
+        "endChar": 25
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e458deb_bf953f21",
+        "filename": "roles/blackduck-run/defaults/main.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "NIT no quotes needed",
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16114bda_ff774605",
+        "filename": "roles/blackduck-run/files/report_script.py",
+        "patchSetId": 48
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "all functions missing Args: and Returns:",
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8a4c699_fa03d539",
+        "filename": "roles/blackduck-run/files/report_script.py",
+        "patchSetId": 48
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "might want to add command line arguments and use the role variables",
+      "range": {
+        "startLine": 78,
+        "startChar": 4,
+        "endLine": 78,
+        "endChar": 18
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0487e071_10729faa",
         "filename": "roles/blackduck-run/files/report_script.py",
         "patchSetId": 48
@@ -60,6 +209,46 @@
         "startChar": 4,
         "endLine": 84,
         "endChar": 56
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35a2112d_7814137a",
+        "filename": "roles/blackduck-run/tasks/main.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "loads of unnecessary quotes here too (NIT?)",
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "909eab63_16d5123f",
+        "filename": "roles/blackduck-run/tasks/main.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T07:27:44Z",
+      "side": 1,
+      "message": "failed: false, looks better in the output",
+      "range": {
+        "startLine": 20,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 21
       },
       "revId": "e998e40ddd59f00022287db364d6587f60369af6",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
