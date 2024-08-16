@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "93476af6_c202fa02",
+        "filename": "playbooks/powertrain-build-blackduck-pre.yaml",
+        "patchSetId": 49
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T11:45:40Z",
+      "side": 1,
+      "message": "why?",
+      "range": {
+        "startLine": 21,
+        "startChar": 6,
+        "endLine": 21,
+        "endChar": 18
+      },
+      "revId": "2c1c6a61811b82a3d88c8944cb4695e023bfbe9f",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    }
+  ]
+}

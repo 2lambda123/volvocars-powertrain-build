@@ -323,6 +323,30 @@
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "819f5d99_3de2a626",
+        "filename": "roles/blackduck-run/files/report_script.py",
+        "patchSetId": 48
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T11:45:40Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "b0ad9075_a38665e1",
+      "range": {
+        "startLine": 78,
+        "startChar": 4,
+        "endLine": 78,
+        "endChar": 18
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0487e071_10729faa",
@@ -442,6 +466,30 @@
       "side": 1,
       "message": "Successful when it fails is better then failed when it fails? I\u0027m not convinced.",
       "parentUuid": "909eab63_16d5123f",
+      "range": {
+        "startLine": 20,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 21
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2902ed87_f1ffbac8",
+        "filename": "roles/blackduck-run/tasks/main.yaml",
+        "patchSetId": 48
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T11:45:40Z",
+      "side": 1,
+      "message": "But you don\u0027t care about the failure here so why show it as one? It will open by default in the console page and show stuff we don\u0027t care about. Misleading IMO, pretty sure this is a general guideline too.\n\nWill not provide any information at all since you pipe the output to a file, right?\nJust a big red box standing in the way of the real error below.",
+      "parentUuid": "2effb286_b7b52a0b",
       "range": {
         "startLine": 20,
         "startChar": 2,
