@@ -161,6 +161,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "63f2e77f_8933ca61",
+        "filename": "roles/blackduck-run/README.me",
+        "patchSetId": 48
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T13:58:30Z",
+      "side": 1,
+      "message": "Still don\u0027t understand what this is even after reading the documentation.\nA simple version, like 1.1.1? Then this is wrong 😄\nAlso, there seems to be a git thing: https://sig-product-docs.synopsys.com/bundle/integrations-detect/page/naming/projectversionscannaming.html\n\nBut I don\u0027t think it is too important, NIT.",
+      "parentUuid": "45920db7_113a5e5f",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 16
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "568fa091_13b306a2",
         "filename": "roles/blackduck-run/README.me",
         "patchSetId": 48
@@ -196,6 +220,30 @@
       "side": 1,
       "message": "I think people can look up the blackduck documentation for more information on this.",
       "parentUuid": "568fa091_13b306a2",
+      "range": {
+        "startLine": 21,
+        "startChar": 14,
+        "endLine": 21,
+        "endChar": 25
+      },
+      "revId": "e998e40ddd59f00022287db364d6587f60369af6",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48f74b88_0d2c0762",
+        "filename": "roles/blackduck-run/README.me",
+        "patchSetId": 48
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-08-16T13:58:30Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "e2857d65_1550c819",
       "range": {
         "startLine": 21,
         "startChar": 14,
