@@ -1,7 +1,7 @@
 # Copyright 2024 Volvo Car Corporation
 # Licensed under Apache 2.0.
 
-"""Unit test setup data for pybuild.zone_controller.composition_yaml."""
+"""Unit test setup data for powertrain_build.zone_controller.composition_yaml."""
 
 base_configuration = {
     "Composition": "some_arxml.arxml",

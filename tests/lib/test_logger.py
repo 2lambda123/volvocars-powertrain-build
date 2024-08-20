@@ -2,7 +2,7 @@
 # Licensed under Apache 2.0.
 
 """Unit tests for logger module."""
-from pybuild.lib import logger
+from powertrain_build.lib import logger
 
 
 def test_parse_log_level_default_on_error():

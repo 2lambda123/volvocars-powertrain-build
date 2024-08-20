@@ -5,9 +5,9 @@ import unittest
 from unittest import mock
 from pathlib import Path
 
-from pybuild.interface.base import Signal
-from pybuild.interface.service import ServiceFramework, get_service_list
-from pybuild.interface.csp_api import MissingApi
+from powertrain_build.interface.base import Signal
+from powertrain_build.interface.service import ServiceFramework, get_service_list
+from powertrain_build.interface.csp_api import MissingApi
 
 
 SIGNAL_SPEC = (

@@ -8,7 +8,7 @@ import json
 import os
 import unittest
 
-from pybuild.interface import simulink
+from powertrain_build.interface import simulink
 
 
 class TestSimulink(unittest.TestCase):
