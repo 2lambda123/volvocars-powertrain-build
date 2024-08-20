@@ -10,7 +10,7 @@ Powertrain Build contains scripts for both signal consistency checks and signal 
 If you type the following in git bash:
 
 ```bash
-py -3.6 -m pytools.pybuild_wrapper --help
+py -3.6 -m powertrain_build.wrapper --help
 ```
 
 ## Signal Interface report
@@ -18,7 +18,7 @@ py -3.6 -m pytools.pybuild_wrapper --help
 The signal Interface tool generates html reports. The following example shows how to generate the report:
 
 ```bash
-py -3.6 -m pytools.pybuild_wrapper --build ABC_123 --interface
+py -3.6 -m powertrain_build.wrapper --build ABC_123 --interface
 ```
 
 A project specific report will be available here: `Projects\ABC_123\output\Reports\SigIf.html`.

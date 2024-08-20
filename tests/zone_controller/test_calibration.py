@@ -1,11 +1,11 @@
 # Copyright 2024 Volvo Car Corporation
 # Licensed under Apache 2.0.
 
-"""Unit test script for pybuild.zone_controller.calibration."""
+"""Unit test script for powertrain_build.zone_controller.calibration."""
 
 from unittest import TestCase
 from unittest.mock import MagicMock
-from pybuild.zone_controller.calibration import ZoneControllerCalibration
+from powertrain_build.zone_controller.calibration import ZoneControllerCalibration
 
 
 class TestZoneControllerCalibration(TestCase):
