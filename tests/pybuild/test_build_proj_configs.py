@@ -6,7 +6,7 @@
 import unittest
 
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
+from powertrain_build.build_proj_config import BuildProjConfig
 
 CNFG_DIR = Path(Path(__file__).parent, 'cnfg_files')
 

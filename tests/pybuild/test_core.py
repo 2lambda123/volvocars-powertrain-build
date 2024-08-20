@@ -5,9 +5,9 @@
 import unittest
 from unittest.mock import MagicMock
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.unit_configs import UnitConfigs
-from pybuild.core import Core, HICore, ZCCore
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.core import Core, HICore, ZCCore
 
 from .core_cnfg import CORE_CFG
 

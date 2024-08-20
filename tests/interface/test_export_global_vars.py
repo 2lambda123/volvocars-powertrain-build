@@ -5,7 +5,7 @@
 
 from unittest import TestCase, mock
 
-from pybuild.interface.export_global_vars import get_global_variables
+from powertrain_build.interface.export_global_vars import get_global_variables
 
 
 class TestGlobalVarsExport(TestCase):
@@ -33,7 +33,7 @@ class TestGlobalVarsExport(TestCase):
                 },
             },
         )
-        with mock.patch("pybuild.interface.export_global_vars._get_project_data", return_value=dummy_pybuild_return):
+        with mock.patch("powertrain_build.interface.export_global_vars._get_project_data", return_value=dummy_pybuild_return):
             result = get_global_variables("Dummy")
         expected_variables = [
             {"name": "sVcOut_D_One", "type": "dummy_type"},

@@ -8,9 +8,9 @@ import unittest
 import pprint
 from unittest.mock import MagicMock, patch
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.unit_configs import UnitConfigs
-from pybuild.signal_interfaces import CsvSignalInterfaces
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.signal_interfaces import CsvSignalInterfaces
 
 
 class SigIfCfg:

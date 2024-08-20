@@ -6,8 +6,8 @@
 import unittest
 from unittest import mock
 
-from pybuild.interface.base import Signal
-from pybuild.interface.hal import HALA
+from powertrain_build.interface.base import Signal
+from powertrain_build.interface.hal import HALA
 
 SIGNAL_SPEC = (
     "enum_0",  # enum padding

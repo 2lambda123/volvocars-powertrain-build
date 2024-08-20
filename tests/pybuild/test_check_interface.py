@@ -2,9 +2,9 @@
 
 from unittest import TestCase, mock
 
-from pybuild.interface.base import BaseApplication, Signal, LOGGER as bl
-from pybuild.interface.application import Model
-import pybuild.check_interface as checker
+from powertrain_build.interface.base import BaseApplication, Signal, LOGGER as bl
+from powertrain_build.interface.application import Model
+import powertrain_build.check_interface as checker
 
 checker.LOGGER.setLevel(10)
 bl.setLevel(10)
@@ -13,7 +13,7 @@ bl.setLevel(10)
 class TestChecker(TestCase):
     """Test the check_interface module."""
 
-    @mock.patch("pybuild.interface.application.Application.parse_definition")
+    @mock.patch("powertrain_build.interface.application.Application.parse_definition")
     def test_process_app(self, app_parser):
         """Test the process_app function."""
         app = checker.process_app("test")

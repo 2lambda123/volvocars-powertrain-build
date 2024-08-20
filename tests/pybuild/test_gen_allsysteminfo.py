@@ -7,9 +7,9 @@ from pathlib import Path
 from unittest import TestCase
 from unittest.mock import MagicMock
 from numpy import ndarray
-from pybuild.signal_interfaces import CsvSignalInterfaces
-from pybuild.unit_configs import UnitConfigs
-from pybuild.gen_allsysteminfo import GenAllSystemInfo
+from powertrain_build.signal_interfaces import CsvSignalInterfaces
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.gen_allsysteminfo import GenAllSystemInfo
 
 CNFG_DIR = Path(Path(__file__).parent, 'cnfg_files')
 

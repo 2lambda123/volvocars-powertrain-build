@@ -1,7 +1,7 @@
 # Copyright 2024 Volvo Car Corporation
 # Licensed under Apache 2.0.
 
-"""Unit test script for pybuild.build module."""
+"""Unit test script for powertrain_build.build module."""
 
 import os
 import logging
@@ -9,13 +9,13 @@ import unittest
 from unittest.mock import MagicMock, patch, PropertyMock
 from pathlib import Path
 
-from pybuild.lib import helper_functions
-from pybuild.problem_logger import ProblemLogger
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.unit_configs import UnitConfigs
-from pybuild.signal_interfaces import CsvSignalInterfaces
-from pybuild.core import Core
-from pybuild import build
+from powertrain_build.lib import helper_functions
+from powertrain_build.problem_logger import ProblemLogger
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.signal_interfaces import CsvSignalInterfaces
+from powertrain_build.core import Core
+from powertrain_build import build
 
 SRC_DIR = Path(__file__).parent
 
@@ -207,7 +207,7 @@ class TestBuild(unittest.TestCase):
             filepath + '/VcDebugOutput.c',
             filepath + '/VcDebugOutput.a2l']
         remove(*files)
-        with patch('pybuild.user_defined_types.UserDefinedTypes') as udt_mock:
+        with patch('powertrain_build.user_defined_types.UserDefinedTypes') as udt_mock:
             udt_mock.return_value.common_header_files = PropertyMock(return_value=[])
             build.generate_ext_var(self.build_cfg, self.unit_cfg, signal_if, udt_mock)
         signal_if.get_external_io.assert_called_once()
@@ -262,13 +262,13 @@ class TestBuild(unittest.TestCase):
     def test_build_no_cfg(self):
         """Check that main entrypoint raises exception for missing config."""
         prj_root = str(Path(SRC_DIR, 'cnfg_files', 'NonexistentProjectCfg.json'))
-        with unittest.mock.patch('pybuild.build.find_all_project_configs') as mock:
+        with unittest.mock.patch('powertrain_build.build.find_all_project_configs') as mock:
             mock.return_value = [prj_root]
             self.assertRaises(FileNotFoundError, build.build, prj_root, quiet=True)
 
     @staticmethod
-    @unittest.mock.patch('pybuild.unit_configs.UnitConfigs.get_per_unit_cfg')
-    @unittest.mock.patch('pybuild.build.find_all_project_configs')
+    @unittest.mock.patch('powertrain_build.unit_configs.UnitConfigs.get_per_unit_cfg')
+    @unittest.mock.patch('powertrain_build.build.find_all_project_configs')
     def test_build(mock_find_all_project_configs, mock_get_per_unit_cfg):
         """Check that main entrypoint can be run without exceptions."""
         prj_root = str(Path(SRC_DIR, 'cnfg_files', 'ProjectCfg.json'))
@@ -285,8 +285,8 @@ class TestBuild(unittest.TestCase):
         exists(output)
 
     @staticmethod
-    @unittest.mock.patch('pybuild.unit_configs.UnitConfigs.get_per_unit_cfg')
-    @unittest.mock.patch('pybuild.build.find_all_project_configs')
+    @unittest.mock.patch('powertrain_build.unit_configs.UnitConfigs.get_per_unit_cfg')
+    @unittest.mock.patch('powertrain_build.build.find_all_project_configs')
     def test_build_ec(mock_find_all_project_configs, mock_get_per_unit_cfg):
         """Check that main entrypoint can be run without exceptions."""
         prj_root = str(Path(SRC_DIR, 'cnfg_files', 'ProjectCfg.json'))
@@ -306,8 +306,8 @@ class TestBuild(unittest.TestCase):
         exists(output)
 
     @staticmethod
-    @unittest.mock.patch('pybuild.unit_configs.UnitConfigs.get_per_unit_cfg')
-    @unittest.mock.patch('pybuild.build.find_all_project_configs')
+    @unittest.mock.patch('powertrain_build.unit_configs.UnitConfigs.get_per_unit_cfg')
+    @unittest.mock.patch('powertrain_build.build.find_all_project_configs')
     def test_build_mixed_ec_tl(mock_find_all_project_configs, mock_get_per_unit_cfg):
         """Check that main entrypoint can be run without exceptions."""
         prj_root = str(Path(SRC_DIR, 'cnfg_files', 'ProjectCfg.json'))
@@ -327,8 +327,8 @@ class TestBuild(unittest.TestCase):
         exists(output)
 
     @staticmethod
-    @unittest.mock.patch('pybuild.unit_configs.UnitConfigs.get_per_unit_cfg')
-    @unittest.mock.patch('pybuild.build.find_all_project_configs')
+    @unittest.mock.patch('powertrain_build.unit_configs.UnitConfigs.get_per_unit_cfg')
+    @unittest.mock.patch('powertrain_build.build.find_all_project_configs')
     def test_build_no_abort(mock_find_all_project_configs, mock_get_per_unit_cfg):
         """Check that main entrypoint can be run without exceptions with no abort set to True."""
         prj_root = str(Path(SRC_DIR, 'cnfg_files', 'ProjectCfg.json'))

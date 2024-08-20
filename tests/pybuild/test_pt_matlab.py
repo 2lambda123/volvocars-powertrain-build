@@ -6,7 +6,7 @@
 import unittest
 from unittest.mock import patch, Mock
 
-from pybuild import pt_matlab
+from powertrain_build import pt_matlab
 
 
 class TestMatlab(unittest.TestCase):

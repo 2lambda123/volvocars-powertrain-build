@@ -1,7 +1,7 @@
 # Copyright 2024 Volvo Car Corporation
 # Licensed under Apache 2.0.
 
-"""Unit test script for pybuild.zone_controller.generate_yaml."""
+"""Unit test script for powertrain_build.zone_controller.generate_yaml."""
 
 import copy
 import os
@@ -9,11 +9,11 @@ import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.core import ZCCore
-from pybuild.dids import ZCDIDs
-from pybuild.unit_configs import UnitConfigs
-from pybuild.zone_controller.composition_yaml import CompositionYaml
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.core import ZCCore
+from powertrain_build.dids import ZCDIDs
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.zone_controller.composition_yaml import CompositionYaml
 from test_data.zone_controller.test_composition_yaml import (
     composition_yaml_setup,
     composition_yaml,

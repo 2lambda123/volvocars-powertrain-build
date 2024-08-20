@@ -8,9 +8,9 @@ from unittest.mock import MagicMock
 from unittest.mock import patch
 from unittest.mock import mock_open
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.dids import DIDs, HIDIDs, ZCDIDs
-from test_data.pybuild.test_dids.zc_dids import (
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.dids import DIDs, HIDIDs, ZCDIDs
+from test_data.powertrain_build.test_dids.zc_dids import (
     dummy_project_dids,
     valid_dids,
     bad_valid_dids,
