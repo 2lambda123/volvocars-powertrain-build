@@ -7,7 +7,7 @@
 import unittest
 from unittest import mock
 
-from pybuild.interface.update_model_yaml import BadYamlFormat, UpdateYmlFormat
+from powertrain_build.interface.update_model_yaml import BadYamlFormat, UpdateYmlFormat
 
 
 class TestUpdateYamlFormat(unittest.TestCase):

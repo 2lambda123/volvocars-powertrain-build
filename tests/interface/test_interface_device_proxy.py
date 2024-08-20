@@ -4,8 +4,8 @@
 import unittest
 from unittest import mock
 
-from pybuild.interface.base import Signal
-from pybuild.interface.device_proxy import DPAL, BadYamlFormat
+from powertrain_build.interface.base import Signal
+from powertrain_build.interface.device_proxy import DPAL, BadYamlFormat
 
 
 class TestDPAL(unittest.TestCase):

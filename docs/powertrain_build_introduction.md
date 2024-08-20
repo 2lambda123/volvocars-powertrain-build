@@ -28,5 +28,5 @@ source ./powertrain_build_venv/bin/activate
 Once activated, you can execute it:
 
 ```shell
-PYTHONPATH=<path_to>/pt/pytools:<path_to>//pt/pybuild python -m pytools.pybuild_wrapper build-specific --project-config Projects/CSP/PvcDepDemo/ProjectCfg.json --core-dummy
+PYTHONPATH=<path_to>//powertrain-build python -m powertrain_build.wrapper build-specific --project-config Projects/CSP/PvcDepDemo/ProjectCfg.json --core-dummy
 ```
