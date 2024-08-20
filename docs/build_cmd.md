@@ -1,8 +1,8 @@
 # Run the build command
 
-`pybuild/build.py` is the starting point for generating all the files needed for building a complete SW using the supplier make environment. The script takes one positional argument, and that is a [project_config](project_config.md).
+`powertrain_build/build.py` is the starting point for generating all the files needed for building a complete SW using the supplier make environment. The script takes one positional argument, and that is a [project_config](project_config.md).
 
-This script acts as a command line wrapper for [build](../../pybuild/build.py).
+This script acts as a command line wrapper for [build](../../powertrain_build/build.py).
 
 ```none
 usage: build.py [-h] [-cd] [-d] [-na] [-if] [-V] proj_config
