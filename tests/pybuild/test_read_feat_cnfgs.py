@@ -6,8 +6,8 @@ import re
 import unittest
 from unittest.mock import MagicMock
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.feature_configs import FeatureConfigs
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.feature_configs import FeatureConfigs
 from .sw_cnfg import SW_FILE_DICT
 
 SRC_DIR = Path(__file__).parent

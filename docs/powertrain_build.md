@@ -31,7 +31,7 @@ actuation-arbitration-manager-simulink-logic/Projects/Init_PyBuild.m
 In git bash:
 
 ```bash
-py -3.6 -m pytools.pybuild_wrapper --codegen --models Models/ICEAES/VcAesTx/VcAesTx.mdl
+py -3.6 -m powertrain_build.wrapper --codegen --models Models/ICEAES/VcAesTx/VcAesTx.mdl
 ```
 
 #### Set Matlab 2017 as Environmental Variable
@@ -61,15 +61,15 @@ See picture below for details.
 #### Code generate with Embedded Coder with Matlab2019b
 
 ```python
-py -3.6 -m pytools.pybuild_wrapper --codegen --matlab-bin "C:\MATLAB_2019_b\bin\matlab.exe" --models Models/STEER/VcSteer/VcSteer.mdl
+py -3.6 -m powertrain_build.wrapper --codegen --matlab-bin "C:\MATLAB_2019_b\bin\matlab.exe" --models Models/STEER/VcSteer/VcSteer.mdl
 ```
 
-### Update a TargeLink model to pybuild
+### Update a TargeLink model to powertrain_build
 
 In git bash:
 
 ```python
-py -3.6 -m pytools.pybuild_wrapper --update --models Models/ICEAES/VcAesTx/VcAesTx.mdl
+py -3.6 -m powertrain_build.wrapper --update --models Models/ICEAES/VcAesTx/VcAesTx.mdl
 ```
 
 ### Update and Code generate a model
@@ -77,7 +77,7 @@ py -3.6 -m pytools.pybuild_wrapper --update --models Models/ICEAES/VcAesTx/VcAes
 In git bash:
 
 ```bash
-py -3.6 -m pytools.pybuild_wrapper --update --codegen --models Models/ICEAES/VcAesTx/VcAesTx.mdl
+py -3.6 -m powertrain_build.wrapper --update --codegen --models Models/ICEAES/VcAesTx/VcAesTx.mdl
 ```
 
 ### Code generation and build
@@ -85,7 +85,7 @@ py -3.6 -m pytools.pybuild_wrapper --update --codegen --models Models/ICEAES/VcA
 To code generate and build a complete project *ABC_123*:
 
 ```bash
-py -3.6 -m pytools.pybuild_wrapper --codegen --build ABC_123
+py -3.6 -m powertrain_build.wrapper --codegen --build ABC_123
 ```
 
 ### Build a project
@@ -93,13 +93,13 @@ py -3.6 -m pytools.pybuild_wrapper --codegen --build ABC_123
 You can either use the wrapper:
 
 ```bash
-py -3.6 -m pytools.pybuild_wrapper --build ABC_123
+py -3.6 -m powertrain_build.wrapper --build ABC_123
 ```
 
 ### Detailed build options
 
 ```bash
-py -3.6 -m pytools.pybuild_wrapper --help
+py -3.6 -m powertrain_build.wrapper --help
 ```
 
 The powertrain_build wrapper has many options, we'll explain them in detail here:
@@ -126,7 +126,7 @@ binary to use. Defaults to C:\MATLABR2017b_x64\bin\matlab.exe. If you have
 Matlab installed in the wrong place you can use:
 
 ```bash
-py -3.6 -m pytools.pybuild_wrapper --codegen --models Models/ICEAES/VcAesTx/VcAesTx.mdl --matlab-bin="C:\Program Files\MATLAB\R2017b\bin\matlab.exe"
+py -3.6 -m powertrain_build.wrapper --codegen --models Models/ICEAES/VcAesTx/VcAesTx.mdl --matlab-bin="C:\Program Files\MATLAB\R2017b\bin\matlab.exe"
 ```
 
 NOTE: Building a project (--build) does not work if a model requires a

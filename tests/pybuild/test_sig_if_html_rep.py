@@ -6,10 +6,10 @@ from copy import deepcopy
 import unittest
 from unittest.mock import MagicMock
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.unit_configs import UnitConfigs
-from pybuild.signal_interfaces import CsvSignalInterfaces
-from pybuild.signal_if_html_rep import SigIfHtmlReport
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.signal_interfaces import CsvSignalInterfaces
+from powertrain_build.signal_if_html_rep import SigIfHtmlReport
 
 UNIT_CFG = {
     'VcAesSupM__gen3': {

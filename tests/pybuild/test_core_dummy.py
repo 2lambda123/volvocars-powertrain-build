@@ -6,8 +6,8 @@
 import io
 import unittest
 from unittest.mock import patch, mock_open, MagicMock
-from pybuild.core_dummy import CoreDummy
-from pybuild.unit_configs import UnitConfigs
+from powertrain_build.core_dummy import CoreDummy
+from powertrain_build.unit_configs import UnitConfigs
 
 from .core_cnfg import CORE_CFG
 from . import core_dummy_cnfg

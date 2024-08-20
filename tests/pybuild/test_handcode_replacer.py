@@ -1,14 +1,14 @@
 # Copyright 2024 Volvo Car Corporation
 # Licensed under Apache 2.0.
 
-"""Unit test script for pybuild.handcode_replacer module."""
+"""Unit test script for powertrain_build.handcode_replacer module."""
 
 import unittest
-from pybuild import handcode_replacer
+from powertrain_build import handcode_replacer
 
 
 class TestPragmaRegexStart(unittest.TestCase):
-    """Unit tests for pybuild.handcode_replacer regexes."""
+    """Unit tests for powertrain_build.handcode_replacer regexes."""
 
     def setUp(self):
         self.pragma_replacer = handcode_replacer.PragmaReplacer()
