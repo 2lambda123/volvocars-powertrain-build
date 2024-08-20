@@ -6,7 +6,7 @@ import unittest
 
 from pathlib import Path
 
-from pybuild.signal_interfaces import YamlSignalInterfaces
+from powertrain_build.signal_interfaces import YamlSignalInterfaces
 
 BASEDIR = Path(__file__).parent / "cnfg_files/test-repo"
 CSP_PROJECT_ROOT = BASEDIR / "Projects/CSP/CATC"

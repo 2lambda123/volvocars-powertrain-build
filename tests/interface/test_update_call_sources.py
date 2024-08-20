@@ -7,7 +7,7 @@
 import json
 import unittest
 
-from pybuild.interface import update_call_sources
+from powertrain_build.interface import update_call_sources
 
 # C-Code chunks
 CHUNK_0 = (

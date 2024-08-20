@@ -3,14 +3,14 @@
 
 """Tests for pybuild environment check module.
 
-Run from project: py -3 -m pytest ./pybuild/test/test_environmentcheck.py
+Run from project: py -3 -m pytest ./powertrain_build/test/test_environmentcheck.py
 """
 
 
 import unittest
 from unittest.mock import patch
 
-from pybuild import environmentcheck
+from powertrain_build import environmentcheck
 
 
 class TestpybuildEnvironmentCheck(unittest.TestCase):

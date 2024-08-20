@@ -7,9 +7,9 @@ from unittest.mock import MagicMock
 from pathlib import Path
 from copy import deepcopy
 
-from pybuild.unit_configs import UnitConfigs
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.feature_configs import FeatureConfigs
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.feature_configs import FeatureConfigs
 
 CNFG_DIR = Path(Path(__file__).parent, 'cnfg_files')
 

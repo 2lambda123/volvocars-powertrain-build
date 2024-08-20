@@ -5,9 +5,9 @@
 
 import unittest
 from unittest.mock import MagicMock
-from pybuild.ext_dbg import ExtDbg
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.unit_configs import UnitConfigs
+from powertrain_build.ext_dbg import ExtDbg
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.unit_configs import UnitConfigs
 from .io_cnfg import DBG_CNFG_DICT
 
 

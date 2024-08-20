@@ -6,8 +6,8 @@
 from copy import deepcopy
 import unittest
 from unittest.mock import MagicMock
-from pybuild.a2l import A2l
-from pybuild.build_proj_config import BuildProjConfig
+from powertrain_build.a2l import A2l
+from powertrain_build.build_proj_config import BuildProjConfig
 
 A2L_DATA = {
     "function": "rVcAesSupM",

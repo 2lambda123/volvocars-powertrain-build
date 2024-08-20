@@ -2,7 +2,7 @@
 # Licensed under Apache 2.0.
 
 import unittest
-from pybuild.create_conversion_table import get_vtab_text
+from powertrain_build.create_conversion_table import get_vtab_text
 
 
 class TestGetVtabText(unittest.TestCase):

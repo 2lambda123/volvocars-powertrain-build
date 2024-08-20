@@ -4,14 +4,14 @@
 """Unit tests for merge_a2l.py."""
 
 import unittest
-from pybuild.a2l_templates import A2lProjectTemplate, A2lSilverTemplate
+from powertrain_build.a2l_templates import A2lProjectTemplate, A2lSilverTemplate
 
 
 class TestA2lProjectTemplate(unittest.TestCase):
-    """Tests for pybuild.a2l_templates."""
+    """Tests for powertrain_build.a2l_templates."""
 
     def test_a2l_project_template(self):
-        """Test pybuild.a2l_templates.A2lProjectTemplate."""
+        """Test powertrain_build.a2l_templates.A2lProjectTemplate."""
         events = []
         events = [
             {
@@ -684,7 +684,7 @@ class TestA2lProjectTemplate(unittest.TestCase):
         self.assertListEqual(a2l.split('\n'), expected)
 
     def test_a2l_silver_template(self):
-        """Test pybuild.a2l_templates.test_A2lSilverTemplate."""
+        """Test powertrain_build.a2l_templates.test_A2lSilverTemplate."""
         test_a2l = '\n'.join([
             '/begin CHARACTERISTIC',
             '    char_dummy    /* Name */',

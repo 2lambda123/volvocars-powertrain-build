@@ -10,7 +10,7 @@ try:
 except ImportError as import_error:
     raise unittest.SkipTest("Failed to import win32api, probably wrong platform") from import_error
 
-from pybuild import pt_win32
+from powertrain_build import pt_win32
 
 
 class TestPtWin32Process(unittest.TestCase):

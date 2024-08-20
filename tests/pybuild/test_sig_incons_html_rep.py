@@ -7,7 +7,7 @@ import os
 import os.path
 import unittest
 from pathlib import Path
-from pybuild.signal_incons_html_rep import SigConsHtmlReport
+from powertrain_build.signal_incons_html_rep import SigConsHtmlReport
 
 INDATA = {
     "sigs": {
