@@ -1,23 +1,23 @@
-# PyBuild
+# Powertrain-build
 
 A Continuous Integration (CI) build system, testing all configurations where a TargetLink model is used.
 
-## General Information about Pybuild
+## General Information about Powertrain-build
 
-- PyBuild is fast.
+- Powertrain-build is fast.
   - More parallelization of jobs in the CI system makes it faster.
   - Code generation is moved to the developer's PC.
   - Code generation is done once for all projects using pre-processor directives.
   - C code reviews are now possible in Gerrit.
-- PyBuild adds signal consistency checks.
+- Powertrain-build adds signal consistency checks.
 - Unit tests of the build system are introduced.
   - Its quality is assured.
-- PyBuild creates new variable classes with unique code decorations.
+- Powertrain-build creates new variable classes with unique code decorations.
   - Post-processing C code is not necessary.
   - ASIL-classed variables get declared at the source.
   - Memory can be optimized at compilation through short addressing different variable classes.
   - The same models can be used in more than two different suppliers, for instance, SPA2's Core System Platform (CSP).
-  - PyBuild fixes incorrect handling of NVM variables.
+  - Powertrain-build fixes incorrect handling of NVM variables.
 
 ## Project Structure
 
@@ -25,18 +25,20 @@ A Continuous Integration (CI) build system, testing all configurations where a T
 
 - `playbooks/`: Directory where we keep Ansible playbooks that are executed in the jobs we use in this project.
 
-- `pybuild/`: Main directory of the project. All the application source code is kept here. It is divided into different Python modules:
+- `powertrain_build/`: Main directory of the project. All the application source code is kept here. It is divided into different Python modules:
   - `interface/`
   - `lib/`
   - `zone_controller/`
 
 Also, we keep `static_code/` and `templates/` directories with useful `.c`, `.h`, and `.html` files.
 
-- `tests/`: Directory where we keep the unit tests for our application source code. The tests are structured in a similar way to what we have inside the `pybuild/` directory. Tests for the `interface`, `lib`, and `zone_controller` modules are split into `tests/interface/`, `tests/lib/`, and `tests/zone_controller/`, respectively. Other tests are kept inside the `tests/pybuild/` directory.
+- `tests/`: Directory where we keep the unit tests for our application source code. The tests are structured in a similar way to what we have inside the `powertrain_build/` directory. Tests for the `interface`, `lib`, and `zone_controller` modules are split into `tests/interface/`, `tests/lib/`, and `tests/zone_controller/`, respectively. Other tests are kept inside the `tests/powertrain_build/` directory.
 
 - `zuul.d/`: Directory where we keep our Zuul jobs.
 
-## How to use Pybuild
+## How to use Powertrain-build
+
+See [Powertrain-build introduction](./docs/powertrain_build_introduction.md)
 
 ## Contributing
 
