@@ -7,7 +7,7 @@
 import unittest
 from unittest import mock
 
-from pybuild.interface.base import Domain, Interface, MultipleProducersError, Signal
+from powertrain_build.interface.base import Domain, Interface, MultipleProducersError, Signal
 
 
 class DummyApp:
