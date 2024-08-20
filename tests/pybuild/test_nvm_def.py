@@ -12,9 +12,9 @@ import unittest
 from unittest.mock import MagicMock, mock_open, patch, call
 from pathlib import Path
 
-from pybuild.lib import helper_functions
-from pybuild.nvm_def import NVMDef
-from pybuild.unit_configs import UnitConfigs
+from powertrain_build.lib import helper_functions
+from powertrain_build.nvm_def import NVMDef
+from powertrain_build.unit_configs import UnitConfigs
 
 SRC_DIR = Path(__file__).parent
 

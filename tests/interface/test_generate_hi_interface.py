@@ -10,7 +10,7 @@ from argparse import Namespace
 from pathlib import Path
 from unittest import TestCase
 from ruamel.yaml import YAML
-from pybuild.interface.generate_hi_interface import generate_hi_interface
+from powertrain_build.interface.generate_hi_interface import generate_hi_interface
 
 
 class TestHIManifestParser(TestCase):

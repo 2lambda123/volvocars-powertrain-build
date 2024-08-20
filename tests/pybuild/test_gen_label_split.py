@@ -6,8 +6,8 @@
 from pathlib import Path
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.gen_label_split import LabelSplit
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.gen_label_split import LabelSplit
 
 CNFG_DIR = Path(Path(__file__).parent, 'cnfg_files')
 REF_DIR = Path(Path(__file__).parent, 'reference_files')
@@ -115,7 +115,7 @@ class TestGenLabelSplit(TestCase):
         no_hybrid_test = self.label_split.get_sgp_symbol_group(no_hybrid_group)
         self.assertEqual(no_hybrid_test, '')
 
-    @patch('pybuild.gen_label_split.LabelSplit.get_sgp_symbol_group', autospec=True)
+    @patch('powertrain_build.gen_label_split.LabelSplit.get_sgp_symbol_group', autospec=True)
     def test_get_interface_symbols_and_groups(self, sg_mock):
         sg_mock.return_value = 'SG_P'
         interface_dict = {
@@ -150,8 +150,8 @@ class TestGenLabelSplit(TestCase):
         ]
         self.assertListEqual(symbols_and_groups, expected)
 
-    @patch('pybuild.gen_label_split.LabelSplit.get_interface_symbols_and_groups', autospec=True)
-    @patch('pybuild.gen_label_split.LabelSplit.get_sgp_symbols', autospec=True)
+    @patch('powertrain_build.gen_label_split.LabelSplit.get_interface_symbols_and_groups', autospec=True)
+    @patch('powertrain_build.gen_label_split.LabelSplit.get_sgp_symbols', autospec=True)
     def test_get_debug_symbols_and_groups(self, sgp_symbols_mock, interface_symbols_and_groups_mock):
         # This function calls other (already tested functions), however, it has an important check in the end tp test.
         self.label_split.signal_interface = MagicMock()
@@ -219,8 +219,8 @@ class TestGenLabelSplit(TestCase):
         sgp_file = self.label_split.get_unit_sgp_file('VcTestModel')
         self.assertFalse(sgp_file.is_file())
 
-    @patch('pybuild.gen_label_split.LabelSplit.get_unit_sgp_file', autospec=True)
-    @patch('pybuild.gen_label_split.LabelSplit.check_unit_par_file', autospec=True)
+    @patch('powertrain_build.gen_label_split.LabelSplit.get_unit_sgp_file', autospec=True)
+    @patch('powertrain_build.gen_label_split.LabelSplit.check_unit_par_file', autospec=True)
     def test_get_unit_symbols_and_groups(self, unit_par_file_mock, sgp_file_mock):
         sgp_file_mock.return_value = Path(REF_DIR, 'SS1', 'test_model', 'VcTestModel_sgp.xml')
         unit_calibration_symbols = [

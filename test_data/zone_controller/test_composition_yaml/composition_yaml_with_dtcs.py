@@ -1,7 +1,7 @@
 # Copyright 2024 Volvo Car Corporation
 # Licensed under Apache 2.0.
 
-"""Unit test data for pybuild.zone_controller.composition_yaml with DTCs."""
+"""Unit test data for powertrain_build.zone_controller.composition_yaml with DTCs."""
 
 from test_data.zone_controller.test_composition_yaml import composition_yaml_setup
 

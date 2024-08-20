@@ -8,10 +8,10 @@ import unittest
 from unittest.mock import patch
 from pathlib import Path
 
-from pybuild.config import ProcessHandler
-from pybuild.config import CConfigParser
-from pybuild.config import HeaderConfigParser
-from pybuild.config import JsonConfigHandler
+from powertrain_build.config import ProcessHandler
+from powertrain_build.config import CConfigParser
+from powertrain_build.config import HeaderConfigParser
+from powertrain_build.config import JsonConfigHandler
 
 SRC_DIR = Path(__file__).parent
 SKIP_WHILE_DEVELOPING = False

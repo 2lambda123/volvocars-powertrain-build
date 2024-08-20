@@ -1,7 +1,7 @@
 # Copyright 2024 Volvo Car Corporation
 # Licensed under Apache 2.0.
 
-"""Unit test data for pybuild.dids.ZCDIDs."""
+"""Unit test data for powertrain_build.dids.ZCDIDs."""
 
 dummy_project_dids = {
     'dummy_did_one': {

@@ -5,7 +5,7 @@ import unittest
 from argparse import Namespace
 from unittest.mock import MagicMock, patch
 
-from pybuild.signal_inconsistency_check import (
+from powertrain_build.signal_inconsistency_check import (
     EXIT_CODE_INCORRECT_CSV,
     EXIT_CODE_MISSING_CONSUMER,
     EXIT_CODE_NEVER_ACTIVE_SIGNALS,
@@ -340,7 +340,7 @@ class TestSignalInconsistency(unittest.TestCase):
         result = signal_inconsistency.aggregate_model_inports()
         self.assertEqual(expected_result, result)
 
-    @patch("pybuild.signal_interfaces.CsvSignalInterfaces")
+    @patch("powertrain_build.signal_interfaces.CsvSignalInterfaces")
     def test_aggregate_supplier_inports(self, mock):
         """Test aggregate external outports"""
         mock_instance = mock.return_value
@@ -513,7 +513,7 @@ class TestSignalInconsistency(unittest.TestCase):
         result = signal_inconsistency.get_consumer_int("TEST_SIG2")
         self.assertEqual(result, expected_result)
 
-    @patch("pybuild.signal_interfaces.CsvSignalInterfaces")
+    @patch("powertrain_build.signal_interfaces.CsvSignalInterfaces")
     def test_get_consumer_ext(self, mock):
         """Test aggregate external outports"""
         mock_instance = mock.return_value
