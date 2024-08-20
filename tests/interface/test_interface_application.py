@@ -5,13 +5,13 @@ import pathlib
 import unittest
 from unittest import mock
 
-from pybuild.interface.application import Application, Raster, Model
-from pybuild.interface.base import Signal
+from powertrain_build.interface.application import Application, Raster, Model
+from powertrain_build.interface.base import Signal
 
 
 class TestApplication(unittest.TestCase):
     def test_parse_definition(self):
-        # Tested in pybuild.
+        # Tested in powertrain_build.
         pass
 
     def test_parse_ports(self):

@@ -6,20 +6,20 @@
 import unittest
 from unittest import mock
 
-from pybuild.interface import generation_utils
-from pybuild.interface.application import Application, Raster
-from pybuild.interface.base import Signal
-from pybuild.interface.hal import HALA
+from powertrain_build.interface import generation_utils
+from powertrain_build.interface.application import Application, Raster
+from powertrain_build.interface.base import Signal
+from powertrain_build.interface.hal import HALA
 
 
 class TestGenerationUtils(unittest.TestCase):
     """Test cases for the generation utils."""
 
-    @mock.patch('pybuild.interface.application.Raster.insignals', new_callable=mock.PropertyMock)
-    @mock.patch('pybuild.interface.application.Raster.outsignals', new_callable=mock.PropertyMock)
-    @mock.patch('pybuild.interface.csp_api.CspApi.read_translation')
-    @mock.patch('pybuild.interface.hal.HALA.get_map_file')
-    @mock.patch('pybuild.interface.hal.HALA._get_hal_translation')
+    @mock.patch('powertrain_build.interface.application.Raster.insignals', new_callable=mock.PropertyMock)
+    @mock.patch('powertrain_build.interface.application.Raster.outsignals', new_callable=mock.PropertyMock)
+    @mock.patch('powertrain_build.interface.csp_api.CspApi.read_translation')
+    @mock.patch('powertrain_build.interface.hal.HALA.get_map_file')
+    @mock.patch('powertrain_build.interface.hal.HALA._get_hal_translation')
     def test_get_interface(self, mock_hal_translation, mock_hal_file, mock_read_file, raster_out, raster_in):
         """Test get_interface method."""
         # Setup signals
