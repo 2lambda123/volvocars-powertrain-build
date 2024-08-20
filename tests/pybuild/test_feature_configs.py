@@ -7,8 +7,8 @@ import unittest
 
 from unittest.mock import MagicMock, patch
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.feature_configs import FeatureConfigs
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.feature_configs import FeatureConfigs
 from .sw_cnfg import SW_DICT
 
 SRC_DIR = Path(__file__).parent
@@ -35,7 +35,7 @@ class TestFeatureConfigs(unittest.TestCase):
         self.build_cfg.get_did_cfg_file_name = MagicMock(return_value='DIDIds_FullRange')
         self.build_cfg.get_prj_config = MagicMock(return_value='CFG1')
         patcher_read_config_sw = patch(
-            'tests.pybuild.test_feature_configs.FeatureConfigs._parse_all_code_sw_configs',
+            'tests.powertrain_build.test_feature_configs.FeatureConfigs._parse_all_code_sw_configs',
             MagicMock())
         self.mock_read_config_sw = patcher_read_config_sw.start()
         self.addCleanup(patcher_read_config_sw.stop)

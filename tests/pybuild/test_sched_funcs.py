@@ -8,9 +8,9 @@ from unittest.mock import MagicMock
 from os.path import exists
 from os import remove
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.sched_funcs import SchedFuncs
-from pybuild.unit_configs import UnitConfigs
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.sched_funcs import SchedFuncs
+from powertrain_build.unit_configs import UnitConfigs
 
 SRC_DIR = Path(__file__).parent
 
