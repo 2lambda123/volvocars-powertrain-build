@@ -7,7 +7,7 @@
 import unittest
 from unittest import mock
 
-from pybuild.interface.model_yaml_verification import ModelYmlVerification
+from powertrain_build.interface.model_yaml_verification import ModelYmlVerification
 
 
 class TestModelYamlVerification(unittest.TestCase):
