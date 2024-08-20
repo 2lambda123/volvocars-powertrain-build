@@ -3,7 +3,7 @@
 
 """Unittests for helper_functions."""
 import unittest
-from pybuild.lib import helper_functions as HF
+from powertrain_build.lib import helper_functions as HF
 
 
 class TestHelperFunctions(unittest.TestCase):

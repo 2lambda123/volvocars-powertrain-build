@@ -1,4 +1,4 @@
-# PyBuild
+# Powertrain-build
 
 A Continuous Integration (CI) build system, testing all configurations where a TargetLink model is used.
 
@@ -25,14 +25,14 @@ A Continuous Integration (CI) build system, testing all configurations where a T
 
 - `playbooks/`: Directory where we keep Ansible playbooks that are executed in the jobs we use in this project.
 
-- `pybuild/`: Main directory of the project. All the application source code is kept here. It is divided into different Python modules:
+- `powertrain_build/`: Main directory of the project. All the application source code is kept here. It is divided into different Python modules:
   - `interface/`
   - `lib/`
   - `zone_controller/`
 
 Also, we keep `static_code/` and `templates/` directories with useful `.c`, `.h`, and `.html` files.
 
-- `tests/`: Directory where we keep the unit tests for our application source code. The tests are structured in a similar way to what we have inside the `pybuild/` directory. Tests for the `interface`, `lib`, and `zone_controller` modules are split into `tests/interface/`, `tests/lib/`, and `tests/zone_controller/`, respectively. Other tests are kept inside the `tests/pybuild/` directory.
+- `tests/`: Directory where we keep the unit tests for our application source code. The tests are structured in a similar way to what we have inside the `powertrain_build/` directory. Tests for the `interface`, `lib`, and `zone_controller` modules are split into `tests/interface/`, `tests/lib/`, and `tests/zone_controller/`, respectively. Other tests are kept inside the `tests/powertrain_build/` directory.
 
 - `zuul.d/`: Directory where we keep our Zuul jobs.
 
