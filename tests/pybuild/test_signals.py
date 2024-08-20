@@ -7,8 +7,8 @@ import copy
 import unittest
 from unittest.mock import MagicMock
 from pathlib import Path
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.signal_interfaces import CsvSignalInterfaces
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.signal_interfaces import CsvSignalInterfaces
 from .io_cnfg import IO_CNFG_DICT, INPUT_CNFG_DICT, OUTPUT_CNFG_DICT, DBG_CNFG_DICT, DEP_IO_CNFG_DICT
 
 CNFG_DIR = Path(Path(__file__).parent, 'cnfg_files')

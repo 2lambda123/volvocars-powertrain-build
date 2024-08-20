@@ -6,7 +6,7 @@
 import unittest
 from unittest.mock import mock_open, patch, MagicMock
 from pathlib import Path
-from pybuild.a2l_merge import A2lMerge
+from powertrain_build.a2l_merge import A2lMerge
 from .a2l_merge_data import A2L_MERGED_1, A2L_MERGED_2
 
 # Fake unit config files

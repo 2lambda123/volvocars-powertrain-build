@@ -1,15 +1,15 @@
 # Copyright 2024 Volvo Car Corporation
 # Licensed under Apache 2.0.
 
-"""Tests for pybuild version compatibility check module."""
+"""Tests for powertrain-build version compatibility check module."""
 
 import unittest
-from pybuild import __config_version__
-from pybuild.versioncheck import Version
+from powertrain_build import __config_version__
+from powertrain_build.versioncheck import Version
 
 
 class TestVersionCheck(unittest.TestCase):
-    """Unit tests for pybuild version compatibility check module."""
+    """Unit tests for powertrain-build version compatibility check module."""
 
     def test_float_version(self):
         version = Version(1.04)

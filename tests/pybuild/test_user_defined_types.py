@@ -6,9 +6,9 @@
 import unittest
 from pathlib import Path
 from unittest.mock import patch, mock_open, MagicMock
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.unit_configs import UnitConfigs
-from pybuild.user_defined_types import UserDefinedTypes
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.user_defined_types import UserDefinedTypes
 
 REF_DIR = Path(Path(__file__).parent, 'reference_files')
 CFG_DIR = Path(Path(__file__).parent, 'cnfg_files')

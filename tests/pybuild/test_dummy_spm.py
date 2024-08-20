@@ -7,11 +7,11 @@ import unittest
 import os
 
 from unittest.mock import patch, mock_open, MagicMock
-from pybuild.dummy_spm import DummySpm
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.feature_configs import FeatureConfigs
-from pybuild.unit_configs import UnitConfigs
-from pybuild.user_defined_types import UserDefinedTypes
+from powertrain_build.dummy_spm import DummySpm
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.feature_configs import FeatureConfigs
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.user_defined_types import UserDefinedTypes
 
 
 UNDEFINED_OUTPORTS = [

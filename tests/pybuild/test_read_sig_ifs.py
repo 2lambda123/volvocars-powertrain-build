@@ -8,9 +8,9 @@ import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch, mock_open, call
 
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.unit_configs import UnitConfigs
-from pybuild.signal_interfaces import CsvSignalInterfaces
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.unit_configs import UnitConfigs
+from powertrain_build.signal_interfaces import CsvSignalInterfaces
 
 
 class RawIOCfg:
@@ -139,7 +139,7 @@ class TestSignalIterfacesRead(BaseSetUp):
         expected_res = self.raw_io_cfg.get_raw_io_cnfg()
         self.assertDictEqual(result, expected_res)
 
-    @patch('pybuild.signal_interfaces.open', new_callable=mock_open())
+    @patch('powertrain_build.signal_interfaces.open', new_callable=mock_open())
     def test_verify_files_read(self, m):
         """Verify that files are opened and read."""
         private_can_input_call = call(Path(BaseSetUp.ACTIVE_INTERFACE_DIRECTORY,

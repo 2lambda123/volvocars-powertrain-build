@@ -5,9 +5,9 @@
 
 from pathlib import Path
 from unittest import mock, TestCase
-from pybuild.build_proj_config import BuildProjConfig
-from pybuild.memory_section import MemorySection
-from pybuild.lib import helper_functions
+from powertrain_build.build_proj_config import BuildProjConfig
+from powertrain_build.memory_section import MemorySection
+from powertrain_build.lib import helper_functions
 from .test_build import remove
 
 SRC_DIR = Path(__file__).parent
