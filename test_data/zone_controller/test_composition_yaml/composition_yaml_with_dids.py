@@ -59,11 +59,32 @@ expected_result = {
                 }
             },
             "diagnostics": {
-                "events": {},
                 "dids": {
                     "DID1": {
+                        "identifier": "34EE",
+                        "numberOfParameters": 1,
+                        "totalNumberOfBytes": 2,
                         "operations": {
-                            "ReadData": {},
+                            "ReadData": {
+                                "securityAccess": "",
+                                "readLocalVariables": ["MyIRV"],
+                                "writtenLocalVariables": ["MyIRV"],
+                            },
+                            "WriteData": {
+                                "securityAccess": "",
+                                "readLocalVariables": ["MyIRV3"],
+                                "writtenLocalVariables": ["MyIRV3"],
+                            },
+                            "ShortTermAdjustment": {
+                                "securityAccess": "",
+                                "readLocalVariables": ["MyIRV4"],
+                                "writtenLocalVariables": ["MyIRV4"],
+                            },
+                            "ReturnControlToECU": {
+                                "securityAccess": "",
+                                "readLocalVariables": ["MyIRV5"],
+                                "writtenLocalVariables": ["MyIRV6"],
+                            },
                         },
                     },
                 }
