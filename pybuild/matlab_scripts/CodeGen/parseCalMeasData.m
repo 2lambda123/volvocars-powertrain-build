@@ -152,9 +152,13 @@ function allVariables = Create_Standard_Struct(systemIn, allVariables, ...
                             end
                             allVariables.(structName).(variableName).configs = removeConfigDuplicates(codeSwTmp);
                         end
-                        if ismember(get_param(block, 'masktype'), {'TL_IndexSearch', 'TL_Interpolation'}) ...
+                        if ismember(get_param(block, 'masktype'), {'TL_IndexSearch', 'TL_Interpolation', 'TL_Lookup1D', 'TL_Lookup2D'}) ...
                            && ~strcmp(field,'output')
-                            InputValue=evalin('base', tl_getfast(block, [field '.value']));
+                            [inputValueRef, errorFlag, ~] = tl_get(block, [field '.value']);
+                            if errorFlag > 0
+                                inputValueRef = tl_getfast(block, [field '.value']);
+                            end
+                            InputValue=evalin('base', inputValueRef);
                             VarSize=size(InputValue);
                             allVariables.(structName).(variableName).width = VarSize;
                         elseif strcmp(get_param(block, 'masktype'), 'TL_Constant') && strcmp(field,'output')
