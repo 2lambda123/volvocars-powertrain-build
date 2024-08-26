@@ -148,7 +148,9 @@ class ZCAL(BaseApplication):
         for port_name, port in raw.get("ports", {}).items():
             signal_struct = port.get("element", {})
             if signal_struct:
-                self.populate_signal_translations(port_name, signal_struct)
+                for element_name, element_data in signal_struct.items():
+                    self.populate_signal_translations(port_name, element_name, element_data)
+                # Loop inside function to make sure direction is consistent
                 ports_info[port_name] = {
                     **self.get_port_info(signal_struct),
                     "interface": port.get("interface")
@@ -168,39 +170,37 @@ class ZCAL(BaseApplication):
             port_info (dict): Dict containing port direction and if any elements
             should have an update bit associated with them.
         """
-        struct_name = list(signal_struct.keys())[0]
-        signal_elements = signal_struct[struct_name]
         update_elements = set()
         direction = None
-        for element in signal_elements:
-            if "insignal" in element:
-                temp_dir = "IN"
-            elif "outsignal" in element:
-                temp_dir = "OUT"
-            else:
-                raise BadYamlFormat(f"in/out signal for element in { struct_name } is missing.")
-            if direction is not None and direction != temp_dir:
-                raise BadYamlFormat(f"Signal { struct_name } has both in and out elements.")
-            direction = temp_dir
-            if element.get("updateBit", False):
-                update_elements.add(struct_name)
+        for element_name, element_data in signal_struct.items():
+            for element in element_data:
+                if "insignal" in element:
+                    temp_dir = "IN"
+                elif "outsignal" in element:
+                    temp_dir = "OUT"
+                else:
+                    raise BadYamlFormat(f"in/out signal for element in { element_name } is missing.")
+                if direction is not None and direction != temp_dir:
+                    raise BadYamlFormat(f"Signal { element_name } has both in and out elements.")
+                direction = temp_dir
+                if element.get("updateBit", False):
+                    update_elements.add(element_name)
         port_info = {"direction": direction}
         if update_elements:
             port_info["enable_update"] = list(update_elements)
         return port_info
 
-    def populate_signal_translations(self, port_name, struct_specifications):
+    def populate_signal_translations(self, port_name, element_name, element_data):
         """Populate class translations data.
 
         Args:
             port_name (str): Port name.
-            struct_specifications (dict): Dict with signal structs to/from a port.
+            element_name (str): Name of a port element.
+            element_data (dict): Dict with signal structs to/from a port of an element.
         """
         enumerations = self.base_application.enumerations
 
-        struct_name = list(struct_specifications.keys())[0]
-        signal_definitions = struct_specifications[struct_name]
-        for signal_definition in signal_definitions:
+        for signal_definition in element_data:
             if "insignal" in signal_definition:
                 signal_name = signal_definition["insignal"]
                 base_signals = self.base_application.insignals
@@ -235,7 +235,7 @@ class ZCAL(BaseApplication):
 
             update_bit = signal_definition.get("updateBit", False)
             e2e_status = signal_definition.get("e2eStatus", False)
-            group = signal_definition.get("group", struct_name)
+            group = signal_definition.get("group", element_name)
             translation = {
                 "range": {
                     "min": base_properties.get("min", "-"),
@@ -246,7 +246,7 @@ class ZCAL(BaseApplication):
                 "property": signal_definition["property"],
                 "init": init_value,
                 "port_name": port_name,
-                "struct_name": struct_name,
+                "struct_name": element_name,
                 "variable_type": base_properties.get("type"),
                 "description": base_properties.get("description"),
                 "unit": base_properties.get("unit"),
@@ -259,7 +259,7 @@ class ZCAL(BaseApplication):
                 self.zc_translations[signal_name] = []
             self.zc_translations[signal_name].append(translation)
             if update_bit:
-                update_bit_property = f"{struct_name}UpdateBit"
+                update_bit_property = f"{element_name}UpdateBit"
                 update_signal_name = f"yVc{group}_B_{update_bit_property}"
                 if signal_name == update_signal_name:
                     error_msg = f"Don't put updateBit status signals ({update_signal_name}) in yaml interface files."
@@ -277,8 +277,8 @@ class ZCAL(BaseApplication):
                         },
                         "init": 1,
                         "port_name": port_name,
-                        "struct_name": struct_name,
-                        "description": f"Update bit signal for signal {struct_name}.",
+                        "struct_name": element_name,
+                        "description": f"Update bit signal for signal {element_name}.",
                         "unit": None,
                         "dependability": False,
                         "update_bit": True
@@ -291,7 +291,7 @@ class ZCAL(BaseApplication):
                     error_msg = "E2e status not expected for outsignals"
                     raise BadYamlFormat(error_msg)
 
-                e2e_sts_property = f"{struct_name}E2eSts"
+                e2e_sts_property = f"{element_name}E2eSts"
                 e2e_sts_signal_name = f"sVc{group}_D_{e2e_sts_property}"
 
                 if signal_name == e2e_sts_signal_name:
@@ -311,7 +311,7 @@ class ZCAL(BaseApplication):
                             },
                             "init": 255,
                             "port_name": port_name,
-                            "struct_name": struct_name,
+                            "struct_name": element_name,
                             "description": f"E2E status code for E2E protected signal(s) {signal_name}.",
                             "unit": None,
                             "debug": False,
