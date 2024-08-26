@@ -164,7 +164,7 @@ class TestCompositionYaml(unittest.TestCase):
 
     def test_composition_yaml_with_dids(self):
         """Checking that the dict is generated correctly, with DIDs."""
-        self.zc_dids.project_dids = {"DID1": {"dummy_data": {}}}
+        self.zc_dids.project_dids = {"DID1": {"type": "UInt8"}}
         self.zc_spec["Diagnostics"] = composition_yaml_with_dids.diagnostics
         with patch.object(
             CompositionYaml,

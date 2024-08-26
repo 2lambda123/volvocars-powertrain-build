@@ -298,46 +298,27 @@ class CompositionYaml(ProblemLogger):
 
         return trigger_signal
 
-    def _get_diagnostic_event_info(self, event_dict):
-        """Get diagnostic event information from an even dictionary.
-
-        Args:
-            event_dict (dict): Dict with event information.
-        Returns:
-            valid_event_dict (dict): Dict with diagnostic event information supported by yaml2arxml script.
-        """
-        valid_event_dict = {}
-        dtcs = self.zc_core.get_diagnostic_trouble_codes(event_dict)
-        for dtc_name, dtc_data in dtcs.items():
-            valid_event_dict[dtc_name] = {"operations": dtc_data["operations"], "runnable": dtc_data["runnable"]}
-        return valid_event_dict
-
-    def _get_diagnostic_did_info(self, did_dict):
-        """Get diagnostic DID information from a DID dictionary.
-        NOTE: This function sets the valid_dids property of the ZCDIDs object.
-
-        Args:
-            did_dict (dict): Dict with DID information.
-        Returns:
-            valid_did_dict (dict): Dict with diagnostic DID information supported by yaml2arxml script.
-        """
-        valid_did_dict = {}
-        self.zc_dids.valid_dids = did_dict
-        for did_name, did_data in self.zc_dids.valid_dids.items():
-            valid_did_dict[did_name] = {"operations": did_data["operations"]}
-        return valid_did_dict
-
     def _get_diagnostic_info(self):
         """Get diagnostic information from composition spec.
+        NOTE: This function sets the valid_dids property of the ZCDIDs object.
 
         Returns:
             (dict): Dict containing diagnostic information.
         """
-        diag_dict = self.composition_spec.get("Diagnostics", {})
-        return {
-            "events": self._get_diagnostic_event_info(diag_dict.get("events", {})),
-            "dids": self._get_diagnostic_did_info(diag_dict.get("dids", {})),
-        }
+        diag_dict = {}
+        diagnostics = self.composition_spec.get("Diagnostics", {})
+        dids = diagnostics.get("dids", {})
+        events = diagnostics.get("events", {})
+        rids = diagnostics.get("rids", {})
+        if dids:
+            self.zc_dids.valid_dids = dids
+            diag_dict["dids"] = self.zc_dids.valid_dids
+        if events:
+            diag_dict["events"] = self.zc_core.get_diagnostic_trouble_codes(events)
+        if rids:
+            diag_dict["rids"] = rids
+            self.warning('Will not generate code for RIDs, add manually.')
+        return diag_dict
 
     def _get_ports_info(self):
         """Creates a dict containing port information.

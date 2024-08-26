@@ -12,9 +12,11 @@ from pybuild.build_proj_config import BuildProjConfig
 from pybuild.dids import DIDs, HIDIDs, ZCDIDs
 from test_data.pybuild.test_dids.zc_dids import (
     dummy_project_dids,
+    bad_dummy_project_dids,
     valid_dids,
     bad_valid_dids,
     test_valid_dids_setter_expected,
+    test_get_operation_data_did_data,
     test_get_operation_data_expected,
     TEST_GET_HEADER_FILE_CONTENT_EXPECTED,
     TEST_GET_SOURCE_FILE_CONTENT_EXPECTED,
@@ -990,16 +992,33 @@ class TestZCDIDs(unittest.TestCase):
 
     def test_valid_dids_setter(self):
         """Test setting property ZCDIDs.valid_dids."""
-        self.zc_dids.valid_dids = {}
-        self.assertDictEqual(self.zc_dids.valid_dids, {})
-
         self.zc_dids.valid_dids = bad_valid_dids
         self.assertDictEqual(self.zc_dids.valid_dids, test_valid_dids_setter_expected)
 
+    def test_valid_dids_setter_none(self):
+        """Test setting property ZCDIDs.valid_dids with no dids."""
+        self.zc_dids.valid_dids = {}
+        self.assertDictEqual(self.zc_dids.valid_dids, {})
+
+    def test_valid_dids_setter_bad_project_dids(self):
+        """Test setting property ZCDIDs.valid_dids with project DIDs of wrong data type."""
+        self.zc_dids.project_dids = bad_dummy_project_dids
+        self.zc_dids.valid_dids = valid_dids
+        self.assertDictEqual(self.zc_dids.valid_dids, {})
+
+    def test_get_operation_data_none(self):
+        """Test ZCDIDs.get_operation_data with unsupported operation."""
+        self.assertIsNone(self.zc_dids.get_operation_data('Dummy', test_get_operation_data_did_data['dummy_did_one']))
+
     def test_get_operation_data(self):
         """Test ZCDIDs.get_operation_data."""
-        result = self.zc_dids.get_operation_data()
-        self.assertDictEqual(result, test_get_operation_data_expected)
+        result = self.zc_dids.get_operation_data('ReadData', test_get_operation_data_did_data['dummy_did_one'])
+        self.assertDictEqual(result, test_get_operation_data_expected['dummy_did_one']['ReadData'])
+
+    def test_get_operation_data_array(self):
+        """Test ZCDIDs.get_operation_data with DID byte size bigger than one."""
+        result = self.zc_dids.get_operation_data('ReadData', test_get_operation_data_did_data['dummy_did_two'])
+        self.assertDictEqual(result, test_get_operation_data_expected['dummy_did_two']['ReadData'])
 
     def test_get_header_file_content_no_dids(self):
         """Test ZCDIDs._get_header_file_content without DIDs."""

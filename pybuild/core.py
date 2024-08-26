@@ -337,12 +337,12 @@ class ZCCore(ProblemLogger):
         Returns:
             (dict): Dict of DTCs, project yaml dict where the keys also appear in the project.
         """
-        yaml_dtcs = set(event_data.keys())
-        dtcs_not_in_yaml = self.project_dtcs - yaml_dtcs
+        valid_dtcs = {}
+
+        dtcs_not_in_yaml = self.project_dtcs - set(event_data.keys())
         for key in dtcs_not_in_yaml:
             self.warning(f'Ignoring DTC {key} since it does not appear in the project diagnostics yaml file.')
 
-        valid_dtcs = {}
         supported_operations = {"SetEventStatus"}
         for dtc_name, dtc_data in event_data.items():
             if dtc_name not in self.project_dtcs:
