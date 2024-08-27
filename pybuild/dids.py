@@ -15,7 +15,7 @@ from ruamel.yaml import YAML
 from pybuild import build_defs
 from pybuild.lib.helper_functions import deep_dict_update
 from pybuild.problem_logger import ProblemLogger
-from pybuild.types import get_ec_type, get_float32_types
+from pybuild.types import byte_size, get_ec_type, get_float32_types
 from pybuild.unit_configs import CodeGenerators
 
 
@@ -637,28 +637,19 @@ class ZCDIDs(ProblemLogger):
         """
         self._valid_dids = {}
 
-        yaml_did_names = set(yaml_dids.keys())
-        dids_not_in_project = yaml_did_names - set(self.project_dids.keys())
-        for did in dids_not_in_project:
-            self.warning(f'Ignoring DID {did}, not defined in any model.')
+        dids_not_in_yaml = set(self.project_dids.keys()) - set(yaml_dids.keys())
+        for did in dids_not_in_yaml:
+            self.warning(f'DID {did} not defined in project diagnostics yaml file.')
 
-        supported_operations = set(self.get_operation_data().keys())
-        for did, did_data in self.project_dids.items():
-            if did not in yaml_dids:
-                self.warning(f'DID {did} not defined in project diagnostics yaml file.')
+        for did, did_data in yaml_dids.items():
+            if did not in self.project_dids:
+                self.warning(f'Ignoring DID {did}, not defined in any model.')
                 continue
-
-            yaml_operations = set(yaml_dids[did]['operations'].keys())
-            if not yaml_operations.issubset(supported_operations):
-                self.warning(f'Ignoring unsupported operations {yaml_operations - supported_operations} for DID {did}.')
-
-            operations = {
-                "operations": {
-                    operation: {} for operation in supported_operations
-                }
-            }
-
-            self._valid_dids[did] = deep_dict_update(did_data, operations)
+            data_type = self.project_dids[did]['type']
+            if not data_type.startswith('UInt'):
+                self.warning(f'Ignoring DID {did} of type {data_type}, only unsigned integers are supported.')
+                continue
+            self._valid_dids[did] = did_data
 
     def _get_project_dids(self):
         """Return a dict with DIDs defined in the project.
@@ -673,27 +664,42 @@ class ZCDIDs(ProblemLogger):
             return {}
         return project_dids
 
-    def get_operation_data(self, operation=None):
+    def get_operation_data(self, operation, did_data):
         """Get operation function data of supported operations.
 
         Args:
             operation (str): Operation to get data for.
+            did_data (dict): DID data.
         Returns:
             (dict): Operation function data.
         """
+        array_size = byte_size(did_data['type'])
+        if array_size > 1:
+            read_data_declaration = f'UInt8 Run_{did_data["name"]}_ReadData(UInt8 Data[{array_size}])'
+            read_data_definition = (
+                '{\n'
+                f'  for (UInt8 i = 0U; i < {array_size}; i++) {{\n'
+                f'    Data[i] = ({did_data["name"]} >> (8 * i)) & 0xFF;\n'
+                '  }\n'
+                '  return 0U;\n'
+                '}\n'
+            )
+        else:
+            read_data_declaration = f'UInt8 Run_{did_data["name"]}_ReadData(UInt8 *Data)'
+            read_data_definition = (
+                '{\n'
+                f'  *Data = {did_data["name"]};\n'
+                '  return 0U;\n'
+                '}\n'
+            )
         operation_data = {
             'ReadData': {
-                'declaration': 'UInt8 Run_{did_name}_ReadData({data_type} *Data)',
-                'body': (
-                    '{{\n'
-                    '  *Data = {did_name};\n'
-                    '  return 0U;\n'
-                    '}}\n'
-                ),
+                'declaration': read_data_declaration,
+                'body': read_data_definition,
             }
         }
-        if operation is None:
-            return operation_data
+        if operation not in operation_data:
+            return None
         return operation_data[operation]
 
     def _get_header_file_content(self):
@@ -717,23 +723,30 @@ class ZCDIDs(ProblemLogger):
         if not self.valid_dids:
             return header + footer
 
-        body = [f'#include "{build_defs.PREDECL_DISP_ASIL_D_START}"\n']
-        for did_data in self.valid_dids.values():
-            define = did_data["class"].split('/')[-1]  # E.q. for ASIL D it is ASIL_D/CVC_DISP_ASIL_D
-            body.append(f'extern {define} {did_data["type"]} {did_data["name"]};\n')
-        body.append(f'#include "{build_defs.PREDECL_DISP_ASIL_D_END}"\n')
-
-        body.append(f'\n#include "{build_defs.PREDECL_CODE_ASIL_D_START}"\n')
-        for did_data in self.valid_dids.values():
-            body.extend(
-                [
-                    self.get_operation_data(operation)['declaration'].format(
-                        did_name=did_data["name"],
-                        data_type=did_data["type"]
-                    ) + ';\n' for operation in did_data["operations"]
-                ]
+        variable_declarations = []
+        function_declarations = []
+        for did, did_data in self.valid_dids.items():
+            define = self.project_dids[did]["class"].split('/')[-1]  # E.q. for ASIL D it is ASIL_D/CVC_DISP_ASIL_D
+            variable_declarations.append(
+                f'extern {define} {self.project_dids[did]["type"]} {self.project_dids[did]["name"]};\n'
             )
-        body.append(f'#include "{build_defs.PREDECL_CODE_ASIL_D_END}"\n')
+            for operation in did_data["operations"]:
+                operation_data = self.get_operation_data(operation, self.project_dids[did])
+                if operation_data is None:
+                    self.warning(
+                        f'Will not generate code for unsupported operation {operation}. Add manually for DID {did}.'
+                    )
+                    continue
+                function_declarations.append(operation_data['declaration'] + ';\n')
+
+        body = [
+            f'#include "{build_defs.PREDECL_DISP_ASIL_D_START}"\n',
+            *variable_declarations,
+            f'#include "{build_defs.PREDECL_DISP_ASIL_D_END}"\n',
+            f'\n#include "{build_defs.PREDECL_CODE_ASIL_D_START}"\n',
+            *function_declarations,
+            f'#include "{build_defs.PREDECL_CODE_ASIL_D_END}"\n',
+        ]
 
         return header + body + footer
 
@@ -752,14 +765,12 @@ class ZCDIDs(ProblemLogger):
             return header
 
         body = [f'#include "{build_defs.CVC_CODE_ASIL_D_START}"\n']
-        for did_data in self.valid_dids.values():
+        for did, did_data in self.valid_dids.items():
             for operation in did_data["operations"]:
-                body.append(
-                    self.get_operation_data(operation)['declaration'].format(
-                        did_name=did_data["name"],
-                        data_type=did_data["type"]
-                    ) + '\n' + self.get_operation_data(operation)['body'].format(did_name=did_data["name"])
-                )
+                operation_data = self.get_operation_data(operation, self.project_dids[did])
+                if operation_data is None:
+                    continue  # Warning already given in header generation
+                body.append(operation_data['declaration'] + '\n' + operation_data['body'])
         body.append(f'#include "{build_defs.CVC_CODE_ASIL_D_END}"\n')
 
         return header + body
