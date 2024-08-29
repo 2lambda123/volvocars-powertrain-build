@@ -3,6 +3,7 @@
       jobs:
         - noop
         - powertrain-build-tox
+        - powertrain-build-blackduck
     gate:
       jobs:
         - noop
