@@ -308,10 +308,10 @@ class CompositionYaml(ProblemLogger):
         diag_dict = {}
         diagnostics = self.composition_spec.get("Diagnostics", {})
         dids = diagnostics.get("dids", {})
+        self.zc_dids.valid_dids = dids
         events = diagnostics.get("events", {})
         rids = diagnostics.get("rids", {})
         if dids:
-            self.zc_dids.valid_dids = dids
             diag_dict["dids"] = self.zc_dids.valid_dids
         if events:
             diag_dict["events"] = self.zc_core.get_diagnostic_trouble_codes(events)
