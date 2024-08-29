@@ -5,7 +5,7 @@ Copyright 2024
 Phase: DEVELOPMENT
 Distribution: EXTERNAL
 
-Components:
+Components: 
 
 exceptiongroup 1.2.2 : MIT License
 flake8 7.1.1 : MIT License
@@ -15,24 +15,25 @@ idna 3.8 : BSD 3-clause "New" or "Revised" License
 mccabe 0.7.0 : Expat License
 NumPy 1.24.4 : BSD 3-clause "New" or "Revised" License
 Packaging 24.1 : (Apache License 2.0 AND BSD 3-clause "New" or "Revised" License)
-pbr 6.0.0 : Apache License 2.0
+pbr 6.1.0 : Apache License 2.0
+powertrain-build 0.1.0 : Apache License 2.0
 psf-requests 2.32.3 : Apache License 2.0
 pycodestyle 2.12.1 : MIT License
 Pyflakes 3.2.0 : MIT License
-pytest 8.3.2 : MIT License
+pytest 8.3.3 : MIT License
 python3-charset-normalizer 3.3.2 : MIT License
 python-certifi 2024.7.4 : Mozilla Public License 2.0
-python-pluggy 1.5.0 : Expat License
+python-pluggy 1.5.0 : MIT License
 RonnyPfannschmidt/iniconfig 2.0.0 : MIT License
 ruamel-yaml 0.18.6 : MIT License
 ruamel.yaml.clib 0.2.8 : MIT License
 SciPy 1.9.1 : BSD 3-clause "New" or "Revised" License
 smmap 5.0.1 : BSD 3-clause "New" or "Revised" License
 tomli 2.0.1 : MIT License
-urllib3 2.2.2 : MIT License
+urllib3 2.2.3 : MIT License
 voluptuous 0.15.2 : BSD 3-clause "New" or "Revised" License
 
-Copyright Text:
+Copyright Text: 
 
 exceptiongroup 1.2.2 pypi:exceptiongroup/1.2.2
 	Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
@@ -48,6 +49,8 @@ GitPython 3.1.43 pypi:GitPython/3.1.43
 	Copyright (C) 2008, 2009 Michael Trier and contributors, 2010-2015 Sebastian Thiel"
 	Copyright (C) 2008, 2009 Michael Trier and contributorsAll rights reserved
 	Copyright (C) 2008, 2009 Michael Trier (mtrier@gmail.com) and contributors
+idna 3.8 pypi:idna/3.8
+	Copyright (c) 2013-2024, Kim Davies and contributors.All rights reserved
 mccabe 0.7.0 pypi:mccabe/0.7.0
 	Copyright © 2011-2013 Tarek Ziade <tarek@ziade.org>
 	Copyright © 2013 Florent Xicluna <florent.xicluna@gmail.com>
@@ -106,10 +109,10 @@ NumPy 1.24.4 pypi:numpy/1.24.4
 	Copyright (C) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>
 	Copyright (C) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>
 	Copyright (C) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>
-	Copyright (C) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>  This software is provided 'as-is', without any express or implied  warranty.  In no event will the authors be held liable for any
+	Copyright (C) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>  This software is provided 'as-is', without any express or implied  warranty.  In no event will the authors be held liable for any 
 	Copyright (c) Donald Stufft and individual contributors.# All rights reserved
 	Copyright (c) Donald Stufft and individual contributors.# All rights reserved
-	(C) or column-major (Fortran) order. The function * array_from_pyobj is very flexible about its Python object argument * that can be any number, list, tuple, or array. * * array_from_pyobj is
+	(C) or column-major (Fortran) order. The function * array_from_pyobj is very flexible about its Python object argument * that can be any number, list, tuple, or array. * * array_from_pyobj is 
 	(C) or column-major (Fortran) order. The function * array_from_pyobj is very flexible about its Python object argument * that can be any number, list, tuple, or array. * * array_from_pyobj is used
 	(C)        The data is in a single, C-style contiguous segment.    F_CONTIGUOUS (F)        The data is in a single, Fortran-style contiguous segment.    OWNDATA (O)        The array owns the
 	(C)        The data is in a single, C-style contiguous segment.    F_CONTIGUOUS (F)        The data is in a single, Fortran-style contiguous segment.    OWNDATA (O)        The array owns the memo
@@ -118,7 +121,7 @@ NumPy 1.24.4 pypi:numpy/1.24.4
 Packaging 24.1 pypi:packaging/24.1
 	copyright = ABOUT
 	Copyright (c) Donald Stufft and individual contributors.All rights reserved
-pbr 6.0.0 pypi:pbr/6.0.0
+pbr 6.1.0 pypi:pbr/6.1.0
 	Copyright 2010-2011 OpenStack Foundation
 	Copyright 2011 OpenStack Foundation
 	Copyright 2012-2013 Hewlett-Packard Development Company, L.P.
@@ -136,6 +139,2550 @@ pbr 6.0.0 pypi:pbr/6.0.0
 	Copyright (c) 2013 Testrepository Contributors
 	Copyright (c) 2015 Hewlett-Packard Development Company, L.P. (HP)
 	Copyright (C) 2020 Red Hat, Inc.
+powertrain-build 0.1.0 pypi:powertrain-build/0.1.0
+	(C) 2003, C. Bond. All rights reserved
+	(C) 2015-2020 Niall Douglas <http://www.nedproductions.biz/> (7 commits)File Created: August 2015
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (10 commits)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (10 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (11 commits)File Created: July 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (12 commits)File Created: Nov 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (12 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (13 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (14 commits)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (1 commit)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (20 commits)File Created: July 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (20 commits)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (21 commits)File Created: July 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (225 commits)
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (24 commits)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (25 commits)File Created: July 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (2 commits)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (2 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (3 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (4 commits)
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (6 commits) and Andrzej KrzemieFile Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (6 commits)File Created: Aug 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (6 commits)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (6 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (7 commits)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (7 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (8 commits)File Created: June 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (8 commits)File Created: Oct 2017
+	(C) 2017-2020 Niall Douglas <http://www.nedproductions.biz/> (9 commits)File Created: Oct 2017
+	(C) 2018 - 2019 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: Feb 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (11 commits)File Created: Apr 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (17 commits)File Created: Apr 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (3 commits)File Created: March 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (4 commits)File Created: Mar 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (4 commits)File Created: Sep 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: Aug 2018
+	(C) 2018 - 2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: Feb 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: Feb 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: Jun 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: June 2018
+	(C) 2018 - 2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: May 2020
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: Sep 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (6 commits)File Created: March 2018
+	(C) 2018-2020 Niall Douglas <http://www.nedproductions.biz/> (8 commits)File Created: March 2018
+	(C) 2019-2020 Niall Douglas <http://www.nedproductions.biz/> (12 commits)File Created: Oct 2019
+	(C) 2020 Niall Douglas <http://www.nedproductions.biz/> (11 commits)File Created: Jan 2020
+	(C) 2020 Niall Douglas <http://www.nedproductions.biz/> (5 commits)File Created: Jan 2020
+	(C)        A = A
+	(C) ACM, 2011. http://doi.acm.org/10.1145/1916461.1916469
+	(C) and B by diag(R)
+	(C) as c:    ...
+	(C) as c:            del c
+	(C) as c:            pass
+	(C)        assert_array_equal(C
+	(C)        assert_array_equal(C.A, D.A)
+	(C)        assert_array_equal(C        assert_array_equal(C
+	(C)    assert_array_equal(row_ind, np.arange(n))    assert_array_equal(col_ind, np.arange(n))
+	(C)        assert_equal(type(c
+	(C)        assert_equal(type(np.polyval(
+	(C)        assert_equal(type(np.polyval(    def test_polyvalfromroots(self):	(C)np.asanyarray(A)np.asanyarray(B)np.asanyarray(B, dtype=int)	(C)np.ascontiguousarray(A)np.ascontiguousarray(B)	(C)np.a
+	(C)    assert len(row_ind) == 0    assert len(col_ind) == 0
+	(C)*B (if options->Trans
+	(C)*B (if trans =
+	(C)*B (if trans =
+	(C)* BOOST_CONTRACT_DETAIL_NAME1(obj) \            BOOST_CONTRACT_DETAIL_TVARIADIC_COMMA(arity) \            BOOST_CONTRACT_DETAIL_TVARIADIC_FPARAMS_Z(z, arity, \                BOOST_CONTRACT_DETA
+	(C) BOOST_MPL_AUX_VALUE_WKND(C)
+	(C)   \    BOOST_SERIALIZATION_COLLECTION_TRAITS_HELPER(wchar_t, C)        \    /
+	(C) Copyright 2002, 2003 Beman Dawes   Boost.Filesystem
+	(C) Copyright 2002-2008, Fernando Luis Cacciola Carballal.
+	(C) Copyright 2002-2008 Robert Ramey and Joaquin M Lopez Munoz
+	(C) Copyright 2002-2009 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2002-2014 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2002-2020 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2002-4 Pavel Vozenilek .
+	(C) Copyright 2002 Rani Sharoni (rani_sharoni@hotmail.com) and Robert Ramey
+	(C) Copyright 2002 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2003-2007 Jonathan Turkanis
+	(C) Copyright 2003-4 Pavel Vozenilek and Robert Ramey - http://www.rrsd.com.
+	(C) Copyright 2004-2007 Jonathan Turkanis
+	(C) Copyright 2004-2009 Robert Ramey, Martin Ecker and Takatoshi Kondo
+	(C) Copyright 2004 Pavel Vozenilek.
+	(C) Copyright 2004 Robert Ramey and Martin Ecker
+	(C) Copyright 2004 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2005-2006 Matthias Troyer
+	(C) Copyright 2005-2007 Jonathan Turkanis
+	(C) Copyright 2005-2007 Matthias Troyer
+	(C) Copyright 2005-7 Anthony Williams
+	(C) Copyright 2005-8 Anthony Williams
+	(C) Copyright 2005 John Maddock
+	(C) Copyright 2005  Matthias Troyer
+	(C) Copyright 2005 Matthias Troyer .
+	(C) Copyright 2005 Matthias Troyer
+	(C) Copyright 2005 Matthias Troyer and Dave Abrahams
+	(C) Copyright 2005 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2005 Robert Ramey - http://www.rrsd.com
+	(C) Copyright 2006-7 Anthony Williams
+	(C) Copyright 2006-8 Anthony Williams
+	(C) Copyright 2006 David Abrahams - http://www.boost.org.// implementation of class export functionality.  This is an alternative to// "forward declaration" method to provoke instantiation of derive
+	(C) Copyright 2006 Douglas Gregor <doug.gregor -at gmail.com>
+	(C) Copyright 2006 Douglas Gregor <doug.gregor -at- gmail.com>
+	(C) Copyright 2007-10 Anthony Williams
+	(C) Copyright 2007, 2008 Steven Watanabe, Joseph Gauterin, Niels Dekker
+	(C) Copyright 2007-2009 Andrew Sutton
+	(C) Copyright 2007-2010 Anthony Williams
+	(C) Copyright 2007-8 Anthony Williams
+	(C) Copyright 2007-9 Anthony Williams
+	(C) Copyright 2007 Andrew Sutton
+	(C) Copyright 2007 Anthony Williams
+	(C) Copyright 2007 David Deakins
+	(C) Copyright 2007 Matthias Troyer .
+	(C) Copyright 2007 Matthias Troyer
+	(C) Copyright 2007 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2008-10 Anthony Williams
+	(C) Copyright 2008-2009,2012 Vicente J. Botet Escriba
+	(C) Copyright 2008-9 Anthony Williams
+	(C) Copyright 2008 Anthony Williams
+	(C) Copyright 2008 CodeRage, LLC (turkanis at coderage dot com)
+	(C) Copyright 2008 Matthias Troyer
+	(C) Copyright 2008 Robert Ramey
+	(C) Copyright 2009-2011 Frederic Bron.
+	(C) Copyright 2009-2011 Frederic Bron, Robert Stewart, Steven Watanabe
+	(C) Copyright 2009-2012 Anthony Williams
+	(C) Copyright 2009-2012 Vicente J. Botet Escriba
+	(C) Copyright 2009 Eric Bose-Wolf
+	(C) Copyright 2009 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2010-2011 Vicente J. Botet Escriba
+	(C) Copyright 2010 Daniel James
+	(C) Copyright 2010 Just Software Solutions Ltd http://www.justsoftwaresolutions.co.uk
+	(C) Copyright 2010 Robert Ramey
+	(C) Copyright 2010 Vicente J. Botet Escriba
+	(C) Copyright 2011-2012,2015 Vicente J. Botet Escriba
+	(C) Copyright 2011,2012,2015 Vicente J. Botet Escriba
+	(C) Copyright 2011-2012,2017-2018 Vicente J. Botet Escriba
+	(C) Copyright 2011-2012 Vicente J. Botet Escriba
+	(C) Copyright 2011-2013 Vicente J. Botet Escriba
+	(C) Copyright 2011-2015 Vicente J. Botet Escriba
+	(C) Copyright 2011 Vicente J. Botet Escriba
+	(C) Copyright 2011Vicente J. Botet Escriba
+	(C) Copyright 2012 Vicente Botet
+	(C) Copyright 2012 Vicente J. Botet Escriba
+	(C) Copyright 2013,2014 Vicente J. Botet Escriba
+	(C) Copyright 2013,2015 Vicente J. Botet Escriba
+	(C) Copyright 2013, 2020 Andrey Semashev
+	(C) Copyright 2013 Andrey Semashev
+	(C) Copyright 2013 Ruslan Baratov
+	(C) Copyright 2013 Tim Blechmann
+	(C) Copyright 2013 Vicente J. Botet Escriba
+	(C) Copyright 2014 Jim Bell
+	(C) Copyright 2014 Robert Ramey - http://www.rrsd.com .
+	(C) Copyright 2014 Vicente J. Botet Escriba
+	(C) Copyright 2016 Ashish Sadanandan
+	(C) Copyright 2016 Raffi Enficiaud.
+	(C) Copyright 2017 Andrey Semashev
+	(C) Copyright 2020  Robert Ramey
+	(C) Copyright Aleksey Gurtovoy 2002.
+	(C) Copyright Aleksey Gurtovoy 2002 - 2003.
+	(C) Copyright Aleksey Gurtovoy 2003.
+	(c) Copyright Andreas Huber Doenni 2002-2005, Eric Niebler 2006
+	(C) Copyright Andrew Sutton 2007
+	(C) Copyright Andrey Semashev 2017.
+	(C) Copyright Anton Bikineev 2014
+	(C) Copyright Antony Polukhin 2013.
+	(C) Copyright Antony Polukhin 2014.
+	(C) Copyright Artyom Beilis 2010.
+	(C) Copyright Balint Cserni 2017
+	(C) Copyright Beman Dawes 1999.
+	(C) Copyright Beman Dawes 1999-2003. Distributed under the Boost
+	(C) Copyright Beman Dawes 2000. Distributed under the Boost
+	(C) Copyright Beman Dawes 2001.
+	(C) Copyright Beman Dawes 2001 - 2003.
+	(C) Copyright Beman Dawes 2002
+	(C) Copyright Beman Dawes 2002 - 2003.
+	(C) Copyright Beman Dawes 2003.
+	(C) Copyright Beman Dawes 2006, 2009, 2014
+	(C) Copyright Benedek Thaler 2015-2016
+	(C) Copyright Bill Kempf 2001.
+	(C) Copyright Bill Kempf 2002.
+	(C) Copyright Boris Gubenko 2006 - 2007.
+	(C) Copyright Boris Gubenko 2007.
+	(C) Copyright Boris Rasin 2014.
+	(C) Copyright Boris Rasin and Antony Polukhin 2014-2019.
+	(C) Copyright Brian Kuhl 2016.
+	(C) Copyright Bruno Lalande 2008.
+	(C) Copyright Bryce Lelbach 2010
+	(C) Copyright Bryce Lelbach 2011
+	(C) Copyright Christopher Jefferson 2011.
+	(C) Copyright Craig Henderson 2002.
+	(C) Copyright Daniel Frey 2002-2017.
+	(C) Copyright Daniel Frey and Robert Ramey 2009.
+	(C) Copyright Daniel K. O. 2005.
+	(C) Copyright Daniel Wallin 2004.
+	(C) Copyright Darin Adler 2000
+	(C) Copyright Darin Adler 2001.
+	(C) Copyright Darin Adler 2001
+	(C) Copyright Darin Adler 2001 - 2002.
+	(C) Copyright Daryle Walker 2000-2001.
+	(C) Copyright Daryle Walker 2001.
+	(C) Copyright Daryle Walker 2001-2002.
+	(C) Copyright Daryle Walker 2001, 2006.
+	(C) Copyright Daryle Walker and Stephen Cleary 2001-2002.
+	(C) Copyright Dave Abrahams and Daniel Walker 1999-2003.
+	(C) Copyright Dave Abrahams and Daryle Walker 2001. Distributed under the Boost
+	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,
+	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes, Howard
+	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,//      Howard Hinnant and John Maddock 2000.
+	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,//      Howard Hinnant and John Maddock 2000, 2010.
+	(C) Copyright David Abrahams 2000.
+	(C) Copyright David Abrahams 2001.
+	(C) Copyright David Abrahams 2001 - 2002.
+	(C) Copyright David Abrahams 2001, Howard Hinnant 2001.
+	(C) Copyright David Abrahams 2002.
+	(C) Copyright David Abrahams 2002 - 2003.
+	(C) Copyright David Abrahams 2003.
+	(C) Copyright David Abrahams 2004.
+	(C) Copyright David Abrahams, Jeremy Siek, Daryle Walker 1999-2001.
+	(C) Copyright David Abrahams Steve Cleary, Beman Dawes, Howard
+	(C) Copyright David Abrahams, Vicente Botet 2009.
+	(C) Copyright Douglas Gregor 2001.
+	(C) Copyright Douglas Gregor 2002.
+	(C) Copyright Douglas Gregor 2010
+	(C) Copyright Dustin Spicuzza 2009.
+	(C) Copyright Edward Diener 2011.
+	(C) Copyright Edward Diener 2011,2012
+	(C) Copyright Edward Diener 2011,2012,2013
+	(C) Copyright Edward Diener 2011,2012,2019
+	(C) Copyright Edward Diener 2011,2013.
+	(C) Copyright Edward Diener 2011,2014.
+	(C) Copyright Edward Diener 2011-2015
+	(C) Copyright Edward Diener 2011-2015,2019
+	(C) Copyright Edward Diener 2011-2020.
+	(C) Copyright Edward Diener 2012
+	(C) Copyright Edward Diener 2012,2013
+	(C) Copyright Edward Diener 2012,2013,2019
+	(C) Copyright Edward Diener 2013.
+	(C) Copyright Edward Diener 2014.
+	(C) Copyright Edward Diener 2014,2019.
+	(C) Copyright Edward Diener 2015.
+	(C) Copyright Edward Diener 2015
+	(C) Copyright Edward Diener 2016.
+	(C) Copyright Edward Diener 2019.
+	(C) Copyright Edward Diener 2019
+	(C) Copyright Edward Diener 2020.
+	(C) Copyright Edward Diener 2020
+	(C) Copyright Eric Ford
+	(C) Copyright Eric Ford 2001
+	(C) Copyright Eric Friedman 2002-2003.
+	(C) Copyright Eric Jourdanneau, Joel Falcou 2010
+	(C) Copyright Eric Niebler 2004-2005
+	(c) Copyright Fernando Luis Cacciola Carballal 2000-2004
+	(C) Copyright Francois Faure, iMAGIS-GRAVIR / UJF, 2001.
+	(C) Copyright Gennadiy Rozental 2001.
+	(C) Copyright Gennaro Prota 2003.
+	(C) Copyright Gennaro Prota 2003 - 2004.
+	(C) Copyright Greg Colvin and Beman Dawes 1998, 1999.
+	(C) Copyright Guillaume Melquiond 2002 - 2003.
+	(C) Copyright Guillaume Melquiond 2003.
+	(C) Copyright Herve Bronnimann 2004.
+	(C) Copyright Howard Hinnant
+	(C) Copyright Howard Hinnant 2004
+	(C) Copyright Howard Hinnant 2007-2010. Distributed under the Boost
+	(C) Copyright Hubert Holin 2001.
+	(C) Copyright Hubert Holin 2003.
+	(C) Copyright Hubert Holin 2003-2005.");
+	(C) Copyright Hubert Holin and Daryle Walker 2001-2002.  Distributed under the Boost
+	(C) Copyright Ignacy Gawedzki 2010
+	(C) Copyright Ion Gaztanaga 2004-2015. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2005.
+	(C) Copyright Ion Gaztanaga 2005-2012.
+	(C) Copyright Ion Gaztanaga 2005-2012. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2005-2013.
+	(C) Copyright Ion Gaztanaga 2005-2013. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2005-2014. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2005-2015.
+	(C) Copyright Ion Gaztanaga 2005-2015. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2005-2016.
+	(C) Copyright Ion Gaztanaga 2006-2012.
+	(C) Copyright Ion Gaztanaga 2006-2012
+	(C) Copyright Ion Gaztanaga 2006-2012. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2006-2013.
+	(C) Copyright Ion Gaztanaga  2006-2013
+	(C) Copyright Ion Gaztanaga        2006-2014
+	(C) Copyright Ion Gaztanaga  2006-2014.
+	(C) Copyright Ion Gaztanaga  2006-2014
+	(C) Copyright Ion Gaztanaga 2006-2014. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2006-2015
+	(C) Copyright Ion Gaztanaga 2006. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2007-2012.
+	(C) Copyright Ion Gaztanaga 2007-2012. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2007-2013
+	(C) Copyright Ion Gaztanaga 2007-2013.
+	(C) Copyright Ion Gaztanaga 2007-2013
+	(C) Copyright Ion Gaztanaga 2007-2013. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2007-2014
+	(C) Copyright Ion Gaztanaga 2007-2014
+	(C) Copyright Ion Gaztanaga 2007-2014. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2008
+	(C) Copyright Ion Gaztanaga 2008-2012. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2008-2013
+	(C) Copyright Ion Gaztanaga 2008-2013. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2008-2015. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2009-2012.
+	(C) Copyright Ion Gaztanaga 2009-2012. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2009-2013.
+	(C) Copyright Ion Gaztanaga 2009. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2010-2012.
+	(C) Copyright Ion Gaztanaga 2010-2012. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2010-2013
+	(C) Copyright Ion Gaztanaga 2010-2016.
+	(C) Copyright Ion Gaztanaga 2011-2012. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2011-2013. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2011-2014. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2012-2012.
+	(C) Copyright Ion Gaztanaga 2012-2012. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2012-2013. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2012-2015.
+	(C) Copyright Ion Gaztanaga 2012-2016.
+	(C) Copyright Ion Gaztanaga  2013-2013
+	(C) Copyright Ion Gaztanaga 2013-2013. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2013-2014
+	(C) Copyright Ion Gaztanaga 2014.
+	(C) Copyright Ion Gaztanaga          2014-2014
+	(C) Copyright Ion Gaztanaga  2014-2014
+	(C) Copyright Ion Gaztanaga 2014-2014.
+	(C) Copyright Ion Gaztanaga 2014-2014. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2014-2015
+	(C) Copyright Ion Gaztanaga 2014-2015. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2014-2017. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2015-2015.
+	(C) Copyright Ion Gaztanaga 2015-2015. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2015-2016.
+	(C) Copyright Ion Gaztanaga  2015-2017.
+	(C) Copyright Ion Gaztanaga 2016-2016. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga  2017-2017
+	(C) Copyright Ion Gaztanaga 2017-2017.
+	(C) Copyright Ion Gaztanaga 2017-2017. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2017-2018.
+	(C) Copyright Ion Gaztanaga 2017-2018. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2018-2018. Distributed under the Boost
+	(C) Copyright Ion Gaztanaga 2019-2020. Distributed under the Boost
+	(C) Copyright Jens Mauer 2001
+	(C) Copyright Jens Maurer 2001.
+	(C) Copyright Jens Maurer 2001
+	(C) Copyright Jens Maurer 2001 - 2002.
+	(C) Copyright Jens Maurer 2001 - 2003.
+	(C) Copyright Jens Maurer 2002 - 2003.
+	(C) Copyright Jens Maurer 2003.
+	(C) Copyright Jeremiah Willcock 2004
+	(C) Copyright Jeremy Siek 1999.
+	(C) Copyright Jeremy Siek 1999-2001.
+	(C) Copyright Jeremy Siek 2000.
+	(C) Copyright Jeremy Siek 2001.
+	(C) Copyright Jeremy Siek, 2001.
+	(C) Copyright Jeremy Siek 2001. Use, modification and
+	(C) Copyright Jeremy Siek    2002.
+	(C) Copyright Jeremy Siek 2002.
+	(C) Copyright Jeremy Siek    2004.
+	(C) Copyright Jeremy Siek 2004
+	(C) Copyright Jeremy Siek 2006
+	(c) Copyright Jeremy Siek and John R. Bandela 2001.
+	(C) Copyright Jeremy William Murphy 2015.
+	(C) Copyright Jeremy William Murphy 2016.
+	(C) Copyright Jessica Hamilton 2014.
+	(C) Copyright Jim Douglas 2005.
+	(C) Copyright Joaquin M Lopez Munoz  2006-2013
+	(C) Copyright Joel de Guzman 2003.
+	(C) Copyright Johan Rade 2006.
+	(C) Copyright John Maddock
+	(C) Copyright John maddock 1999.
+	(C) Copyright John maddock 1999. Distributed under the Boost
+	(C) Copyright John Maddock 2000.
+	(C) Copyright John Maddock 2001.
+	(C) Copyright John Maddock 2001
+	(C) Copyright John Maddock 2001 - 2002.
+	(C) Copyright John Maddock 2001 - 2003.
+	(C) Copyright John Maddock 2001 - 2003
+	(C) Copyright John Maddock 2001-8.
+	(C) Copyright John Maddock 2002.
+	(C) Copyright John Maddock 2002 - 2003.
+	(c) Copyright John Maddock 2003
+	(C) Copyright John Maddock 2003.
+	(C) Copyright John Maddock 2005.
+	(C) Copyright John Maddock 2005-2006.
+	(C) Copyright John Maddock 2006.
+	(C) Copyright John Maddock 2006, 2015
+	(C) Copyright John Maddock 2006-7.
+	(C) Copyright John Maddock 2006-8.
+	(C) Copyright John Maddock 2007.
+	(C) Copyright John Maddock 2008.
+	(C) Copyright John Maddock 2010.
+	(C) Copyright John Maddock 2011.
+	(C) Copyright John Maddock 2015.
+	(C) Copyright John Maddock 2017.
+	(C) Copyright John Maddock 2018.
+	(C) Copyright John Maddock and Steve Cleary 2000.
+	(C) Copyright Jonathan Graehl 2004.
+	(C) Copyright Jonathan Turkanis 2003.
+	(C) Copyright Jonathan Turkanis 2004.
+	(C) Copyright Jonathan Turkanis 2004
+	(C) Copyright Jonathan Turkanis 2004-2005.
+	(C) Copyright Jorge Lodos 2008.
+	(c) Copyright Juergen Hunold 2008
+	(C) Copyright Kevlin Henney and Dave Abrahams 1999.
+	(C) Copyright Lie-Quan Lee 2001.
+	(C) Copyright Markus Schoepflin 2002 - 2003.
+	(C) Copyright Markus Schoepflin 2005.
+	(C) Copyright Markus Schoepflin 2007
+	(C) Copyright Martin Wille 2003.
+	(C) Copyright Mat Marcus, Jesse Jones and Adobe Systems Inc 2001
+	(C) Copyright Matthias Troyerk 2006.
+	(C) Copyright Michael Glassford 2004.
+	(C) Copyright Microsoft Corporation  2014
+	(C) Copyright Milan Svoboda 2008.
+	(C) Copyright Nick Thompson 2017.
+	(C) Copyright Nick Thompson 2018.
+	(C) Copyright Nick Thompson 2019.
+	(C) Copyright Nick Thompson 2020.
+	(C) Copyright Nicolai M. Josuttis 2001.
+	(C) Copyright Nicolai M. Josuttis 2001,// available at http://www.josuttis.com/cppcode/fdstream.html.
+	(C) Copyright Noel Belcourt 2007.
+	(C) Copyright Olaf Krzikalla 2004-2006.
+	(C) Copyright Orson Peters  2017.
+	(C) Copyright Pablo Halpern 2009. Distributed under the Boost
+	(C) Copyright Paul A. Bristow 2006.
+	(C) Copyright Paul A. Bristow 2011 (added changesign).
+	(C) Copyright Paul A. Bristow 2011 (added tests for changesign)
+	(C) Copyright Paul Mensonides 2002.
+	(C) Copyright Paul Mensonides 2002-2011.
+	(C) Copyright Paul Mensonides 2003.
+	(C) Copyright Paul Mensonides 2005.
+	(C) Copyright Paul Mensonides 2011.
+	(C) Copyright Paul Mensonides 2012.
+	(C) Copyright Paul Moore 1999. Permission to copy, use, modify, sell and
+	(C) Copyright Peter Dimov 2001.
+	(C) Copyright Peter Dimov 2001
+	(C) Copyright Peter Dimov 2001, 2002
+	(C) Copyright Peter Dimov 2001, 2002, 2003
+	(C) Copyright Peter Dimov 2002.
+	(C) Copyright Peter Dimov 2002
+	(C) Copyright Peter Dimov 2004-2005
+	(C) Copyright Peter Dimov 2008.
+	(C) Copyright Peter Dimov 2017.
+	(C) Copyright Peter Dimov 2019
+	(C) Copyright Peter Dimov and Multi Media Ltd. 2001, 2002, 2003
+	(c) Copyright Raffi Enficiaud 2017.
+	(C) Copyright Raffi Enficiaud 2018.
+	(C) Copyright Raffi Enficiaud 2019.
+	(C) Copyright Rani Sharoni 2003.
+	(C) Copyright Rani Sharoni 2003-2005.
+	(C) Copyright Reimar D// Based on zstd.hpp by:
+	(C) Copyright Rene Rivera 2005.
+	(C) Copyright Robert Ramey 2003. Jonathan Turkanis 2004.
+	(c) Copyright Robert Ramey 2004
+	(C) Copyright Roland Richter 2003.
+	(C) Copyright Ronald Garcia 2002. Permission to copy, use, modify, sell and// distribute this software is granted provided this copyright notice appears// in all copies. This software is provided "a
+	(C) Copyright Runar Undheim, Robert Ramey
+	(C) Copyright R.W. Grosse-Kunstleve 2002.
+	(C) Copyright Samuli-Petrus Korhonen 2017.
+	(C) Copyright Stefan Slapeta 2004.
+	(C) Copyright Stephen Cleary 2000.
+	(C) Copyright Stephen Cleary 2000
+	(C) Copyright Steve Cleary, Beman Dawes, Aleksey Gurtovoy, Howard Hinnant
+	(C) Copyright Steve Cleary, Beman Dawes, Howard Hinnant
+	(C) Copyright Synge Todo 2003.
+	(C) Copyright Thomas Claveirole 2010
+	(C) Copyright Thomas Witt    2002.
+	(C) Copyright Thorsten Ottosen 2002-2003. Use, modification and
+	(C) Copyright Thorsten Ottosen 2005.
+	(C) Copyright Thorsten Ottosen 2005
+	(C) Copyright Tobias Schwinger
+	(C) Copyright Toon Knapen    2001.
+	(C) Copyright Toon Knapen 2001 - 2003.
+	(C) Copyright Toon Knapen 2003.
+	(C) Copyright Vicente J. Botet Escriba 20010.
+	(C) Copyright Vicente J. Botet Escriba 2008-2009,2012. Distributed under the Boost
+	(C) Copyright Vicente J. Botet Escriba 2010.
+	(C) Copyright Vicente J. Botet Escriba 2013-2014. Distributed under the Boost
+	(C) Copyright Vicente J. Botet Escriba 2013-2017. Distributed under the Boost
+	(C) Copyright Vicente J. Botet Escriba 2014-2015. Distributed under the Boost
+	(C) Copyright Vicente J. Botet Escriba 2014. Distributed under the Boost
+	(C) Copyright Yuriy Krasnoschek 2009.
+	(C) c = span.innerHTML = C;          if (c.match(/
+	(C) David Abrahams 2002.  Distributed under the Boost
+	(C) ? DD_C_NAN : DD_C_ZERO);
+	(C) ? DD_C_ZERO : DD_C_NEGINF);
+	(C)        Dsp = self.spmatrix(D)        assert_almost_equal(Csp.multiply(Dsp).toarray(), C
+	(C)                elements.push_back(el);                                                                     // MAY THROW (C)
+	(C)*EPS) GO TO 1510         CONTINUE15         S=XA
+	(C) *           equed =
+	(C) *	     equed =
+	(C)        # fails if sparse or scalar; that
+	(C)              IF (DABS((WA-WA0)/WA).LT.EPS.AND.K.GT.10) GO TO 3010            WA0=WA        ELSE IF (W0.GT.2.5.AND.W0.LT.4.5) THEN           M=85           C=Z0           CF1=Z0           CF
+	(C) (if options->Trans = NOTRANS) or diag(R)
+	(C) (if options->Trans = NOTRANS) or diag(R)
+	(C) if sps.issparse(A) else A        c = c
+	(C)    # improve precision of result    for i in range(2):
+	(C) *               in order to obtain the solution to the original system.
+	(C) *inv(diag(C))
+	(C) is not known a priori, a conservative bound is:
+	(C)    MD, ND = _shape_or_none(D)
+	(C) needs to be assigned for the test
+	(C)        NM2=2        CALL KMN(M,N,C,CV,KD,DF,DN,CK1,CK2)        CALL LPMNS(M,NM2,X,PM,PD)        CALL LQMNS(M,NM2,X,QM,QD)        SU0=0.0D0        SW=0.0D0        DO 10 K=1,NM          J=2
+	Copyright 1984, 1987, 1988, 1992, 2000 by Stephen L. Moshier
+	Copyright 1984, 1987, 1988, 1992 by Stephen L. Moshier
+	Copyright 1984, 1987, 1988, 2000 by Stephen L. Moshier
+	Copyright 1984, 1987, 1988 by Stephen L. Moshier
+	Copyright 1984, 1987, 1988 by Stephen L. MoshierDirect inquiries to 30 Frost Street, Cambridge, MA 02140
+	Copyright 1984, 1987, 1989, 1992, 2000 by Stephen L. Moshier
+	Copyright 1984, 1987, 1989, 1992 by Stephen L. Moshier
+	Copyright 1984, 1987, 1989, 1995 by Stephen L. Moshier
+	Copyright 1984, 1987, 1989, 2000 by Stephen L. Moshier
+	Copyright 1984, 1987, 1989 by Stephen L. Moshier
+	Copyright 1984, 1987, 1992, 2000 by Stephen L. Moshier
+	Copyright 1984, 1987, 1993 by Stephen L. Moshier
+	Copyright 1984, 1987, 1995 by Stephen L. Moshier
+	Copyright 1984, 1987, 2000 by Stephen L. Moshier
+	Copyright 1984, 1987 by Stephen L. Moshier
+	Copyright 1984, 1991 by Stephen L. Moshier
+	Copyright 1984 - 1994 by Stephen L. Moshier
+	Copyright 1984, 1995, 2000 by Stephen L. Moshier
+	Copyright 1984, 1995 by Stephen L. Moshier
+	Copyright 1984, 1996 by Stephen L. Moshier
+	Copyright 1985, 1987, 1989 by Stephen L. Moshier
+	Copyright 1985, 1987, 2000 by Stephen L. Moshier
+	Copyright 1985, 1987 by Stephen L. Moshier
+	Copyright 1985 by Stephen L. Moshier
+	Copyright 1987-, A. Volgenant/Amsterdam School of Economics,
+	Copyright 1991: Dieter Kraft, FHMC
+	Copyright 1997, 1998, 1999, 2000 University of Notre Dame.
+	Copyright 1997, 1998, 1999, 2000 University of Notre Dame.// Authors: Andrew Lumsdaine, Lie-Quan Lee, Jeremy G. Siek
+	Copyright 1997-2001 University of Notre Dame.
+	Copyright 1997-2008 by Agner Fog.
+	Copyright 1999, 2000, 2001 Regents of the University of California.Released for unlimited redistribution.
+	Copyright 1999, 2000 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+	Copyright 1999,2000 Pearu Peterson all rights reserved
+	Copyright 1999-2003 Aleksey Gurtovoy.  Use, modification, and distribution are
+	Copyright 1999-2004 Pearu Peterson all rights reserved
+	Copyright 1999 - 2011 Pearu Peterson all rights reserved
+	Copyright 1999--2011 Pearu Peterson all rights reserved
+	Copyright 1999 Travis Oliphant
+	Copyright 2000 by Alan Genz.
+	Copyright 2000 Jens Maurer
+	Copyright 2000 Jeremy Siek (jsiek@lsc.nd.edu)
+	Copyright 2000 John Maddock (john@johnmaddock.co.uk)
+	Copyright 2000 Pearu Peterson all rights reserved
+	Copyright 2000 University of Notre Dame.
+	Copyright 2001, 2003, 2004, 2012 Daryle Walker.  Use, modification, and
+	Copyright 2001, 2004, 2011 Daryle Walker.
+	Copyright 2001-2005 Pearu Peterson all rights reserved
+	Copyright 2001 Indiana University
+	Copyright 2001 John Maddock.
+	Copyright 2001 Universite Joseph Fourier, Grenoble.
+	Copyright 2001 University of Notre Dame.
+	Copyright 2002-2003 Guillaume Melquiond
+	Copyright 2002-2003 Herv
+	Copyright 2002, 2005 Daryle Walker
+	Copyright 2002, 2005 Daryle Walker.  Use, modification, and distribution
+	Copyright 2002-2006 Andreas Huber Doenni
+	Copyright 2002-2007 Andreas Huber Doenni
+	Copyright 2002-2008 Andreas Huber Doenni
+	Copyright 2002-2008 by Agner Fog.
+	Copyright 2002, 2009, 2014 Peter Dimov
+	Copyright 2002, 2009 Peter Dimov
+	Copyright 2002-2010 Andreas Huber Doenni
+	Copyright 2002-2014 by Agner Fog.
+	Copyright 2002-2016 The SciPy Developers
+	Copyright 2002-2018 Peter Dimov
+	Copyright 2002, 2020 Peter Dimov
+	Copyright 2002 Aleksey Gurtovoy (agurtovoy@meta-comm.com)
+	Copyright 2002 Brad King and Douglas Gregor
+	Copyright 2002 Daryle Walker
+	Copyright 2002 Gary Strangman.  All rights reserved
+	Copyright 2002 Herv
+	Copyright 2002 H Lohninger, TU Wein
+	Copyright 2002 Indiana University.
+	Copyright 2002 Marc Wintermantel (wintermantel@even-ag.ch)
+	Copyright 2002 Pearu Peterson all rights reserved
+	Copyright 2002 Rensselaer Polytechnic Institute
+	Copyright 2002 The Trustees of Indiana University.
+	Copyright 2003-2005 Peter Dimov
+	Copyright 2003-2008 Joaquin M Lopez Munoz.
+	Copyright 2003 - 2011  LASMEA UMR 6602 CNRS/Univ. Clermont II
+	Copyright 2003-2013 Joaquin M Lopez Munoz.
+	Copyright 2003-2014 Joaquin M Lopez Munoz.
+	Copyright 2003-2015 Joaquin M Lopez Munoz.
+	Copyright 2003-2016 Joaquin M Lopez Munoz.
+	Copyright 2003-2017 Joaquin M Lopez Munoz.
+	Copyright 2003-2018 Joaquin M Lopez Munoz.
+	Copyright 2003-2019 Joaquin M Lopez Munoz.
+	Copyright 2003-2020 Joaquin M Lopez Munoz.
+	Copyright 2003 Bruce Barr
+	Copyright 2003 (c) The Trustees of Indiana University.
+	Copyright 2003 Guillaume Melquiond
+	Copyright 2003 Guillaume Melquiond, Sylvain Pion
+	Copyright 2003 Jeremy Siek
+	Copyright 2003 The Trustees of Indiana University
+	Copyright 2004-2005 by Enthought, Inc.
+	Copyright 2004-2005 Peter Dimov
+	Copyright 2004, 2005 The Trustees of Indiana University.
+	Copyright 2004, 2005 Trustees of Indiana University
+	Copyright 2004-2006 Peter Dimov
+	Copyright 2004-2006 The Trustees of Indiana University.
+	Copyright 2004-2008 by Agner Fog.
+	Copyright 2004-2008 Peter Dimov
+	Copyright 2004-2013 by Agner Fog.
+	Copyright 2004-5 The Trustees of Indiana University.
+	Copyright 2004-9 Trustees of Indiana University
+	copyright 2004 Brian Ravnsgaard Riis
+	Copyright 2004 Eric Niebler///////////////////////////////////////////////////////////////////////////////
+	Copyright 2004 Eric Niebler.
+	Copyright 2004 Eric Niebler
+	Copyright 2004 The Trustees of Indiana University.
+	Copyright 2004 The Trustees of Indiana University
+	Copyright 2005-2006 Andreas Huber Doenni
+	Copyright 2005-2007 Adobe Systems Incorporated
+	Copyright 2005-2008 Andreas Huber Doenni
+	Copyright 2005-2009 Daniel James.
+	Copyright 2005-2009 The Trustees of Indiana University.
+	Copyright 2005-2011 Daniel James.
+	Copyright 2005-2012 Daniel James.
+	Copyright 2005-2013 Peter Dimov
+	Copyright 2005-2014 Daniel James.
+	Copyright 2005, 2014 Peter Dimov
+	Copyright 2005 Alexander Nasonov.
+	Copyright 2005 Ben Hutchings
+	Copyright 2005 Daniel Egloff. Distributed under the Boost
+	Copyright 2005 Daniel Egloff, Eric Niebler. Distributed under the Boost
+	Copyright 2005 Daniel Egloff, Olivier Gygi. Distributed under the Boost
+	Copyright 2005 Daniel Wallin.
+	Copyright 2005 Dan Marsden.
+	Copyright 2005 David Abrahams and Aleksey Gurtovoy. Distributed
+	Copyright 2005 Douglas Gregor.
+	Copyright 2005 Eric Niebler.
+	Copyright 2005 Eric Niebler, Daniel Egloff. Distributed under the Boost
+	Copyright 2005 Eric Niebler. Distributed under the Boost
+	Copyright 2005 Eric Niebler, Michael Gauckler. Distributed under the Boost
+	Copyright 2005 Felix H
+	Copyright 2005 Guillaume Melquiond
+	Copyright 2005 Jeremy G. Siek
+	Copyright 2005 Joel de Guzman.
+	Copyright 2005 Matthias Troyer.
+	Copyright 2005 Peter Dimov
+	Copyright 2005 The Trustees of Indiana University.
+	Copyright 2005 Travis Oliphant
+	Copyright 2005 Trustees of Indiana University
+	Copyright 2006-2007 Boris Gubenko
+	Copyright 2006-2008 Joaquin M Lopez Munoz.
+	Copyright 2006-2009 Joaquin M Lopez Munoz.
+	Copyright © 2006-2009 Johann C. Rocholl <johann@rocholl.net>
+	Copyright 2006-2011 Joaquin M Lopez Munoz.
+	Copyright 2006-2013 Joaquin M Lopez Munoz.
+	Copyright 2006-2014 Joaquin M Lopez Munoz.
+	Copyright 2006-2015 Joaquin M Lopez Munoz.
+	Copyright 2006-2018 Joaquin M Lopez Munoz.
+	Copyright 2006-2019 Joaquin M Lopez Munoz.
+	Copyright 2006-2020 Joaquin M Lopez Munoz.
+	Copyright 2006, 2020 Peter Dimov
+	Copyright 2006 Andy Tompkins.
+	Copyright 2006 Daniel Egloff, Olivier Gygi. Distributed under the Boost
+	Copyright 2006 Douglas Gregor <doug.gregor -at- gmail.com>.
+	Copyright 2006 Eric Niebler. Distributed under the Boost
+	Copyright 2006 Eric Niebler, Olivier Gygi. Distributed under the Boost
+	Copyright 2006, Eric Niebler, Olivier Gygi. Distributed under the Boost
+	Copyright 2006      Ion Gaztanaga
+	Copyright 2006 Johan Rade
+	Copyright 2006 John Maddock
+	Copyright 2006 Michael van der Westhuizen
+	Copyright 2006 Olivier Gygi, Daniel Egloff. Distributed under the Boost
+	Copyright 2006 Roland Schwarz.
+	Copyright 2006 The Trustees of Indiana University.
+	Copyright 2006 Thorsten Ottosen.
+	Copyright 2006 Trustees of Indiana University
+	Copyright 2007-2008 Andreas Pokorny, Christian Henning
+	Copyright 2007-2008 Christian Henning
+	Copyright 2007-2008 Christian Henning, Andreas Pokorny
+	Copyright 2007-2008 Christian Henning, Andreas Pokorny, Lubomir Bourdev
+	Copyright:   2007-2008 CodeRage, LLC
+	Copyright 2007-2012 Christian Henning, Andreas Pokorny
+	Copyright 2007-2012 Christian Henning, Andreas Pokorny, Lubomir Bourdev
+	Copyright 2007-2012 Christian Henning, Lubomir Bourdev
+	Copyright 2007-2012 Ion Gaztanaga
+	Copyright 2007, 2014 Peter Dimov
+	Copyright 2007, 2019 Peter Dimov
+	Copyright 2007, 2020 Peter Dimov
+	Copyright 2007 Aaron Windsor
+	Copyright 2007 Alexandre Courpron
+	Copyright 2007 Andy Tompkins.
+	Copyright 2007 Baruch Zilber
+	Copyright 2007 Boris Gubenko
+	Copyright 2007 Christian Henning
+	Copyright 2007 David Jenkins.
+	Copyright 2007 Eric Niebler.
+	Copyright 2007 Peter Dimov
+	Copyright 2007 Stanford University
+	Copyright 2007 Tobias Schwinger
+	Copyright 2007 University of Karlsruhe
+	copyright = '2008-
+	Copyright 2008
+	Copyright 2008-2009 Frank Mori Hess
+	Copyright 2008-2010 Gordon Woodhull
+	Copyright 2008,2012 Peter Dimov
+	Copyright 2008, 2020 Peter Dimov
+	Copyright 2008 Adobe Systems Incorporated
+	Copyright 2008 Andreas Huber Doenni
+	Copyright 2008 Beman Dawes
+	Copyright 2008 Christian Henning
+	Copyright 2008 Christian Henning, Lubomir Bourdev
+	Copyright 2008 Christophe Henry
+	Copyright 2008 Christophe Henry// henry UNDERSCORE christophe AT hotmail DOT com// This is taken from Boost.Proto
+	Copyright:   2008 CodeRage, LLC
+	Copyright:   2008 CodeRage, LLC                2004-2007 Jonathan Turkanis
+	Copyright 2008 David Jenkins.
+	Copyright 2008 Eric Niebler.
+	Copyright 2008 Eric Niebler. Distributed
+	Copyright 2008 Eric Niebler. Distributed under the Boost
+	Copyright 2008 Gautam Sewani
+	Copyright 2008 Hartmut Kaiser.
+	Copyright 2008 Howard Hinnant
+	Copyright 2008 Intel Corporation
+	Copyright 2008 Joaquin M Lopez Munoz.
+	Copyright 2008 John Maddock
+	Copyright 2008 Peter Dimov
+	Copyright 2009-2010 Vicente J. Botet Escriba
+	Copyright 2009-2011 Karsten Ahnert
+	Copyright 2009 - 2011  LRI    UMR 8623 CNRS/Univ Paris Sud XI
+	Copyright 2009-2011 Mario Mulansky
+	Copyright 2009-2011 Vicente J. Botet Escriba
+	Copyright 2009-2012 Karsten Ahnert
+	Copyright 2009-2012 Mario Mulansky
+	Copyright 2009-2012 Vicente J. Botet Escriba
+	Copyright 2009-2013 Karsten Ahnert
+	Copyright 2009-2013 Mario Mulansky
+	Copyright © 2009-2014 Florent Xicluna <florent.xicluna@gmail.com>
+	Copyright 2009-2014 Neil Groves.
+	Copyright 2009-2015 Mario Mulansky
+	Copyright 2009, Andrew Sutton
+	Copyright 2009 Andy Tompkins.
+	Copyright 2009 (C) Dean Michael Berris <me@deanberris.com>
+	Copyright 2009 Christian Henning
+	Copyright 2009 Eric Niebler. Distributed under the Boost
+	Copyright 2009 Neil Groves.
+	Copyright 2009 Steven Watanabe
+	Copyright 2009 The Trustees of Indiana University.
+	Copyright 2009 Trustees of Indiana University.
+	Copyright 2009 Trustees of Indiana University
+	Copyright 2009 Vicente J. Botet Escriba
+	Copyright 2010-2011 Karsten Ahnert
+	Copyright 2010-2011 Mario Mulansky
+	Copyright 2010-2011 OpenStack Foundation
+	Copyright 2010-2012, D. E. Shaw Research.        // All rights reserved
+	Copyright 2010-2012 Karsten Ahnert
+	Copyright 2010-2012 Kenneth Riddile, Christian Henning
+	Copyright 2010-2012 Mario Mulansky
+	Copyright 2010-2013 Karsten Ahnert
+	Copyright 2010-2013 Mario Mulansky
+	Copyright 2010-2014 Mario Mulansky
+	Copyright 2010-2015 Mario Mulansky
+	Copyright 2010 Andy Tompkins.
+	Copyright 2010 Beman Dawes
+	Copyright 2010 Christian Henning
+	Copyright 2010 Daniel Wallin, Eric Niebler. Distributed under the Boost
+	copyright 2010 DavidWolever <david@wolever.net>. All rights reserved
+	Copyright 2010 Eric Niebler.
+	Copyright 2010 Eric Niebler. Distributed under the Boost
+	Copyright 2010 Fabien Castan, Christian Henning
+	Copyright 2010 Gaetano Mendola, 2011 Simon West. Distributed under the Boost
+	Copyright 2010 John Maddock
+	Copyright 2010 Kenneth Riddile
+	Copyright 2010 Mario Mulansky
+	Copyright 2010 Paul A. Bristow
+	Copyright 2010 The Trustees of Indiana University.
+	Copyright 2010 Thomas Claveirole
+	Copyright 2010 Vicente J. Botet Escriba
+	Copyright 2011-2012 Karsten Ahnert
+	Copyright 2011-2012 Mario Mulansky
+	Copyright 2011, 2012 Paul A. Bristow
+	Copyright 2011-2012 Steven Watanabe
+	Copyright 2011 - 2013 John Maddock. Distributed under the Boost
+	Copyright 2011 -2013 John Maddock. Distributed under the Boost
+	Copyright 2011-2013 Karsten Ahnert
+	Copyright 2011-2013 Mario Mulansky
+	Copyright © 2011-2013 Tarek Ziade <tarek@ziade.org>
+	Copyright 2011-2013 Thorsten Ottosen
+	Copyright 2011-2015 Mario Mulansky
+	Copyright 2011 Christophe Henry
+	Copyright 2011         Eric Niebler
+	Copyright 2011 Eric Niebler. Distributed under the Boost
+	Copyright 2011 Garmin Ltd. or its subsidiaries
+	Copyright 2011 John Maddock
+	Copyright 2011 John Maddock. Distributed under the Boost
+	Copyright 2011 Karsten Ahnert
+	Copyright 2011 Mario Mulansky
+	Copyright 2011 OpenStack Foundation
+	Copyright 2011 Paul A. Bristow
+	Copyright 2011 Paul A. Bristow  To incorporate into Boost.Math
+	Copyright 2011 Simon West. Distributed under the Boost
+	Copyright 2011 Steven Watanabe
+	Copyright 2011 Vicente J. Botet Escriba
+	Copyright 2012-2013 Andreas Angelopoulos
+	Copyright 2012-2013 Hewlett-Packard Development Company, L.P.
+	Copyright 2012-2013 Karsten Ahnert
+	Copyright 2012-2013 Mario Mulansky
+	Copyright 2012-2013 Steven Watanabe
+	Copyright 2012-2015 Mario Mulansky
+	Copyright 2012-2019 Glen Joseph Fernandes
+	Copyright 2012-2020 Antony Polukhin.
+	Copyright 2012-2020 John Maddock.
+	Copyright 2012-20 John Maddock.
+	Copyright 2012 Andreas Pokorny
+	Copyright 2012 (C) Google, Inc.
+	Copyright 2012 Christian Henning
+	Copyright 2012 Christian Henning, Andreas Pokorny, Lubomir Bourdev
+	Copyright 2012 Christoph Koke
+	Copyright 2012 Chung-Lin Wen
+	Copyright 2012 Chung-Lin Wen, Davide Anastasia
+	Copyright 2012 (C) Jeffrey Lee Hellrung, Jr.
+	Copyright 2012 Denis Demidov
+	Copyright 2012 Eric Niebler. Distributed under the Boost
+	Copyright 2012 Fernando Vilas
+	Copyright 2012 IBM Corp.
+	Copyright 2012 John Maddock.
+	Copyright 2012 John Maddock. Distributed under the Boost
+	Copyright 2012 Karsten Ahnert
+	Copyright 2012 Kenneth Riddile, Christian Henning
+	Copyright 2012 K R Walker
+	Copyright 2012 Lucanus Simonson
+	Copyright 2012 Mario Mulansky
+	Copyright 2012 Olivier Tournaire
+	Copyright 2012 Olivier Tournaire, Christian Henning
+	Copyright 2012 OpenStack Foundation
+	Copyright 2012 Paul A. Bristow with new tests.
+	Copyright 2012, Philipp Moeller
+	Copyright 2012 Red Hat, Inc.
+	Copyright 2012 Steven Watanabe
+	Copyright 2012 The Trustees of Indiana University.
+	Copyright 2012 Vicente J. Botet Escriba
+	Copyright 2013-2014 Karsten Ahnert
+	Copyright 2013-2014 Mario Mulansky
+	Copyright 2013, 2017-2018 Cray, Inc.
+	Copyright 2013, 2017 Andrey Semashev
+	Copyright 2013-2020 Antony Polukhin.
+	Copyright 2013 Andrea GavanaAuthor: <andrea.gavana@gmail.com>
+	Copyright 2013 Andrey Semashev
+	Copyright 2013 Ankur Sinha
+	Copyright 2013 Christian Henning
+	Copyright 2013 Christian Henning and Juan V. Puertos
+	Copyright 2013 Christian Shelton
+	Copyright 2013 Christopher Kormanyos
+	Copyright 2013 Cromwell D. Enage
+	Copyright © 2013 Florent Xicluna <florent.xicluna@gmail.com>
+	Copyright 2013 Hewlett-Packard Development Company, L.P.
+	Copyright 2013 John Maddock
+	Copyright 2013 John Maddock. Distributed under the Boost
+	Copyright 2013 Juan V. Puertos G-Cluster, Christian Henning
+	Copyright 2013 Karsten Ahnert
+	Copyright 2013 Kyle Lutz
+	Copyright 2013 Maciej Piechotka
+	Copyright 2013 Mario Mulansky
+	Copyright 2013 Nikhar Agrawal
+	copyright = '2013, OpenStack Foundation
+	Copyright 2013 Pascal Germroth
+	Copyright 2013 Paul Bristow
+	Copyright 2013 Peter Dimov
+	Copyright 2013 University of Warsaw.
+	Copyright 2014-2015 Glen Joseph Fernandes
+	Copyright 2014-2015 Renato Tegon Forti, Antony Polukhin.
+	Copyright 2014-2016 Glen Joseph Fernandes
+	Copyright 2014,2018 Glen Joseph Fernandes
+	Copyright 2014-2020 Glen Joseph Fernandes
+	Copyright © 2014-2020 Ian Lee <IanLee1521@gmail.com>
+	Copyright 2014 Andrey Semashev
+	Copyright 2014 Anton Bikineev
+	Copyright 2014 Antony Polukhin
+	Copyright 2014 Bill Gallafent
+	Copyright 2014 Christopher Kormanyos
+	Copyright 2014, Eric W. Moore
+	Copyright 2014 Glen Joseph Fernandes
+	Copyright 2014 Hewlett-Packard Development Company, L.P.
+	Copyright 2014 John Maddock
+	Copyright 2014          LASMEA UMR 6602 CNRS/Univ. Clermont II
+	Copyright 2014          LRI    UMR 8623 CNRS/Univ Paris Sud XI
+	Copyright 2014 Marco Guazzone (marco.guazzone@gmail.com)
+	Copyright 2014          MetaScale SAS
+	Copyright 2014 Neil Groves
+	Copyright 2014          NumScale SAS
+	Copyright 2014 Paul Bristow
+	Copyright 2014 Peter Dimov
+	Copyright 2014 Renato Tegon Forti, Antony Polukhin.
+	Copyright 2014 Renato Tegon Forti, Antony Polukhin
+	Copyright 2015-2016 Hans Dembinski
+	Copyright 2015, 2016 Peter Dimov.
+	Copyright 2015, 2017, 2019 Peter Dimov.
+	Copyright 2015, 2017 Andrey Semashev
+	Copyright 2015-2017 Hans Dembinski
+	Copyright 2015-2017 Peter Dimov.
+	Copyright 2015-2018 Andrey Semashev
+	Copyright 2015-2018 Hans Dembinski
+	Copyright 2015-2018 Klemens D. Morgenstern
+	Copyright 2015-2019 Antony Polukhin.
+	Copyright 2015-2019 Hans Dembinski
+	Copyright 2015-2019 Peter Dimov.
+	Copyright 2015-2019 Peter Dimov
+	Copyright 2015, 2019 Peter Dimov.
+	Copyright 2015, 2020 Andrey Semashev
+	Copyright 2015-2020 Antony Polukhin.
+	Copyright 2015-2020 Peter Dimov.
+	Copyright 2015 Andrey Semashev
+	Copyright 2015 Antony Polukhin
+	Copyright 2015 Glen Joseph Fernandes
+	Copyright 2015 John Fletcher.
+	Copyright 2015 John Fletcher
+	Copyright 2015 John Maddock. Distributed under the Boost
+	Copyright 2015 Klemens Morgenstern
+	Copyright 2015 LRI UMR 8623 CNRS/University Paris Sud XI
+	Copyright 2015 Mario Mulansky
+	Copyright 2015 NumScale SAS
+	Copyright 2015 Ontario Institute for Cancer Research// Written by Matei David (matei@cs.toronto.edu)//---------------------------------------------------------
+	Copyright 2015 Peter Dimov.
+	Copyright 2015 Peter Dimov
+	Copyright 2015 Steven Watanabe
+	Copyright 2016, 2017 Andrey Semashev
+	Copyright 2016-2017 Joaquin M Lopez Munoz.
+	Copyright 2016, 2017 Peter Dimov
+	Copyright 2016, 2018, 2019 Peter Dimov.
+	Copyright 2016-2018 Andrey Semashev
+	Copyright 2016-2018 Joaquin M Lopez Munoz.
+	Copyright 2016-2019 Antony Polukhin.
+	Copyright 2016-2019 Joaquin M Lopez Munoz.
+	Copyright 2016-2020 Joaquin M Lopez Munoz.
+	Copyright 2016 Andrey Semashev
+	Copyright 2016 Joaquin M Lopez Munoz.
+	Copyright 2016 John Maddock. Distributed under the Boost
+	Copyright 2016 Jorge Lodos
+	Copyright 2016 Klemens D. Morgenstern
+	Copyright 2016 Klemens Morgenstern
+	Copyright 2016 Klemens Morgenstern, Antony Polukhin
+	Copyright 2017-2018 Glen Joseph Fernandes
+	Copyright 2017-2018 Joaquin M Lopez Munoz.
+	Copyright 2017, 2018 Peter Dimov.
+	Copyright 2017-2019 Glen Joseph Fernandes
+	Copyright 2017-2019 Peter Dimov.
+	Copyright 2017, 2019 Peter Dimov.
+	Copyright 2017 Andrey Semashev
+	Copyright 2017 Daniel James.
+	Copyright 2017 Glen Joseph Fernandes
+	Copyright 2017 James E. King III
+	Copyright 2017 James E. King, III
+	Copyright 2017 Joaquin M Lopez Munoz.
+	Copyright 2017 John Maddock
+	Copyright 2017, NVIDIA CORPORATION.
+	Copyright 2017 Peter Dimov.
+	Copyright 2017 Peter Dimov
+	Copyright 2017 Two Blue Cubes Ltd. All rights reserved
+	Copyright 2017 Valentin Noah Hartmann
+	Copyright 2017 Vinnie Falco
+	Copyright 2018, 2019 Andrey Semashev
+	Copyright 2018-2019 Antony Polukhin.
+	Copyright 2018-2019 Hans Dembinski
+	Copyright 2018, 2020 Peter Dimov
+	Copyright 2018 Glen Joseph Fernandes
+	Copyright 2018 Hans Dembinski
+	Copyright 2018 Joaquin M Lopez Munoz.
+	Copyright 2018 John Maddock
+	Copyright 2018 John Maddock. Distributed under the Boost
+	Copyright 2018 Mateusz Loskot <mateusz@loskot.net>
+	Copyright 2018 Nico Weber
+	Copyright 2018 Peter Dimov
+	Copyright 2018 Red Hat, Inc.
+	Copyright 2018 Stefan Seefeld
+	Copyright 2018 Steven Watanabe
+	Copyright 2018 Ulf Adams
+	Copyright 2019-2020 Antony Polukhin
+	Copyright 2019-2020 Glen Joseph Fernandes
+	Copyright 2019, 2020 Peter Dimov
+	Copyright 2019-20 Christopher Kormanyos.
+	Copyright 2019-20 Madhur Chauhan.
+	Copyright 2019 Emil Dotchevski.
+	Copyright 2019 Glen Joseph Fernandes
+	Copyright 2019 Glen Joseph Fernandes (glenjofe@gmail.com)
+	Copyright 2019 Hans Dembinski
+	Copyright 2019 Henry Schreiner
+	Copyright 2019 John Maddock
+	Copyright 2019 John Maddock. Distributed under the Boost
+	Copyright 2019 Mateusz Loskot <mateusz at loskot dot net>
+	Copyright 2019 Miral Shah <miralshah2211@gmail.com>
+	Copyright 2019 Olzhas Zhumabek <anonymous.from.applecity@gmail.com>
+	Copyright 2019 Peter Dimov
+	Copyright 2019 Pranam Lashkari <plashkari628@gmail.com>
+	Copyright 2019 Przemyslaw Bartosik
+	Copyright 2020 Andrey Semashev
+	Copyright 2020 Glen Joseph Fernandes
+	Copyright 2020 Hans Dembinski
+	Copyright 2020 Ion Gaztanaga
+	Copyright 2020 John Maddock.
+	Copyright 2020 John Maddock. Distributed under the Boost
+	Copyright 2020 Madhur Chauhan.
+	Copyright 2020 Peter Dimov
+	Copyright 2020 Samuel Debionne
+	Copyright 2021 Monty Taylor
+	Copyright 2024 Volvo Car Corporation
+	Copyright (2) Beman Dawes 2010, 2011
+	Copyright (3) Ion Gaztanaga 2013
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2009 - 2010.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2009 - 2011.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2009 - 2012.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2010.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2010 - 2011.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)   2011.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2011.
+	Copyright Abel Sinkovics (abel@sinkovics.hu) 2011.
+	Copyright Abel Sinkovics (abel@sinkovics.hu) 2011 - 2012.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2012.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)   2013.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2013.
+	Copyright Abel Sinkovics (abel@sinkovics.hu) 2013.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2014.
+	Copyright Abel Sinkovics (abel@sinkovics.hu) 2014.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2015.
+	Copyright Abel Sinkovics (abel@sinkovics.hu) 2015.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2016.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2017.
+	Copyright Abel Sinkovics (abel@sinkovics.hu)  2018.
+	copyright = ABOUT
+	Copyright Absoft Corporation 1994-1998 mV2; Cray Research, Inc. 1994-1996 CF90 (2.x.x.x  f36t87) Version 2.3 Wed Apr 19, 2006  13:05:16
+	Copyright Absoft Corporation 1994-2002; Absoft Pro FORTRAN Version 8.0
+	Copyright Absoft Corporation.                       r
+	Copyright Adam D. Walling 2012. Use, modification and
+	COPYRIGHT$    Additional copyrights may follow
+	COPYRIGHT$  Additional copyrights may follow
+	Copyright Alain Miniussi 2014.
+	Copyright Aleksey Gurtovoy 2000-2002
+	Copyright Aleksey Gurtovoy 2000-2003
+	Copyright Aleksey Gurtovoy 2000-2004
+	Copyright Aleksey Gurtovoy 2000-2006
+	Copyright Aleksey Gurtovoy 2000-2008
+	Copyright Aleksey Gurtovoy 2000-2009
+	Copyright Aleksey Gurtovoy 2000-2010
+	Copyright Aleksey Gurtovoy 2001-2004
+	Copyright Aleksey Gurtovoy 2001-2006
+	Copyright Aleksey Gurtovoy 2001-2007
+	Copyright Aleksey Gurtovoy 2001-2008
+	Copyright Aleksey Gurtovoy 2002-2004
+	Copyright Aleksey Gurtovoy 2002-2006
+	Copyright Aleksey Gurtovoy 2003-2004
+	Copyright Aleksey Gurtovoy 2003-2007
+	Copyright Aleksey Gurtovoy 2004
+	Copyright Aleksey Gurtovoy 2006
+	Copyright Aleksey Gurtovoy 2008
+	Copyright Alexander Grund 2018. Corrections to singleton lifetime
+	Copyright Alexander Nasonov
+	Copyright Alexander Nasonov 2004
+	Copyright Alexander Nasonov, 2006-2010.
+	Copyright Anne M. Archibald 2008
+	Copyright Antony Polukhin, 2011-2020.
+	Copyright Antony Polukhin, 2013-2014.
+	Copyright Antony Polukhin, 2013-2020.
+	Copyright Antony Polukhin, 2016-2019.
+	Copyright Antony Polukhin, 2016-2020.
+	Copyright (arg) 2001-2014 Joel de Guzman
+	Copyright Arno Schoedl
+	Copyright Barrett Adair 2015-2017
+	Copyright Barrett Adair 2015-2018
+	Copyright Barrett Adair 2016-2017
+	copyright below:/
+	Copyright Beman Dawes 1994, 2006, 2008
+	Copyright Beman Dawes 1994-2007, 2011
+	Copyright Beman Dawes 1994-99.
+	Copyright Beman Dawes 1994-99.  Distributed under the Boost
+	Copyright Beman Dawes 1995-2001.  Distributed under the Boost
+	Copyright Beman Dawes 2001.  Distributed under the Boost
+	Copyright Beman Dawes 2002
+	Copyright Beman Dawes, 2002-2005
+	Copyright Beman Dawes 2002-2005, 2009
+	Copyright Beman Dawes 2002, 2006
+	Copyright Beman Dawes 2002-2009
+	Copyright Beman Dawes 2003
+	Copyright Beman Dawes 2003, 2006
+	Copyright Beman Dawes 2003, 2006, 2008
+	Copyright Beman Dawes 2003, 2006, 2010
+	Copyright Beman Dawes 2003, 2006, 2011
+	Copyright Beman Dawes 2005.
+	Copyright Beman Dawes 2006
+	Copyright Beman Dawes 2006, 2007
+	Copyright Beman Dawes 2007
+	Copyright Beman Dawes 2008
+	Copyright Beman Dawes 2009
+	Copyright Beman Dawes, 2009
+	Copyright Beman Dawes 2010
+	Copyright Beman Dawes 2010, 2011, 2014
+	Copyright Beman Dawes 2011
+	Copyright Beman Dawes 2013
+	Copyright Beman Dawes 2014
+	Copyright Beman Dawes 2015
+	Copyright Beman Dawes and Daryle Walker 1999.  Distributed under the Boost
+	Copyright Benjamin Sobotta 2012.
+	Copyright Benjamin Sobotta 2012
+	Copyright Benjamin Worpitz 2018
+	Copyright Bertolt Mildner 2004.
+	copyright  Boost Software License, version 1.0
+	Copyright Bruno Dutra 2015
+	Copyright Bryce Lelbach 2010
+	copyright by Renee Touzin)under the BSD licence. The following files have been removed from the original library:
+	Copyright (c) 1992-2013 The University of Tennessee and The University                          of Tennessee Research Foundation.  All rights                          reserved.
+	Copyright (c) 1993-2019 C.B. Barber.
+	Copyright (c) 1993-2019                                                C.B. Barber                           Arlington, MA
+	Copyright (c) 1993-2019 The Geometry Center.
+	Copyright (c) 1994
+	Copyright (c) 1994 by Xerox Corporation.  All rights reserved
+	Copyright (c) 1994// Hewlett-Packard Company
+	Copyright (c) 1995, 2007-2015 Barend Gehrels, Amsterdam, the Netherlands.
+	copyright (c) 1995-2010 Geodan, Amsterdam, the Netherlands.
+	Copyright (C) 1995-2013 Jean-loup Gailly and Mark Adler
+	Copyright (c) 1995, Gerald Evenden
+	Copyright (c) 1995 Maarten Hilferink, Amsterdam, the Netherlands
+	Copyright (c) 1996
+	Copyright (c) 1996,1997
+	Copyright (C) 1996, 1997, 1998, 1999, 2000 Gerard Jungman, Brian Gough
+	Copyright (c) 1996-1998// Silicon Graphics Computer Systems, Inc.
+	Copyright (c) 1996-2008 Rice University.
+	Copyright (c) 1996-2008 Rice University.Developed by D.C. Sorensen, R.B. Lehoucq, C. Yang, and K. Maschhoff.All rights reserved
+	Copyright (c) 1996// Silicon Graphics Computer Systems, Inc.
+	Copyright (c) 1998
+	Copyright (c) 1998, 1999, 2000 Thai Open Source Software Center Ltd                               and Clark Cooper
+	Copyright (c) 1998-2000
+	Copyright (c) 1998-2000 Theodore C. Belding     /
+	Copyright (c) 1998-2002
+	Copyright (c) 1998-2002 Joel de Guzman
+	Copyright (c) 1998-2003 by the University of Florida.	All Rights Reserved
+	Copyright (c) 1998-2003 Joel de Guzman
+	Copyright (c) 1998-2004 John Maddock
+	Copyright (c) 1998-2005
+	Copyright (c) 1998-2008 Joel de Guzman
+	Copyright (c) 1998-2009
+	Copyright (c) 1998-2009 John Maddock
+	Copyright (c) 1999, 2000, 2001 North Carolina State University
+	Copyright (C) 1999, 2000 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+	Copyright (C) 1999-2001 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+	Copyright (c) 1999-2003 Jaakko Jarvi
+	Copyright (c) 1999-2003 Jeremiah Willcock
+	Copyright (c) 1999-2006: Cortex Software GmbH, Kantstrasse 57, Berlin
+	Copyright (C) 2000, 2001 Stephen Cleary
+	Copyright (c) 2000-2002
+	Copyright (c) 2000-2003 Brian McNamara and Yannis Smaragdakis
+	Copyright (c) 2000-2004
+	Copyright (c) 2000-2006, 2010 Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2000-2006 Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2000-2007
+	Copyright (c) 2000-2009
+	Copyright (c) 2000-2010
+	Copyright (c) 2000-2010//  Joerg Walter, Mathias Koch, David Bellot
+	Copyright (c) 2000-2010//  Joerg Walter, Mathias Koch, Gunter Winkler, David Bellot
+	Copyright (c) 2000-2010  Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2000-2011 Joerg Walter, Mathias Koch, David Bellot
+	Copyright (c) 2000-2013
+	Copyright (c) 2000-2013 The University of California Berkeley. All                          rights reserved.
+	Copyright (c) 2000-2022 Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2000 Cadenza New Zealand Ltd
+	Copyright (c)  2000 David Abrahams.
+	Copyright (c) 2000, Frank Warmerdam
+	Copyright (C) 2000 Gary Powell (gary.powell@sierra.com)
+	Copyright (C) 2000 Gary Powell (gwpowell@hotmail.com)
+	Copyright (C) 2000 Gary Powell (powellg@amazon.com)
+	Copyright (C) 2000 Stephen Cleary
+	Copyright (C) 2001
+	Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,
+	Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021 Python Software Foundation;All Rights Reserved
+	Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Expat maintainers.
+	Copyright (c) 2001, 2002, 2003 Peter Dimov
+	Copyright (c) 2001, 2002, 2003 Peter Dimov and Multi Media Ltd.
+	Copyright (c) 2001, 2002, 2012 Peter Dimov
+	Copyright (c) 2001-2002 Chuck Allison and Jeremy Siek
+	Copyright (c) 2001, 2002 Enthought, Inc.
+	Copyright (c) 2001-2002 Enthought, Inc. 2003-2022, SciPy Developers.All rights reserved
+	Copyright (c) 2001-2002 Joel de Guzman
+	Copyright (C) 2001-2002 Joel de Guzman
+	Copyright (c) 2001, 2002 Peter Dimov
+	Copyright (C) 2001, 2002 Peter Dimov
+	Copyright (c) 2001, 2002 Peter Dimov and Multi Media Ltd.
+	Copyright (c) 2001, 2002 Python Software Foundation; All Rights
+	Copyright (C) 2001-2003
+	Copyright (c) 2001-2003 Daniel Nuffer
+	Copyright (c) 2001-2003 Hartmut Kaiser
+	Copyright (c) 2001-2003 Joel de Guzman
+	Copyright (c) 2001-2003 John Maddock
+	Copyright (C) 2001-2003// William E. Kempf
+	Copyright (c) 2001-2004 Peter Dimov and Multi Media Ltd.
+	Copyright (c) 2001-2005 Peter Dimov
+	Copyright (c) 2001-2007 Hartmut Kaiser
+	Copyright (c) 2001-2007 Joel de Guzman
+	Copyright (c) 2001-2008 Hartmut Kaiser
+	Copyright (c) 2001-2008 Joel de Guzman
+	Copyright (c) 2001-2008 Peter Dimov
+	Copyright (c) 2001-2009, 2012 Peter Dimov
+	Copyright (c) 2001-2009 Daniel Nuffer
+	Copyright (c) 2001-2009, Hartmut Kaiser
+	Copyright (c) 2001-2009 Joel de Guzman
+	Copyright (c) 2001-2010 Hartmut Kaiser
+	Copyright (c) 2001-2010 Joel de Guzman
+	Copyright (c) 2001-2011 Hartmut Kaiser.
+	Copyright (c) 2001-2011 Hartmut Kaiser
+	Copyright (c) 2001-2011 Joel de Guzman
+	Copyright (c) 2001-2011 - Scilab EnterprisesUpdated by Allan Cornet, Sylvestre Ledru.
+	Copyright (c) 2001-2011 Thomas Bernard
+	Copyright (c) 2001-2012 Hartmut Kaiser.
+	Copyright (c) 2001-2012 Hartmut Kaiser
+	Copyright (c) 2001-2012 Hartmut Kaiser. Distributed under the Boost
+	Copyright (c) 2001-2012 Joel de Guzman
+	Copyright (c) 2001-2013 Hartmut Kaiser.
+	Copyright (c) 2001-2013 Hartmut Kaiser
+	Copyright (c) 2001-2013 Joel de Guzman
+	Copyright (c) 2001-2014 Joel de Guzman
+	Copyright (c) 2001-2015 Joel de Guzman
+	Copyright (c) 2001-2019 Joel de Guzman
+	Copyright (c) 2001 Alexander Peslyak and it is hereby released to the
+	Copyright (c) 2001 Bruce Florman
+	Copyright (c) 2001 by Andrei Alexandrescu. Distributed under the Boost
+	Copyright (c) 2001 Daniel C. Nuffer.
+	Copyright (c) 2001 Daniel C. Nuffer
+	Copyright (c) 2001, Daniel C. Nuffer
+	Copyright (c) 2001 Daniel Nuffer
+	Copyright (c) 2001 Darin Adler
+	Copyright (C) 2001 Daryle Walker.
+	Copyright (c) 2001 David Abrahams
+	Copyright (C) 2001 Dietmar Kuehl
+	Copyright (c) 2001 Doug Gregor
+	Copyright (C) 2001 Gary Powell (gary.powell@sierra.com)
+	Copyright (C) 2001 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+	Copyright (C) 2001 Jeremy Siek, Douglas Gregor, Brian Osman
+	Copyright (C) 2001 Jeremy Siek <jsiek@cs.indiana.edu>
+	Copyright (c) 2001 Peter Dimov
+	Copyright (C) 2001 Peter Dimov
+	Copyright (c) 2001 Peter Dimov and Multi Media Ltd.
+	Copyright (c) 2001 Ronald Garcia, Indiana University (garcia@osl.iu.edu)
+	Copyright (c) 2001 Ronald Garcia, Indiana University (garcia@osl.iu.edu)// Andrew Lumsdaine, Indiana University (lums@osl.iu.edu). Permission to copy, // use, modify, sell and distribute this softwa
+	Copyright (c) 2001, Thomas Flemming, tf@ttqv.com
+	Copyright (C) 2001 Vladimir Prus <ghost@cs.msu.su>
+	Copyright (c) 2002
+	Copyright (c) 2002-2003
+	Copyright (c) 2002,2003,2005,2020 CrystalClear Software, Inc.
+	Copyright (c) 2002-2003,2005 CrystalClear Software, Inc.
+	Copyright (c) 2002,2003,2005 CrystalClear Software, Inc.
+	Copyright (c) 2002,2003, 2007 CrystalClear Software, Inc.
+	Copyright (c) 2002,2003, 2020 CrystalClear Software, Inc.
+	Copyright (c) 2002,2003,2020 CrystalClear Software, Inc.
+	Copyright (c) 2002,2003 CrystalClear Software, Inc.
+	Copyright (c) 2002-2003 David Abrahams
+	Copyright (C) 2002-2003// David Moore, William E. Kempf
+	Copyright (c) 2002-2003 Eric Friedman
+	Copyright (c) 2002-2003 Eric Friedman, Itay Maman
+	Copyright (c) 2002-2003 Hartmut Kaiser
+	Copyright (c) 2002-2003 Joel de Guzman
+	Copyright (c) 2002-2003 Juan Carlos Arevalo-Baeza
+	Copyright (c) 2002-2003 Martin Wille
+	Copyright (c) 2002, 2003 Peter Dimov
+	Copyright (c) 2002, 2003 Peter Dimov and Multi Media Ltd.
+	Copyright (c) 2002-2004 CrystalClear Software, Inc.
+	Copyright (c) 2002-2005 CrystalClear Software, Inc.
+	Copyright (c) 2002-2005, Jean-Sebastien Roy (js@jeannot.org)
+	Copyright (c) 2002-2006 Hartmut Kaiser
+	Copyright (C) 2002-2006 Marcin Kalicinski
+	Copyright (C) 2002-2007 Marcin Kalicinski
+	Copyright (C) 2002, 2008, 2013 Peter Dimov
+	Copyright (c) 2002, 2009, 2014 Peter Dimov
+	Copyright (C) 2002-2017 Free Software Foundation, Inc.
+	Copyright (c) 2002, 2018, 2019 Peter Dimov
+	Copyright (c) 2002-2020 CrystalClear Software, Inc.
+	Copyright (C) 2002 Beman Dawes
+	Copyright (c) 2002 Bill Kempf
+	Copyright (C) 2002 Brad King and Douglas Gregor
+	Copyright (C) 2002 Brad King (brad.king@kitware.com)                   Douglas Gregor (gregod@cs.rpi.edu)
+	Copyright (c) 2002 by Andrei Alexandrescu
+	Copyright (C) 2002 David Abrahams
+	Copyright (c) 2002 Eric Friedman, Itay Maman
+	Copyright (c) 2002, Frank Warmerdam
+	Copyright (C) 2002 Gary Powell (gwpowell@hotmail.com)
+	Copyright (c) 2002 Hartmut Kaiser
+	Copyright (C) 2002 Jaakko Jarvi (jaakko.jarvi@cs.utu.fi)
+	Copyright (c) 2002 Jeff Westfahl
+	Copyright (c) 2002 Jens Maurer
+	Copyright (c) 2002 Joel de Guzman
+	Copyright (c) 2002 Juan Carlos Arevalo-Baeza
+	Copyright (c) 2002 Lars Gullik Bj
+	Copyright (c) 2002 Peter Dimov
+	Copyright (c) 2002 Peter Dimov and Multi Media Ltd.
+	Copyright (c) 2002 Raghavendra Satish
+	Copyright (c) 2002 Travis Oliphant all rights reserved
+	Copyright (c) 2003
+	Copyright (c) 2003-2004, 2008 Gennaro Prota
+	Copyright (c) 2003-2004 CrystalClear Software, Inc.
+	Copyright (c) 2003-2004 Gennaro Prota
+	Copyright (C) 2003-2004 Jeremy B. Maitin-Shepard.
+	Copyright (c) 2003-2005
+	Copyright (c) 2003-2005 CrystalClear Software, Inc.
+	Copyright (c) 2003-2005 Peter Dimov
+	Copyright (C) 2003-2005 Peter J. Verveer
+	Copyright (c) 2003-2006, 2008 Gennaro Prota
+	Copyright (c) 2003, 2006   Gerald I. Evenden
+	Copyright (C) 2003, 2007-14 Massachusetts Institute of Technology
+	Copyright (C) 2003, 2007-14 Matteo Frigo
+	Copyright (C) 2003, 2008 Fernando Luis Cacciola Carballal.
+	Copyright (c) 2003-2008 Jan Gaspar
+	Copyright (C) 2003-2008 Matthias Christian Schabel
+	Copyright (C) 2003-2009 Matthias Christian Schabel
+	Copyright (c) 2003-2009, The Regents of the University of California,
+	Copyright (c) 2003-2009, The Regents of the University of California,  through Lawrence Berkeley National Laboratory (subject to receipt of  any required approvals from U.S. Dept. of Energy) All rig
+	Copyright (c) 2003-2011 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+	Copyright (c) 2003-2020 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+	Copyright (c) 2003 Daniel Frey
+	Copyright (c) 2003 David Abrahams
+	Copyright (c) 2003 Eric Friedman
+	Copyright (c) 2003// Eric Friedman
+	Copyright (c) 2003 Eric Friedman, Itay Maman
+	Copyright (C) 2003, Fernando Luis Cacciola Carballal.
+	Copyright (c) 2003 Gennaro Prota
+	Copyright (C) 2003 Gennaro Prota.
+	Copyright (c) 2003   Gerald I. Evenden
+	Copyright (c) 2003 Giovanni Bajo
+	Copyright (c) 2003 Gustavo Guerra
+	Copyright (c) 2003 Hartmut Kaiser
+	Copyright (c) 2003, Hartmut Kaiser
+	Copyright (c) 2003 Howard Hinnant
+	Copyright (c) 2003 Joel de Guzman
+	Copyright (c) 2003 Jonathan de Halleux
+	Copyright (c) 2003 Jonathan de Halleux (dehalleux@pelikhan.com)
+	Copyright (c) 2003 Martin Wille
+	Copyright (c) 2003 Paul Mensonides
+	Copyright (c) 2003 Peter Dimov
+	Copyright (c) 2003 Peter Dimov  Distributed under the Boost
+	Copyright (c) 2003, The Regents of the University of California, throughLawrence Berkeley National Laboratory (subject to receipt of any required approvals from U.S. Dept. of Energy)
+	Copyright (c) 2003, The Regents of the University of California, throughLawrence Berkeley National Laboratory (subject to receipt of any requiredapprovals from U.S. Dept. of Energy)
+	Copyright (c) 2003 Thomas Witt
+	Copyright (c) 2003 Vaclav Vesely
+	Copyright (C) 2003 Vesa Karvonen.
+	Copyright (c) 2003 Vladimir Prus.
+	Copyright (c) 2004
+	Copyright (C) 2004, 2005 Arkadiy Vertleyb
+	Copyright (c) 2004-2005 CrystalClear Software, Inc.
+	Copyright (c) 2004-2005, Jean-Sebastien Roy (js@jeannot.org)
+	Copyright (C) 2004-2006 The Trustees of Indiana University.
+	Copyright (C) 2004-2008 The Trustees of Indiana University.
+	Copyright (C) 2004-2009 The Trustees of Indiana University.
+	Copyright (c) 2004 Angus Leeming
+	Copyright (C) 2004 Arkadiy Vertleyb
+	Copyright (c) 2004 CrystalClear Software, Inc.
+	Copyright (c) 2004 Daniel Wallin
+	Copyright (c) 2004 David M. Cooke <cookedm@physics.mcmaster.ca>
+	Copyright (c) 2004   Gerald I. Evenden
+	Copyright (c) 2004 Hartmut Kaiser
+	Copyright (c) 2004 Joel de Guzman
+	Copyright (c) 2004 John Maddock
+	Copyright (c) 2004 Jonathan Brandmeyer
+	Copyright (c) 2004 Kristopher Beevers
+	Copyright (C) 2004 Peder Holt
+	Copyright (c) 2004 Ralf Mattethat
+	Copyright (C) 2004  The Trustees of Indiana University.
+	Copyright (C) 2004 The Trustees of Indiana University.
+	Copyright (C) 2004 The Trustees of Indiana University
+	copyright (c) 2005
+	Copyright (C) 2005-2006 Alain Miniussi <alain.miniussi -at- oca.eu>.
+	Copyright (c) 2005-2006 Dan Marsden
+	Copyright (C) 2005, 2006 Douglas Gregor.
+	Copyright (C) 2005-2006 Douglas Gregor <doug.gregor -at- gmail.com>.
+	Copyright (C) 2005-2006 Douglas Gregor <doug.gregor -at- gmail.com>
+	Copyright (C) 2005, 2006 Douglas Gregor <doug.gregor -at- gmail.com>.
+	Copyright (C) 2005-2006 Douglas Gregor <doug.gregor@gmail.com>.
+	Copyright (c) 2005-2006 Joao Abecasis
+	Copyright (C) 2005-2006 The Trustees of Indiana University.
+	Copyright (c) 2005-2007 Dan Marsden
+	Copyright (C) 2005-2007 Peder Holt (VC 7.0
+	Copyright (C) 2005-2008 Daniel James.
+	Copyright (c) 2005-2008 Hartmut Kaiser
+	Copyright (C) 2005-2008 The Trustees of Indiana University.
+	Copyright (C) 2005-2009 Jongsoo Park <jongsoo.park -at- gmail.com>
+	Copyright (c) 2005-2010 Joel de Guzman
+	Copyright (C) 2005-2010 The Trustees of Indiana University.
+	Copyright (C) 2005-2011 Daniel James.
+	Copyright (c) 2005-2011 Joel de Guzman
+	Copyright (c) 2005-2012 Joel de Guzman
+	Copyright (c) 2005-2013 Joel de Guzman
+	Copyright (c) 2005, 2014 Eric Niebler
+	Copyright (c) 2005-2015, Michele Simionato
+	Copyright (C) 2005-2016 Daniel James
+	Copyright (c) 2005-2020 Christopher M. Kohlhoff (chris at kohlhoff dot com)
+	Copyright (c) 2005-2022, NumPy Developers.All rights reserved
+	Copyright (c) 2005 Aaron Windsor
+	Copyright (C) 2005 Arkadiy Vertleyb
+	Copyright (C) 2005 Arkadiy Vertleyb, Peder Holt.
+	Copyright (c) 2005 CrystalClear Software, Inc.
+	Copyright (c) 2005 Dan Marsden
+	Copyright (C) 2005 Douglas Gregor.
+	Copyright (c) 2005 Eric Niebler
+	Copyright (C) 2005 Eric Niebler
+	Copyright (C) 2005, Fernando Luis Cacciola Carballal.
+	Copyright (C) 2005 Igor Chesnokov, mailto:ichesnokov@gmail.com (VC 6.5,VC 7.1
+	Copyright (c) 2005 Matthew Calabrese
+	Copyright (C) 2005 Peder Holt
+	Copyright (c) 2005 Peter Dimov.
+	Copyright (c) 2005 Peter Dimov
+	Copyright (c) 2005, Rasmus Munk Larsen, Stanford UniversityAll rights reserved
+	Copyright (c) 2005 Stefan Arentz (stefan at soze dot com)
+	Copyright (c) 2005 Voipster / Indrek dot Juhani at voipster dot com
+	Copyright (c) 2006, 2007 Julio M. Merino Vidal
+	Copyright (c) 2006-2007 Matias Capeletto
+	Copyright (c) 2006-2007, Robert Hetland <hetland@tamu.edu>
+	Copyright (c) 2006-2007 Tobias Schwinger
+	Copyright (c) 2006-2008 Alexander Chemeris// // Redistribution and use in source and binary forms, with or without// modification, are permitted provided that the following conditions are met://
+	Copyright (c) 2006-2008 Emil Dotchevski and Reverge Studios, Inc.
+	Copyright (c) 2006-2008 Johan Rade
+	Copyright (C) 2006-2009, 2012 Alexander Nasonov
+	Copyright (C) 2006-2009 Dmitry Bufistov and Andrey Parfenov
+	Copyright (c) 2006-2009 Emil Dotchevski and Reverge Studios, Inc.
+	Copyright (C) 2006-2009 Johann C. Rocholl <johann@rocholl.net>
+	Copyright (C) 2006, 2009 Marcin Kalicinski
+	Copyright (c) 2006-2010 Emil Dotchevski and Reverge Studios, Inc.
+	Copyright (C) 2006-2010 The Trustees of Indiana University.
+	Copyright (c) 2006-2013 Emil Dotchevski and Reverge Studios, Inc.
+	Copyright (c) 2006-2013 The University of Colorado Denver.  All rights                          reserved.
+	Copyright (c) 2006-7 John Maddock
+	Copyright (C) 2006 Arkadiy Vertleyb
+	Copyright (c) 2006 CrystalClear Software, Inc.
+	Copyright (c) 2006 Daniel Wallin
+	Copyright (c) 2006 Dan Marsden
+	Copyright (C) 2006 Douglas Gregor <doug.gregor -at- gmail.com>.
+	Copyright (C) 2006 Douglas Gregor <doug.gregor -at- gmail.com>
+	Copyright (c) 2006 Eric Niebler
+	Copyright (c) 2006 Joao Abecasis
+	Copyright (c) 2006 Johan Rade
+	Copyright (c) 2006 John Maddock
+	Copyright (c) 2006 Kirill Simonov
+	Copyright (c) 2006 Peter Dimov
+	Copyright (c) 2006 Piotr Wyderski
+	Copyright (c) 2006, Stephan Diederich
+	Copyright (c) 2006 Stephen Nutt
+	Copyright (C) 2006 Steven Watanabe (VC 8.0)
+	Copyright (c) 2006, Systems Optimization LaboratoryAll rights reserved
+	Copyright (C) 2006 The Trustees of Indiana University.
+	Copyright (C) 2006  Tiago de Paula Peixoto <tiago@forked.de>
+	Copyright (c) 2006 Tobias Schwinger
+	Copyright (C) 2006 Tobias Schwinger
+	Copyright (c) 2006 Tomas Puverle
+	Copyright (C) 2006 Trustees of Indiana University
+	Copyright (c) 2006 Xiaogang Zhang
+	Copyright (c) 2006 Xiaogang Zhang, 2015 John Maddock.
+	Copyright (c) 2006 Xiaogang Zhang, 2015 John Maddock
+	Copyright (c) 2007, 2008, 2012 Peter Dimov
+	Copyright (c) 2007, 2008, Damian Eads
+	Copyright (c) 2007, 2008, Damian Eads. All rights reserved
+	Copyright (c) 2007, 2008 Peter Dimov
+	Copyright (C) 2007-2008 Steven Watanabe
+	Copyright (C) 2007, 2008 Steven Watanabe, Joseph Gauterin, Niels Dekker
+	Copyright (c) 2007-2008 Tobias Schwinger
+	Copyright (c) 2007-2009 Ben Hanson (http://www.benhanson.net/)
+	Copyright (c) 2007-2009: Joachim Faulhaber
+	Copyright (C) 2007-2009 Steven Watanabe
+	Copyright (c) 2007-2010: Joachim Faulhaber
+	Copyright (C) 2007-2010 Steven Watanabe
+	Copyright (c) 2007-2011 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2007-2011 Hartmut Kaiser
+	Copyright (c) 2007-2011: Joachim Faulhaber
+	Copyright (c) 2007-2012 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2007-2012: Joachim Faulhaber
+	Copyright (c) 2007-2013 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2007, 2013 John Maddock
+	Copyright (c) 2007, 2013 Peter Dimov
+	Copyright (c) 2007-2014 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2007, 2014 Peter Dimov
+	Copyright (c) 2007-2015 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2007-2016 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2007-2017 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2007-2020 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (C) 2007-8 Anthony Williams
+	Copyright (C) 2007-9 Anthony Williams
+	Copyright (C) 2007 Alexey Baskakov
+	Copyright (c) 2007 Cybozu Labs, Inc.
+	Copyright (c) 2007, Damian Eads. All rights reserved
+	Copyright (c) 2007 Dan Marsden
+	Copyright (C) 2007   Douglas Gregor
+	Copyright (C) 2007 Douglas Gregor
+	Copyright (C) 2007 Douglas Gregor and Matthias Troyer
+	Copyright (C) 2007  Douglas Gregor  <doug.gregor@gmail.com>
+	Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+	Copyright (C) 2007 Hartmut Kaiser
+	Copyright (c) 2007 Joel de Guzman
+	Copyright (c) 2007 John Maddock
+	Copyright (c) 2007, John Travers <jtravs@gmail.com>
+	Copyright (C) 2007 Marcin Kalicinski
+	Copyright (C) 2007 Matthias Troyer
+	Copyright (C) 2007  Matthias Troyer  <troyer@boost-consulting.com>
+	Copyright (C) 2007 Peder Holt
+	Copyright (c) 2007 Peter Dimov
+	Copyright (c) 2007 - S
+	Copyright (C) 2007 The Trustees of Indiana University.
+	Copyright (c) 2007 Tobias Schwinger
+	Copyright (C) 2007, Tobias Schwinger.
+	Copyright (C) 2007 Trustees of Indiana University
+	Copyright (C) 2008, 2009, 2016 Tim Blechmann, based on code by Cory Nelson
+	Copyright (c) 2008-2009 Ben Hanson
+	Copyright (c) 2008-2009 Ben Hanson (http://www.benhanson.net/)
+	Copyright (c) 2008-2009 Ben Hanson\n";
+	Copyright (c) 2008-2009 Emil Dotchevski and Reverge Studios, Inc.
+	Copyright (c) 2008-2009 Frank Mori Hess
+	Copyright (c) 2008-2009: Joachim Faulhaber
+	Copyright (C) 2008, 2009 Michael Trier and contributors, 2010-2015 Sebastian Thiel"
+	Copyright (C) 2008, 2009 Michael Trier and contributorsAll rights reserved
+	Copyright (C) 2008, 2009 Michael Trier (mtrier@gmail.com) and contributorsmccabe 0.7.0 pypi:mccabe/0.7.0
+	Copyright (c) 2008, 2009 Peter Dimov
+	Copyright (c) 2008-2010: Joachim Faulhaber
+	Copyright (c) 2008-2010 Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2008-2011 Bruno Lalande, Paris, France.
+	Copyright (C) 2008-2011 Daniel James.
+	Copyright (c) 2008-2011 Hartmut Kaiser
+	Copyright (c) 2008-2011 Hartmut Kaiser\n";
+	Copyright (c) 2008-2011: Joachim Faulhaber
+	Copyright (c) 2008, 2011 Peter Dimov
+	Copyright (c) 2008-2012 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2008-2012 Bruno Lalande, Paris, France.
+	Copyright (c) 2008-2012: Joachim Faulhaber
+	Copyright (c) 2008-2012 Simonson Lucanus.
+	Copyright (c) 2008-2013 Bruno Lalande, Paris, France.
+	Copyright (C) 2008-2013 Tim Blechmann
+	Copyright (c) 2008-2014 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2008-2014 Bruno Lalande, Paris, France.
+	Copyright (c) 2008-2015 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2008-2015 Bruno Lalande, Paris, France.
+	Copyright (C) 2008-2016 Daniel James.
+	Copyright (c) 2008-2016 Emil Dotchevski and Reverge Studios, Inc.
+	Copyright (C) 2008-2016 Tim Blechmann
+	Copyright (C) 2008, 2016 Tim Blechmann
+	Copyright (c) 2008-2017 Bruno Lalande, Paris, France.
+	Copyright (c) 2008-2017 Emil Dotchevski and Reverge Studios, Inc.
+	Copyright (C) 2008-2018 Lorenzo Caminiti
+	Copyright (c) 2008, 2018 Peter Dimov
+	Copyright (C) 2008-2019 Lorenzo Caminiti
+	Copyright (c) 2008 Beman Dawes
+	Copyright (C) 2008 Damian Eads
+	Copyright (C) 2008 Eric Niebler.
+	Copyright (c) 2008 Federico J. Fernandez.
+	Copyright (c) 2008 Frank Mori Hess
+	Copyright (c) 2008   Gerald I. Evenden
+	Copyright (c) 2008 Ilya Sokolov, Boris Schaeling
+	Copyright (C) 2008 Ion Gaztanaga
+	Copyright (c) 2008 Michael Marcin
+	Copyright (c) 2008 Peter Dimov
+	Copyright (c) 2008 Rep Invariant Systems, Inc. (info@repinvariant.com)
+	Copyright (c) 2008 Roelof Naude (roelof.naude at gmail dot com)
+	Copyright (C) 2008 Steven Watanabe
+	Copyright (c) 2009
+	Copyright (c) 2009-2009: Joachim Faulhaber
+	Copyright (c) 2009-2010 Christopher Schmidt
+	Copyright (c) 2009-2010 Hartmut Kaiser
+	Copyright (c) 2009-2010: Joachim Faulhaber
+	Copyright (c) 2009-2010, Marco Guazzone
+	Copyright (c) 2009-2010  Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2009-2011 Artyom Beilis (Tonkikh)
+	Copyright (c) 2009-2011 Christopher Schmidt
+	Copyright (c) 2009, 2011 Helge Bahmann
+	Copyright (c) 2009-2011: Joachim Faulhaber
+	Copyright (c) 2009-2011 Mateusz Loskot, London, UK.
+	Copyright (c) 2009-2011 Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2009-2012 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (C) 2009-2012 Lorenzo Caminiti
+	Copyright (c) 2009-2012, Marco Guazzone
+	Copyright (c) 2009-2012 Mateusz Loskot, London, UK.
+	Copyright (c) 2009-2012 Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2009-2013 Mateusz Loskot, London, UK.
+	Copyright (C) 2009-2013 Tim Blechmann
+	Copyright (C) 2009-2014 Florent Xicluna <florent.xicluna@gmail.com>
+	Copyright (c) 2009-2014 Mateusz Loskot, London, UK.
+	Copyright (c) 2009-2015 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2009-2015 Mateusz Loskot, London, UK.
+	Copyright (c) 2009, 2015 Peter Dimov
+	Copyright (c) 2009-2017 Mateusz Loskot, London, UK.
+	Copyright (c) 2009-2017 The MathJax Consortium
+	Copyright (c) 2009-2020 Vladimir Batov.
+	Copyright (C) 2009 Andrew Sutton
+	Copyright (c) 2009 Ben Hanson (http://www.benhanson.net/)
+	Copyright (c) 2009 Boris Schaeling
+	Copyright (c) 2009 Carl Barron
+	Copyright (c) 2009 Chris Hoeppler
+	Copyright (c) 2009 Christopher Schmidt
+	Copyright (c) 2009 Francois Barel
+	Copyright (c) 2009 Frank Mori Hess
+	Copyright (C) 2009 Free Software Foundation, Inc. <http://fsf.org/>
+	Copyright (c) 2009, Gunter Winkler
+	Copyright (c) 2009  Hartmut Kaiser
+	Copyright (c) 2009 Hartmut Kaiser
+	Copyright (c) 2009 Helge Bahmann
+	Copyright (c) 2009 John Maddock
+	Copyright (c) 2009, Marco Guazzone
+	Copyright (c) 2009, Motorola, Inc
+	Copyright (C) 2009 Pauli Virtanen
+	Copyright (C) 2009, Pauli Virtanen <pav@iki.fi>
+	Copyright (c) 2009 Peter Dimov
+	Copyright (c) 2009 Phil Endecott
+	Copyright (C) 2009 Sebastian Redl
+	Copyright (c) 2009, Spirent Communications, Inc.
+	Copyright (C) 2009 Steven Watanabe
+	Copyright (C) 2009 Trustees of Indiana University
+	Copyright (c) 2009 Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2010-2010: Joachim Faulhaber
+	Copyright (c) 2010-2011 Bryce Lelbach
+	Copyright (c) 2010-2011 Christopher Schmidt
+	Copyright (c) 2010-2011 David Bellot
+	Copyright (c) 2010-2011: Joachim Faulhaber
+	Copyright (C) 2010, 2011 Sebastian Thiel and contributorsAll rights reserved
+	Copyright (C) 2010, 2011 Sebastian Thiel (byronimo@gmail.com) and contributors
+	Copyright (C) 2010, 2011 Sebastian Thiel (byronimo@gmail.com) and contributorsGitPython 3.1.43 pypi:GitPython/3.1.43
+	Copyright (c) 2010-2011 Thomas Heller
+	Copyright (C) 2010-2011 Tim Blechmann
+	Copyright (c) 2010-2012 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2010 2015 Francisco Jos
+	Copyright (c) 2010-2017 The MathJax Consortium
+	Copyright (C) 2010-2019 Max-Planck-SocietyAll rights reserved
+	Copyright (C) 2010 - 2019 ridiculous_fish, <libdivide@ridiculousfish.com>
+	Copyright (C) 2010-2020 Max-Planck-Society
+	Copyright (c) 2010 Alfredo Correa
+	Copyright (c) 2010 Artyom Beilis (Tonkikh)
+	Copyright (c) 2010 Athanasios Iliopoulos
+	Copyright (c)      2010 Bryce Lelbach
+	Copyright (c) 2010      Bryce Lelbach
+	Copyright (c) 2010 Christopher Schmidt
+	Copyright (C) 2010 David Fong and Michael Saunders
+	Copyright (c) 2010 Eric Jourdanneau, Joel Falcou
+	Copyright (c) 2010      Eric Niebler
+	Copyright (c) 2010 Eric Niebler
+	Copyright (c) 2010 Felipe Tanus, Boris Schaeling
+	Copyright (c) 2010 Helge Bahmann
+	Copyright (c) 2010 Ilya Murav
+	Copyright (c) 2010 - Jordi Guti
+	Copyright (c) 2010 Matthias Walter (xammy@xammy.homelinux.net)
+	Copyright (c) 2010 Neil Groves
+	Copyright (c) 2010 Nuovation System Designs, LLC//    Grant Erickson <gerickson@nuovations.com>
+	Copyright (C) 2010 Paul A. Bristow added Doxygen comments.
+	Copyright (C) 2010 Peder Holt
+	Copyright (c) 2010 Thomas Heller
+	Copyright (c) 2010 Thomas P. Robitaille
+	Copyright (C) 2010 Tim Blechmann
+	Copyright (c) 2010 Wolfgang Hoermann and Josef Leydold
+	Copyright (c) 2011
+	Copyright (c) 2011-2011: Joachim Faulhaber
+	Copyright (c) 2011-2012
+	Copyright (c) 2011-2012 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2011-2012 Bruno Lalande, Paris, France.
+	Copyright (c) 2011, 2012 Jeff Flinn, Boris Schaeling
+	Copyright (c) 2011, 2012  Martin Lambers <marlam@marlam.de>
+	Copyright (c) 2011-2012 Mateusz Loskot, London, UK.
+	Copyright (c) 2011-2012 Thomas Bernard
+	Copyright (C) 2011-2012 Vicente J. Botet Escriba
+	Copyright (c) 2011-2012 Wolfgang Hoermann and Josef Leydold
+	Copyright (C) 2011-2013, 2016 Tim Blechmann
+	Copyright (c) 2011-2013 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2011-2013 Andrew Hundt.
+	Copyright (C) 2011-2013 Vicente J. Botet Escriba
+	Copyright (c) 2011-2014 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2011-2014, The OpenBLAS Project  All rights reserved
+	Copyright (c) 2011-2015 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2011-2015 Akira Takahashi
+	Copyright (c) 2011-2015 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2011-2015 The MathJax Consortium
+	Copyright (c) 2011-2016 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (C) 2011, 2016 Tim Blechmann
+	Copyright (c) 2011-2017 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2011-2017 The MathJax Consortium
+	Copyright (c) 2011-2018 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2011-2019 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2011-2020 Antony Polukhin
+	Copyright (c) 2011 Aaron Graham
+	Copyright (c) 2011 Boris Schaeling (boris@highscore.de)
+	Copyright (c) 2011 Brandon Kohn
+	Copyright (c)      2011 Bryce Lelbach
+	Copyright (c) 2011      Bryce Lelbach
+	Copyright (c) 2011 Bryce Lelbach
+	Copyright (c) 2011 Christopher Jefferson
+	Copyright (c) 2011 Emil Dotchevski
+	Copyright (c) 2011 Eric Niebler
+	Copyright (c) 2011 Hartmut Kaiser
+	Copyright (c) 2011 Helge Bahmann
+	Copyright (C) 2011 J
+	Copyright (c) 2011 Jamboree
+	Copyright (c) 2011 Jan Frederick Eick
+	Copyright (c) 2011 Jeff Flinn, Boris Schaeling
+	Copyright (c) 2011 John Maddock
+	Copyright (c) 2011 OpenStack Foundation
+	Copyright (c) 2011 Paul A. Bristow comments
+	Copyright (c) 2011 Paul A. Bristow - filename changes for boost-trunk.
+	Copyright (c) 2011 Paul A. Bristow incorporated Boost.Math
+	Copyright (c) 2011 Paul A. Bristow To incorporate into Boost.Math
+	Copyright (c) 2011 Steven Watanabe
+	Copyright (c) 2011 Thomas Bernard
+	Copyright (c)      2011 Thomas Heller
+	Copyright (c) 2011 Thomas Heller
+	Copyright (C) 2011 Tim Blechmann
+	Copyright (C) 2011 Vicente J. Botet Escriba
+	Copyright (c) 2012-2012 Andrii Sydorchuk.
+	Copyright (c) 2012-2013 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (C) 2012-2013 Vicente J. Botet Escriba
+	Copyright (c) 2012 - 2014, 2017 Andrey Semashev
+	Copyright (c) 2012 - 2014 Andrey Semashev
+	Copyright (c) 2012-2014 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2012-2014 Bruno Lalande, Paris, France.
+	Copyright (c) 2012-2014 Kohei Takahashi
+	Copyright (c) 2012-2014 Mateusz Loskot, London, UK.
+	Copyright (c) 2012-2015 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2012-2015 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2012-2020 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2012-2020 Antony Polukhin
+	Copyright (c) 2012-2020 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (C) 2012 Anthony Williams
+	Copyright (c) 2012 Artyom Beilis (Tonkikh)
+	Copyright (c) 2012 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2012 Boris Schaeling
+	Copyright (c) 2012 Bruno Lalande, Paris, France.
+	Copyright (C) 2012 David Stone
+	Copyright (C) 2012 Flavio De Lorenzi (fdlorenzi@gmail.com)
+	Copyright (c) 2012 Google Inc.
+	Copyright (c) 2012 Hartmut Kaiser
+	Copyright (c) 2012 Kohei Takahashi
+	Copyright (C) 2012 Lorenzo Caminiti
+	Copyright (c) 2012   Martin Raspaud
+	Copyright (c) 2012 Massachusetts Institute of Technology
+	Copyright (c) 2012 Mateusz Loskot, London, UK.
+	Copyright (C) 2012, Michele Caini.
+	Copyright (c) 2012 Nathan Ridge
+	Copyright (c) 2012 Oswin Krause
+	Copyright (c) 2012 Paul A. Bristow
+	Copyright (c) 2012 Paul Fultz II
+	Copyright (C) 2012 Pieter Bastiaan Ober (Integricom).
+	Copyright (c) 2012 Robert Ramey
+	Copyright (c) 2012 Tim Blechmann
+	Copyright (C) 2012 Vicente J. Botet Escriba
+	Copyright (c) 2013-2014, 2020 Andrey Semashev
+	Copyright (c) 2013-2014 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2013-2014 Adam Wulkiewicz, Lodz, Poland
+	Copyright (c) 2013-2014 Agustin Berge
+	Copyright (c) 2013 - 2014 Andrey Semashev
+	Copyright (c) 2013-2014 Damien Buhl
+	Copyright (c) 2013-2014 Ion Gaztanaga
+	Copyright (c) 2013-2014 Kyle Lutz <kyle.r.lutz@gmail.com>
+	copyright (c) 2013-2014, Oracle and/or its affiliates.
+	copyright (c) 2013, 2014 Oracle and/or its affiliates.
+	Copyright (C) 2013-2014 Vicente J. Botet Escriba
+	Copyright (C) 2013,2014 Vicente J. Botet Escriba
+	Copyright (c) 2013-2015 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2013-2015 Adam Wulkiewicz, Lodz, Poland
+	Copyright (c) 2013-2015 Kyle Lutz <kyle.r.lutz@gmail.com>
+	copyright (c) 2013-2015, Oracle and/or its affiliates.
+	Copyright (c) 2013-2017 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2013-2017 Adam Wulkiewicz, Lodz, Poland
+	copyright (c) 2013-2017 Oracle and/or its affiliates.
+	copyright (c) 2013-2017, Oracle and/or its affiliates.
+	Copyright (c) 2013-2017 The MathJax Consortium
+	Copyright (c) 2013 - 2018, 2020 Andrey Semashev
+	copyright (c) 2013-2018 Oracle and/or its affiliates.
+	copyright (c) 2013-2018, Oracle and/or its affiliates.
+	copyright (c) 2013-2019 Oracle and/or its affiliates.
+	copyright (c) 2013-2019, Oracle and/or its affiliates.
+	Copyright (c) 2013 - 2020 Andrey Semashev
+	Copyright (c) 2013-2020 Antony Polukhin.
+	Copyright (c) 2013-2020 Antony Polukhin
+	copyright (c) 2013-2020 Oracle and/or its affiliates.
+	copyright (c) 2013-2020, Oracle and/or its affiliates.
+	copyright (c) 2013-2020 Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	copyright (c) 2013-2020, Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle// Contributed and/or modified by Menelaos Karavelas, on behalf of Oracle
+	Copyright (c) 2013 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2013 Adam Wulkiewicz, Lodz, Poland
+	Copyright (c) 2013 Agustin Berge
+	Copyright (c) 2013 Anton Bikineev
+	Copyright (c) 2013  Antony Polukhin // Move semantics implementation.
+	Copyright (c) 2013 Antony Polukhin  // Move semantics implementation.
+	Copyright (C) 2013 Association of Universities for Research in Astronomy
+	Copyright (c) 2013 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2013 Bruno Lalande, Paris, France.
+	Copyright (c) 2013 Carl Barron
+	Copyright (c) 2013 Christopher Kormanyos
+	Copyright (C) 2013 Eurodecision
+	Copyright (c) 2013 Hewlett-Packard Development Company, L.P.
+	Copyright (C) 2013 Jakob Lykke Andersen, University of Southern Denmark// (jlandersen@imada.sdu.dk)
+	Copyright (c) 2013 Jamboree
+	Copyright (c) 2013 Joaquim Duran
+	Copyright (c) 2013 John Maddock, Antony Polukhin//
+	Copyright (C) 2013 Kenneth L. Ho
+	Copyright (c) 2013 Kyle Lutz <kyle.r.lutz@gmail.com>
+	Copyright (c) 2013 Mateusz Loskot
+	Copyright (c) 2013 Mateusz Loskot, London, UK.
+	Copyright (c) 2013 New Dream Network, LLC (DreamHost)
+	copyright (c) 2013, Oracle and/or its affiliates.
+	Copyright (c) 2013 Paul A. Bristow  // Doxygen comments changed.
+	Copyright (c) 2013  Paul A. Bristow // Doxygen comments changed for new version of documentation.
+	Copyright (C) 2013  Pauli Virtanen
+	Copyright (c) 2013 Peter Dimov
+	Copyright (C) 2013 Sebastian Redl
+	Copyright (c) 2013 Testrepository Contributors
+	Copyright (c) 2013 Tim Blechmann
+	Copyright (C) 2013 Vicente J. Botet Escriba
+	Copyright (c) 2014, 2015, 2016, 2017 Jarryd Beck
+	Copyright (c) 2014,2015,2018 Kohei Takahashi
+	Copyright (c) 2014-2015 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2014-2015 Adam Wulkiewicz, Lodz, Poland
+	Copyright (C) 2014, 2015 Andrzej Krzemienski.
+	Copyright (c) 2014-2015 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2014-2015 Bruno Lalande, Paris, France.
+	Copyright (c) 2014-2015 John Fletcher
+	Copyright (c) 2014-2015 Kohei Takahashi
+	Copyright (c) 2014-2015 Mateusz Loskot, London, UK.
+	copyright (c) 2014-2015 Oracle and/or its affiliates.
+	Copyright (c) 2014-2015, Oracle and/or its affiliates.
+	Copyright (c) 2014-2015 Samuel Debionne, Grenoble, France.
+	Copyright (C) 2014-2015 Vicente J. Botet Escriba
+	Copyright (C) 2014-2016 Andrzej Krzemienski.
+	Copyright (C) 2014-2016 Ian Lee <ianlee1521@gmail.com>
+	Copyright (c) 2014-2016 Oracle and/or its affiliates.
+	Copyright (c) 2014-2017 Adam Wulkiewicz, Lodz, Poland.
+	copyright (c) 2014-2017 Oracle and/or its affiliates.
+	copyright (c) 2014-2017, Oracle and/or its affiliates.
+	Copyright (c) 2014-2017, Oracle and/or its affiliates.
+	Copyright (c) 2014-2017 The MathJax Consortium
+	Copyright (C) 2014-2017 Vicente J. Botet Escriba
+	Copyright (c) 2014, 2018, 2019, Oracle and/or its affiliates.
+	Copyright (c) 2014-2018, 2020 Andrey Semashev
+	Copyright (c) 2014-2018 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (C) 2014 - 2018 Andrzej Krzemienski.
+	Copyright (c) 2014,2018 Kohei Takahashi
+	copyright (c) 2014-2018 Oracle and/or its affiliates.
+	copyright (c) 2014-2018, Oracle and/or its affiliates.
+	copyright (c) 2014, 2018, Oracle and/or its affiliates.
+	Copyright (c) 2014-2018 Oracle and/or its affiliates.
+	Copyright (c) 2014-2018, Oracle and/or its affiliates.
+	Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+	Copyright (c) 2014, 2019, 2020 Oracle and/or its affiliates.
+	Copyright (c) 2014, 2019 Andrey Semashev
+	copyright (c) 2014-2019 Oracle and/or its affiliates.
+	copyright (c) 2014-2019, Oracle and/or its affiliates.
+	copyright (c) 2014, 2019, Oracle and/or its affiliates.
+	Copyright (c) 2014-2019, Oracle and/or its affiliates.
+	Copyright (c) 2014, 2019, Oracle and/or its affiliates.
+	Copyright (c) 2014-2020 Andrey Semashev
+	Copyright (c) 2014, 2020 Andrey Semashev
+	Copyright (c) 2014-2020 Antony Polukhin
+	copyright (c) 2014-2020 Oracle and/or its affiliates.
+	copyright (c) 2014-2020, Oracle and/or its affiliates.
+	Copyright (c) 2014-2020 Oracle and/or its affiliates.
+	Copyright (c) 2014-2020, Oracle and/or its affiliates.
+	copyright (c) 2014-2020 Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	copyright (c) 2014-2020 Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle// Contributed and/or modified by Menelaos Karavelas, on behalf of Oracle
+	copyright (c) 2014-2020, Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle// Contributed and/or modified by Menelaos Karavelas, on behalf of Oracle
+	copyright (c) 2014-2020, Oracle and/or its affiliates.// Contributed and/or modified by Menelaos Karavelas, on behalf of Oracle// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	Copyright (c) 2014 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2014 Agustin Berge
+	Copyright (C) 2014 Agustin Berge
+	Copyright (c) 2014 Ahmed Charles
+	Copyright (c) 2014 Andrey Semashev
+	Copyright (C) 2014 Andrey Semashev
+	Copyright (C) 2014, Andrzej Krzemienski.
+	Copyright (c) 2014, Athanasios Iliopoulos
+	Copyright (c) 2014 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2014 Bruno Lalande, Paris, France.
+	Copyright (c) 2014 Christoph Weiss
+	Copyright (c) 2014 Eric Niebler
+	Copyright (C) 2014 Erik Erlandson
+	Copyright (c) 2014 Glen Fernandes
+	Copyright (c) 2014 Glen Joseph Fernandes//       (glenjofe@gmail.com)
+	Copyright (c) 2014 Glen Joseph Fernandes// (glenjofe@gmail.com)
+	Copyright (C) 2014 Glen Joseph Fernandes//  (glenjofe@gmail.com)
+	Copyright (C) 2014 Ian Forbed
+	Copyright (c) 2014 Jamboree
+	Copyright (c) 2014  Joel de Guzman
+	Copyright (c) 2014 Joel de Guzman
+	Copyright (c) 2014      John Fletcher
+	Copyright (c) 2014 John Fletcher
+	Copyright (c) 2014 Kohei Takahashi
+	Copyright (c) 2014 Lee Clagett
+	Copyright (c) 2014 Mageswaran.D <mageswaran1989@gmail.com>
+	Copyright (c) 2014 Mateusz Loskot, London, UK.
+	Copyright (c) 2014 Mathjax Consortium
+	Copyright (c) 2014 Oliver Kowalke (oliver dot kowalke at gmail dot com)
+	copyright (c) 2014 Oracle and/or its affiliates.
+	copyright (c) 2014, Oracle and/or its affiliates.
+	Copyright (c) 2014, Oracle and/or its affiliates.
+	Copyright (c) 2014 Paul Fultz II
+	Copyright (c) 2014 Peter Dimov
+	Copyright (C) 2014 Pieter Bastiaan Ober (Integricom).
+	Copyright (c) 2014 Riccardo Marcangelo
+	Copyright (c) 2014 Roshan <thisisroshansmail@gmail.com>
+	Copyright (c) 2014 Samuel Debionne, Grenoble, France.
+	Copyright (c) 2014 Thomas Bernard
+	Copyright (c) 2014      Tomoki Imai
+	Copyright (C) 2014 Vicente J. Botet Escriba
+	Copyright (c) 2015-2016 Barend Gehrels, Amsterdam, the Netherlands.
+	copyright (c) 2015-2016 Oracle and/or its affiliates.
+	copyright (c) 2015-2016, Oracle and/or its affiliates.
+	Copyright (c) 2015-2016 Oracle and/or its affiliates.
+	Copyright (C) 2015 - 2017 Andrzej Krzemienski.
+	Copyright (c) 2015-2017 Martin Hensel
+	copyright (c) 2015-2017 Oracle and/or its affiliates.
+	copyright (c) 2015-2017, Oracle and/or its affiliates.
+	Copyright (c) 2015-2017, Oracle and/or its affiliates.
+	Copyright (c) 2015-2017 The MathJax Consortium
+	Copyright (C) 2015-2018 Andrzej Krzemienski.
+	copyright (c) 2015-2018, Oracle and/or its affiliates.
+	copyright (c) 2015, 2018, Oracle and/or its affiliates.
+	Copyright (c) 2015-2018 Oracle and/or its affiliates.
+	Copyright (c) 2015-2018, Oracle and/or its affiliates.
+	copyright (c) 2015-2019 Oracle and/or its affiliates.
+	copyright (c) 2015-2019, Oracle and/or its affiliates.
+	Copyright (c) 2015-2019 Vinnie Falco (vinnie dot falco at gmail dot com)
+	Copyright (c) 2015-2020 Antony Polukhin
+	Copyright (c) 2015-2020 Barend Gehrels, Amsterdam, the Netherlands.
+	copyright (c) 2015-2020 Oracle and/or its affiliates.
+	copyright (c) 2015-2020, Oracle and/or its affiliates.
+	Copyright (c) 2015-2020 Oracle and/or its affiliates.
+	Copyright (c) 2015-2020, Oracle and/or its affiliates.
+	copyright (c) 2015-2020, Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	copyright (c) 2015-2020, Oracle and/or its affiliates.// Contributed and/or modified by Menelaos Karavelas, on behalf of Oracle// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	Copyright (c) 2015 Agustin K-ballo Berge
+	Copyright (c) 2015 Andrey Semashev
+	Copyright (C) 2015 Andrzej Krzemienski.
+	Copyright (c) 2015 Artyom Beilis (Tonkikh)
+	Copyright (c) 2015 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2015 Francisco Jos
+	Copyright (c) 2015 Hewlett-Packard Development Company, L.P. (HP)
+	Copyright (c) 2015 Ion Gaztanaga
+	Copyright (c) 2015 Jakub Pola <jakub.pola@gmail.com>
+	Copyright (c) 2015 Jakub Szuppe <j.szuppe@gmail.com>
+	Copyright (c) 2015 John Fletcher
+	Copyright (c) 2015 John Maddock
+	Copyright (c) 2015 Kohei Takahashi
+	Copyright (c) 2015 Mario Lang
+	Copyright (c) 2015 Muhammad Junaid Muzammil <mjunaidmuzammil@gmail.com>
+	copyright (c) 2015 Oracle and/or its affiliates.
+	copyright (c) 2015, Oracle and/or its affiliates.
+	Copyright (c) 2015 Oracle and/or its affiliates.
+	Copyright (c) 2015, Oracle and/or its affiliates.
+	Copyright (c) 2015, Oracle and/or its affiliates.// Contributed and/or modified by Menelaos Karavelas, on behalf of Oracle//
+	Copyright (c) 2015 Orson Peters <orsonpeters@gmail.com>        This software is provided
+	Copyright (c) 2015 Orson Peters//  This software is provided
+	Copyright (c) 2015 Paul Fultz II
+	Copyright (C) 2015, Pauli Virtanen <pav@iki.fi>
+	Copyright (c) 2015 Robert Ramey
+	Copyright (C) 2015 Sebastian Redl
+	Copyright (c) 2015 Seth Heeren
+	Copyright (C) 2015 Vicente J. Botet Escriba
+	Copyright (c) 2016--2017 Felix Lenders
+	Copyright (c) 2016-2017, Oracle and/or its affiliates.
+	Copyright (c) 2016-2017 The MathJax Consortium
+	Copyright (C) 2016-2018  ERGO-Code
+	copyright (c) 2016-2018 Oracle and/or its affiliates.
+	Copyright (c) 2016-2018 Oracle and/or its affiliates.
+	Copyright (c) 2016, 2018 Oracle and/or its affiliates.
+	Copyright (C) 2016-2018 T. Zachary Laine
+	Copyright (c) 2016-2019 Damian Jarek (damian dot jarek93 at gmail dot com)
+	Copyright (C) 2016-2019  ERGO-Code
+	Copyright (C) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>
+	Copyright (C) 2016 - 2019 Kim Walisch, <kim.walisch@gmail.com>  This software is provided
+	copyright (c) 2016-2019, Oracle and/or its affiliates.
+	Copyright (c) 2016-2019 Oracle and/or its affiliates.
+	Copyright (c) 2016-2019 Viktor Kirilov
+	Copyright (c) 2016-2019 Vinnie Falco (vinnie dot falco at gmail dot com)
+	Copyright (c) 2016-2020 Antony Polukhin
+	copyright (c) 2016-2020 Oracle and/or its affiliates.
+	copyright (c) 2016-2020, Oracle and/or its affiliates.
+	Copyright (c) 2016-2020 Oracle and/or its affiliates.
+	Copyright (c) 2016-2020, Oracle and/or its affiliates.
+	Copyright (C) 2016 Andrzej Krzemienski.
+	Copyright (C) 2016 Andrzej Krzemienski
+	Copyright (c) 2016 Barrett Adair
+	Copyright (c) 2016 Francisco Jos
+	Copyright(c) 2016 Francisco Jos
+	Copyright (c) 2016 Francisco Jose Tapia (fjtapia@gmail.com )\n
+	Copyright(c) 2016 Francisco Jose Tapia (fjtapia@gmail.com )\n
+	Copyright (c) 2016 Frank Hein, maxence business consulting gmbh
+	Copyright (c) 2016 Jakub Szuppe <j.szuppe@gmail.com>
+	Copyright (c) 2016 Klemens D. Morgenstern
+	Copyright (C) 2016 K. Noel Belcourt <kbelco -at- sandia.gov>.
+	Copyright (c) 2016      Kohei Takahashi
+	Copyright (c) 2016 Kohei Takahashi
+	Copyright (c) 2016 Lee Clagett
+	Copyright (c) 2016 Modified Work Barrett Adair
+	Copyright (c) 2016 Norbert Wenzel
+	copyright (c) 2016 Oracle and/or its affiliates.
+	copyright (c) 2016, Oracle and/or its affiliates.
+	Copyright (c) 2016 Oracle and/or its affiliates.
+	Copyright (c) 2016, Oracle and/or its affiliates.
+	Copyright (c) 2016 Paul Fultz II
+	Copyright (c) 2016 Peter Dimov
+	Copyright (c) 2016 Wenzel Jakob <wenzel.jakob@epfl.ch>, All rights reserved
+	Copyright (C) 2017
+	Copyright (c) 2017-2017 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2017-2018 Alexandr Poltavsky, Antony Polukhin.
+	Copyright (c) 2017 - 2018 Andrey Semashev
+	Copyright (c) 2017-2018 Chris Beck
+	Copyright (c) 2017, 2018 James E. King III
+	copyright (c) 2017-2018 Oracle and/or its affiliates.
+	copyright (c) 2017-2018, Oracle and/or its affiliates.
+	Copyright (c) 2017-2018 Oracle and/or its affiliates.
+	Copyright (c) 2017-2018, Oracle and/or its affiliates.
+	copyright (c) 2017-2019, Oracle and/or its affiliates.
+	copyright (c) 2017, 2019 Oracle and/or its affiliates.
+	copyright (c) 2017, 2019, Oracle and/or its affiliates.
+	Copyright (c) 2017-2019 Oracle and/or its affiliates.
+	Copyright (c) 2017-2019, Oracle and/or its affiliates.
+	Copyright (c) 2017, 2019 Oracle and/or its affiliates.
+	copyright (c) 2017-2020 Oracle and/or its affiliates.
+	copyright (c) 2017-2020, Oracle and/or its affiliates.
+	Copyright (c) 2017-2020 Oracle and/or its affiliates.
+	Copyright (c) 2017-2020, Oracle and/or its affiliates.
+	copyright (c) 2017-2020 Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	copyright (c) 2017-2020, Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	Copyright (c) 2017 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2017 Andrey Semashev
+	Copyright (C) 2017 Andrzej Krzemienski.
+	Copyright (c) 2017 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (C) 2017 Daniela Engert
+	Copyright (c) 2017 Denis Demidov <dennis.demidov@gmail.com>
+	Copyright (c) 2017 Dynatrace
+	Copyright (c) 2017 Francisco Jos
+	Copyright (c) 2017 Francisco Jose Tapia (fjtapia@gmail.com )\n
+	Copyright (C) 2017 Glen Joseph Fernandes (glenjofe@gmail.com)
+	Copyright (c) 2017 James E. King III
+	Copyright (C) 2017 James E. King III
+	Copyright (c) 2017 John Maddock
+	Copyright (c) 2017 Klemens D. Morgenstern
+	Copyright (c) 2017 Kohei Takahashi
+	Copyright (c) 2017 Kristian Popov <kristian.popov@outlook.com>
+	Copyright (C) 2017 Michel Morin.
+	copyright (c) 2017 Oracle and/or its affiliates.
+	copyright (c) 2017, Oracle and/or its affiliates.
+	Copyright (c) 2017 Oracle and/or its affiliates.
+	Copyright (c) 2017, Oracle and/or its affiliates.
+	Copyright (c) 2017 Robert Ramey
+	Copyright (c) 2017 Vinnie Falco (vinnie dot falco at gmail dot com)
+	Copyright (c) 2018-2019
+	Copyright (c) 2018-2019 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2018-2019, Cem Bassoy, cem.bassoy@gmail.com
+	Copyright (c) 2018-2019 ERGO-Code. See license.txt for license.
+	copyright (c) 2018-2019, Oracle and/or its affiliates.
+	copyright (c) 2018, 2019, Oracle and/or its affiliates.
+	Copyright (c) 2018-2019 Oracle and/or its affiliates.
+	Copyright (c) 2018-2019, Oracle and/or its affiliates.
+	Copyright (c) 2018-2020 Antony Polukhin
+	Copyright (c) 2018-2020 Emil Dotchevski and Reverge Studios, Inc.
+	copyright (c) 2018-2020 Oracle and/or its affiliates.
+	copyright (c) 2018-2020, Oracle and/or its affiliates.
+	Copyright (c) 2018-2020 Oracle and/or its affiliates.
+	Copyright (c) 2018-2020, Oracle and/or its affiliates.
+	copyright (c) 2018-2020 Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	copyright (c) 2018-2020, Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	Copyright (c) 2018-2021  ERGO-Code
+	Copyright (c) 2018 Adam Butcher, Antony Polukhin
+	Copyright (c) 2018 Adam Wulkiewicz, Lodz, Poland.
+	Copyright (c) 2018 Adeel Ahmad, Islamabad, Pakistan.
+	Copyright (c) 2018 agate-pris
+	Copyright (C) 2018 Alain Miniussi <alain.miniussi -at- oca.eu>.
+	Copyright (C) 2018 Alain Miniussi <alain.miniussi@oca.eu>.
+	Copyright (c) 2018 Andrey Semashev
+	Copyright (c) 2018 Artyom Beilis (Tonkikh)
+	Copyright (c) 2018, Cem Bassoy, cem.bassoy@gmail.com
+	Copyright (c) 2018 ERGO-Code. See license.txt for license.
+	Copyright (c) 2018 Evgeny Shulgin
+	Copyright (c) 2018 Fady Essam
+	Copyright (c) 2018 Jakub Szuppe <j.szuppe@gmail.com>
+	Copyright (c) 2018 James E. King III
+	Copyright (c) 2018 Klemens D. Morgenstern
+	Copyright (c) 2018 Kohei Takahashi
+	copyright (c) 2018 Oracle and/or its affiliates.
+	copyright (c) 2018, Oracle and/or its affiliates.
+	Copyright (c) 2018 Oracle and/or its affiliates.
+	Copyright (c) 2018, Oracle and/or its affiliates.
+	copyright (c) 2018 Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	Copyright (C) 2018 Peter Dimov
+	Copyright (c) 2018, Quansight-LabsAll rights reserved
+	Copyright (c) 2018 Sergei Fedorov
+	Copyright (c) 2018 Stefan Seefeld
+	Copyright (c) 2018 Sylvain Gubian <sylvain.gubian@pmi.com>,
+	Copyright (c) 2018 Yaghyavardhan Singh Khangarot, Hyderabad, India.// Contributed and/or modified by Yaghyavardhan Singh Khangarot,//   as part of Google Summer of Code 2018 program.
+	Copyright (c) 2018 Yi Ji
+	Copyright (c) 2019-2019 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2019 - 2020 Alexander Grund
+	Copyright (c) 2019-2020 Alexander Grund
+	Copyright (c) 2019-2020 Antony Polukhin.
+	Copyright (c) 2019-2020 Antony Polukhin
+	Copyright (c) 2019-2020 Krystian Stasiowski (sdkrystian at gmail dot com)
+	copyright (c) 2019-2020 Oracle and/or its affiliates.
+	Copyright (c) 2019-2020, Oracle and/or its affiliates.
+	Copyright (C) 2019-2020 Peter Bell
+	Copyright (c) 2019-2023 Anthon van der Neut, Ruamel bvba
+	Copyright (c) 2019 agate-pris
+	Copyright (c) 2019 Andrey Semashev
+	Copyright (c) 2019 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2019 Damian Jarek(damian.jarek93@gmail.com)
+	Copyright (c) 2019 Dario Menendez, Banco Santander
+	Copyright (c) 2019 Joel de Guzman
+	Copyright (c) 2019 Klemens D. Morgenstern
+	Copyright (C) 2019 Max-Planck-Society
+	Copyright (c) 2019 Mika Fischer (mika.fischer@zoopnet.de)
+	copyright (c) 2019 Oracle and/or its affiliates.
+	Copyright (c) 2019 Oracle and/or its affiliates.
+	Copyright (c) 2019, Oracle and/or its affiliates.
+	Copyright (C) 2019 Peter Bell
+	Copyright (c) 2019 Peter Dimov (pdimov at gmail dot com),//                    Vinnie Falco (vinnie.falco@gmail.com)
+	Copyright (C) 2019 T. Zachary Laine
+	Copyright (c) 2019 Vinnie Falco (vinnie.falco@gmail.com)
+	Copyright (c) 2020
+	Copyright (c) 2020 Alexander Grund
+	Copyright (c) 2020 Andrey Semashev
+	Copyright (c) 2020 Barend Gehrels, Amsterdam, the Netherlands.
+	Copyright (c) 2020 Caian Benedicto, Campinas, Brazil.
+	Copyright (c) 2020, Debabrata Mandal <mandaldebabrata123@gmail.com>
+	Copyright (c) 2020 Digvijay Janartha, Hamirpur, India.
+	Copyright (c) 2020      Jeff Trull
+	Copyright (c) 2020 John Maddock
+	Copyright (c) 2020 Krystian Stasiowski (sdkrystian at gmail dot com)
+	Copyright (c) 2020 Krystian Stasiowski (sdkrystian@gmail.com)
+	Copyright (c) 2020 Michael Feldmeier
+	Copyright (c) 2020 Nikita Kniazev
+	copyright (c) 2020 Oracle and/or its affiliates.
+	copyright (c) 2020, Oracle and/or its affiliates.
+	Copyright (c) 2020, Oracle and/or its affiliates.
+	copyright (c) 2020 Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	copyright (c) 2020, Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	Copyright (c) 2020 Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	Copyright (c) 2020, Oracle and/or its affiliates.// Contributed and/or modified by Adam Wulkiewicz, on behalf of Oracle
+	Copyright (C) 2020 Red Hat, Inc.pycodestyle 2.11.1 pypi:pycodestyle/2.11.1
+	Copyright (c) 2020 Richard Hodges (hodges.r@gmail.com)
+	Copyright (c) 2020 Vinnie Falco (vinnie.falco@gmail.com)
+	Copyright (c) 2021-04-21 St
+	Copyright (c) 2021 ERGO-Code
+	Copyright (c) 2021 Orson Peters
+	Copyright (c) 2021 Orson Peters <orsonpeters@gmail.com>
+	Copyright (c) 2021 Taneli Hukkinen
+	Copyright (c) 2021 Taneli Hukkinen
+	Copyright (c) 2022 Alex Grgitdb 4.0.11 pypi:gitdb/4.0.11
+	Copyright (c) 2022 ERGO-Code under MIT licence terms\n");
+	Copyright (c) 2022 Two Blue Cubes Ltd. All rights reserved
+	Copyright (c) 2106 Klemens D. Morgenstern
+	Copyright (c) Aaron Windsor 2007
+	Copyright (c) Alexander Zaitsev <zamazan4ik@gmail.by>, 2017.
+	Copyright (c) Alexander Zaitsev <zamazan4ik@gmail.com>, 2016
+	Copyright (c) Alexander Zaitsev <zamazan4ik@gmail.com>, 2017
+	Copyright (c) Andrey Semashev 2017
+	Copyright Catch2 Authors
+	Copyright (c) Beman Dawes 2011
+	Copyright (c) Beman Dawes 2015
+	Copyright (C) Benjamin Sobotta 2012
+	Copyright (c) Charles Karney (2008-2017) <charles@karney.com> and licensed
+	Copyright (c) Chris Glover, 2016.
+	Copyright (C) Christof Meerwald 2003
+	Copyright (c) Christopher Diggins 2005
+	Copyright (C) Damian Eads, 2007-2008. New BSD License.
+	Copyright (C) Dan Watkins 2003
+	Copyright (c) David Abrahams 2001.
+	Copyright (c) Donald Stufft and individual contributors.
+	Copyright (c) Donald Stufft and individual contributors.All rights reserved
+	Copyright (c) Douglas Gregor 2004
+	Copyright (C) Douglas Gregor 2008
+	copyright: * *     Cephes Math Library Release 2.8:  June, 2000
+	Copyright (c) Glen Joseph Fernandes 2019 (glenjofe@gmail.com)
+	Copyright Charly Chevalier 2015
+	Copyright Christoper Kohlhoff 2007
+	Copyright Christopher Brown 2013
+	Copyright Christopher Kormanyos 2002 - 2011.
+	Copyright Christopher Kormanyos 2002 - 2013.
+	Copyright Christopher Kormanyos 2013.
+	Copyright Christopher Kormanyos 2013-14
+	Copyright Christopher Kormanyos 2013. Distributed under the Boost
+	Copyright Christopher Kormanyos 2014.
+	Copyright (c) Intel Corporation 2008.
+	Copyright (c) Jeremy Siek 2001
+	Copyright (c) Jeremy Siek 2001-2003.
+	Copyright (c) Jeremy Siek 2001, Marc Wintermantel 2002
+	Copyright (c) Kevlin Henney 2001
+	Copyright (c) Marshall Clow 2008-2012.
+	Copyright (c) Marshall Clow 2010-2012.
+	Copyright (c) Marshall Clow 2011-2012.
+	Copyright (c) Marshall Clow 2012-2012.
+	Copyright (c) Marshall Clow 2012-2015.
+	Copyright (c) Marshall Clow 2014.
+	Copyright (c) Marshall Clow 2017.
+	Copyright (c) Microsoft Corporation 2014
+	Copyright \copyright\ 2014 by P.-G. Martinsson, V. Rokhlin,Y. Shkolnisky, and M. Tygert.
+	copyright: Copyright 2015  Jon Lund Steffensen. Based on extlinks by
+	Copyright (c) Pablo Aguilar 2005
+	Copyright (C) Piers Lawrence.  All rights reserved
+	Copyright Cromwell D. Enage 2013.
+	Copyright Cromwell D. Enage 2017.
+	Copyright Cromwell D. Enage 2018.
+	Copyright Cromwell D. Enage 2019.
+	Copyright (c) Thomas Witt 2002.
+	Copyright (c) Tobias Schwinger
+	Copyright (C)  Tyler Reddy, Ross Hemsley, Edd Edmondson,
+	Copyright (c) T. Zachary Laine 2018.
+	Copyright (C) Vladimir Prus 2003.
+	Copyright (C) Vladimir Prus 2003
+	Copyright (c) <year> <copyright holders>
+	Copyright (c) <YEAR>, <OWNER>All rights reserved
+	Copyright Daniel Trebbien 2010.
+	Copyright Daniel Walker 2006. Use, modification and distribution
+	Copyright Daniel Walker 2007
+	Copyright Daniel Walker, Eric Niebler, Michel Morin 2008-2012.
+	Copyright Daniel Wallin 2005.
+	Copyright Daniel Wallin 2005. Use, modification and distribution is
+	Copyright Daniel Wallin 2006.
+	Copyright Daniel Wallin 2006. Use, modification and distribution is
+	Copyright Daniel Wallin 2007. Use, modification and distribution is
+	Copyright Daniel Wallin, David Abrahams 2005.
+	Copyright Daniel Wallin, David Abrahams 2010.
+	Copyright Daryle Walker, Hubert Holin, John Maddock 2006 - 2007
+	Copyright Dave Abrahams 2001-2002
+	Copyright David Abrahams 2000-2002
+	Copyright David Abrahams 2001.
+	Copyright David Abrahams 2001
+	Copyright David Abrahams 2001-2002
+	Copyright David Abrahams 2002.
+	Copyright David Abrahams 2002
+	Copyright David Abrahams 2002-2003
+	Copyright David Abrahams 2002, Joel de Guzman, 2002.
+	Copyright David Abrahams 2002,  Nikolay Mladenov 2007.
+	Copyright David Abrahams 2003.
+	Copyright David Abrahams 2003
+	Copyright David Abrahams 2003-2004
+	Copyright David Abrahams 2003. Use, modification and distribution is
+	Copyright David Abrahams 2004.
+	Copyright David Abrahams 2004
+	Copyright David Abrahams 2004. Distributed under the Boost
+	Copyright David Abrahams 2004. Use, modification and distribution is
+	Copyright David Abrahams 2005.
+	Copyright David Abrahams 2005. Distributed under the Boost
+	Copyright David Abrahams 2006.
+	Copyright David Abrahams 2006. Distributed under the Boost
+	Copyright David Abrahams 2006. Original version
+	Copyright David Abrahams 2009. Distributed under the Boost
+	Copyright David Abrahams and Jeremy Siek 2003.
+	Copyright David Abrahams and Nikolay Mladenov 2003.
+	Copyright David Abrahams and Thomas Becker 2000-2006.
+	Copyright David Abrahams, Daniel Wallin 2003.
+	Copyright David Abrahams, Daniel Wallin 2005.
+	Copyright Dietmar Kuehl 2001
+	Copyright Douglas Gregor 2001-2003.
+	Copyright Douglas Gregor 2001-2003. Use, modification and
+	Copyright Douglas Gregor 2001-2004.
+	Copyright Douglas Gregor 2001-2004. Use, modification and
+	Copyright Douglas Gregor 2001-2006
+	Copyright Douglas Gregor 2002-2003. Use, modification and
+	Copyright Douglas Gregor 2002-2004. Use, modification and
+	Copyright Douglas Gregor 2003. Use, modification and
+	Copyright Douglas Gregor 2004.
+	Copyright Douglas Gregor 2004. Use, modification and
+	Copyright Emil Dotchevski 2007
+	Copyright Eric Friedman 2002
+	Copyright Eric Friedman 2002-2003
+	Copyright Eric Friedman 2003
+	Copyright Eric Niebler 2005.
+	Copyright Eric Niebler 2008
+	Copyright Eric Niebler 2009
+	Copyright Eric Niebler 2014
+	Copyright Eric Niebler 2014. Use, modification and
+	Copyright Evan Miller 2020
+	copyright follows:
+	copyright for code they wrote and submit for
+	Copyright for the original TNBC fortran routines:
+	Copyright for the original TNBC Fortran routines:
+	Copyright for the original version:
+	Copyright Frank Mori Hess 2007.
+	Copyright Frank Mori Hess 2007-2008.
+	Copyright Frank Mori Hess 2007-2008
+	Copyright Frank Mori Hess 2007-2009.
+	Copyright Frank Mori Hess 2007-2009
+	Copyright Frank Mori Hess 2007,2009.
+	Copyright Frank Mori Hess 2007-2010.
+	Copyright Frank Mori Hess 2007. Use, modification and
+	Copyright Frank Mori Hess 2008.
+	Copyright Frank Mori Hess 2009.
+	Copyright Frank Mori Hess 2009
+	Copyright Franz Detro 2014
+	Copyright Gautam Sewani
+	Copyright Gautam Sewani 2008
+	copyright Gonzalo Brito Gadeschi 2015
+	Copyright Gottfried Gan
+	Copyright Hans Dembinski 2020
+	copyright header
+	copyright header in
+	copyright header in	    print (outfile);
+	Copyright header line 0 is at	if (
+	copyright header should be ignored
+	copyright header so stop ignoring lines
+	copyright header so write out the line
+	Copyright Howard Hinnant 2007-2010.
+	Copyright * * I hereby release this code into the PUBLIC DOMAIN AS IS. There is no
+	copyright information.
+	copyright information- HISTORY : Release history- README : This file- example.c : A simple example- Makefile : Make file used to build the examples- moduleTNC.c : the source of the python module
+	copyright is acknowledged./
+	Copyright Jaap Suter 2003
+	Copyright James E. King III, 2017
+	Copyright Jan Langer 2002
+	Copyright Jason Rhinelander 2016
+	copyright Jason Rice 2016
+	copyright Jason Rice 2017
+	Copyright Jens Maurer 2000
+	Copyright Jens Maurer 2000-2001
+	Copyright Jens Maurer 2002
+	Copyright Jens Maurer 2006
+	Copyright Jens Maurer 2006-1011
+	Copyright Jessica Hamilton 2014
+	Copyright Jim Bosch 2010-2012.
+	Copyright Joel Falcou 2015
+	Copyright John Maddock 2005.
+	Copyright John Maddock 2005-2006.
+	Copyright John Maddock 2005-2006, 2011.
+	Copyright John Maddock 2005-2008.
+	Copyright John Maddock 2006.
+	Copyright John Maddock 2006
+	Copyright John Maddock 2006, 2007.
+	Copyright John Maddock 2006, 2007
+	Copyright John Maddock 2006, 2007, 2012, 2014.
+	Copyright John Maddock 2006, 2010.
+	Copyright John Maddock 2006, 2011.
+	Copyright John Maddock 2006, 2012.
+	Copyright John Maddock 2006-7.
+	Copyright John Maddock 2006-7, 2013-14.
+	Copyright John Maddock 2007.
+	Copyright John Maddock 2007, 2014.
+	Copyright John Maddock 2007-8.
+	Copyright John Maddock 2008.
+	Copyright John Maddock 2008
+	Copyright John Maddock 2008, 2012.
+	Copyright John Maddock 2009.
+	Copyright John Maddock 2009
+	Copyright John Maddock 2010.
+	Copyright John Maddock 2010
+	Copyright John Maddock 2010, 2012.
+	Copyright John Maddock 2011.
+	Copyright John Maddock 2012.
+	Copyright John Maddock 2012
+	Copyright John Maddock 2013.
+	Copyright John Maddock 2013
+	Copyright John Maddock 2014.
+	Copyright John Maddock 2015.
+	Copyright John Maddock 2015
+	Copyright John Maddock 2016.
+	Copyright John Maddock 2017.
+	Copyright John Maddock 2018.
+	Copyright John Maddock, 2020
+	Copyright John R. Bandela 2000-2002
+	Copyright John R. Bandela 2001.
+	Copyright John R. Bandela 2001
+	Copyright J.S. Roy (js@jeannot.org), 2002-2005
+	Copyright Justinas Vygintas Daugmaudis 2010-2018
+	Copyright Kevlin Henney, 2000, 2001, 2002. All rights reserved
+	Copyright Kevlin Henney, 2000-2005.
+	Copyright Kohei Takahashi 2012-2014.
+	Copyright Lingxi Li 2015.
+	Copyright Louis Dionne 2013
+	copyright Louis Dionne 2013-2016
+	copyright Louis Dionne 2013-2017
+	Copyright Louis Dionne 2013-2017
+	copyright Louis Dionne 2016
+	Copyright Marco Guazzone 2014
+	Copyright Matthew Pulver 2018 - 2019.
+	Copyright Michael Drexl 2005, 2006.
+	Copyright Nat Goodspeed
+	Copyright Nat Goodspeed 2014.
+	Copyright Neil Groves
+	Copyright Neil Groves 2003-2004.
+	Copyright Neil Groves 2007.
+	Copyright Neil Groves 2007. Use, modification and
+	Copyright Neil Groves 2009.
+	Copyright Neil Groves 2009. Use, modification and
+	Copyright Neil Groves 2009. Use, modification and distribution
+	Copyright Neil Groves 2010. Use, modification and
+	Copyright Neil Groves 2014.
+	Copyright Neil Groves 2014
+	Copyright Neil Groves 2014. Use, modification and
+	Copyright Nicholas Thompson 2018
+	Copyright Nick Thompson 2017.
+	Copyright Nick Thompson, 2017
+	Copyright Nick Thompson, 2018
+	Copyright Nick Thompson 2019.
+	Copyright Nick Thompson, 2019
+	Copyright Nick Thompson, 2020
+	Copyright Nick Thompson, John Maddock 2020
+	Copyright Nikhar Agrawal 2013-14
+	Copyright Nikolay Mladenov 2007.
+	Copyright Nuxi, https://nuxi.nl/ 2015.
+	Copyright ohn Maddock 2012
+	Copyright Oliver Kowalke 2009.
+	Copyright Oliver Kowalke 2013.
+	Copyright Oliver Kowalke 2014.
+	Copyright Oliver Kowalke 2015.
+	Copyright Oliver Kowalke 2016.
+	Copyright Oliver Kowalke 2017.
+	Copyright Oliver Kowalke 2018.
+	Copyright Orson Peters 2017.
+	Copyright Paul A. Bristow
+	Copyright Paul A. Bristow 2006.
+	Copyright Paul A. Bristow 2006, 2007.
+	Copyright Paul A. Bristow 2006, 2007, 2009, 2010.
+	Copyright Paul A. Bristow 2006, 2007, 2012.
+	Copyright Paul A. Bristow 2006, 2007, 2012
+	Copyright Paul A. Bristow 2006-2011.
+	Copyright Paul A. Bristow 2006, 2012, 2017.
+	Copyright Paul A. Bristow 2006-7.
+	Copyright  Paul A. Bristow 2007.
+	Copyright Paul A. Bristow 2007.
+	Copyright Paul A. Bristow 2007
+	Copyright Paul A. Bristow 2007, 2009.
+	Copyright Paul A. Bristow 2007, 2009
+	Copyright  Paul A. Bristow 2007, 2009, 2010, 2012.
+	Copyright Paul A. Bristow 2007, 2010.
+	Copyright Paul A. Bristow 2007, 2010, 2012, 2014.
+	Copyright  Paul A. Bristow 2007, 2012.
+	Copyright Paul A. Bristow 2007, 2012.
+	Copyright Paul A. Bristow 2007, 2013-14.
+	Copyright Paul A. Bristow 2008, 2009.
+	Copyright Paul A. Bristow 2008, 2010.
+	Copyright Paul A. Bristow 2008, 2014.
+	Copyright Paul A. Bristow 2009, 2011
+	Copyright Paul A. Bristow 2010.
+	Copyright Paul A. Bristow 2010
+	Copyright Paul A. Bristow 2011, 2012.
+	Copyright Paul A. Bristow 2012.
+	Copyright Paul A. Bristow 2013.
+	Copyright Paul A. Bristow 2014.
+	Copyright Paul A. Bristow 2016, 2017, 2018.
+	Copyright Paul A. Bristow 2017.
+	Copyright Paul Bristow 2006, 2007.
+	Copyright Paul Bristow 2007.
+	Copyright Paul Bristow 2007, 2011.
+	Copyright Paul Bristow 2014.
+	Copyright Paul Mensonides 2003
+	Copyright Pavol Droba 2002-2003.
+	Copyright Pavol Droba 2002-2003. Use, modification and
+	Copyright Pavol Droba 2002-2004.
+	Copyright Pavol Droba 2002-2006.
+	Copyright Peter Dimov 2000-2002
+	Copyright Peter Dimov 2000-2003
+	Copyright Peter Dimov 2001
+	Copyright Peter Dimov 2001-2002
+	Copyright Peter Dimov 2001-2003
+	Copyright Peter Dimov 2017, 2018
+	Copyright Peter Dimov 2017, 2018, 2020
+	Copyright Peter Dimov 2019.
+	Copyright Peter Dimov and David Abrahams 2002.
+	Copyright Peter Dimov and Multi Media Ltd 2001, 2002
+	copyright property.
+	Copyright Ralf W. Grosse-Kunstleve
+	Copyright Ralf W. Grosse-Kunstleve 2006.
+	Copyright Rene Rivera 2005-2016
+	Copyright Rene Rivera 2008-2013
+	Copyright Rene Rivera 2008-2015
+	Copyright Rene Rivera 2008-2017
+	Copyright Rene Rivera 2008-2019
+	Copyright Rene Rivera 2011-2012
+	Copyright Rene Rivera 2011-2015
+	Copyright Rene Rivera 2012-2015
+	Copyright Rene Rivera 2013
+	Copyright Rene Rivera 2013-2015
+	Copyright Rene Rivera 2014
+	Copyright Rene Rivera 2014-2015
+	Copyright Rene Rivera 2015
+	Copyright Rene Rivera 2015-2016
+	Copyright Rene Rivera 2015-2019
+	Copyright Rene Rivera 2017
+	Copyright Robert Ramey 2007.  Changes made to permit// application throughout the serialization library.
+	Copyright Robin Eckert 2015.
+	Copyright Ruslan Baratov 2017
+	Copyright Samuel Krempp 2003.
+	Copyright Samuel Krempp 2003. Use, modification, and distribution are
+	Copyright Sebastian Ramacher, 2007.
+	Copyright Sergey Krivonos 2017
+	Copyright Shreyans Doshi 2017.
+	Copyright Shunsuke Sogame 2005-2006.
+	copyright-sign"
+	copyright sign","short":"copyright"
+	copyright sign",short:"copyright"
+	Copyright Stefan Seefeld 2005.
+	Copyright Stefan Seefeld 2016.
+	Copyright Steven J. Ross 2001 - 2009.
+	Copyright Steven J. Ross 2001 - 2014.
+	Copyright Steven J. Ross 2001 - 2014
+	Copyright Steven J. Ross 2014
+	Copyright Steven Watanabe 2009
+	Copyright Steven Watanabe 2009-2011
+	Copyright Steven Watanabe 2010
+	Copyright Steven Watanabe 2010-2011
+	Copyright Steven Watanabe 2011
+	Copyright Steven Watanabe 2014
+	Copyright Text:
+	Copyright Thijs van den Berg, 2008.
+	Copyright Thijs van den Berg 2014
+	Copyright Thomas Mang 2012.
+	Copyright Thorsten Ottosen 2003-2004. Use, modification and
+	Copyright Thorsten Ottosen 2003-2005. Use, modification and
+	Copyright Thorsten Ottosen 2003-2006. Use, modification and
+	Copyright Thorsten Ottosen 2003-2007. Use, modification and
+	Copyright Thorsten Ottosen 2003-2008. Use, modification and
+	Copyright Thorsten Ottosen 2006.
+	Copyright Thorsten Ottosen 2006. Use, modification and
+	Copyright Thorsten Ottosen 2008. Use, modification and
+	Copyright Thorsten Ottosen, 2009.
+	Copyright Thorsten Ottosen, Neil Groves 2006 - 2008. Use, modification and
+	Copyright Thorsten Ottosen, Neil Groves 2006. Use, modification and
+	copyright : tiff_property_base< std::string, TIFFTAG_COPYRIGHT >
+	Copyright Timmo Stange 2007.
+	copyright to this source code.
+	Copyright uses reporting  // settings defined in any options file.  highs.passOptions(loaded_options);
+	Copyright Vicente J. Botet Escriba 2009
+	Copyright Vicente J. Botet Escriba 2009-2011
+	Copyright Vicente J. Botet Escriba 2010
+	Copyright Vicente J. Botet Escriba 2012.
+	Copyright Vladimir Prus 2002.
+	Copyright Vladimir Prus 2002
+	Copyright Vladimir Prus, 2002
+	Copyright Vladimir Prus 2002-2004.
+	Copyright Vladimir Prus 2004.
+	copyright Xiaogang Zhang.
+	Copyright Xiaogang Zhang 2006
+	Copyright © <year> Ned Batchelder
+	(C) or column-major (Fortran) order. The function
+	(C) or column-major (Fortran) order. The function
+	(C) or diag(R))		for (i = 0; i < A->nrow;
+	(C) or diag(R)).		if ( notran
+	(C)        PI=3.141592653589793D0        A0=A        A1=A        X0=X        HG=0.0D0C       DLMF 13.2.39        IF (X.LT.0.0D0) THEN           A=B-A           A0=A           X=DABS(X)
+	(C) Rasmus Munk Larsen, Stanford, 1999, 2004c
+	(C) Rasmus Munk Larsen, Stanford University, 1999, 2004c
+	(C) Rasmus Munk Larsen, Stanford University, 2000,2004c
+	(C) Rasmus Munk Larsen, Stanford University, 2000, 2004ccc
+	(C) Rasmus Munk Larsen, Stanford University, 2000,2004c      subroutine csafescal(n,alpha,x)cc     Scale the vector x by 1/alpha avoiding unnecessary under- and overflow.c
+	(C) Rasmus Munk Larsen, Stanford University, 2000,2004c      subroutine dsafescal(n,alpha,x)cc     Scale the vector x by 1/alpha avoiding unnecessary under- and overflow.c
+	(C) Rasmus Munk Larsen, Stanford University, 2000,2004c      subroutine ssafescal(n,alpha,x)cc     Scale the vector x by 1/alpha avoiding unnecessary under- and overflow.c
+	(C) Rasmus Munk Larsen, Stanford University, 2000,2004c      subroutine zsafescal(n,alpha,x)cc     Scale the vector x by 1/alpha avoiding unnecessary under- and overflow.c
+	(C) Rasmus Munk Larsen, Stanford University, 2000c
+	(C) Rasmus Munk Larsen, Stanford University, 2000c      subroutine clearstat      implicit none      include
+	(C) Rasmus Munk Larsen, Stanford University, 2004c
+	(C) Rasmus Munk Larsen, Stanford University, March 2004.
+	(C)        REG=1.0D0        IF (M
+	(C)        REG=1.0D0        IF (M
+	(C) Ronny Pfannschmidt, Holger Krekel -- MIT licensed"""from __future__ import annotationsfrom typing import (    Callable,    Iterator,    Mapping,    Optional,    Tuple,    TypeVar,    Uniruamel.ya
+	(C)        self.outputs = self.C.shape
+	(C)        The data is in a single, C-style contiguous segment.    F_CONTIGUOUS (F)        The data is in a single, Fortran-style contiguous segment.    OWNDATA (O)        The array owns the
+	(C)        The data is in a single, C-style contiguous segment.    F_CONTIGUOUS (F)        The data is in a single, Fortran-style contiguous segment.    OWNDATA (O)        The array owns the memo
+	(C)` to respect the signature of
+	(C)            want = np.array(            assert_equal(have, want)
+	(C)            want = np.array(            assert_equal(have, want)    def test_for_equal_names(self):Packaging 24.0 pypi:packaging/24.0
+	(C) * (y = 1. / sin(D));                            ysmmap 5.0.1 pypi:smmap/5.0.1
 psf-requests 2.32.3 pypi:requests/2.32.3
 	Copyright 2019 Kenneth Reitz
 	copyright: (c) 2012 by Kenneth Reitz.
@@ -148,10 +2695,6 @@ pycodestyle 2.12.1 pypi:pycodestyle/2.12.1
 	Copyright (C) 2006-2009 Johann C. Rocholl <johann@rocholl.net>
 	Copyright (C) 2009-2014 Florent Xicluna <florent.xicluna@gmail.com>
 	Copyright (C) 2014-2016 Ian Lee <ianlee1521@gmail.com>
-pytest 8.3.2 pypi:pytest/8.3.2
-	Copyright (c) 2004 Holger Krekel and others
-	Copyright (c) 2014, Gregory Boissinot
-	Copyright Holger Krekel and others, 2004.
 python3-charset-normalizer 3.3.2 pypi:charset-normalizer/3.3.2
 	copyright = '2023, Ahmed TAHRIauthor = 'Ahmed TAHRI'
 	Copyright (c) 2019 TAHRI Ahmed R.
@@ -228,14 +2771,14 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	(C)    assert len(row_ind) == 0    assert len(col_ind) == 0
 	(C)*B; *            if A->Stype = SLU_NR:
 	(C)*B; *	      if A->Stype = SLU_NR:
-	(C)*B (if options->Trans *           = TRANS or CONJ). * *      1.2. Permute columns of A, forming A*Pc, where Pc is a permutation *           matrix that usually preserves sparsity. *
-	(C)*B (if options->Trans *	     = TRANS or CONJ). * *	1.2. Permute columns of A, forming A*Pc, where Pc is a permutation *	     matrix that usually preserves sparsity. *	     For more details of
+	(C)*B (if options->Trans *           = TRANS or CONJ). * *      1.2. Permute columns of A, forming A*Pc, where Pc is a permutation *           matrix that usually preserves sparsity. *           
+	(C)*B (if options->Trans *	     = TRANS or CONJ). * *	1.2. Permute columns of A, forming A*Pc, where Pc is a permutation *	     matrix that usually preserves sparsity. *	     For more details of 
 	(C)*B; *               if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *                  B is overwritten by diag(R)*B. * * X       (output) SuperMatrix* *         X has types: Stype =
-	(C)*B; *		 if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *		    B is overwritten by diag(R)*B. * * X	   (output) SuperMatrix* *	   X has types: Stype = SLU_DN, Dtype = SLU_C, Mtype =
-	(C)*B; *		 if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *		    B is overwritten by diag(R)*B. * * X	   (output) SuperMatrix* *	   X has types: Stype = SLU_DN, Dtype = SLU_D, Mtype =
-	(C)*B; *		 if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *		    B is overwritten by diag(R)*B. * * X	   (output) SuperMatrix* *	   X has types: Stype = SLU_DN, Dtype = SLU_S, Mtype =
-	(C)*B; *		 if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *		    B is overwritten by diag(R)*B. * * X	   (output) SuperMatrix* *	   X has types: Stype = SLU_DN, Dtype = SLU_Z, Mtype =
-	(C)*B (if trans = * *      2.2. Permute columns of transpose(A) (rows of A), *           forming transpose(A)*Pc, where Pc is a permutation matrix that *           usually preserves sparsity. *
+	(C)*B; *		 if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *		    B is overwritten by diag(R)*B. * * X	   (output) SuperMatrix* *	   X has types: Stype = SLU_DN, Dtype = SLU_C, Mtype = 
+	(C)*B; *		 if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *		    B is overwritten by diag(R)*B. * * X	   (output) SuperMatrix* *	   X has types: Stype = SLU_DN, Dtype = SLU_D, Mtype = 
+	(C)*B; *		 if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *		    B is overwritten by diag(R)*B. * * X	   (output) SuperMatrix* *	   X has types: Stype = SLU_DN, Dtype = SLU_S, Mtype = 
+	(C)*B; *		 if options->Trans = TRANS or CONJ and equed = 'R' of 'B', *		    B is overwritten by diag(R)*B. * * X	   (output) SuperMatrix* *	   X has types: Stype = SLU_DN, Dtype = SLU_Z, Mtype = 
+	(C)*B (if trans = * *      2.2. Permute columns of transpose(A) (rows of A), *           forming transpose(A)*Pc, where Pc is a permutation matrix that *           usually preserves sparsity. *  
 	(C)*B (if trans = * *	2.2. Permute columns of transpose(A) (rows of A), *	     forming transpose(A)*Pc, where Pc is a permutation matrix that *	     usually preserves sparsity. *	     For more de
 	(C)* BOOST_CONTRACT_DETAIL_NAME1(obj) \            BOOST_CONTRACT_DETAIL_TVARIADIC_COMMA(arity) \            BOOST_CONTRACT_DETAIL_TVARIADIC_FPARAMS_Z(z, arity, \                BOOST_CONTRACT_DETA
 	(C) BOOST_MPL_AUX_VALUE_WKND(C)#else
@@ -390,8 +2933,8 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	(C) Copyright Dave Abrahams and Daryle Walker 2001. Distributed under the Boost
 	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,
 	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes, Howard
-	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,//      Howard Hinnant and John Maddock 2000.
-	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,//      Howard Hinnant and John Maddock 2000, 2010.
+	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,//      Howard Hinnant and John Maddock 2000. 
+	(C) Copyright Dave Abrahams, Steve Cleary, Beman Dawes,//      Howard Hinnant and John Maddock 2000, 2010. 
 	(C) Copyright David Abrahams 2000.
 	(C) Copyright David Abrahams 2001.
 	(C) Copyright David Abrahams 2001 - 2002.
@@ -674,7 +3217,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	(C)        Dsp = self.spmatrix(D)        assert_almost_equal(Csp.multiply(Dsp).toarray(), C*D)  # sparse/sparse        assert_almost_equal(Csp.multiply(D).toarray(), C*D)  # sparse/dense
 	(C)                elements.push_back(el);                                                                     // MAY THROW (C)            }
 	(C)#else    #define BOOST_SERIALIZATION_COLLECTION_TRAITS_HELPER_WCHAR(C)   \    BOOST_SERIALIZATION_COLLECTION_TRAITS_HELPER(wchar_t, C)        \    /**/#endif
-	(C)*EPS) GO TO 1510         CONTINUE15         S=XA*T/3.0D0           R=S           DO 20 K=1,50              R=-.5D0*R*(4.0D0*K-1.0D0)/K/(2.0D0*K+1.0D0)     &          /(4.0D0*K+3.0D0)*T2
+	(C)*EPS) GO TO 1510         CONTINUE15         S=XA*T/3.0D0           R=S           DO 20 K=1,50              R=-.5D0*R*(4.0D0*K-1.0D0)/K/(2.0D0*K+1.0D0)     &          /(4.0D0*K+3.0D0)*T2     
 	(C) *           equed = *         If A->Stype = SLU_NR:
 	(C) *	     equed = *	   If A->Stype = SLU_NR:
 	(C) *	     equed = * *         If options->RowPerm = LargeDiag_MC64, MC64 is used to scale and permute *            the matrix to an I-matrix, that is A is modified as follows:
@@ -686,7 +3229,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	(C) @f    //!    //! @param g    //! A monadic function with signature @f$ A \to M(B) @f$.
 	(C) @f    //! we could simply set    //! @code    //!     monadic_compose(g, f)(x) = joker(transform(f(x), g))    //! @endcode    //!    //! and we would be happy. It turns out that `flatten` is
 	(C)              IF (DABS((WA-WA0)/WA).LT.EPS.AND.K.GT.10) GO TO 3010            WA0=WA        ELSE IF (W0.GT.2.5.AND.W0.LT.4.5) THEN           M=85           C=Z0           CF1=Z0           CF
-	(C) (if options->Trans = NOTRANS) or diag(R) *	     (if options->Trans = TRANS or CONJ) so that it solves the *	     original system before equilibration. * *	1.9. options for ILU only *	     1)
+	(C) (if options->Trans = NOTRANS) or diag(R) *	     (if options->Trans = TRANS or CONJ) so that it solves the *	     original system before equilibration. * *	1.9. options for ILU only *	     1) 
 	(C) (if options->Trans = NOTRANS) or diag(R) *           (if options->Trans = TRANS or CONJ) so that it solves the *           original system before equilibration. * *   2. If A is stored row-wis
 	(C) (if options->Trans = NOTRANS) or diag(R) *           (if options->Trans = TRANS or CONJ) so that it solves the *           original system before equilibration. * *   See supermatrix.h for the
 	(C) (if options->Trans = NOTRANS) or diag(R) *	     (if options->Trans = TRANS or CONJ) so that it solves the *	     original system before equilibration. * *   See supermatrix.h for the definitio
@@ -722,7 +3265,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright 1984, 1987, 2000 by Stephen L. Moshier */
 	Copyright 1984, 1987 by Stephen L. Moshier * Direct inquiries to 30 Frost Street, Cambridge, MA 02140 */
 	Copyright 1984, 1991 by Stephen L. Moshier * Direct inquiries to 30 Frost Street, Cambridge, MA 02140 */
-	Copyright 1984 - 1994 by Stephen L. Moshier *                                                                           * *   Alternatively, we also can use the functions from the Rmath library
+	Copyright 1984 - 1994 by Stephen L. Moshier *                                                                           * *   Alternatively, we also can use the functions from the Rmath library     
 	Copyright 1984, 1995, 2000 by Stephen L. Moshier
 	Copyright 1984, 1995, 2000 by Stephen L. Moshier*/
 	Copyright 1984, 1995 by Stephen L. Moshier */
@@ -881,7 +3424,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright:   2007-2008 CodeRage, LLC * Author:      Jonathan Turkanis * Contact:     turkanis at coderage dot com
 	Copyright:   2007-2008 CodeRage, LLC * Author:      Jonathan Turkanis * Contact:     turkanis at coderage dot com */
 	Copyright:   2007-2008 CodeRage, LLC * Author:      Jonathan Turkanis * Contact:     turkanis at coderage dot com * * Defines the function boost::iostreams::detail::absolute_path, used for  * deb
-	Copyright:   2007-2008 CodeRage, LLC * Author:      Jonathan Turkanis * Contact:     turkanis at coderage dot com * * Defines the function boost::iostreams::detail::current_directory, used by  *
+	Copyright:   2007-2008 CodeRage, LLC * Author:      Jonathan Turkanis * Contact:     turkanis at coderage dot com * * Defines the function boost::iostreams::detail::current_directory, used by  * 
 	Copyright:   2007-2008 CodeRage, LLC * Author:      Jonathan Turkanis * Contact:     turkanis at coderage dot com * * Defines the preprocessor symbol BOOST_IOSTREAMS_HAS_DINKUMWARE_FPOS for * pla
 	Copyright:   2007-2008 CodeRage, LLC * Author:      Jonathan Turkanis * Contact:     turkanis at coderage dot com * * If included with the macro BOOST_IOSTREAMS_RESTRICT undefined, defines the  *
 	Copyright 2007-2012 Christian Henning, Andreas Pokorny
@@ -1298,7 +3841,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright Bryce Lelbach 2010
 	copyright by Renee Touzin)under the BSD licence. The following files have been removed from the original library:
 	Copyright (c) 1992-2013 The University of Tennessee and The University                          of Tennessee Research Foundation.  All rights                          reserved.
-	Copyright (c) 1993-2019                                                C.B. Barber                           Arlington, MA
+	Copyright (c) 1993-2019                                                C.B. Barber                           Arlington, MA 
 	Copyright (c) 1993-2019 C.B. Barber.   $Id: //main/2019/qhull/src/libqhull_r/merge_r.c#12 $$Change: 2712 $   $DateTime: 2019/06/28 12:57:00 $$Author: bbarber $*/
 	Copyright (c) 1993-2019 C.B. Barber.   $Id: //main/2019/qhull/src/libqhull_r/merge_r.h#1 $$Change: 2661 $   $DateTime: 2019/05/24 20:09:58 $$Author: bbarber $*/
 	Copyright (c) 1993-2019 The Geometry Center.   $Id: //main/2019/qhull/src/libqhull_r/geom2_r.c#15 $$Change: 2712 $   $DateTime: 2019/06/28 12:57:00 $$Author: bbarber $
@@ -1338,7 +3881,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 1996// Silicon Graphics Computer Systems, Inc.
 	Copyright (c) 1996 * Silicon Graphics Computer Systems, Inc. * * Permission to use, copy, modify, distribute and sell this software * and its documentation for any purpose is hereby granted withou
 	Copyright (c) 1998-2000
-	Copyright (c) 1998-2000 Theodore C. Belding     /*    University of Michigan Center for the Study of Complex Systems    */     /*    Ted.Belding@umich.edu)
+	Copyright (c) 1998-2000 Theodore C. Belding     /*    University of Michigan Center for the Study of Complex Systems    */     /*    Ted.Belding@umich.edu)                                           
 	Copyright (c) 1998-2002
 	Copyright (c) 1998-2002 Joel de Guzman
 	Copyright (c) 1998-2003 by the University of Florida.	All Rights Reserved
@@ -1359,14 +3902,14 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2000-2002
 	Copyright (c) 2000-2003 Brian McNamara and Yannis Smaragdakis
 	Copyright (c) 2000-2004
-	Copyright (c) 2000-2006, 2010 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *
-	Copyright (c) 2000-2006 Wolfgang Hoermann and Josef Leydold *   Dept. for Statistics, University of Economics, Vienna, Austria          * *
+	Copyright (c) 2000-2006, 2010 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *                                                     
+	Copyright (c) 2000-2006 Wolfgang Hoermann and Josef Leydold *   Dept. for Statistics, University of Economics, Vienna, Austria          * *                                                           
 	Copyright (c) 2000-2007
 	Copyright (c) 2000-2009
 	Copyright (c) 2000-2010
 	Copyright (c) 2000-2010//  Joerg Walter, Mathias Koch, David Bellot
 	Copyright (c) 2000-2010//  Joerg Walter, Mathias Koch, Gunter Winkler, David Bellot
-	Copyright (c) 2000-2010  Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *
+	Copyright (c) 2000-2010  Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *                                                          
 	Copyright (c) 2000-2011 Joerg Walter, Mathias Koch, David Bellot
 	Copyright (c) 2000-2013
 	Copyright (c) 2000-2013 The University of California Berkeley. All                          rights reserved.
@@ -1511,7 +4054,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2003-2005 CrystalClear Software, Inc.
 	Copyright (c) 2003-2005 Peter Dimov
 	Copyright (C) 2003-2005 Peter J. Verveer
-	Copyright (C) 2003-2005 Peter J. Verveer * * Redistribution and use in source and binary forms, with or without * modification, are permitted provided that the following conditions * are met: *
+	Copyright (C) 2003-2005 Peter J. Verveer * * Redistribution and use in source and binary forms, with or without * modification, are permitted provided that the following conditions * are met: * 
 	Copyright (c) 2003-2006, 2008 Gennaro Prota
 	Copyright (c) 2003, 2006   Gerald I. Evenden
 	Copyright (C) 2003, 2007-14 Massachusetts Institute of Technology
@@ -1546,7 +4089,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2003 Paul Mensonides
 	Copyright (c) 2003 Peter Dimov
 	Copyright (c) 2003 Peter Dimov  Distributed under the Boost
-	Copyright (c) 2003, The Regents of the University of California, throughLawrence Berkeley National Laboratory (subject to receipt of any required approvals from U.S. Dept. of Energy)
+	Copyright (c) 2003, The Regents of the University of California, throughLawrence Berkeley National Laboratory (subject to receipt of any required approvals from U.S. Dept. of Energy) 
 	Copyright (c) 2003, The Regents of the University of California, throughLawrence Berkeley National Laboratory (subject to receipt of any requiredapprovals from U.S. Dept. of Energy)
 	Copyright (c) 2003 Thomas Witt
 	Copyright (c) 2003 Vaclav Vesely
@@ -1623,7 +4166,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2006-2007 Matias Capeletto
 	Copyright (c) 2006-2007, Robert Hetland <hetland@tamu.edu>
 	Copyright (c) 2006-2007 Tobias Schwinger
-	Copyright (c) 2006-2008 Alexander Chemeris// // Redistribution and use in source and binary forms, with or without// modification, are permitted provided that the following conditions are met://
+	Copyright (c) 2006-2008 Alexander Chemeris// // Redistribution and use in source and binary forms, with or without// modification, are permitted provided that the following conditions are met:// 
 	Copyright (c) 2006-2008 Emil Dotchevski and Reverge Studios, Inc.
 	Copyright (c) 2006-2008 Johan Rade
 	Copyright (C) 2006-2009, 2012 Alexander Nasonov
@@ -1633,7 +4176,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2006-2010 Emil Dotchevski and Reverge Studios, Inc.
 	Copyright (C) 2006-2010 The Trustees of Indiana University.
 	Copyright (c) 2006-2013 Emil Dotchevski and Reverge Studios, Inc.
-	Copyright (c) 2006-2013 The University of Colorado Denver.  All rights                          reserved.
+	Copyright (c) 2006-2013 The University of Colorado Denver.  All rights                          reserved.  
 	Copyright (c) 2006-7 John Maddock
 	Copyright (C) 2006 Arkadiy Vertleyb
 	Copyright (c) 2006 CrystalClear Software, Inc.
@@ -1728,7 +4271,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2008-2009: Joachim Faulhaber+------------------------------------------------------------------------------+
 	Copyright (c) 2008, 2009 Peter Dimov
 	Copyright (c) 2008-2010: Joachim Faulhaber
-	Copyright (c) 2008-2010 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *
+	Copyright (c) 2008-2010 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *                                                           
 	Copyright (c) 2008-2011 Bruno Lalande, Paris, France.
 	Copyright (C) 2008-2011 Daniel James.
 	Copyright (c) 2008-2011 Hartmut Kaiser
@@ -1776,20 +4319,20 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2009-2010 Hartmut Kaiser
 	Copyright (c) 2009-2010: Joachim Faulhaber
 	Copyright (c) 2009-2010, Marco Guazzone
-	Copyright (c) 2009-2010  Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *
+	Copyright (c) 2009-2010  Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *                                                          
 	Copyright (c) 2009-2011 Artyom Beilis (Tonkikh)
 	Copyright (c) 2009-2011 Christopher Schmidt
 	Copyright (c) 2009, 2011 Helge Bahmann
 	Copyright (c) 2009-2011: Joachim Faulhaber
 	Copyright (c) 2009-2011 Mateusz Loskot, London, UK.
-	Copyright (c) 2009-2011 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *
+	Copyright (c) 2009-2011 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *                                                           
 	Copyright (c) 2009-2012 Barend Gehrels, Amsterdam, the Netherlands.
 	Copyright (c) 2009-2012 Barend Gehrels, Amsterdam, the Netherlands.
 	Copyright (C) 2009-2012 Lorenzo Caminiti
 	Copyright (c) 2009-2012, Marco Guazzone
 	Copyright (c) 2009-2012 Mateusz Loskot, London, UK.
 	Copyright (c) 2009-2012 Mateusz Loskot, London, UK.
-	Copyright (c) 2009-2012 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *
+	Copyright (c) 2009-2012 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *                                                           
 	Copyright (c) 2009-2013 Mateusz Loskot, London, UK.
 	Copyright (c) 2009-2013 Mateusz Loskot, London, UK.
 	Copyright (C) 2009-2013 Tim Blechmann
@@ -1827,7 +4370,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2009, Spirent Communications, Inc.
 	Copyright (C) 2009 Steven Watanabe
 	Copyright (C) 2009 Trustees of Indiana University
-	Copyright (c) 2009 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *
+	Copyright (c) 2009 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *                                                                
 	Copyright (c) 2010-2010: Joachim Faulhaber
 	Copyright (c) 2010-2011 Bryce Lelbach
 	Copyright (c) 2010-2011 Christopher Schmidt
@@ -1865,7 +4408,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2010 Thomas Heller
 	Copyright (c) 2010 Thomas P. Robitaille
 	Copyright (C) 2010 Tim Blechmann
-	Copyright (c) 2010 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *
+	Copyright (c) 2010 Wolfgang Hoermann and Josef Leydold *   Department of Statistics and Mathematics, WU Wien, Austria              * *                                                                
 	Copyright (c) 2011
 	Copyright (c) 2011-2011: Joachim Faulhaber
 	Copyright (c) 2011-2012
@@ -1877,7 +4420,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (c) 2011-2012 Mateusz Loskot, London, UK.
 	Copyright (c) 2011-2012 Thomas Bernard
 	Copyright (C) 2011-2012 Vicente J. Botet Escriba
-	Copyright (c) 2011-2012 Wolfgang Hoermann and Josef Leydold *   Institute for Statistics and Mathematics, WU Wien, Austria              * *
+	Copyright (c) 2011-2012 Wolfgang Hoermann and Josef Leydold *   Institute for Statistics and Mathematics, WU Wien, Austria              * *                                                           
 	Copyright (C) 2011-2013, 2016 Tim Blechmann
 	Copyright (c) 2011-2013 Adam Wulkiewicz, Lodz, Poland.
 	Copyright (c) 2011-2013 Adam Wulkiewicz, Lodz, Poland.
@@ -2019,7 +4562,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	Copyright (C) 2013 Jakob Lykke Andersen, University of Southern Denmark// (jlandersen@imada.sdu.dk)
 	Copyright (c) 2013 Jamboree
 	Copyright (c) 2013 Joaquim Duran
-	Copyright (c) 2013 John Maddock, Antony Polukhin//
+	Copyright (c) 2013 John Maddock, Antony Polukhin// 
 	Copyright (C) 2013 Kenneth L. Ho
 	Copyright (C) 2013 Kenneth L. Ho#   Redistribution and use in source and binary forms, with or without#   modification, are permitted provided that the following conditions are met:
 	Copyright (c) 2013 Kyle Lutz <kyle.r.lutz@gmail.com>
@@ -2182,9 +4725,9 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	copyright (c) 2015, Oracle and/or its affiliates.
 	Copyright (c) 2015 Oracle and/or its affiliates.
 	Copyright (c) 2015, Oracle and/or its affiliates.
-	Copyright (c) 2015, Oracle and/or its affiliates.// Contributed and/or modified by Menelaos Karavelas, on behalf of Oracle//
+	Copyright (c) 2015, Oracle and/or its affiliates.// Contributed and/or modified by Menelaos Karavelas, on behalf of Oracle// 
 	Copyright (c) 2015 Orson Peters <orsonpeters@gmail.com>        This software is provided 'as-is', without any express or implied warranty. In no event will the    authors be held liable for any dam
-	Copyright (c) 2015 Orson Peters//  This software is provided 'as-is', without any express or implied warranty. In no event will the//  authors be held liable for any damages arising from the use of
+	Copyright (c) 2015 Orson Peters//  This software is provided 'as-is', without any express or implied warranty. In no event will the//  authors be held liable for any damages arising from the use of 
 	Copyright (c) 2015 Paul Fultz II
 	Copyright (C) 2015, Pauli Virtanen <pav@iki.fi>
 	Copyright (c) 2015 Robert Ramey
@@ -2547,7 +5090,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	copyright follows:
 	copyright for code they wrote and submit for
 	Copyright for the original TNBC Fortran routines:
-	Copyright for the original TNBC fortran routines: * *   TRUNCATED-NEWTON METHOD:  SUBROUTINES *     WRITTEN BY:  STEPHEN G. NASH *           SCHOOL OF INFORMATION TECHNOLOGY & ENGINEERING *
+	Copyright for the original TNBC fortran routines: * *   TRUNCATED-NEWTON METHOD:  SUBROUTINES *     WRITTEN BY:  STEPHEN G. NASH *           SCHOOL OF INFORMATION TECHNOLOGY & ENGINEERING *      
 	Copyright for the original version:
 	Copyright Frank Mori Hess 2007.
 	Copyright Frank Mori Hess 2007-2008.
@@ -2813,7 +5356,7 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	(C) or diag(R)).		if ( notran && colequ )		    for (i = 0; i < A->ncol; ++i) work[i] *= C[i];		else if ( !notran && rowequ )		    for (i = 0; i < A->nrow; ++i) work[i] *= R[i];				dgstrs (transt
 	(C) or diag(R)).		if ( notran && colequ )		    for (i = 0; i < A->ncol; ++i) work[i] *= C[i];		else if ( !notran && rowequ )		    for (i = 0; i < A->nrow; ++i) work[i] *= R[i];				sgstrs (transt
 	(C) or diag(R)).		if ( notran && colequ )		    for (i = 0; i < A->ncol; ++i) {		        zd_mult(&work[i], &work[i], C[i]);	            }		else if ( !notran && rowequ )		    for (i = 0; i < A->nr
-	(C)        PI=3.141592653589793D0        A0=A        A1=A        X0=X        HG=0.0D0C       DLMF 13.2.39        IF (X.LT.0.0D0) THEN           A=B-A           A0=A           X=DABS(X)
+	(C)        PI=3.141592653589793D0        A0=A        A1=A        X0=X        HG=0.0D0C       DLMF 13.2.39        IF (X.LT.0.0D0) THEN           A=B-A           A0=A           X=DABS(X)     
 	(C) Rasmus Munk Larsen, Stanford, 1999, 2004c
 	(C) Rasmus Munk Larsen, Stanford University, 1999, 2004c
 	(C) Rasmus Munk Larsen, Stanford University, 2000,2004c
@@ -2825,13 +5368,13 @@ SciPy 1.9.1 pypi:scipy/1.9.1
 	(C) Rasmus Munk Larsen, Stanford University, 2000c
 	(C) Rasmus Munk Larsen, Stanford University, 2000c      subroutine clearstat      implicit none      include 'stat.h'      nopx = 0      nreorth = 0      ndot = 0      nitref = 0      nbsvd =
 	(C) Rasmus Munk Larsen, Stanford University, 2004c
-	(C) Rasmus Munk Larsen, Stanford University, 2004c
+	(C) Rasmus Munk Larsen, Stanford University, 2004c     
 	(C) Rasmus Munk Larsen, Stanford University, March 2004.
 	(C)        REG=1.0D0        IF (M+NM.GT.80) REG=1.0D-200        NM2=2*NM+M        CX=C*X        CALL SPHY(NM2,CX,NM2,SY,DY)        R0=REG        DO 10 J=1,2*M+IP10         R0=R0*J        R=R0
-	(C)        REG=1.0D0        IF (M+NM.GT.80) REG=1.0D-200        R0=REG        DO 10 J=1,2*M+IP10         R0=R0*J        R=R0        SUC=R*DF(1)        SW=0.0D0        DO 15 K=2,NM
+	(C)        REG=1.0D0        IF (M+NM.GT.80) REG=1.0D-200        R0=REG        DO 10 J=1,2*M+IP10         R0=R0*J        R=R0        SUC=R*DF(1)        SW=0.0D0        DO 15 K=2,NM           
 	(C)        self.outputs = self.C.shape
 	(C)` to respect the signature of
-	(C) * (y = 1. / sin(D));                            y *= D * sin(lp_lat);                        } else                            x = y = 0.;                        if (this->m_proj_parm.mode ==
+	(C) * (y = 1. / sin(D));                            y *= D * sin(lp_lat);                        } else                            x = y = 0.;                        if (this->m_proj_parm.mode == 
 smmap 5.0.1 pypi:smmap/5.0.1
 	Copyright (C) 2010, 2011 Sebastian Thiel and contributorsAll rights reserved
 tomli 2.0.1 pypi:tomli/2.0.1
@@ -2840,10 +5383,10 @@ voluptuous 0.15.2 pypi:voluptuous/0.15.2
 	Copyright (c) 2010, Alec ThomasAll rights reserved
 
 
-Licenses:
+Licenses: 
 
 Apache License 2.0
-(Packaging 24.1, pbr 6.0.0, psf-requests 2.32.3)
+(Packaging 24.1, pbr 6.1.0, powertrain-build 0.1.0, psf-requests 2.32.3)
 
 Apache License
 Version 2.0, January 2004
@@ -3064,7 +5607,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ---
 
 Expat License
-(mccabe 0.7.0, python-pluggy 1.5.0)
+(mccabe 0.7.0)
 
 Expat License
 =============
@@ -3120,7 +5663,7 @@ SOFTWARE
 ---
 
 MIT License
-(exceptiongroup 1.2.2, flake8 7.1.1, pycodestyle 2.12.1, Pyflakes 3.2.0, pytest 8.3.2, python3-charset-normalizer 3.3.2, RonnyPfannschmidt/iniconfig 2.0.0, ruamel-yaml 0.18.6, ruamel.yaml.clib 0.2.8, urllib3 2.2.2)
+(exceptiongroup 1.2.2, flake8 7.1.1, pycodestyle 2.12.1, Pyflakes 3.2.0, pytest 8.3.3, python-pluggy 1.5.0, python3-charset-normalizer 3.3.2, RonnyPfannschmidt/iniconfig 2.0.0, ruamel-yaml 0.18.6, ruamel.yaml.clib 0.2.8, urllib3 2.2.3)
 
 The MIT License
 ===============
@@ -3181,12 +5724,12 @@ Version 2.0
 
   means
 
-    a.
+    a. 
 
       that the initial Contributor has attached the notice described in Exhibit B
       to the Covered Software; or
 
-    b.
+    b. 
 
       that the Covered Software was made available under the terms of version 1.1
       or earlier of the License, but not also under the terms of a Secondary
@@ -3215,12 +5758,12 @@ Version 2.0
 
   means any of the following:
 
-    a.
+    a. 
 
       any file in Source Code Form that results from an addition to, deletion
       from, or modification of the contents of Covered Software; or
 
-    b.
+    b. 
 
       any new file in Source Code Form that contains any Covered Software.
 
@@ -3262,7 +5805,7 @@ Version 2.0
   Each Contributor hereby grants You a world-wide, royalty-free, non-exclusive
   license:
 
-    a.
+    a. 
 
       under intellectual property rights (other than patent or trademark)
       Licensable by such Contributor to use, reproduce, make available, modify,
@@ -3270,7 +5813,7 @@ Version 2.0
       either on an unmodified basis, with Modifications, or as part of a Larger
       Work; and
 
-    b.
+    b. 
 
       under Patent Claims of such Contributor to make, use, sell, offer for sale,
       have made, import, and otherwise transfer either its Contributions or its
@@ -3291,18 +5834,18 @@ Version 2.0
   or licensing of Covered Software under this License. Notwithstanding
   Section 2.1(b) above, no patent license is granted by a Contributor:
 
-    a.
+    a. 
 
       for any code that a Contributor has removed from Covered Software; or
 
-    b.
+    b. 
 
       for infringements caused by: (i) Your and any other third party's
       modifications of Covered Software, or (ii) the combination of its
       Contributions with other software (except as part of its Contributor
       Version); or
 
-    c.
+    c. 
 
       under Patent Claims infringed by Covered Software in the absence of its
       Contributions.
@@ -3357,7 +5900,7 @@ Version 2.0
 
   If You distribute Covered Software in Executable Form then:
 
-    a.
+    a. 
 
       such Covered Software must also be made available in Source Code Form, as
       described in Section 3.1, and You must inform recipients of the Executable
@@ -3365,7 +5908,7 @@ Version 2.0
       means in a timely manner, at a charge no more than the cost of distribution
       to the recipient; and
 
-    b.
+    b. 
 
       You may distribute such Executable Form under the terms of this License, or
       sublicense it under different terms, provided that the license for the
