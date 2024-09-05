@@ -31,46 +31,13 @@ class MemorySection(ProblemLogger):
         'CVC_DISP_ASIL_C',
         'CVC_DISP_ASIL_D'
     ]
-    project_defines = {
-        'HI': {
-            'START': {
-                'const': '#define {software_component_name}_START_SEC_CONST_UNSPECIFIED\n',
-                'disp': '#define {software_component_name}_START_SEC_VAR_INIT_UNSPECIFIED\n',
-                'cal': '#pragma section ".XcpCalibrationSection"\n'
-            },
-            'STOP': {
-                'const': '#define {software_component_name}_STOP_SEC_CONST_UNSPECIFIED\n',
-                'disp': '#define {software_component_name}_STOP_SEC_VAR_INIT_UNSPECIFIED\n',
-                'cal': '#pragma section\n'
-            }
-        },
-        'ZC': {
-            'START': {
-                'const': '#define {software_component_name}_START_SEC_VCC_CONST\n',
-                'disp': '#define {software_component_name}_START_SEC_VCC_DISP\n',
-                'cal': '#define {software_component_name}_START_SEC_VCC_CAL\n'
-            },
-            'STOP': {
-                'const': '#define {software_component_name}_STOP_SEC_VCC_CONST\n',
-                'disp': '#define {software_component_name}_STOP_SEC_VCC_DISP\n',
-                'cal': '#define {software_component_name}_STOP_SEC_VCC_CAL\n'
-            },
-        }
-    }
 
     def __init__(self, build_cfg):
         super().__init__()
         self.build_cfg = build_cfg
-        self.a2l_cfg_name = self.build_cfg.get_a2l_cfg()['name']
-        self.ecu_supplier = self.build_cfg.get_ecu_info()[0]
-        if self.ecu_supplier == 'HI':
-            self.include_header_guards = True
-            self.software_component_name = self.a2l_cfg_name
-            self.mem_map_include = f'#include "{self.a2l_cfg_name}_MemMap.h"\n'
-        else:
-            self.include_header_guards = False
-            self.software_component_name = self.build_cfg.get_swc_name()
-            self.mem_map_include = f'#include "{self.software_component_name}_MemMap.h"\n'
+        self.mem_map_config = self.build_cfg.get_memory_map_config()
+        self.include_header_guards = self.mem_map_config['includeHeaderGuards']
+        self.mem_map_include = f'#include "{self.mem_map_config["memMapPrefix"]}_MemMap.h"\n'
         self.xcp_enabled = self.build_cfg.get_xcp_enabled()
         self.use_volatile_globals = self.build_cfg.get_use_volatile_globals()
 
@@ -100,11 +67,9 @@ class MemorySection(ProblemLogger):
             cvc_defines = []
         section_type = 'cal' if self.xcp_enabled else 'disp'
         memory_section_handling = [
-            self.project_defines[self.ecu_supplier][self._get_mem_map_section(section)][section_type].format(
-                software_component_name=self.software_component_name
-            )
+            self.mem_map_config['projectDefines'][self._get_mem_map_section(section)][section_type] + '\n'
         ]
-        if self.ecu_supplier != 'HI' or not self.xcp_enabled:
+        if self.mem_map_config['includeMemMapForCalibration'] or not self.xcp_enabled:
             memory_section_handling.append(self.mem_map_include)
         return cvc_undefines, cvc_defines, memory_section_handling
 
@@ -116,19 +81,16 @@ class MemorySection(ProblemLogger):
         else:
             cvc_defines = []
         memory_section_handling = [
-            self.project_defines[self.ecu_supplier][self._get_mem_map_section(section)]['disp'].format(
-                software_component_name=self.software_component_name
-            ),
+            self.mem_map_config['projectDefines'][self._get_mem_map_section(section)]['disp'] + '\n',
             self.mem_map_include
         ]
         return cvc_undefines, cvc_defines, memory_section_handling
 
     def _get_code(self, section):
-        mem_map_section = self._get_mem_map_section(section)
         cvc_undefines = []
         cvc_defines = []
         memory_section_handling = [
-            f'#define {self.software_component_name}_{mem_map_section}_SEC_CODE\n',
+            self.mem_map_config['projectDefines'][self._get_mem_map_section(section)]['code'] + '\n',
             self.mem_map_include
         ]
         return cvc_undefines, cvc_defines, memory_section_handling
@@ -137,9 +99,7 @@ class MemorySection(ProblemLogger):
         cvc_undefines = []
         cvc_defines = []
         memory_section_handling = [
-            self.project_defines[self.ecu_supplier][self._get_mem_map_section(section)]['const'].format(
-                software_component_name=self.software_component_name
-            ),
+            self.mem_map_config['projectDefines'][self._get_mem_map_section(section)]['const'] + '\n',
             self.mem_map_include
         ]
         return cvc_undefines, cvc_defines, memory_section_handling

@@ -271,12 +271,10 @@ def generate_core_dummy(build_cfg, core, unit_cfg):
     start_time = time.time()
     core_dummy = CoreDummy(core.get_current_core_config(), unit_cfg)
     ecu_supplier = build_cfg.get_ecu_info()[0]
-    if ecu_supplier == "Denso":
+    if ecu_supplier in ["Denso", "CSP"]:
         core_dummy.generate_dg2_core_dummy_files(core_dummy_fname)
     elif ecu_supplier == "RB":
         core_dummy.generate_rb_core_dummy_files(core_dummy_fname)
-    elif ecu_supplier == "CSP":
-        core_dummy.generate_csp_core_dummy_files(core_dummy_fname)
     else:
         msg = f"Could not generate VcCoreDummy, cannot identify the supplier {ecu_supplier}."
         LOG.critical(msg)
@@ -284,7 +282,7 @@ def generate_core_dummy(build_cfg, core, unit_cfg):
     LOG.info("Finished generating Core Dummy (in %4.2f s)", time.time() - start_time)
 
 
-def generate_ext_var(build_cfg, unit_cfg, signal_if, udt, debug_code=True):
+def generate_ext_var(build_cfg, unit_cfg, signal_if, udt, asil_level_db, asil_level_dep, debug_code=True):
     """Generate two c-files that define the signal interface to the supplier.
 
     The VcExtVar function assigns all variables to the CVC_DISP memory area,
@@ -299,24 +297,17 @@ def generate_ext_var(build_cfg, unit_cfg, signal_if, udt, debug_code=True):
         build_cfg (BuildProjConfig): Build project class holding where files should be stored.
         signal_if (SignalInterfaces): class holding signal interface information.
         udt (UserDefinedTypes): Class holding user defined data types.
+        asil_level_db (str): ASIL level for debug variables.
+        asil_level_dep (str): ASIL level for dependability variables.
         debug_code (boolean): If true, generate debug code.
     """
     LOG.info("******************************************************")
     LOG.info("Start generating VcExtVar and VcDebug")
     start_time = time.time()
-    ecu_supplier = build_cfg.get_ecu_info()[0]
-    asil_level_dep = build_defs.ASIL_D if ecu_supplier == "HI" else build_defs.ASIL_B
-    asil_level_db = (
-        build_defs.CVC_ASIL_D if ecu_supplier == "HI" else build_defs.CVC_ASIL_B
-    )
     nrm_dict, dep_dict, sec_dict, dbg_dict = signal_if.get_external_io()
-
-    _extract_external_var(
-        build_cfg, unit_cfg, udt, asil_level_dep, nrm_dict, dep_dict, sec_dict
-    )
+    _extract_external_var(build_cfg, unit_cfg, udt, asil_level_dep, nrm_dict, dep_dict, sec_dict)
     if debug_code:
         _extract_debug(build_cfg, unit_cfg, asil_level_db, dep_dict, dbg_dict)
-
     LOG.info(
         "Finished generating VcExtVar and VcDebug (in %4.2f s)",
         time.time() - start_time,
@@ -759,7 +750,6 @@ def build(
 
         prj_cfgs = {}
         build_cfg = BuildProjConfig(os.path.normpath(project_config))
-        ecu_supplier = build_cfg.get_ecu_info()[0]
         prj_cfgs.update({build_cfg.name: build_cfg})
 
         build_cfg.create_build_dirs()
@@ -806,10 +796,20 @@ def build(
 
         udt.generate_common_header_files()
 
-        generate_ext_var(build_cfg, unit_cfg, signal_if, udt)
-        if ecu_supplier in ["CSP", "HP", "HI", "ZC"]:
+        code_generation_config = build_cfg.get_code_generation_config()
+
+        generate_ext_var(
+            build_cfg,
+            unit_cfg,
+            signal_if,
+            udt,
+            build_defs.CVC_ASIL_LEVEL_MAP[code_generation_config["generalAsilLevelDebug"]],
+            build_defs.ASIL_LEVEL_MAP[code_generation_config["generalAsilLevelDependability"]]
+        )
+
+        if not code_generation_config["generateDummyVar"]:
             LOG.info("******************************************************")
-            LOG.info("Skip generating VcDummy file for %s projects", ecu_supplier)
+            LOG.info("Skip generating VcDummy file")
         else:
             generate_dummy_var(build_cfg, unit_cfg, signal_if, udt)
 
@@ -837,37 +837,8 @@ def build(
                 else:
                     LOG.warning("Cannot find desired custom sourcefile: %s", custom_src)
 
-        if ecu_supplier in ["HI"]:
-            LOG.info("******************************************************")
-            LOG.info("Generating Core header")
-            hi_core = HICore(build_cfg, unit_cfg)
-            hi_core.generate_dtc_files()
-            LOG.info("******************************************************")
-            LOG.info("Generating DID files")
-            dids = HIDIDs(build_cfg, unit_cfg)
-            dids.generate_did_files()
-        elif ecu_supplier in ["ZC"]:
-            LOG.info("******************************************************")
-            LOG.info("Generating Core header")
-            zc_core = ZCCore(build_cfg, unit_cfg)
-            zc_core.generate_dtc_files()
-        else:
-            generate_did_files(build_cfg, unit_cfg)
-            # generate core dummy files if requested
-            if core_dummy:
-                core_dummy_fname = os.path.basename(build_cfg.get_core_dummy_name())
-                if CodeGenerators.embedded_coder in unit_cfg.code_generators:
-                    LOG.info("******************************************************")
-                    LOG.info("Skip generating %s for EC projects", core_dummy_fname)
-                elif ecu_supplier in ["HI", "ZC", "CSP"]:
-                    LOG.info("******************************************************")
-                    LOG.info("Skip generating %s for SPA2+ projects", core_dummy_fname)
-                else:
-                    core = Core(build_cfg, unit_cfg)
-                    generate_core_dummy(build_cfg, core, unit_cfg)
-
         # generate NVM definitions
-        if ecu_supplier in ["ZC"]:
+        if code_generation_config["useSwcNameAsPrefix"]:
             generate_nvm_def(build_cfg, unit_cfg, no_nvm_a2l, True)
         else:
             generate_nvm_def(build_cfg, unit_cfg, no_nvm_a2l)
@@ -911,20 +882,19 @@ def build(
 
         # Copy files to output folder
         copy_unit_src_to_src_out(build_cfg)
-        if ecu_supplier in ["ZC"]:
+        if code_generation_config["useSwcNameAsPrefix"]:
             copy_common_src_to_src_out(build_cfg, True)
         else:
             copy_common_src_to_src_out(build_cfg)
         copy_unit_cfgs_to_output(build_cfg)
         copy_files_to_include(build_cfg)
-        if ecu_supplier in ["HI", "ZC"]:
+        if code_generation_config["generateInterfaceHeaders"]:
             memory_section = MemorySection(build_cfg)
             memory_section.generate_required_header_files()
 
-        # Propagate tag name for release builds
-        # TAG_NAME is set in release -> release-compile-denso/release-ecmsildll -> powertrain_build.build
+        # Propagate tag name for release builds, TAG_NAME must be set in environment
         tag_name = os.environ.get("TAG_NAME", "")
-        if tag_name and ecu_supplier == "Denso":
+        if tag_name and code_generation_config["propagateTagName"]:
             propagate_tag_name(build_cfg, tag_name, problem_logger)
 
         # Copy header files (subversion is using an external that points to
@@ -936,23 +906,55 @@ def build(
             ctable_a2l = Path(build_cfg.get_src_code_dst_dir(), "custom_tabs.a2l")
             create_conversion_table(ctable_json, ctable_a2l)
         merged_a2l = merge_a2l_files(build_cfg, unit_cfg, complete_a2l, silver_a2l)
-        if ecu_supplier in ["ZC"]:
+        a2l_file_path = Path(build_cfg.get_src_code_dst_dir(), build_cfg.get_a2l_name())
+        replace_tab_verb(a2l_file_path)
+
+        # Generate interface files
+        if code_generation_config["generateYamlInterfaceFile"]:
+            zc_core = ZCCore(build_cfg, unit_cfg)
             zc_dids = ZCDIDs(build_cfg, unit_cfg)
             axis_data = merged_a2l.get_characteristic_axis_data()
             composition_yaml = CompositionYaml(
                 build_cfg, signal_if.composition_spec, unit_cfg, zc_core, zc_dids, axis_data
             )
+            LOG.info("******************************************************")
             composition_yaml.generate_yaml()
+            LOG.info("******************************************************")
+            LOG.info("Generating Core header")
+            zc_core.generate_dtc_files()
+            LOG.info("******************************************************")
+            LOG.info("Generating DID files")
+            zc_dids.generate_did_files()
+        elif build_cfg.get_ecu_info()[0] == "HI":
+            LOG.info("******************************************************")
+            LOG.info("Generating Core header")
+            hi_core = HICore(build_cfg, unit_cfg)
+            hi_core.generate_dtc_files()
+            LOG.info("******************************************************")
+            LOG.info("Generating DID files")
+            dids = HIDIDs(build_cfg, unit_cfg)
+            dids.generate_did_files()
+        else:
+            generate_did_files(build_cfg, unit_cfg)
+            # generate core dummy files if requested
+            if core_dummy:
+                core_dummy_fname = os.path.basename(build_cfg.get_core_dummy_name())
+                if CodeGenerators.embedded_coder in unit_cfg.code_generators:
+                    LOG.info("******************************************************")
+                    LOG.info("Skip generating %s for EC projects", core_dummy_fname)
+                elif code_generation_config["generateCoreDummy"]:
+                    LOG.info("******************************************************")
+                    LOG.info("Skip generating %s for SPA2+ projects", core_dummy_fname)
+                else:
+                    core = Core(build_cfg, unit_cfg)
+                    generate_core_dummy(build_cfg, core, unit_cfg)
+
+        if code_generation_config["generateCalibrationInterfaceFiles"]:
             zc_calibration = ZoneControllerCalibration(
                 build_cfg, composition_yaml.cal_class_info["tl"]
             )
             zc_calibration.generate_calibration_interface_files()
-            LOG.info("******************************************************")
-            LOG.info("Generating DID files")
-            zc_dids.generate_did_files()
 
-        a2l_file_path = Path(build_cfg.get_src_code_dst_dir(), build_cfg.get_a2l_name())
-        replace_tab_verb(a2l_file_path)
         if problem_logger.errors():
             problem_logger.info(
                 "Critical errors were detected, aborting" " after %4.2f s.",
