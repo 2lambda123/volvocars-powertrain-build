@@ -30,3 +30,19 @@ class TestReadCodeSw(unittest.TestCase):
         result = self.build_prj_cfg.get_included_units()
         expected = ['VcScBCoord', 'VcScCVehMtn', 'VcScFeh', 'VcConst']
         self.assertEqual(result, expected)
+
+    def test_get_code_generation_config_default(self):
+        """Test build_proj_config._get_code_generation_config with not input."""
+        expected = {'CodeGenerationConfig': self.build_prj_cfg._get_default_code_generation_config()}
+        self.assertDictEqual(self.build_prj_cfg._get_code_generation_config(), expected)
+
+    def test_get_code_generation_config_project_template_and_custom(self):
+        """Test build_proj_config._get_code_generation_config with project template and custom changes."""
+        self.build_prj_cfg = BuildProjConfig(str(Path(CNFG_DIR, 'ProjectCfg_CodeGenConfig.json')))
+        expected = self.build_prj_cfg._get_default_code_generation_config()
+        expected['generalAsilLevelDebug'] = 'D'
+        expected['generalAsilLevelDependability'] = 'D'
+        expected['generateInterfaceHeaders'] = True
+        expected['generateYamlInterfaceFile'] = True
+        expected['useSwcNameAsPrefix'] = True
+        self.assertDictEqual(self.build_prj_cfg._prj_cfg['CodeGenerationConfig'], expected)

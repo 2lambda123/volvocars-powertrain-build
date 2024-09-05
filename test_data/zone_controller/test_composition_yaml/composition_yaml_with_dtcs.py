@@ -42,11 +42,6 @@ expected_result = {
                     "period": 10,
                     "type": "PERIODIC",
                     "accesses": composition_yaml_setup.base_accesses,
-                },
-                "AR_testName_SC_ZcCalibrationStep": {
-                    "period": 0.1,
-                    "type": "PERIODIC",
-                    "accesses": composition_yaml_setup.base_accesses
                 }
             },
             "diagnostics": {

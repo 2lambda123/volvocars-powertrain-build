@@ -1,0 +1,28 @@
+{
+  "ConfigFileVersion": "0.0.1",
+  "BaseConfig": "./BaseConfig.json",
+  "ProjectInfo": {
+    "projConfig": "GEP3_BEV",
+    "a2LFileName": "VEA_VED4_SPA.a2l",
+    "baseNvmStructs": "nvm_structs_ref_empty.json",
+    "ecuSupplier": "dummy",
+    "ecuType": "dummy",
+    "unitCfgDeliveryDir": "../output/UnitCfgs",
+    "prjUnitCfgDir": "./cnfg_files/unit_cfgs/"
+  },
+  "CodeGenerationConfig": {
+    "generateInterfaceHeaders": true,
+    "generateYamlInterfaceFile": true,
+    "useSwcNameAsPrefix": true
+  },
+  "ProjectTemplates": {
+    "dummy": {
+      "generalAsilLevelDebug": "D",
+      "generalAsilLevelDependability": "D",
+      "generateInterfaceHeaders": false,
+      "generateYamlInterfaceFile": false,
+      "useSwcNameAsPrefix": false
+    }
+  },
+  "UnitCfgs": "./rasters.json"
+}
