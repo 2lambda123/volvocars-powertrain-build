@@ -341,18 +341,3 @@ class CoreDummy(ProblemLogger):
                 self._gen_dg2_mode06_dummies()
                 self._gen_dg2_rnk_dummies()
                 self._gen_dg2_end(f_name)
-
-    def generate_csp_core_dummy_files(self, file_name):
-        """Generate core API dummy files for Bosch projects."""
-        cname = file_name + '.c'
-        hname = file_name + '.h'
-        with open(cname, 'w', encoding="utf-8") as self.fh_c:
-            with open(hname, 'w', encoding="utf-8") as self.fh_h:
-                _, f_name = os.path.split(hname)
-                self._gen_dg2_header(f_name)
-                self._gen_dg2_event_dummies()
-                self._gen_dg2_fid_dummies()
-                self._gen_dg2_iumpr_dummies()
-                self._gen_dg2_mode06_dummies()
-                self._gen_dg2_rnk_dummies()
-                self._gen_dg2_end(f_name)

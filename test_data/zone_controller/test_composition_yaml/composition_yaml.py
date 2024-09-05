@@ -20,15 +20,44 @@ expected_result = {
                     "type": "PERIODIC",
                     "accesses": composition_yaml_setup.base_accesses
                 },
-                "AR_testName_SC_ZcCalibrationStep": {
-                    "period": 0.1,
-                    "type": "PERIODIC",
-                    "accesses": composition_yaml_setup.base_accesses
-                }
             },
             "diagnostics": {},
             "static": composition_yaml_setup.base_static,
             "shared":  composition_yaml_setup.base_shared,
+            "ports": {
+                "GlobSignNme": {"direction": "IN", "interface": "PIGlobSignNme"}
+            },
+        }
+    },
+    "DataTypes": composition_yaml_setup.base_data_types,
+    "PortInterfaces": composition_yaml_setup.base_port_interfaces,
+    "ExternalFiles": composition_yaml_setup.base_configuration
+}
+
+expected_cal_result = {
+    "SoftwareComponents": {
+        "testName_SC": {
+            "type": "SWC",
+            "template": "ARTCSC",
+            "runnables": {
+                "AR_prefix_VcExtINI": {
+                    "type": "INIT",
+                    "accesses": composition_yaml_setup.cal_accesses
+                },
+                "AR_prefix_testRunnable": {
+                    "period": 10,
+                    "type": "PERIODIC",
+                    "accesses": composition_yaml_setup.cal_accesses
+                },
+                "AR_testName_SC_ZcCalibrationStep": {
+                    "period": 0.1,
+                    "type": "PERIODIC",
+                    "accesses": composition_yaml_setup.cal_accesses
+                }
+            },
+            "diagnostics": {},
+            "static": composition_yaml_setup.base_static,
+            "shared":  composition_yaml_setup.cal_shared,
             "ports": {
                 "GlobSignNme": {"direction": "IN", "interface": "PIGlobSignNme"}
             },

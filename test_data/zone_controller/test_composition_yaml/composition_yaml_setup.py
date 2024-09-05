@@ -20,11 +20,58 @@ base_accesses = [
     "tVcGpaDemo_X_DummyOne",
     "mVcGpaDemo_X_DummyTwo_r",
     "mVcGpaDemo_X_DummyTwo_c",
+    "mVcGpaDemo_X_DummyTwo"
+]
+
+cal_accesses = [
+    "tVcGpaDemo_X_DummyOne_x",
+    "tVcGpaDemo_X_DummyOne",
+    "mVcGpaDemo_X_DummyTwo_r",
+    "mVcGpaDemo_X_DummyTwo_c",
     "mVcGpaDemo_X_DummyTwo",
     "ctestName_SC_TriggerReadRteCData"
 ]
 
 base_shared = {
+    "tVcGpaDemo_X_DummyOne_x": {
+        "access": "READ-WRITE",
+        "type": "dt_tVcGpaDemo_X_DummyOne_x",
+        "init": [0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    "tVcGpaDemo_X_DummyOne": {
+        "access": "READ-WRITE",
+        "type": "dt_tVcGpaDemo_X_DummyOne",
+        "init": [0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    "mVcGpaDemo_X_DummyTwo_r": {
+        "access": "READ-WRITE",
+        "type": "dt_mVcGpaDemo_X_DummyTwo_r",
+        "init": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "mVcGpaDemo_X_DummyTwo_c": {
+        "access": "READ-WRITE",
+        "type": "dt_mVcGpaDemo_X_DummyTwo_c",
+        "init": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "mVcGpaDemo_X_DummyTwo": {
+        "access": "READ-WRITE",
+        "type": "dt_mVcGpaDemo_X_DummyTwo",
+        "init": [
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+        ]
+    }
+}
+
+cal_shared = {
     "ctestName_SC_TriggerReadRteCData": {
         "access": "READ-WRITE",
         "type": "Float32",

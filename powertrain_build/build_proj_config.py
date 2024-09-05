@@ -43,6 +43,7 @@ class BuildProjConfig:
             deep_dict_update(self._prj_cfg, base_cnfg)
             if not Version.is_compatible(self._prj_cfg.get('BaseConfigFileVersion')):
                 raise ValueError('Incompatible base config file version.')
+        deep_dict_update(self._prj_cfg, self._get_code_generation_config())
         self.has_yaml_interface = self._prj_cfg['ProjectInfo'].get('yamlInterface', False)
         self.device_domains = self._get_device_domains()
         self.services_file = self._get_services_file()
@@ -59,6 +60,39 @@ class BuildProjConfig:
     def __repr__(self):
         """Get string representation of object."""
         return pformat(self._prj_cfg['ProjectInfo'])
+
+    def _get_default_code_generation_config(self):
+        return {
+            'generalAsilLevelDebug': 'B',
+            'generalAsilLevelDependability': 'B',
+            'generateCalibrationInterfaceFiles': False,
+            'generateCoreDummy': False,
+            'generateDummyVar': False,
+            'generateInterfaceHeaders': False,
+            'generateYamlInterfaceFile': False,
+            'propagateTagName': False,
+            'useA2lSymbolLinks': False,
+            'useSwcNameAsPrefix': False,
+        }
+
+    def _get_code_generation_config(self):
+        """ Get code generation configuration.
+
+        Anything already set in CodeGenerationConfig in ProjectCfg.json takes priority.
+        If there is a project template for the ECU supplier, those values are used,
+        unless already set in ProjectCfg.json.
+        Finally, default values are inserted for missing keys.
+
+        Args:
+            item (str): Item to get from the configuration. If None, the whole configuration is returned.
+        Returns:
+            (dict): Code generation configuration.
+        """
+        code_generation_configuration = {}
+        ecu_supplier = self.get_ecu_info()[0]
+        deep_dict_update(code_generation_configuration, self._prj_cfg.get('ProjectTemplates', {}).get(ecu_supplier, {}))
+        deep_dict_update(code_generation_configuration, self._get_default_code_generation_config())
+        return {'CodeGenerationConfig': code_generation_configuration}
 
     def _get_device_domains(self):
         file_name = self._prj_cfg['ProjectInfo'].get('deviceDomains')
@@ -137,6 +171,26 @@ class BuildProjConfig:
         if unit_cfg_outp is not None:
             os.makedirs(unit_cfg_outp)
 
+    def get_code_generation_config(self, item=None):
+        """ Get code generation configuration.
+
+        Args:
+            item (str): Item to get from the configuration. If None, the whole configuration is returned.
+        Returns:
+            (dict): Code generation configuration.
+        """
+        if item is not None:
+            return self._prj_cfg['CodeGenerationConfig'].get(item, {})
+        return self._prj_cfg['CodeGenerationConfig']
+
+    def get_memory_map_config(self):
+        """ Get memory map configuration.
+
+        Returns:
+            (dict): Memory map configuration.
+        """
+        return self._prj_cfg.get('MemoryMapConfig', {})
+
     def get_a2l_cfg(self):
         """ Get A2L configuration from A2lConfig.
 
@@ -151,6 +205,16 @@ class BuildProjConfig:
             'ip_port': '0x%X' % a2l_config.get('ipPort', 30000),
             'asap2_version': a2l_config.get('asap2Version', "1 51")
         }
+
+    def get_enable_end_to_end_status_signals(self):
+        """Get the enable end-to-end status signals configuration.
+
+        NOTE: Only appicable for device proxy type signal interfaces.
+
+        Returns:
+            (bool): True if end-to-end status signals are enabled, False otherwise.
+        """
+        return self._prj_cfg['ProjectInfo'].get('enableEndToEndStatusSignals', False)
 
     def get_unit_cfg_deliv_dir(self):
         """Get the directory where to put the unit configuration files.
@@ -207,6 +271,10 @@ class BuildProjConfig:
         """Returns the software component name."""
         a2lname = f"{self.get_a2l_cfg()['name']}_SC"
         return self._prj_cfg['ProjectInfo'].get('softwareComponentName', a2lname)
+
+    def get_swc_template(self):
+        """Returns the software component template to use."""
+        return self._prj_cfg['ProjectInfo'].get('softwareComponentTemplate')
 
     def get_car_com_dst(self):
         """Return the absolute path to the source output folder."""
@@ -383,10 +451,11 @@ class BuildProjConfig:
 
         Returns:
             (ecuSupplier, ecuType)
-
         """
-        return (self._prj_cfg['ProjectInfo']['ecuSupplier'],
-                self._prj_cfg['ProjectInfo'].get('ecuType', ''))
+        return (
+            self._prj_cfg['ProjectInfo'].get('ecuSupplier', None),
+            self._prj_cfg['ProjectInfo'].get('ecuType', '')
+        )
 
     def get_xcp_enabled(self):
         """Return True/False whether XCP is enabled in the project or not.

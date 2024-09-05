@@ -159,8 +159,7 @@ expected_result = {
                         "tVcGpaDemo_X_NotSameAsAxisOne",
                         "mVcGpaDemo_X_DummyTwo_r",
                         "mVcGpaDemo_X_DummyTwo_c",
-                        "mVcGpaDemo_X_NotSameAsAxisTwo",
-                        "ctestName_SC_TriggerReadRteCData"
+                        "mVcGpaDemo_X_NotSameAsAxisTwo"
                     ]
                 },
                 "AR_prefix_testRunnable": {
@@ -171,31 +170,13 @@ expected_result = {
                         "tVcGpaDemo_X_NotSameAsAxisOne",
                         "mVcGpaDemo_X_DummyTwo_r",
                         "mVcGpaDemo_X_DummyTwo_c",
-                        "mVcGpaDemo_X_NotSameAsAxisTwo",
-                        "ctestName_SC_TriggerReadRteCData"
-                    ]
-                },
-                "AR_testName_SC_ZcCalibrationStep": {
-                    "period": 0.1,
-                    "type": "PERIODIC",
-                    "accesses": [
-                        "tVcGpaDemo_X_DummyOne_x",
-                        "tVcGpaDemo_X_NotSameAsAxisOne",
-                        "mVcGpaDemo_X_DummyTwo_r",
-                        "mVcGpaDemo_X_DummyTwo_c",
-                        "mVcGpaDemo_X_NotSameAsAxisTwo",
-                        "ctestName_SC_TriggerReadRteCData"
+                        "mVcGpaDemo_X_NotSameAsAxisTwo"
                     ]
                 }
             },
             "diagnostics": {},
             "static": composition_yaml_setup.base_static,
             "shared": {
-                "ctestName_SC_TriggerReadRteCData": {
-                    "access": "READ-WRITE",
-                    "type": "Float32",
-                    "init": 0
-                },
                 "tVcGpaDemo_X_DummyOne_x": {
                     "access": "READ-WRITE",
                     "type": "dt_tVcGpaDemo_X_DummyOne_x",

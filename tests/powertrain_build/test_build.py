@@ -9,6 +9,7 @@ import unittest
 from unittest.mock import MagicMock, patch, PropertyMock
 from pathlib import Path
 
+from powertrain_build import build_defs
 from powertrain_build.lib import helper_functions
 from powertrain_build.problem_logger import ProblemLogger
 from powertrain_build.build_proj_config import BuildProjConfig
@@ -209,7 +210,9 @@ class TestBuild(unittest.TestCase):
         remove(*files)
         with patch('powertrain_build.user_defined_types.UserDefinedTypes') as udt_mock:
             udt_mock.return_value.common_header_files = PropertyMock(return_value=[])
-            build.generate_ext_var(self.build_cfg, self.unit_cfg, signal_if, udt_mock)
+            build.generate_ext_var(
+                self.build_cfg, self.unit_cfg, signal_if, udt_mock, build_defs.CVC_ASIL_B, build_defs.ASIL_B
+            )
         signal_if.get_external_io.assert_called_once()
         self.build_cfg.get_src_code_dst_dir.assert_called()
         exists(*files)

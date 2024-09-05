@@ -210,8 +210,8 @@ class TestNVMDef(unittest.TestCase):
         self.proj_cnfg.get_root_dir = MagicMock(return_value=projdir)
         self.proj_cnfg.get_src_code_dst_dir = MagicMock(return_value=str(Path(SRC_DIR, 'output')))
         self.proj_cnfg.get_nvm_defs = MagicMock(return_value=self.nvm_configs)
-        self.proj_cnfg.get_ecu_info = MagicMock(return_value=('Denso', 'G2'))
         self.proj_cnfg.get_swc_name = MagicMock(return_value='DummySwc')
+        self.proj_cnfg.get_code_generation_config = MagicMock(return_value=True)
         self.nvm_def = NVMDef(self.proj_cnfg, self.unit_cfg, self.nvm_vars_test)
 
         self.small_nvm_struct = {
@@ -466,7 +466,6 @@ class TestNVMDef(unittest.TestCase):
     def test_add_signal_with_nondefault_type_c(self):
         """Test that we can add different types of signals to critical area - c-file
         """
-        self.proj_cnfg.get_ecu_info = MagicMock(return_value=('Bosch', ''))
         self.proj_cnfg.get_nvm_defs = MagicMock(return_value=self.nvm_configs_critical)
         nvm_vars_test = {
             'sVcTest_t_UInt32': {
@@ -530,7 +529,6 @@ class TestNVMDef(unittest.TestCase):
     def test_add_signal_with_nondefault_type_h(self):
         """Test that we can add different types of signals to critical area - h-file
         """
-        self.proj_cnfg.get_ecu_info = MagicMock(return_value=('Bosch', ''))
         self.proj_cnfg.get_nvm_defs = MagicMock(return_value=self.nvm_configs_critical)
         nvm_vars_test = {
             'sVcTest_t_UInt32': {
@@ -594,7 +592,7 @@ class TestNVMDef(unittest.TestCase):
     def test_add_signal_with_nondefault_type_a2l_bosch(self):
         """Test that we can add different types of signals to critical area - a2l-file
         """
-        self.proj_cnfg.get_ecu_info = MagicMock(return_value=('Bosch', ''))
+        self.proj_cnfg.get_code_generation_config = MagicMock(return_value=False)
         self.proj_cnfg.get_nvm_defs = MagicMock(return_value=self.nvm_configs_critical)
         nvm_vars_test = {
             'sVcTest_t_UInt32': {
@@ -664,7 +662,6 @@ class TestNVMDef(unittest.TestCase):
 
         Note: Denso does not have any area like this at the time of writing this test
         """
-        self.proj_cnfg.get_ecu_info = MagicMock(return_value=('Denso', 'G2'))
         self.proj_cnfg.get_nvm_defs = MagicMock(return_value=self.nvm_configs_critical)
         nvm_vars_test = {
             'sVcTest_t_UInt32': {
