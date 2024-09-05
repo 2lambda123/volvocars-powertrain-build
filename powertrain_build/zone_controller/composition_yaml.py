@@ -53,16 +53,17 @@ class CompositionYaml(ProblemLogger):
         self.calibration_init_values = self.get_init_values(calibration_variables)
         self.cal_class_info = self._get_class_info(calibration_variables)
         self.meas_class_info = self._get_class_info(measurable_variables)
-        trigger_read_rte_cdata_signal_name = self._get_calibration_trigger_signal_name(calibration_variables)
-        self.cal_class_info["autosar"]["class_info"].update(
-            {
-                trigger_read_rte_cdata_signal_name: {
-                    "type": ZCC.trigger_read_rte_cdata_signal['data_type'],
-                    "access": "READ-WRITE",
-                    "init": 0,
+        if self.build_cfg.get_code_generation_config(item="generateCalibrationInterfaceFiles"):
+            trigger_read_rte_cdata_signal_name = self._get_calibration_trigger_signal_name(calibration_variables)
+            self.cal_class_info["autosar"]["class_info"].update(
+                {
+                    trigger_read_rte_cdata_signal_name: {
+                        "type": ZCC.trigger_read_rte_cdata_signal["data_type"],
+                        "access": "READ-WRITE",
+                        "init": 0,
+                    }
                 }
-            }
-        )
+            )
 
     @staticmethod
     def _cast_init_value(value_str):
@@ -73,7 +74,7 @@ class CompositionYaml(ProblemLogger):
         Returns:
             (int/float): Value casted to correct type.
         """
-        if value_str.endswith('F'):
+        if value_str.endswith("F"):
             return float(value_str[:-1])
         return int(value_str)
 
@@ -172,17 +173,15 @@ class CompositionYaml(ProblemLogger):
         """
         value_extraction_regexes = [
             (
-                re.compile(r'^\s*CVC_CAL[A-Z_]*\s+\w+\s+(?P<name>\w+)\s*=\s*(?P<value>[-\d\.e]+F?)\s*;'),
-                lambda regex_match, _: self._cast_init_value(regex_match.group('value'))
+                re.compile(r"^\s*CVC_CAL[A-Z_]*\s+\w+\s+(?P<name>\w+)\s*=\s*(?P<value>[-\d\.e]+F?)\s*;"),
+                lambda regex_match, _: self._cast_init_value(regex_match.group("value"))
             ),
             (
-                re.compile(r'^\s*CVC_CAL[A-Z_]*\s+\w+\s+(?P<name>\w+)\[(?P<size>[\d]+)\]\s*=\s*'),
+                re.compile(r"^\s*CVC_CAL[A-Z_]*\s+\w+\s+(?P<name>\w+)\[(?P<size>[\d]+)\]\s*=\s*"),
                 self._get_array_init_values
             ),
             (
-                re.compile(
-                    r'^\s*CVC_CAL[A-Z_]*\s+\w+\s+(?P<name>\w+)\[(?P<rows>[\d]+)\]\[(?P<cols>[\d]+)\]\s*=\s*'
-                ),
+                re.compile(r"^\s*CVC_CAL[A-Z_]*\s+\w+\s+(?P<name>\w+)\[(?P<rows>[\d]+)\]\[(?P<cols>[\d]+)\]\s*=\s*"),
                 self._get_matrix_init_values
             )
         ]
@@ -194,14 +193,14 @@ class CompositionYaml(ProblemLogger):
             line = calibration_definitions.pop()
             for regex, extraction_function in value_extraction_regexes:
                 regex_match = regex.match(line)
-                if regex_match is not None and regex_match.group('name') in calibration_variables:
-                    if regex_match.group('name') in init_values:
-                        self.critical('Variable definition for %s already found.', regex_match.group("name"))
-                    init_values[regex_match.group('name')] = extraction_function(regex_match, calibration_definitions)
+                if regex_match is not None and regex_match.group("name") in calibration_variables:
+                    if regex_match.group("name") in init_values:
+                        self.critical("Variable definition for %s already found.", regex_match.group("name"))
+                    init_values[regex_match.group("name")] = extraction_function(regex_match, calibration_definitions)
 
         missing_init_values = set(calibration_variables) - set(init_values.keys())
         if missing_init_values:
-            self.critical('Missing init values for calibration variables:\n%s', '\n'.join(missing_init_values))
+            self.critical("Missing init values for calibration variables:\n%s", "\n".join(missing_init_values))
 
         return init_values
 
@@ -212,16 +211,16 @@ class CompositionYaml(ProblemLogger):
             (iter): Iterator with calibration definitions.
         """
         calibration_definitions = []
-        end_of_definitions_regex = re.compile(r'^void\s*RESTART_.*')
+        end_of_definitions_regex = re.compile(r"^void\s*RESTART_.*")
         c_files = [Path(src_dir, unit.split("__")[0] + ".c").resolve() for unit, src_dir in self.unit_src_dirs.items()]
         for c_file in c_files:
-            read_lines = ''
-            with c_file.open(mode='r', encoding='latin-1') as file_handle:
+            read_lines = ""
+            with c_file.open(mode="r", encoding="latin-1") as file_handle:
                 for line in file_handle:
                     if end_of_definitions_regex.match(line):
                         break
                     read_lines += line
-            calibration_definitions.extend(re.sub(r'/\*.*?\*/', '', read_lines, flags=re.S).splitlines())
+            calibration_definitions.extend(re.sub(r"/\*.*?\*/", "", read_lines, flags=re.S).splitlines())
         return calibration_definitions
 
     def _get_array_init_values(self, array_regex_match, definitions_list):
@@ -237,16 +236,16 @@ class CompositionYaml(ProblemLogger):
         Returns:
             (list): List of initialization values for the array.
         """
-        array_init_values_str = ''
+        array_init_values_str = ""
         line = definitions_list.pop()  # Skip array definition line
-        while '};' not in line:
+        while "};" not in line:
             array_init_values_str += line.strip()
             line = definitions_list.pop()
         array_init_values_str += line.strip()
-        array_init_values = re.findall(r'([-\d\.e]+F?),?', array_init_values_str)
+        array_init_values = re.findall(r"([-\d\.e]+F?),?", array_init_values_str)
 
-        if int(array_regex_match.group('size')) != len(array_init_values):
-            self.critical('Could not parse init values for array definition %s.', array_regex_match.group("name"))
+        if int(array_regex_match.group("size")) != len(array_init_values):
+            self.critical("Could not parse init values for array definition %s.", array_regex_match.group("name"))
 
         return [self._cast_init_value(value) for value in array_init_values]
 
@@ -264,19 +263,19 @@ class CompositionYaml(ProblemLogger):
             (list(list)): List of initialization values for the matrix.
         """
         matrix_init_values = []
-        matrix_init_values_str = ''
+        matrix_init_values_str = ""
         line = definitions_list.pop()  # Skip matrix definition line
-        while '};' not in line:
+        while "};" not in line:
             matrix_init_values_str += line.strip()
-            if '}' in line:
-                matrix_init_values.append(re.findall(r'([-\d\.e]+F?),?', matrix_init_values_str))
-                matrix_init_values_str = ''
+            if "}" in line:
+                matrix_init_values.append(re.findall(r"([-\d\.e]+F?),?", matrix_init_values_str))
+                matrix_init_values_str = ""
             line = definitions_list.pop()
 
-        row_check = int(matrix_regex_match.group('rows')) != len(matrix_init_values)
-        col_check = any(int(matrix_regex_match.group('cols')) != len(row) for row in matrix_init_values)
+        row_check = int(matrix_regex_match.group("rows")) != len(matrix_init_values)
+        col_check = any(int(matrix_regex_match.group("cols")) != len(row) for row in matrix_init_values)
         if row_check or col_check:
-            self.critical('Could not parse init values for matrix definition %s.', matrix_regex_match.group("name"))
+            self.critical("Could not parse init values for matrix definition %s.", matrix_regex_match.group("name"))
 
         return [[self._cast_init_value(value) for value in row] for row in matrix_init_values]
 
@@ -317,7 +316,7 @@ class CompositionYaml(ProblemLogger):
             diag_dict["events"] = self.zc_core.get_diagnostic_trouble_codes(events)
         if rids:
             diag_dict["rids"] = rids
-            self.warning('Will not generate code for RIDs, add manually.')
+            self.warning("Will not generate code for RIDs, add manually.")
         return diag_dict
 
     def _get_ports_info(self):
@@ -355,24 +354,24 @@ class CompositionYaml(ProblemLogger):
         Returns:
             dict: Dict containing runnables information.
         """
-        swc_content = {}
         swc_name = self.build_cfg.get_swc_name()
         autosar_prefix = "AR_"
         swc_prefix = self.build_cfg.get_scheduler_prefix()
         init_function = autosar_prefix + swc_prefix + "VcExtINI"
         calibration_variables = list(self.cal_class_info["autosar"]["class_info"].keys())
-        calibration_step_function = autosar_prefix + ZCC.calibration_function_step_template.format(swc_name=swc_name)
+        swc_content = {init_function: {"type": "INIT", "accesses": calibration_variables}}
 
-        swc_content.update(
-            {
-                calibration_step_function: {
-                    "type": "PERIODIC",
-                    "period": 0.1,
-                    "accesses": calibration_variables,
-                },
-                init_function: {"type": "INIT", "accesses": calibration_variables},
-            }
-        )
+        if self.build_cfg.get_code_generation_config(item="generateCalibrationInterfaceFiles"):
+            cal_step_function = autosar_prefix + ZCC.calibration_function_step_template.format(swc_name=swc_name)
+            swc_content.update(
+                {
+                    cal_step_function: {
+                        "type": "PERIODIC",
+                        "period": 0.1,
+                        "accesses": calibration_variables,
+                    },
+                }
+            )
 
         call_dict = self._get_runnable_calls_info()
         runnables = self.build_cfg.get_units_raster_cfg()["SampleTimes"]
@@ -396,17 +395,15 @@ class CompositionYaml(ProblemLogger):
             data_types (dict): Data types information.
         """
         software_component_name = self.build_cfg.get_swc_name()
+        software_component_template = self.build_cfg.get_swc_template()
         data_types = {
             **self.cal_class_info["autosar"]["data_types"],
             **self.meas_class_info["autosar"]["data_types"],
         }
-        swcs = {
-            software_component_name: {
-                "type": "SWC",  # Other types than swc??
-                "template": "ARTCSC",
-                "runnables": {},
-            },
-        }
+        swcs = {software_component_name: {}}
+        swcs[software_component_name]["type"] = "SWC"  # Other types than swc??
+        if software_component_template is not None:
+            swcs[software_component_name]["template"] = software_component_template
         swcs[software_component_name]["runnables"] = self._get_runnable_info()
         swcs[software_component_name]["shared"] = self.cal_class_info["autosar"]["class_info"]
         swcs[software_component_name]["static"] = self.meas_class_info["autosar"]["class_info"]
@@ -487,13 +484,13 @@ class CompositionYaml(ProblemLogger):
             upper = 1
             lower = 0
         else:
-            base_type_lower = self.data_types[info['type']]["limits"]["lower"]
-            base_type_upper = self.data_types[info['type']]["limits"]["upper"]
+            base_type_lower = self.data_types[info["type"]]["limits"]["lower"]
+            base_type_upper = self.data_types[info["type"]]["limits"]["upper"]
             lower = info["min"] if info["min"] != "-" else base_type_lower
             upper = info["max"] if info["max"] != "-" else base_type_upper
         if not isinstance(info["width"], list):
             class_info[signal_name] = {
-                "type": info['type'],
+                "type": info["type"],
                 "access": "READ-ONLY" if info["class"] == "CVC_DISP" else "READ-WRITE",
                 "init": self.calibration_init_values.get(signal_name, max(min(0, upper), lower)),
             }
@@ -586,7 +583,7 @@ class CompositionYaml(ProblemLogger):
             new_data_type_data = {
                 "type": "ARRAY",
                 "size": info["width"][1],
-                "element": info['type'],
+                "element": info["type"],
             }
         else:
             self.critical("Signal config error for %s.", signal_name)

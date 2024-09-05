@@ -340,8 +340,8 @@ class DPAL(BaseApplication):
                     )
                 )
 
-                ecu_supplier, _unused = self.base_application.pybuild['build_cfg'].get_ecu_info()
-                if ecu_supplier in ['HI', 'ZC'] and is_safe_signal and group is not None:
+                enable_e2e_sts = self.base_application.pybuild['build_cfg'].get_enable_end_to_end_status_signals()
+                if enable_e2e_sts and is_safe_signal and group is not None:
                     e2e_sts_property = f"{group}E2eSts"
                     e2e_sts_signal_name = f"sVc{domain}_D_{e2e_sts_property}"
 

@@ -1,6 +1,6 @@
 
     /begin MEASUREMENT
-        sVcTest_t_UInt32 /* Name */
+        nvm_list_critical1._sVcTest_t_UInt32 /* Name */
         "Enter a nice description of your variable here" /* LongIdentifier */
         ULONG   /* Datatype */
         VcNvm_2_1_0_s   /* Conversion */
@@ -13,7 +13,7 @@
     /end MEASUREMENT
 
     /begin MEASUREMENT
-        sVcTest_t_Int16 /* Name */
+        nvm_list_critical1._sVcTest_t_Int16 /* Name */
         "Enter a nice description of your variable here" /* LongIdentifier */
         SWORD   /* Datatype */
         VcNvm_1_0_0_None   /* Conversion */
@@ -26,7 +26,7 @@
     /end MEASUREMENT
 
     /begin MEASUREMENT
-        sVcTest_t_UInt8 /* Name */
+        nvm_list_critical1._sVcTest_t_UInt8 /* Name */
         "Enter a nice description of your variable here" /* LongIdentifier */
         UBYTE   /* Datatype */
         VcNvm_1_0_0_None   /* Conversion */

@@ -366,7 +366,7 @@ class TestA2l(unittest.TestCase):
     def setUp(self):
         """Set-up common data structures for all tests in the test case."""
         self.build_cfg = MagicMock(spec_set=BuildProjConfig)
-        self.build_cfg.get_ecu_info = MagicMock(return_value=('Denso', 'G2'))
+        self.build_cfg.get_code_generation_config = MagicMock(return_value=False)
         self.a2l = A2l(A2L_DATA, self.build_cfg)
 
     def test_init_a2l(self):

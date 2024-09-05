@@ -404,7 +404,7 @@ class YamlSignalInterfaces(SignalInterfaces):
 
         translation_files = app.get_translation_files()
 
-        ecu_supplier, _unused = prj_cfg.get_ecu_info()
+        ecu_supplier = prj_cfg.get_ecu_info()[0]
         self.zc_spec = {}
         self.hal_spec = {}
         self.dp_spec = {}
@@ -412,7 +412,7 @@ class YamlSignalInterfaces(SignalInterfaces):
         self.sa_spec = {}
         self.service_spec = {}
         self.mthd_spec = {}
-        if ecu_supplier == 'ZC':
+        if prj_cfg.get_code_generation_config(item='generateYamlInterfaceFile'):
             zc_app = ZCAL(app)
             self.zc_spec = get_interface(app, zc_app)
             self.composition_spec = zc_app.composition_spec
