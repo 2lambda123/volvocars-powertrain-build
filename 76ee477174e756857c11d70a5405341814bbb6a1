@@ -33,6 +33,24 @@
       "message": "We don\u0027t need the legacy in this file",
       "revId": "76ee477174e756857c11d70a5405341814bbb6a1",
       "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a3f648f_ad17d062",
+        "filename": "powertrain_build/matlab_scripts/CodeGen/updateCodeSwConfig.m",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36990
+      },
+      "writtenOn": "2024-09-05T12:18:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a92daf32_0c42ee53",
+      "revId": "76ee477174e756857c11d70a5405341814bbb6a1",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
     }
   ]
 }
