@@ -226,7 +226,7 @@ class TestDPAL(unittest.TestCase):
         ]
         app = mock.MagicMock()
         app.get_domain_mapping.return_value = {"test": "test_domain"}
-        app.pybuild['build_cfg'].get_ecu_info.return_value = ("HI", None)
+        app.pybuild['build_cfg'].get_code_generation_config.return_value = True
         self.dummy_app = app
         self.maxDiff = None
 

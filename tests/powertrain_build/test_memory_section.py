@@ -23,11 +23,29 @@ class TestMemorySection(TestCase):
 
         cnfg_files_folder = Path(SRC_DIR, 'cnfg_files')
         build_cfg = mock.MagicMock(spec_set=BuildProjConfig(Path(cnfg_files_folder, 'ProjectCfg.json')))
-        build_cfg.get_a2l_cfg = mock.MagicMock(return_value={'name': 'MOCK_HI'})
-        build_cfg.get_ecu_info = mock.MagicMock(return_value=('HI', 'dummy'))
-        build_cfg.get_swc_name = mock.MagicMock(return_value='MOCK_HI_SC')
         build_cfg.get_src_code_dst_dir = mock.MagicMock(return_value=self.src_code_dir)
         build_cfg.get_use_volatile_globals = mock.MagicMock(return_value=False)
+        build_cfg.get_memory_map_config = mock.MagicMock(
+            return_value={
+                'includeHeaderGuards': True,
+                'includeMemMapForCalibration': False,
+                'memMapPrefix': 'MOCK_HI',
+                'projectDefines': {
+                    "START": {
+                        "code": "#define MOCK_HI_START_SEC_CODE",
+                        "const": "#define MOCK_HI_START_SEC_CONST_UNSPECIFIED",
+                        "disp": "#define MOCK_HI_START_SEC_VAR_INIT_UNSPECIFIED",
+                        "cal": "#pragma section \".XcpCalibrationSection\""
+                    },
+                    "STOP": {
+                        "code": "#define MOCK_HI_STOP_SEC_CODE",
+                        "const": "#define MOCK_HI_STOP_SEC_CONST_UNSPECIFIED",
+                        "disp": "#define MOCK_HI_STOP_SEC_VAR_INIT_UNSPECIFIED",
+                        "cal": "#pragma section"
+                    }
+                }
+            }
+        )
         self.memory_section = MemorySection(build_cfg)
 
     def test_generate_cvc_header_cal(self):

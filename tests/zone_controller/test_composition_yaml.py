@@ -35,8 +35,6 @@ class BuildProjConfigMock(BuildProjConfig):
 class TestCompositionYaml(unittest.TestCase):
     """Test case for testing composition_yaml."""
 
-    maxDiff = None
-
     def setUp(self):
         """Set-up common data structures for all tests in the test case."""
         self.build_cfg = MagicMock(spec_set=BuildProjConfigMock)
@@ -51,7 +49,9 @@ class TestCompositionYaml(unittest.TestCase):
         )
         self.build_cfg.get_composition_name = MagicMock(return_value="compositionName")
         self.build_cfg.get_swc_name = MagicMock(return_value="testName_SC")
+        self.build_cfg.get_swc_template = MagicMock(return_value="ARTCSC")
         self.build_cfg.get_gen_ext_impl_type = MagicMock(return_value=True)
+        self.build_cfg.get_code_generation_config = MagicMock(return_value=False)
 
         self.unit_cfg = MagicMock(spec_set=UnitConfigs)
         self.unit_cfg.get_per_cfg_unit_cfg.return_value = copy.deepcopy(
@@ -77,14 +77,6 @@ class TestCompositionYaml(unittest.TestCase):
                 self.build_cfg, self.zc_spec, self.unit_cfg, self.zc_core, self.zc_dids, {}
             )
 
-        # Common expected results variables
-        self.base_configuration = copy.deepcopy(composition_yaml_setup.base_configuration)
-        self.base_port_interfaces = copy.deepcopy(composition_yaml_setup.base_port_interfaces)
-        self.base_accesses = copy.deepcopy(composition_yaml_setup.base_accesses)
-        self.base_shared = copy.deepcopy(composition_yaml_setup.base_shared)
-        self.base_static = copy.deepcopy(composition_yaml_setup.base_static)
-        self.base_data_types = copy.deepcopy(composition_yaml_setup.base_data_types)
-
     def test_check_unsupported_fields(self):
         """Test CompositionYaml.check_unsupported_fields."""
         self.composition_yaml.warning = MagicMock()
@@ -106,6 +98,21 @@ class TestCompositionYaml(unittest.TestCase):
         """Checking that the dict is generated correctly"""
         result = self.composition_yaml.gather_yaml_info()
         self.assertDictEqual(composition_yaml.expected_result, result)
+
+    def test_composition_yaml_with_calibration(self):
+        """Checking that the dict is generated correctly including calibration data,
+        setting generateCalibrationInterfaceFiles to true (sort of)."""
+        self.build_cfg.get_code_generation_config = MagicMock(return_value=True)
+        with patch.object(
+            CompositionYaml,
+            "_get_all_calibration_definitions",
+            return_value=self.calibration_definitions
+        ):
+            self.composition_yaml = CompositionYaml(
+                self.build_cfg, self.zc_spec, self.unit_cfg, self.zc_core, self.zc_dids, {}
+            )
+        result = self.composition_yaml.gather_yaml_info()
+        self.assertDictEqual(composition_yaml.expected_cal_result, result)
 
     def test_composition_yaml_with_a2l_axis_data(self):
         """Checking that the dict is generated correctly, including a2l axis data."""

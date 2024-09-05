@@ -53,7 +53,7 @@ class A2l(ProblemLogger):
         """
         super().__init__()
         self._var_dd = var_data_dict
-        self._prj_cf = prj_cfg
+        self._prj_cfg = prj_cfg
         self._axis_ref = None
         self._axis_data = None
         self._compu_meths = None
@@ -344,20 +344,20 @@ class A2l(ProblemLogger):
                 opt_data += '\n' + ' ' * 8 + \
                     self._array_to_a2l_string(data['array'])
 
-            ecu_supplier, _ = self._prj_cf.get_ecu_info()
+            use_symbol_links = self._prj_cfg.get_code_generation_config(item='useA2lSymbolLinks')
             if a2d.get('symbol'):
-                if ecu_supplier == 'Denso':
+                if use_symbol_links:
                     opt_data += '\n' + ' ' * 8 + 'SYMBOL_LINK "%s" %s' % (a2d['symbol'], a2d.get('symbol_offset'))
-                    LOG.debug('This a2l is for Denso %s', opt_data)
-                elif ecu_supplier in ['RB', 'CSP', 'HI', 'ZC']:
+                    LOG.debug('This a2l is using SYMBOL_LINK for %s', opt_data)
+                else:
                     var_name = a2d['symbol'] + '._' + var_name
-                    LOG.debug('This a2l is for %s %s', ecu_supplier, var_name)
+                    LOG.debug('This a2l is not using SYMBOL_LINK for %s', var_name)
 
             dtype = a2l_type(c_type)
             minlim, maxlim = self._get_a2d_minmax(a2d, c_type)
             conv = self._compu_meths[data['compu_meth']]['name']
 
-            if a2d.get('symbol') and ecu_supplier == 'Denso':
+            if a2d.get('symbol') and use_symbol_links:
                 res = self._meas_tmplt_nvm.substitute(Name=var_name,
                                                       LongIdent=a2d['description'].replace('"', '\\"'),
                                                       Datatype=dtype,
