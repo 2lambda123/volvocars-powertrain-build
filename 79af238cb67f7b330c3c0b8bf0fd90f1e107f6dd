@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2a656ee_6d3afd8f",
+        "filename": "pybuild/zone_controller/composition_yaml.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-09-09T13:44:58Z",
+      "side": 1,
+      "message": "worth?\nDevs are confused about the capital d.\nAccept both or switch to lowercase?\nThen we need to update all projects.",
+      "range": {
+        "startLine": 309,
+        "startChar": 8,
+        "endLine": 309,
+        "endChar": 20
+      },
+      "revId": "79af238cb67f7b330c3c0b8bf0fd90f1e107f6dd",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    }
+  ]
+}
