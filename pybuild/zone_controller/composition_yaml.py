@@ -306,7 +306,11 @@ class CompositionYaml(ProblemLogger):
             (dict): Dict containing diagnostic information.
         """
         diag_dict = {}
-        diagnostics = self.composition_spec.get("Diagnostics", {})
+        diagnostics = {}
+        if "diagnostics" in self.composition_spec:
+            diagnostics = self.composition_spec["diagnostics"]
+        elif "Diagnostics" in self.composition_spec:
+            diagnostics = self.composition_spec["Diagnostics"]
         dids = diagnostics.get("dids", {})
         events = diagnostics.get("events", {})
         rids = diagnostics.get("rids", {})
