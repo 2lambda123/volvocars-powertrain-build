@@ -639,7 +639,7 @@ class ZCDIDs(ProblemLogger):
 
         dids_not_in_yaml = set(self.project_dids.keys()) - set(yaml_dids.keys())
         for did in dids_not_in_yaml:
-            self.warning(f'DID {did} not defined in project diagnostics yaml file.')
+            self.critical(f'DID {did} not defined in project diagnostics yaml file.')
 
         for did, did_data in yaml_dids.items():
             if did not in self.project_dids:
