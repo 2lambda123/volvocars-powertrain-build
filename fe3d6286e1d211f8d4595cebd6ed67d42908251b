@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2531f170_1d9e4c5f",
+        "filename": "README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-09-13T07:19:39Z",
+      "side": 1,
+      "message": "lowercase?\nMaybe we should stick to \"powertrain-build\" everywhere but the alternative to \"PyBuild\" would be \"PowertrainBuild\"",
+      "range": {
+        "startLine": 5,
+        "startChar": 29,
+        "endLine": 5,
+        "endChar": 30
+      },
+      "revId": "fe3d6286e1d211f8d4595cebd6ed67d42908251b",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56fa6844_5c264001",
+        "filename": "README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-09-13T07:19:39Z",
+      "side": 1,
+      "message": "lowercase?\nMaybe we should stick to \"powertrain-build\" everywhere but the alternative to \"PyBuild\" would be \"PowertrainBuild\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 22
+      },
+      "revId": "fe3d6286e1d211f8d4595cebd6ed67d42908251b",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db4a61e5_5d66bb58",
+        "filename": "README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-09-13T07:19:39Z",
+      "side": 1,
+      "message": "lowercase?\nMaybe we should stick to \"powertrain-build\" everywhere but the alternative to \"PyBuild\" would be \"PowertrainBuild\"",
+      "range": {
+        "startLine": 39,
+        "startChar": 14,
+        "endLine": 39,
+        "endChar": 17
+      },
+      "revId": "fe3d6286e1d211f8d4595cebd6ed67d42908251b",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df87fbe0_c0b21317",
+        "filename": "README.md",
+        "patchSetId": 18
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-09-13T07:19:39Z",
+      "side": 1,
+      "message": "lowercase?\nMaybe we should stick to \"powertrain-build\" everywhere but the alternative to \"PyBuild\" would be \"PowertrainBuild\"",
+      "range": {
+        "startLine": 41,
+        "startChar": 6,
+        "endLine": 41,
+        "endChar": 8
+      },
+      "revId": "fe3d6286e1d211f8d4595cebd6ed67d42908251b",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b10ef1a3_18f482ab",
+        "filename": "powertrain_build/matlab_scripts/CodeGen/updateCodeSwConfig.m",
+        "patchSetId": 18
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 37052
+      },
+      "writtenOn": "2024-09-13T07:19:39Z",
+      "side": 1,
+      "message": "actually, there was a \"else if CALLING_PYTHON\" thing here before.\nCALLING_PYTHON is set in wrapper.py.\nNow local run forces 3.6 but with wrapper setting above we will use whatever we used to call the wrapper, should add back.",
+      "range": {
+        "startLine": 18,
+        "startChar": 4,
+        "endLine": 18,
+        "endChar": 8
+      },
+      "revId": "fe3d6286e1d211f8d4595cebd6ed67d42908251b",
+      "serverId": "4a232e18-c5a9-48ee-94c0-e04e7cca6543"
+    }
+  ]
+}
