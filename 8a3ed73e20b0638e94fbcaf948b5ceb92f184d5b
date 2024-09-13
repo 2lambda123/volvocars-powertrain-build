@@ -1,0 +1,9 @@
+Code-Review+2: Henrik Wahlqvist <henrik.wahlqvist@volvocars.com>
+Workflow+1: Henrik Wahlqvist <henrik.wahlqvist@volvocars.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 13 Sep 2024 08:06:45 +0000
+Reviewed-on: https://review.opendev.org/c/volvocars/powertrain-build/+/927570
+Comments-Total: 1
+Project: volvocars/powertrain-build
+Branch: refs/heads/master
